@@ -226,7 +226,7 @@ body{
 	background-color: #fff;
 	color: #1a1a1a;
 	font-size: 10px;
-	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",Sans-Serif;
+	font-family: "MS PGothic",Sans-Serif;
 	line-height: 1.7;
 
 	-webkit-text-size-adjust: 100%;
@@ -429,7 +429,7 @@ a:active{
 	top:0;
 	margin-left: -140px;
 	width: 280px;
-	font-family: 'Calibre-Bold',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Bold',"MS PGothic",sans-serif;
 	font-weight:bold;
 	letter-spacing: 0.5em;
 }
@@ -476,7 +476,7 @@ a:active{
 }
 
 .nav-btn a .label{
-	font-family: 'Calibre-Bold',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Bold',"MS PGothic",sans-serif;
 	font-weight:bold;
 	letter-spacing: 0.25em;
 }
@@ -486,7 +486,7 @@ a:active{
 	margin-right:10px;
 }
 .nav-btn a .label .sub-label{
-	font-family: 'Calibre-Regular',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Regular',"MS PGothic",sans-serif;
 	margin-left: 10px;
 	letter-spacing: 0;
 }
@@ -540,13 +540,13 @@ li.current .sub-nav-links{
 }
 .sub-nav-links dl > dt{
 	margin-bottom: 0.8em;
-	font-family: 'Calibre-Bold',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Bold',"MS PGothic",sans-serif;
 	font-weight:bold;
 	letter-spacing: 0.25em;
 }
 .sub-nav-links dl > dd li > a{
 	color:#1a1a1a;
-	font-family: 'Calibre-Regular',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Regular',"MS PGothic",sans-serif;
 }
 
 
@@ -764,7 +764,7 @@ li.current .sub-nav-links{
 	line-height: 40px;
 	padding: 0 0 0 25px;
 	color: #1a1a1a;
-	font-family: 'Calibre-Bold',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",Osaka,"ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	font-family: 'Calibre-Bold',"MS PGothic",sans-serif;
 	font-weight:bold;
 	letter-spacing: 0.25em;
 }
