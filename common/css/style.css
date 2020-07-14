@@ -4,3 +4,6 @@ h1 {
 h1:hover svg {
   fill: #fff;
 }
+h1 svg {
+  -webkit-transition: all 0.5s; /* Safari */
+  transition: all 0.5s;
