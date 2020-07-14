@@ -20,11 +20,12 @@
   background-color: #ddd;
   color: black;
 }
+
 .parent {
   position: relative;
-  outline: 2px solid red;
-  width: 20px;
-  height: 20px;
+  outline: 1px solid red;
+  width: 35px;
+  height: 35px;
 }
 
 .parent a {
