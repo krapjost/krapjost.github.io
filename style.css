@@ -1,9 +1,13 @@
-h1 {
-  color: red;
+h1 svg {
+  -webkit-transition: all 1s; /* Safari */
+  transition: all 1s;
 }
 h1:hover svg {
-  fill: #fff;
+    fill: #fff;
 }
-h1 svg {
-  -webkit-transition: all 0.5s; /* Safari */
-  transition: all 0.5s;
+body {
+  font: 1em/150% Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
