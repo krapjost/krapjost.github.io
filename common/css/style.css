@@ -1,6 +1,6 @@
 h1 {
   color: red;
 }
-div:hover svg {
+h1:hover svg {
   fill: #fff;
 }
