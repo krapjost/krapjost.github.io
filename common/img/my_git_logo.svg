@@ -1,0 +1,10 @@
+<svg version="1.1" id="my_git_logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 960 720" xml:space="preserve">
+  <?xml-stylesheet type="text/css" href="../../style.css"?> /* 외부 스타일시트 연결 */
+  <style>
+    .st0{fill:none}.st1{fill:#231815}
+  </style>
+  <path class="st0" d="M0 0h960v720H0z"/>
+  <path class="st0" d="M0 0h960v720H0V0z"/>
+  <path class="st1" d="M197 303h113v114H197zM650 303h113v114H650z"/>
+  <path class="st1" d="M763 190V77H537v113H423V77H197v113h113v113h113v114H310v226h113V530h114v113h113V417H537V303h113V190z"/>
+</svg>

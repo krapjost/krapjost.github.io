@@ -1,9 +1,23 @@
-h1 svg {
-  -webkit-transition: all 1s; /* Safari */
-  transition: all 1s;
+.object {
+  width: 24px;
+  height: 24px;
 }
-h1:hover svg {
-    fill: #fff;
+.svg:hover .my_git_logo {
+  fill: #fff;
+}
+.parent {
+  position: relative;
+  outline: 2px solid red;
+  width: auto;
+  height: auto;
+}
+.parent a {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
 }
 body {
   font: 1em/150% Helvetica, Arial, sans-serif;
