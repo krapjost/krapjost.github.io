@@ -46,3 +46,10 @@ a.btn-primary:hover {
   background-color: #cccccc;
   border-radius: 1px;
 }
+
+#article_one {
+  display: block;
+}
+#article_two {
+  display: block;
+}
