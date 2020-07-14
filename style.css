@@ -1,7 +1,7 @@
 .object {
   width: 30px;
   height: 30px;
-  color: #924be3
+  color: #c666ff
 }
 .svg:hover .my_git_logo {
   fill: #eef573;
@@ -13,7 +13,7 @@ body
   padding: 0;
 
   background: #000000;
-  color: #cdcdcd;
+  color: #f0f0e9;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
@@ -37,7 +37,7 @@ body
   width: 30;
   height: 30;
   text-decoration: none;
-  color: #232323;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
