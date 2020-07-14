@@ -1,9 +1,7 @@
-.object {
+#logo_index .svg:hover .my_git_logo{
   width: 30px;
   height: 30px;
   color: #c666ff
-}
-.svg:hover .my_git_logo {
   fill: #eef573;
 }
 
