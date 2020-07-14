@@ -1,20 +1,10 @@
 .object {
   width: 30px;
   height: 30px;
+  color: #924be3
 }
 .svg:hover .my_git_logo {
-  fill: #fff;
-}
-.parent {
-  position: relative;
-  width: 30;
-  height: 30;
-}
-.parent a {
-  display: block;
-  position: absolute;
-  width: 30;
-  height: 30;
+  fill: #eef573;
 }
 
 body
@@ -22,7 +12,7 @@ body
   margin: 0;
   padding: 0;
 
-  background: #232323;
+  background: #000000;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
@@ -42,9 +32,12 @@ body
 
 #menuToggle a
 {
+  display: block;
+  position: absolute;
+  width: 30;
+  height: 30;
   text-decoration: none;
   color: #232323;
-
   transition: color 0.3s ease;
 }
 
