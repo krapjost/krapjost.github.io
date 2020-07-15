@@ -1,4 +1,4 @@
-  function() {
+  (function() {
   var DPR = Math.min(2, window.devicePixelRatio);
   var ORIG = 640;
 
