@@ -17,6 +17,97 @@ caption,td,th{text-align:left;font-weight:400;vertical-align:middle}
 .xxxx-large{font-size:64px;line-height:1.2}
 .hide-accessible{width:1px;height:1px;overflow:hidden;position:absolute}
 
+footer{width:100%;color:#fff}
+footer .footer__inner{width:calc(100% - 2rem);-webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0);
+  border-top:4px solid #282828;
+  max-width:60rem;
+  margin:0 auto;
+  padding:3rem 1rem;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column}
+footer .footer__cta{-webkit-box-ordinal-group:2;
+  -ms-flex-order:1;
+  order:1;margin:2rem 0 0 0;width:100%}
+footer .footer__cta-list{display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  height:12rem;
+  font-family:'National 2 Narrow Web',Helvetica,Arial,sans-serif}
+footer .footer__cta-list li{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;width:50%;
+  margin:0;margin-bottom:1rem;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center}
+footer .footer__cta-list li a{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;border:none;
+  color:#fff;-webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center}
+footer .footer__cta-list li a:hover{color:#fff}
+footer .footer__cta-list li p{
+  margin:0;padding-left:.5rem;
+  line-height:1;font-size:16px}
+footer .footer__cta-list li svg{
+  fill:#fff;stroke:none;
+  vertical-align:middle}
+footer .footer__cta-list
+li svg circle,
+footer .footer__cta-list
+li svg line,
+footer .footer__cta-list
+li svg polyline{fill:none;stroke:#fff}
+footer .footer__cta-list
+li svg path,
+footer .footer__cta-list
+li svg rect{stroke:none}
+footer .footer__cta-list
+li .feather-lock path,
+footer .footer__cta-list
+li .feather-mail path,
+footer .footer__cta-list
+li .feather-rss path{stroke:#fff;fill:none}
+footer .footer__about{
+  -webkit-box-ordinal-group:1;
+  -ms-flex-order:0;order:0;
+  width:100%;display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;-webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  font-family:'National 2 Narrow Web',Helvetica,Arial,sans-serif}
+footer .footer__about p{margin:0}
+footer .footer__about svg{width:12rem;margin-bottom:.5rem}
+footer .footer__about svg path{fill:#fff}
+footer .footer__about a{color:#fff;border-bottom:1px solid currentColor}
+footer .footer__about a:hover{color:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'National 2 Web',Helvetica,Arial,sans-serif;
+overflow-x:hidden}
+button{font-family:'National 2 Narrow Web',Helvetica,Arial,sans-serif;
+background-color:transparent}
+
+
+
+
 #navbar {
   background-color: #333; /* Black background color */
   position: fixed; /* Make it stick/fixed */
