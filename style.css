@@ -759,7 +759,7 @@ header .top__title{display:none;position:fixed;
   top:.75rem;left:4rem;margin:0;width:10rem;z-index:1001
   }
 header .top__title a{display:block;border:none}
-header .top__title svg{fill:#282828}
+header .top__title svg{fill:#282828 stroke:#000}
 header .top__nav{position:absolute;top:0;right:0}
 header .top__nav .nav__links{
   display:-webkit-box;
