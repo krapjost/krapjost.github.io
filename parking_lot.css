@@ -1,0 +1,27 @@
+#carinbutton,
+#caroutbutton {
+  border: none;
+  color: #fff;
+  background-color: #000;
+  position: absolute;
+  font-size: 50px;
+  width, height: 45%;
+  cursor: pointer;
+  opacity: .2;
+  transition: all .6s ease;
+}
+
+#carinbutton: hover,
+#caroutbutton: hover{opacity: 1;}
+
+#carinbutton {
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
+
+#caroutbutton {
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
