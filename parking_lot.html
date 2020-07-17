@@ -1,5 +1,34 @@
+<script language="javascript">
+let carAmount = 0;
+const carAmountMax = 5;
+function addCar() {
+  carAmount += 1;
+  function printCurIn() {
+    if(carAmount==carAmountMax){
+      alert ("만차입니다.");
+    }else if (carAmount==4) {
+      alert ("주차 1대 가능.");
+    }else if (carAmount==3) {
+      alert ("주차 2대 가능.");
+    }else{
+      alert ("환영합니다.");
+    }
+  }
+  return carAmount;
+};
 
-<input id ="carinbutton" type="button" name="car_in" value="입차" onclick="">
-<input id ="caroutbutton" type="button" name="car_out" value="출차" onclick="">
+function delCar() {
+  carAmount -= 1;
+  return carAmount;
+  function printCurOut() {
+    if(carAmount < carAmountMax){
+      alert ("4대 안녕히 가세요.")
+    }else{
+      alert ("안녕히 가세요.")
+    }
+  }
+};
+</script>
 
-<script src="./parking_lot.js"></script>
+<input id ="carinbutton" type="button" name="car_in" value="입차" onclick ="addCar()">
+<input id ="caroutbutton" type="button" name="car_out" value="출차" onclick ="delCar()">
