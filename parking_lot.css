@@ -1,5 +1,5 @@
-#carinbutton,
-#caroutbutton {
+.carinbutton,
+.caroutbutton {
   border: none;
   color: #fff
   background-color: #000
@@ -11,13 +11,13 @@
   &:hover{opacity: 1;}
 }
 
-#carinbutton {
+.carinbutton {
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
 }
 
-#caroutbutton {
+.caroutbutton {
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
