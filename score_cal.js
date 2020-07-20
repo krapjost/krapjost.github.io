@@ -11,8 +11,24 @@ function addFields() {
     //input.required= true;
     container.appendChild(input);
     container.appendChild(document.createElement("br"));
-  }
+  };
+  pushArray();
+      function pushArray(){
+        var button = document.createElement("button");
+        container.appendChild(button);
+        button.innerHTML = 'click me';
+        button.onclick = function(){
+        let scoreArray = []
+
+            for (var i = 0; i < number; i++) {
+            scoreArray.push(document.getElementsByName("점수" + (i + 1)).value);
+            console.dir(scoreArray);
+          }
+      }
+   }
 };
+
+
 
 /*
 function grade_is(score){
