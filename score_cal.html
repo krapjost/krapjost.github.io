@@ -47,13 +47,22 @@ onchange = "grade_is(this.value);">
   </fieldset>
 </form>
 -->
-
-<form action="/score_cal" name="myform" method="post">
-  과목의 갯수를 입력하시오:
-  <input name="noOfTests" type="text">
-  <input type="button" id="tests" value = "클릭" onclick="addFields();">
-  <br/>
-  <div id="container">
-  </div>
-  <br/><br/>
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/score_cal" name="myform" method="post">
+      과목의 갯수를 입력하시오:
+      <input name="noOfTests" type="text">
+      <input type="button" id="tests" value = "클릭" onclick="addFields();">
+      <br/>
+      <div id="container">
+      </div>
+      <br/><br/>
+    </form>
+    <script type="text/javascript" src="score_cal.js"></script>
+  </body>
+</html>
