@@ -1,4 +1,6 @@
-*{border: none;
+#carinbutton,
+#caroutbutton {
+  border: none;
   color: #fff
   background-color: #000
   position:absolute;
@@ -6,9 +8,6 @@
   width, height: 40%;
   opacity: .2;
   transition: all .6s ease;
-}
-#carinbutton,
-#caroutbutton {
   &:hover{opacity: 1;}
 }
 
