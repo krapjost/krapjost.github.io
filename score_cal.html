@@ -17,7 +17,9 @@ C(70~79), F(~70)
     </lable>
     <br>
     <lable for="engScore">영어:
-      <input type="number" name="enScore" id="en_score" min="0" max="100" value="" placeholder="점수는" onchange = "grade_is(this.value);">
+      <input type="number" name="enScore"
+      id="en_score" min="0" max="100" value=""
+      placeholder="점수는" onchange = "grade_is(this.value);">
       </lable>
     <br>
     <lable for="korScore">국어:
@@ -54,7 +56,9 @@ onchange = "grade_is(this.value);">
     <title></title>
   </head>
   <body>
-    <form action="/score_cal" name="myform" method="post">
+    <script type="text/javascript" src="score_cal.js">
+    </script>
+    <div onsubmit="return pushArray()" name="myform">
       과목의 갯수를 입력하시오:
       <input name="noOfTests" type="text">
       <input type="button" id="tests" value = "클릭" onclick="addFields();">
@@ -62,7 +66,6 @@ onchange = "grade_is(this.value);">
       <div id="container">
       </div>
       <br/><br/>
-    </form>
-    <script type="text/javascript" src="score_cal.js"></script>
+    </div>
   </body>
 </html>

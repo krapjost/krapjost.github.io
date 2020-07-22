@@ -1,34 +1,61 @@
-function addFields() {
-  debugger;
-  var number = document.getElementsByName("noOfTests")[0].value;
-  var container = document.getElementById("container");
-  container.innerHTML = '';
-  for (i = 0; i < number; i++) {
-    container.appendChild(document.createTextNode("점수" + (i + 1)));
-    var input = document.createElement("input");
-    input.type = "text";
-    input.name = "점수" + i;
-    //input.required= true;
-    container.appendChild(input);
-    container.appendChild(document.createElement("br"));
-  };
-  pushArray();
-      function pushArray(){
-        var button = document.createElement("button");
-        container.appendChild(button);
-        button.innerHTML = 'click me';
-        button.onclick = function(){
-        let scoreArray = []
 
-            for (var i = 0; i < number; i++) {
-            scoreArray.push(document.getElementsByName("점수" + (i + 1)).value);
-            console.dir(scoreArray);
-          }
-      }
-   }
+function addFields() {
+  event.preventDefault()
+  var container = document.getElementById("container");
+  var number = document.getElementsByName("noOfTests")[0].value;
+  container.innerHTML = '';
+    for (i = 0; i < number; i++) {
+      container.appendChild(document.createTextNode("점수" + (i + 1)));
+      var input = document.createElement("input");
+      input.type = "text";
+      input.name = "점수" + i;
+      input.id = "s" + i;
+      // input.value = "";
+      //input.required= true;
+      container.appendChild(input);
+      container.appendChild(document.createElement("br"));
+    };
+  var Array = [];
+  var button1 = document.createElement("button");
+  container.appendChild(button1);
+  button1.innerHTML = '점수제출';
+
+  function pushArray() {
+        button1.onclick = function(){
+        for (var i = 0; i < number; i++)
+          {Array.push(document.getElementById("s" + i).value)}
+        console.log(Array);
+        console.log(Array[1]);
+           var button2 = document.createElement("button");
+           container.appendChild(button2);
+           button2.innerHTML = '점수계산';
+          function getGrade() {
+             button2.onclick = function(){
+                let number = document.getElementsByName("noOfTests")[0].value;
+                for(let i=0; i < number; i++){
+                  let score = Array[i];
+                  if (score >= 95) {
+                    score = 'A+';
+                  }else if (score < 94 && score >= 90) {
+                    score = 'A';
+                  }else if (score < 90 && score >= 85) {
+                    score = 'B+';
+                  }else if (score < 85 && score >= 80) {
+                    score = 'B';
+                  }else if (score < 80 && score >= 70) {
+                    score = 'C';
+                  }else {
+                    score = 'F'}console.log(score);
+                };
+             };
+          }getGrade();
+      };
+   };pushArray();
 };
 
 
+  //  for(var i in scoreArray){
+//    console.log(scoreArray[i]);}
 
 /*
 function grade_is(score){

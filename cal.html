@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body><p>여기 출력값을 쓸거.</p>
+</br>
+        <input type = "button" class = "set-size number" id = "seven" value = "7" onclick="write(7)";/>
+        <input type = "button" class = "set-size number" name = "8" value = "8" onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "9" value = "9" onclick="write()";/>
+        <input type = "button" class = "set-size" name = "/" value = "/" onclick="cal_div()";/>
+      </br>
+        <input type = "button" class = "set-size number" name = "4" value = "4" onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "5" value = "5" onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "6" value = "6" onclick="write()";/>
+        <input type = "button" class = "set-size" name = "*" value = "*" onclick="cal_mul()";/>
+      </br>
+        <input type = "button" class = "set-size number" name = "1" value = "1" onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "2" value = "2" onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "3" value = "3" onclick="write()";/>
+        <input type = "button" class = "set-size" name = "-" value = "-" onclick="cal_sub()";/>
+      </br>
+        <input type = "button" class = "set-size number" name = "." value = "." onclick="write()";/>
+        <input type = "button" class = "set-size number" name = "0" value = "0" onclick="write()";/>
+        <input type = "button" class = "set-size" name = "=" value = "=" onclick="run_cal()";/>
+        <input type = "button" class = "set-size number" name = "9" value = "+" onclick="cal_add()";/>
+
+      <fieldset>
+        <legend>html계산기</legend>
+        <form oninput = "sumresult.value = parseInt(z1.value)+parseInt(z2.value)">
+           더하기<input type = "number" name = "z1" value = "20" /> +
+           <input type = "number" name = "z2" value = "40" />
+           = <output name = "sumresult"></output>
+        </form>
+           <form oninput = "sumresult.value = parseInt(z1.value)-parseInt(z2.value)">
+           빼애기<input type = "number" name = "z1" value = "20" />  -
+           <input type = "number" name = "z2" value = "40" />
+           = <output name = "sumresult"></output>
+        </form>
+      <form oninput = "sumresult.value = parseInt(z1.value)*parseInt(z2.value)">
+           곱하기<input type = "number" name = "z1" value = "20" /> *
+           <input type = "number" name = "z2" value = "40" />
+           = <output name = "sumresult"></output>
+        </form>
+      <form oninput = "sumresult.value = parseInt(z1.value)/parseInt(z2.value)">
+           나누기<input type = "number" name = "z1" value = "20" /> /
+           <input type = "number" name = "z2" value = "40" />
+           = <output name = "sumresult"></output>
+        </form>
+    </fieldset>
+
+   </body>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>
