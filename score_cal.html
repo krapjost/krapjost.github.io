@@ -1,58 +1,8 @@
-<!--
-프로그래밍 과제
-• 1. 평점 계산기
-• 과목 개수와 점수를 입력하면 각 과목 등급과 평점을 계산
-• 점수와 등급: A+(95~), A(90~94), B+(85~89), B(80~84),
-C(70~79), F(~70)
-• 등급과 평점: 4.5(A+), 4.0(A), 3.5(B+), 3.0(B), 2.5(C), 0(F)
-• 예) 과목 개수가 5인 경우, 각 과목의 점수(80, 90, 70, 100,
-100)를 입력하면 다음 결과가 출력
--> 등급: B, A, C, A+, A+
-평점: 3.7
-<form method="GET" action="">
-  <fieldset class="values">
-    <legend>평점 계산기</legend>
-    <lable for="mathScore">수학:
-      <input type="number" name="maScore" id="ma_score" min="0" max="100" value="" placeholder="점수는" onchange = "grade_is(this.value);">
-    </lable>
-    <br>
-    <lable for="engScore">영어:
-      <input type="number" name="enScore"
-      id="en_score" min="0" max="100" value=""
-      placeholder="점수는" onchange = "grade_is(this.value);">
-      </lable>
-    <br>
-    <lable for="korScore">국어:
-      <input type="number" name="koScore" id="ko_score" min="0" max="100" value="" placeholder="점수는" onchange = "grade_is(this.value);">
-    </lable>
-    <br>
-    <lable for="sicScore">과학:
-      <input type="number" name="siScore" id="si_score" min="0" max="100" value="" placeholder="점수는"
-onchange = "grade_is(this.value);">
-    </lable>
-    <br>
-    <lable for="hisScore">역사:
-      <input type="number" name="hiScore" id="hi_score" min="0" max="100" value="" placeholder="점수는" onchange = "grade_is(this.value);">
-    </lable>
-    <br>
-
-   <input type="button" value="제출" onclick = "scoreToGrade()" >
-   <lable for="my_avg_grade">
-     <ol class = "grades">
-      <li id = "ma_grade"></li>
-      <li id = "en_grade"></li>
-      <li id = "ko_grade"></li>
-      <li id = "si_grade"></li>
-      <li id = "hi_grade"></li>
-     </ol>
-   </lable>
-  </fieldset>
-</form>
--->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1">
     <title></title>
   </head>
   <body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <h1>2. 주민등록번호 마스킹 처리(regex)</h1>
+      <p>문자열에서 주민등록번호를 찾아 뒷자리를 '*'로 마스킹</p>
+      <p>주민번호 입력 – 마스킹 - 출력</p>
+    <form name = regit_check>
+      주민번호:<input type="text" id="regNum" name="reg_num" value="" placeholder ="000000-0000000" maxlength = "14" onkeyup="getRegNum(this.value)">
+    </form>
+
+    <script type="text/javascript" src="./masking.js" charset="utf-8">
+    </script>
+  </body>
+</html>

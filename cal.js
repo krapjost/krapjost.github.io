@@ -70,7 +70,7 @@ function calculate(){
   console.log (typeof(stringResult));
   document.calc.display.value = eval(stringResult);
   console.log (eval(stringResult));
-  //eval쓰지 말라고 해서 다른 방법으로는 내일 시도해 보겠습니다.
+  //아스키로 해보려다 eval이 제일 쉬워보여서 일단 썼는데 문서에서 eval쓰지 말라고 해서 다른 방법으로는 내일 시도해 보겠습니다.
   /*
   let resultArray = stringResult.split(" ");
   console.log (resultArray);
