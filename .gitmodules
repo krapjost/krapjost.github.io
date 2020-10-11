@@ -1,0 +1,3 @@
+[submodule "farmers"]
+	path = farmers
+	url = https://github.com/krapjost/teamProject_frontend
