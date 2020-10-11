@@ -1,0 +1,341 @@
+@media (min-width: 1241px) {
+  * {
+    margin: 20px 0 20px 0;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    background-color: black;
+  }
+
+  .membership {
+    visibility: hidden;
+  }
+
+  #formwrap {
+    margin: 30px;
+  }
+
+  #header,
+  #main {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    justify-content: center;
+    background-color: black;
+    width: 30vw;
+    border: 10px solid white;
+  }
+
+  #timer,
+  #cost {
+    font: 700 1rem Arial;
+    overflow: hidden;
+  }
+
+  #count_car {
+    font-weight: bolder;
+    font-size: 5vmax;
+    text-align: center;
+  }
+
+  #spot {
+    display: none;
+  }
+
+
+  #formwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #user_id,
+  #postbtn,
+  #name,
+  #phone,
+  #car,
+  #car_2nd,
+  #link,
+  #postbtn,
+  #timerbtn,
+  .out {
+    border: none;
+    background-color: rgb(42, 42, 42);
+    text-decoration: none;
+    font: 700 1rem Arial;
+    display: block;
+    height: max-content;
+    width: 30vw;
+    min-width: 300px;
+    padding: 10px 0 10px 0;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  #link:hover,
+  #postbtn:hover,
+  #timerbtn:hover,
+  .label:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
+  .label {
+    display: block;
+    min-width: 30vw;
+    border: 5px solid white;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    font: 700 1rem Arial;
+  }
+
+  input:checked+.label {
+    background-color: gray;
+    border: 10px solid white;
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+
+  input:checked+.label::after {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #methodwrap {
+    margin: 0;
+    display: flex;
+    width: 70vw;
+    flex-flow: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  #main>input[type='radio'] {
+    display: none;
+  }
+
+  #methodwrap>input,
+  #tcost {
+    display: none;
+  }
+
+  #spotTr {
+    margin: 0;
+    display: block;
+    width: 70vw;
+    overflow: auto;
+  }
+
+  .th {
+    border: 10px solid rgb(45, 132, 231);
+    background-color: rgb(87, 87, 87);
+    min-width: 1rem;
+    font: 700 1rem Arial;
+  }
+
+  .th:hover {
+    border: 10px solid black;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1240px) {
+  * {
+    margin: 20px 0 20px 0;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    font-size: 7vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  title {
+    font-size: 100px;
+  }
+
+  html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    background-color: black;
+  }
+
+  .membership {
+    visibility: hidden;
+  }
+
+  #formwrap {
+    margin: 30px;
+  }
+
+  #header,
+  #main {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    justify-content: center;
+    background-color: black;
+
+    width: 70vw;
+
+    border: 10px solid white;
+  }
+
+  #timer,
+  #cost {
+    font: 700 1rem Arial;
+    overflow: hidden;
+  }
+
+  #count_car {
+    font-weight: bolder;
+    font-size: 10vmax;
+    text-align: center;
+  }
+
+  #spot {
+    display: none;
+  }
+
+
+  #formwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #user_id,
+  #postbtn,
+  #name,
+  #phone,
+  #car,
+  #car_2nd,
+  #link,
+  #postbtn,
+  #timerbtn,
+  .out {
+    background-color: rgb(42, 42, 42);
+    border: none;
+    text-decoration: none;
+    font: 700 1rem Arial;
+    display: block;
+    height: max-content;
+    width: 70vw;
+    min-width: 300px;
+    padding: 10px 0 10px 0;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+
+  #link:hover,
+  #postbtn:hover,
+  #timerbtn:hover,
+  .label:hover {
+    background-color: white;
+    border: 10px solid white;
+    color: black;
+    cursor: pointer;
+  }
+
+  .label {
+    display: block;
+    min-width: 30vw;
+    border: 10px solid white;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    font: 700 1rem Arial;
+  }
+
+  input:checked+.label {
+    background-color: black;
+    border: 10px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+
+  input:checked+.label::after {
+    opacity: 0;
+    box-shadow: 0px 0px 50px 5px white;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #methodwrap {
+    margin: 0;
+    display: flex;
+    width: 70vw;
+    flex-flow: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  #main>input[type='radio'] {
+    display: none;
+  }
+
+  #methodwrap>input,
+  #tcost {
+    display: none;
+  }
+
+  #spotTr {
+    margin: 0;
+    display: block;
+    width: 70vw;
+    overflow: auto;
+  }
+
+  .th {
+    border: 10px solid rgb(45, 132, 231);
+    background-color: rgb(87, 87, 87);
+    min-width: 2rem;
+    font: 700 2rem Arial;
+  }
+
+  .th:hover {
+    border: 10px solid black;
+    color: black;
+    cursor: pointer;
+  }
+}

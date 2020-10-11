@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>timer</title>
+  <link rel='stylesheet' href='./stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Hello <%= id %></h1>
+  <header id="header">
+    <h1>timer</h1>
+    <div id="timewrap">
+      <p id="timer">
+        <%= time %>
+      </p>
+    </div>
+    <h1>COST</h1>
+    <div id="costwrap">
+      <p id="cost">
+        <%= cost %>
+      </p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <form action="/timer" id="formwrap" method="POST">
+      <div id="methodwrap">
+        <input type="radio" name="method" value="card" id="card">
+        <label for="card" class="label">card</label>
+
+        <input type="radio" name="method" value="cash" id="cash">
+        <label for="cash" class="label">cash</label>
+      </div>
+      <input type="text" id="tcost" maxlength="8" value="<%= cost %>" name="tcost" required>
+      <input style="display: none;" type="text" id="user_id" maxlength="8" value="<%= id %>" name="user_id" required>
+      <button type="submit" id="postbtn">PAY</button>
+    </form>
+
+  </main>
+  <script src="./javascripts/timer.js"></script>
+</body>
+
+</html>

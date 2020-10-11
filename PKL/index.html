@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GATE</title>
+  <link rel='stylesheet' href='./stylesheets/style.css' />
+</head>
+
+<body>
+  <header id="header">
+    <h1>GATE</h1>
+    <h1>Number of cars</h1>
+    <div class="wrapper" id="color">
+      <p id="count_car">
+        0
+      </p>
+    </div>
+    <a id="link" href="./join">JOIN</a>
+  </header>
+
+  <main id="main">
+    <p style="  font: 700 1rem Arial;">> select your spot</p>
+    <table>
+      <tr id = 'spotTr'>
+        <th id="1" onclick="writeSpot(this.id)" class="th">1</th>
+        <th id="2" onclick="writeSpot(this.id)" class="th">2</th>
+        <th id="3" onclick="writeSpot(this.id)" class="th">3</th>
+        <th id="4" onclick="writeSpot(this.id)" class="th">4</th>
+        <th id="5" onclick="writeSpot(this.id)" class="th">5</th>
+        <th id="6" onclick="writeSpot(this.id)" class="th">6</th>
+        <th id="7" onclick="writeSpot(this.id)" class="th">7</th>
+        <th id="8" onclick="writeSpot(this.id)" class="th">8</th>
+        <th id="9" onclick="writeSpot(this.id)" class="th">9</th>
+        <th id="10" onclick="writeSpot(this.id)" class="th">10</th>
+        <th id="11" onclick="writeSpot(this.id)" class="th">11</th>
+        <th id="12" onclick="writeSpot(this.id)" class="th">12</th>
+        <th id="13" onclick="writeSpot(this.id)" class="th">13</th>
+        <th id="14" onclick="writeSpot(this.id)" class="th">14</th>
+        <th id="15" onclick="writeSpot(this.id)" class="th">15</th>
+        <th id="16" onclick="writeSpot(this.id)" class="th">16</th>
+        <th id="17" onclick="writeSpot(this.id)" class="th">17</th>
+        <th id="18" onclick="writeSpot(this.id)" class="th">18</th>
+        <th id="19" onclick="writeSpot(this.id)" class="th">19</th>
+        <th id="20" onclick="writeSpot(this.id)" class="th">20</th>
+      </tr>
+      <tr>
+      <!-- <%if(data) { %>
+        <%for(let i=0; data.length > i; i++){%>
+        <td><%=data[i].spot%></td>
+        <% } %>
+      <% } %> -->
+      </tr>
+    </table>
+
+    <form id="formwrap" method="POST">
+      <input type="text" id="user_id" maxlength="8" placeholder="your id" name="user_id" required>
+      <input type="number" name="spot" id="spot" min="1" max="20" placeholder="parking spot">
+      <button type="submit" id="postbtn">IN</button>
+      <a href="#" id="timerbtn">OUT</a>
+    </form>
+  </main>
+
+  <script src="./javascripts/client.js"></script>
+
+</body>
+
+</html>

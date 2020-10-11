@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN</title>
+    <link rel='stylesheet' href='./stylesheets/style.css' />
+</head>
+
+<body id="formwrap">
+
+    <form id="form" method="POST">
+
+        <fieldset style="border: hidden;" id="main">
+
+            <legend style="display: none;">JOIN</legend>
+            <label for="user_id">ID : </label>
+            <input type="text" name="user_id" id="user_id" maxlength="10">
+            <label for="phone">Phone : </label>
+            <input type="text" name="phone" id="phone" required minlength="12" maxlength="13"
+                placeholder="000-0000-0000">
+            <label for="car">Car Plate Number : </label>
+            <input type="text" class="carnum" name="car" id="car" required minlength="8" maxlength="8"
+                placeholder="00가0000">
+            <label for="car_2nd">Second Car Plate Number(optional) : </label>
+            <input type="text" class="carnum" name="car_2nd" id="car_2nd" maxlength="8"
+                placeholder="Leave if u don't have 2nd">
+            <input type="radio" name="membership" id="null" value="NUL">
+            <label for="null" class="label">No need membership</label>
+            <input type="radio" name="membership" id="gold" value="GLD">
+            <label for="gold" class="label">GOLD</label>
+            <input type="radio" name="membership" id="vip" value="VIP">
+            <label for="vip" class="label">VIP</label>
+            <button id="postbtn" type="button" onclick="validate()">JOIN</button>
+
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
+<script>
+    function validate() {
+        const id = document.getElementById('user_id');
+        const ph = document.getElementById('phone');
+        const pr = /^[0-9]{3}[-]+[0-9]{4}[-]+[0-9]{4}$/
+        const c1 = document.getElementById('car');
+        const c2 = document.getElementById('car_2nd');
+        const cr = /^[0-9]{2}[가-힣]{1}[0-9]{4}|[0-9]{3}[가-힣]{1}[0-9]{4}/;
+        const bt = document.getElementById('postbtn');
+        const form = document.getElementById('form');
+        const msg =
+            (id.value.length > 10) ? 'id: too long' :
+            (pr.test(ph.value) === false) ? 'phone: wrong input' :
+            (cr.test(c1.value) === false) ? 'car1: wrong input' :
+            (cr.test(c2.value) === false && (c2.value !== '')) ? 'car2: wrong input' : 0;
+
+        (function () {
+            if (typeof msg === 'string') {
+                bt.textContent = msg;
+                return false;
+            }
+            window.location.href = "https://krapjost.github.io/PKL/index.html"
+        })();
+    }
+</script>
