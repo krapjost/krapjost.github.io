@@ -165,7 +165,7 @@ function toTop() {
 }
 function toBottom() {
   window.scroll({
-    top: window.scrollMaxY,
+    top: document.body.scrollHeight,
     behavior: 'smooth'
   });
 }
