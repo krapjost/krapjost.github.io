@@ -27,15 +27,25 @@ body {
     background-color: map-get($foundation-palette, fourth);
     line-height: 1.7;
     width: 100%;
-    a{
-        color: map-get($foundation-palette, secondary);
+
+    a {
+        color: map-get($foundation-palette, primary);
     }
-    a:hover{
+
+    a:hover {
         color: map-get($foundation-palette, third);
     }
 }
 
 @media (min-width: 200px) and (max-width:800px) {
+    .v-hidden {
+        visibility: hidden;
+
+    }
+
+    .d-none {
+        display: none;
+    }
 
     #project {
         display: none;
@@ -50,11 +60,13 @@ body {
         top: -60px;
         transition: all .5s;
     }
+
     nav {
         width: 100%;
         position: fixed;
         top: 0;
         transition: all .5s;
+
         ul {
             display: flex;
             flex-direction: row;
@@ -62,6 +74,7 @@ body {
 
             .current {
                 background-color: map-get($foundation-palette, fourth);
+
                 span {
                     display: none;
                 }
@@ -123,6 +136,7 @@ body {
         div {
             width: 100%;
             margin: 10px 0;
+
             article {
                 width: 95%;
                 text-align: left;
@@ -149,7 +163,7 @@ body {
                     margin: 10px 0;
                 }
 
-                ol{
+                ol {
                     margin-left: 20px;
                     list-style: square;
                 }
@@ -162,7 +176,7 @@ body {
             text-align: center;
             margin: 0 20px;
             color: map-get($foundation-palette, primary);
-            
+
         }
 
         i:hover {
@@ -171,7 +185,57 @@ body {
         }
     }
 
+
+
+    .v-mode {
+        position: fixed;
+
+        bottom: 80px;
+        right: 30px;
+
+        width: 40px;
+        height: 30px;
+
+        border-radius: 30px;
+        padding: 6px 12px;
+
+        transition: all .3s ease-in-out;
+    }
+
+
+    .v-mode:hover {
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+
+    .fa-moon {
+        background-color: #393e4650;
+        transition: all .3s ease-in-out;
+    }
+
+    .fa-sun {
+        background-color: #393e4650;
+        transition: all .3s ease-in-out;
+    }
+
+    .scroll-btn {
+        position: fixed;
+
+        bottom: 45px;
+        right: 30px;
+
+        width: 40px;
+        height: 30px;
+
+        border-radius: 30px;
+        padding: 6px 14px;
+        background-color: #393e4650;
+        transition: all .3s ease-in-out;
+    }
+
+
 }
+
 
 @media (min-width: 801px) {
 
