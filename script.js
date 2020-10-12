@@ -33,11 +33,55 @@ const switchPage = e => {
 
 };
 
-// rmClass(select('.current'), 'current');
-//       rmClass(e.target.parentNode, 'li');
-//       addClass(e.target.parentNode, 'current');
-
-
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
 selectAll('.li')[1].addEventListener('click', event => switchPage(event));
 selectAll('.li')[2].addEventListener('click', event => switchPage(event));
+
+
+
+function onCondition(cb) {
+  if (!cb) {
+    throw Error('Invalid required arguments');
+  }
+
+  return function () {
+    const condition = window.scrollY > 200;
+    return requestAnimationFrame(() => {
+      switch (condition) {
+        case false:
+          break;
+        case true:
+          return cb();
+      }
+    });
+
+  };
+}
+
+
+function onScroll() {
+  const direction = (window.scrollY < window.oldScroll) ?
+    (() => {
+      return false;
+    })() :
+    (() => {
+      return true;
+    })();
+  window.oldScroll = window.scrollY;
+
+
+  let targetElement = select('nav');
+
+  switch (direction) {
+    case true:
+      targetElement.className += " " + "nav-up";
+      break;
+    case false:
+      targetElement.className = targetElement.className.split(' ')[0];
+      break;
+  }
+}
+
+window.addEventListener('scroll', onCondition(onScroll), {
+  passive: true
+});

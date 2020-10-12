@@ -24,6 +24,7 @@ $z-index: (topper: 100,
 body {
     font-family: $font-stack;
     color: map-get($foundation-palette, primary);
+    background-color: map-get($foundation-palette, fourth);
     line-height: 1.7;
     width: 100%;
     a{
@@ -45,11 +46,14 @@ body {
     }
 
     //nav
-    .nav {
+    .nav-up {
+        top: -60px;
+        transition: all .5s;
+    }
+    nav {
         width: 100%;
         position: fixed;
         top: 0;
-
         ul {
             display: flex;
             flex-direction: row;
@@ -57,16 +61,15 @@ body {
 
             .current {
                 background-color: map-get($foundation-palette, fourth);
-
                 span {
                     display: none;
                 }
 
                 i {
                     width: 100%;
-                    padding: 15px;
                     font-size: x-large;
                     color: map-get($foundation-palette, primary);
+                    transition: all .5s ease-in-out;
                 }
             }
 
@@ -81,7 +84,7 @@ body {
 
                 i {
                     width: 100%;
-                    padding: 15px;
+                    // padding: 15px;
                     font-size: x-large;
                     color: map-get($foundation-palette, third);
                     transition: all .1s;
@@ -115,22 +118,26 @@ body {
         padding-top: 50px;
         width: 100%;
         height: fit-content;
-        background-color: map-get($foundation-palette, fourth);
 
         div {
             width: 100%;
-
+            margin: 10px 0;
             article {
+                width: 95%;
+                text-align: left;
+                padding: 20px;
+                margin: auto;
 
                 h1 {
-                    font-size: xx-large;
+                    font-size: x-large;
                     color: map-get($foundation-palette, primary);
+                    margin: 10px;
                 }
 
                 h2 {
                     font-size: larger;
                     padding: 10px;
-                    margin: 10px 0;
+                    margin: 20px 0;
                     color: map-get($foundation-palette, fourth);
                     background-color: map-get($foundation-palette, primary);
                     text-align: center;
@@ -138,16 +145,13 @@ body {
 
                 h3 {
                     font-size: larger;
+                    margin: 10px 0;
                 }
 
                 ol{
                     margin-left: 20px;
                     list-style: square;
                 }
-                width: 90%;
-                text-align: left;
-                padding: 20px;
-                margin: auto;
             }
         }
 
@@ -155,7 +159,7 @@ body {
             font-size: 50px;
             font-weight: bolder;
             text-align: center;
-            margin: 20px;
+            margin: 0 20px;
             color: map-get($foundation-palette, primary);
             
         }
@@ -171,7 +175,7 @@ body {
 @media (min-width: 801px) {
 
     //nav
-    .nav {
+    nav {
         width: 100%;
         position: fixed;
         bottom: 0;
