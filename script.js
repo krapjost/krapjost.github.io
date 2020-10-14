@@ -39,7 +39,7 @@ function onCondition(cb) {
   }
 
   return function () {
-    const condition = window.scrollY > 100;
+    const condition = window.scrollY > 50;
     return requestAnimationFrame(() => {
       switch (condition) {
         case false:
