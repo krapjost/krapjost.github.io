@@ -1,5 +1,5 @@
 $foundation-palette: (primary: #222831,
-    secondary: #393e46,
+    secondary: #657894,
     third: #00adb5,
     fourth: #eeeeee);
 
@@ -88,7 +88,7 @@ body {
             }
 
             .li-hover:hover {
-                background-color: map-get($foundation-palette, primary);
+                background-color: map-get($foundation-palette, fourth);
                 transition: all .1s;
                 cursor: pointer;
 
@@ -100,7 +100,7 @@ body {
                     width: 100%;
                     // padding: 15px;
                     font-size: x-large;
-                    color: map-get($foundation-palette, third);
+                    color: map-get($foundation-palette, primary);
                     transition: all .1s;
                 }
             }
@@ -160,12 +160,36 @@ body {
 
                 h3 {
                     font-size: larger;
-                    margin: 10px 0;
+                    margin: 10px;
                 }
 
+                h4 {
+                    text-align: center;
+                    margin: 10px 0;
+                }
                 ol {
                     margin-left: 20px;
                     list-style: square;
+                    li {
+                        font-weight: 500;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    font-weight: bolder;
+                    text-align: center;
+                    margin: 5px auto;
+                }
+                .joke {
+                    display: inline;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: map-get($foundation-palette, secondary);
+                }
+                p {
+                    text-align: left;
+                    padding: 10px;
                 }
             }
         }
@@ -174,7 +198,7 @@ body {
             font-size: 50px;
             font-weight: bolder;
             text-align: center;
-            margin: 0 20px;
+            margin: 20px;
             color: map-get($foundation-palette, primary);
 
         }
@@ -199,23 +223,23 @@ body {
         border-radius: 30px;
         padding: 6px 12px;
 
-        transition: all .3s ease-in-out;
+        
     }
 
 
     .v-mode:hover {
         cursor: pointer;
-        transition: all .3s ease-in-out;
+        
     }
 
     .fa-moon {
         background-color: #393e4650;
-        transition: all .3s ease-in-out;
+        
     }
 
     .fa-sun {
         background-color: #393e4650;
-        transition: all .3s ease-in-out;
+        
     }
 
     .scroll-btn {
@@ -401,23 +425,21 @@ body {
         border-radius: 30px;
         padding: 6px 12px;
 
-        transition: all .3s ease-in-out;
     }
 
 
     .v-mode:hover {
         cursor: pointer;
-        transition: all .3s ease-in-out;
     }
 
     .fa-moon {
         background-color: #393e4650;
-        transition: all .3s ease-in-out;
+        
     }
 
     .fa-sun {
         background-color: #393e4650;
-        transition: all .3s ease-in-out;
+        
     }
 
     .scroll-btn {
