@@ -39,7 +39,7 @@ function onCondition(cb) {
   }
 
   return function () {
-    const condition = window.scrollY > 200;
+    const condition = window.scrollY > 100;
     return requestAnimationFrame(() => {
       switch (condition) {
         case false:
@@ -71,8 +71,8 @@ function onScroll() {
   switch (direction) {
     case false: //up
       nav.className = nav.className.split(' ')[0];
-      upBtn.style.display = "block";
       downBtn.style.display = "none";
+      upBtn.style.display = "block";
       break;
     case true: //down
       nav.className = "nav nav-up";
