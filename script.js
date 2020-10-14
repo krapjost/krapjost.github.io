@@ -162,14 +162,12 @@ function toTop() {
     top: 0,
     behavior: 'smooth'
   });
-  select("#upBtn").style.display = "none";
 }
 function toBottom() {
   window.scroll({
     top: document.body.scrollHeight,
     behavior: 'smooth'
   });
-  select("#downBtn").style.display = "none";
 }
 
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
