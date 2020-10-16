@@ -92,30 +92,27 @@ function onScroll() {
 
   switch (direction) {
     case false:
-      if (upBtn.style.display === "block") {
+      if (upBtn.style.visibility === "visible") {
         ticking = false;
 
         break;
       }
       nav.className = nav.className.split(' ')[0];
-      downBtn.style.display = "none";
-      upBtn.style.display = "block";
+      downBtn.style.visibility = "hidden";
+      upBtn.style.visibility = "visible";
       console.log('Dom Manipulating while scroll Up');
       break;
 
     case true:
-      if (downBtn.style.display === "block") {
+      if (downBtn.style.visibility === "visible") {
         ticking = false;
 
         break;
       }
-      // if (window.scrollY === h2[0].offsetTop) {
-      //   h2[0].style.position = "fixed";
-      //   h2[0].style.width = "100%";
-      // }
+
       nav.className = "nav nav-up";
-      upBtn.style.display = "none";
-      downBtn.style.display = "block";
+      upBtn.style.visibility = "hidden";
+      downBtn.style.visibility = "visible";
       console.log('Dom Manipulating while scroll Down');
       break;
   }
