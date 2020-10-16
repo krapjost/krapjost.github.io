@@ -94,7 +94,6 @@ function onScroll() {
     case false:
       if (upBtn.style.visibility === "visible") {
         ticking = false;
-
         break;
       }
       nav.className = nav.className.split(' ')[0];
