@@ -1,6 +1,7 @@
 const nav = select('nav');
 const upBtn = select('#upBtn');
 const downBtn = select('#downBtn');
+
 const moon = select('#moon');
 const sun = select('#sun');
 const body = select('body');
@@ -10,6 +11,7 @@ const h2 = selectAll('h2');
 const h1 = selectAll('h1');
 const a = selectAll('a');
 const span = selectAll('span');
+
 
 
 function select(selector) {
@@ -46,33 +48,38 @@ const switchPage = e => {
   }
 
 };
+let ticking = false;
+let current_scroll_position = 0;
 
 function onCondition(cb) {
   if (!cb) {
     throw Error('Invalid required arguments');
   }
-  let ticking = false;
+  if (ticking) {
+    return;
+  }
+  console.log("ticking is", ticking);
 
   if (!ticking) {
-    return function () {
+    ticking = true;
+    return () => {
       const maxheight = document.body.offsetHeight - window.innerHeight;
       const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;
-      // return requestAnimationFrame(() => {
-        switch (condition) {
-          case false:
-            break;
-          case true:
-            return cb();
+      return requestAnimationFrame(() => {
+        if (condition === false) {
+          console.log("condition is", condition);
+          return;
+        } else {
+          return cb();
         }
-      // });
-
+      });
     };
   }
-
 }
 
-
 function onScroll() {
+  console.log('scrolling', window.scrollY);
+
   const direction = (window.scrollY < window.oldScroll) ?
     (() => {
       return false; //scroll up
@@ -82,16 +89,26 @@ function onScroll() {
     })();
   window.oldScroll = window.scrollY;
 
+
   switch (direction) {
-    case false: //up
+    case false:
+      if (upBtn.style.display === "block") {
+        ticking = false;
+
+        break;
+      }
       nav.className = nav.className.split(' ')[0];
       downBtn.style.display = "none";
       upBtn.style.display = "block";
-      ticking = true;
-
+      console.log('Dom Manipulating while scroll Up');
       break;
-    case true: //down
-      // 의사코드
+
+    case true:
+      if (downBtn.style.display === "block") {
+        ticking = false;
+
+        break;
+      }
       // if (window.scrollY === h2[0].offsetTop) {
       //   h2[0].style.position = "fixed";
       //   h2[0].style.width = "100%";
@@ -99,10 +116,10 @@ function onScroll() {
       nav.className = "nav nav-up";
       upBtn.style.display = "none";
       downBtn.style.display = "block";
-      ticking = true;
-
+      console.log('Dom Manipulating while scroll Down');
       break;
   }
+  return;
 }
 
 function nightModeChange(e) {
@@ -194,6 +211,6 @@ select('#upBtn').addEventListener("mousedown", toTop);
 select('#downBtn').addEventListener("mousedown", toBottom);
 select('#upBtn').addEventListener("touchstart", toTop);
 select('#downBtn').addEventListener("touchstart", toBottom);
-window.addEventListener('scroll', onScroll, {
+window.addEventListener('scroll', onCondition(onScroll), {
   passive: true
 });
