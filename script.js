@@ -62,7 +62,7 @@ function onCondition(cb) {
   if (!ticking) {
     ticking = true;
     return () => {
-      const maxheight = document.body.offsetHeight - window.innerHeight;
+      const maxheight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
       const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;
       
       if(window.scrollY === maxheight) {
