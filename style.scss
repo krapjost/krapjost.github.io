@@ -27,7 +27,7 @@ body {
     background-color: map-get($foundation-palette, fourth);
     line-height: 1.7;
     width: 100%;
-
+    transition: all 0.3s ease-out;
     a {
         color: map-get($foundation-palette, primary);
     }
@@ -58,7 +58,7 @@ body {
     //nav
     .nav-up {
         top: -60px;
-        transition: all .5s;
+        transition: all .5s ease-out;
     }
 
     nav {
@@ -66,7 +66,6 @@ body {
         position: fixed;
         z-index: 10;
         top: 0;
-        transition: all .5s;
 
         ul {
             display: flex;
@@ -112,6 +111,7 @@ body {
                 list-style: none;
                 width: 100%;
                 text-align: center;
+                transition: all .3s ease-out;
 
                 span {
                     color: map-get($foundation-palette, primary);
@@ -153,12 +153,15 @@ body {
                 h2 {
                     position: sticky;
                     top: 0;
+                    left: 0;
                     font-size: larger;
                     padding: 10px;
-                    margin: 20px 0;
+                    margin: 0;
                     color: map-get($foundation-palette, fourth);
                     background-color: map-get($foundation-palette, primary);
                     text-align: center;
+                    transition: all .3s ease-in-out;
+                    // border-radius: 0 0 50px 50px;
                 }
 
                 h3 {
@@ -224,6 +227,8 @@ body {
         border-radius: 30px;
         padding: 6px 12px;
 
+        transition: all .3s ease-in-out;
+
     }
 
 
@@ -234,12 +239,10 @@ body {
 
     .fa-moon {
         background-color: #393e4650;
-        
     }
 
     .fa-sun {
         background-color: #393e4650;
-        
     }
 
     .scroll-btn {

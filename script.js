@@ -1,3 +1,22 @@
+
+const nav = select('nav');
+const upBtn = select('#upBtn');
+const downBtn = select('#downBtn');
+const moon = select('#moon');
+const sun = select('#sun');
+const body = select('body');
+const li = selectAll('.li');
+const icon = selectAll("i");
+const h2 = selectAll('h2');
+const h1 = selectAll('h1');
+const a = selectAll('a');
+const span = selectAll('span');
+// 의사코드
+if(window.scrollY === h2[0].offsetTop) {
+  h2[0].style.position = "fixed";
+  h2[0].style.width = "100%";
+}
+
 function select(selector) {
   return document.querySelector(selector);
 }
@@ -37,19 +56,24 @@ function onCondition(cb) {
   if (!cb) {
     throw Error('Invalid required arguments');
   }
+  let ticking = false;
 
-  return function () {
-    const condition = window.scrollY > 50;
-    return requestAnimationFrame(() => {
-      switch (condition) {
-        case false:
-          break;
-        case true:
-          return cb();
-      }
-    });
+  if (!ticking) {
+    return function () {
+      const maxheight = document.body.offsetHeight - window.innerHeight;
+      const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;  
+      return requestAnimationFrame(() => {
+        switch (condition) {
+          case false:
+            break;
+          case true:
+            return cb();
+        }
+      });
 
-  };
+    };
+  }
+
 }
 
 
@@ -64,110 +88,103 @@ function onScroll() {
   window.oldScroll = window.scrollY;
 
 
-  const nav = select('nav');
-  const upBtn = select('#upBtn');
-  const downBtn = select('#downBtn');
 
   switch (direction) {
     case false: //up
       nav.className = nav.className.split(' ')[0];
       downBtn.style.display = "none";
       upBtn.style.display = "block";
+      ticking = true;
+
       break;
     case true: //down
       nav.className = "nav nav-up";
       upBtn.style.display = "none";
       downBtn.style.display = "block";
+      ticking = true;
+
       break;
   }
 }
 
 function nightModeChange(e) {
-  const moon = selectAll('.v-mode')[0];
-  const sun = selectAll('.v-mode')[1];
-  const body = select('body');
-  const li = selectAll('.li');
-  const icon = selectAll("i");
-  const h2 = selectAll('h2');
-  const h1 = selectAll('h1');
-  const a = selectAll('a');
-  const span = selectAll('span');
 
- switch (e.target) {
-   case moon:
-    for (let i = 0; i<li.length; i++) {
-      li[i].style.backgroundColor = "#222831";
-      li[i].firstElementChild.style.color = "#eeeeee";
-    }
-    for (let i = 0; i<icon.length; i++) {
-      icon[i].style.color = "#eeeeee";
-    }
-    for (let i = 0; i<a.length; i++) {
-      a[i].style.color = "#eeeeee";
-    }
-    for (let i = 0; i<span.length; i++) {
-      span[i].style.color = "#eeeeee";
-    }
-    for (let i = 0; i<h2.length; i++) {
-      h2[i].style.backgroundColor = "#eeeeee";
-      h2[i].style.color = "#222831";
-    }
-    for (let i = 0; i<h1.length; i++) {
-      h1[i].style.color = "#eeeeee";
-    }
-  
-    body.style.backgroundColor = "#222831";
-    body.style.color = "#eeeeee";
+  switch (e.target) {
+    case moon:
+      for (let i = 0; i < li.length; i++) {
+        li[i].style.backgroundColor = "#222831";
+        li[i].firstElementChild.style.color = "#eeeeee";
+      }
+      for (let i = 0; i < icon.length; i++) {
+        icon[i].style.color = "#eeeeee";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "#eeeeee";
+      }
+      for (let i = 0; i < span.length; i++) {
+        span[i].style.color = "#eeeeee";
+      }
+      for (let i = 0; i < h2.length; i++) {
+        h2[i].style.backgroundColor = "#eeeeee";
+        h2[i].style.color = "#222831";
+      }
+      for (let i = 0; i < h1.length; i++) {
+        h1[i].style.color = "#eeeeee";
+      }
 
-    moon.className = "v-mode fas fa-moon v-hidden";
-    sun.className = "v-mode fas fa-sun";
+      body.style.backgroundColor = "#222831";
+      body.style.color = "#eeeeee";
 
-     break;
- 
-   case sun:
-    for (let i = 0; i<li.length; i++) {
-      li[i].style.backgroundColor = "#eeeeee";
-      li[i].firstElementChild.style.color = "#222831";
-    }
-    for (let i = 0; i<icon.length; i++) {
-      icon[i].style.color = "#222831";
-    }
-    for (let i = 0; i<a.length; i++) {
-      a[i].style.color = "#222831";
-    }
-    for (let i = 0; i<span.length; i++) {
-      span[i].style.color = "#222831";
-    }
-    for (let i = 0; i<h2.length; i++) {
-      h2[i].style.backgroundColor = "#222831";
-      h2[i].style.color = "#eeeeee";
-    }
-    for (let i = 0; i<h1.length; i++) {
-      h1[i].style.color = "#222831";
-    }
-  
-    body.style.backgroundColor = "#eeeeee";
-    body.style.color = "#222831";
+      sun.style.display = "block";
+      moon.style.display = "none";
 
-    moon.className = "v-mode fas fa-moon";
-    sun.className = "v-mode fas fa-sun v-hidden";
-    
-     break;
- }
+      break;
+
+    case sun:
+      for (let i = 0; i < li.length; i++) {
+        li[i].style.backgroundColor = "#eeeeee";
+        li[i].firstElementChild.style.color = "#222831";
+      }
+      for (let i = 0; i < icon.length; i++) {
+        icon[i].style.color = "#222831";
+      }
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "#222831";
+      }
+      for (let i = 0; i < span.length; i++) {
+        span[i].style.color = "#222831";
+      }
+      for (let i = 0; i < h2.length; i++) {
+        h2[i].style.backgroundColor = "#222831";
+        h2[i].style.color = "#eeeeee";
+      }
+      for (let i = 0; i < h1.length; i++) {
+        h1[i].style.color = "#222831";
+      }
+
+      body.style.backgroundColor = "#eeeeee";
+      body.style.color = "#222831";
+
+      moon.style.display = "block";
+      sun.style.display = "none";
+
+      break;
+  }
 
 }
 
 function toTop() {
   window.scroll({
     top: 0,
-    behavior: 'smooth'
   });
+  select('#upBtn').style.display = "none";
 }
+
 function toBottom() {
   window.scroll({
     top: document.body.scrollHeight,
-    behavior: 'smooth'
   });
+  select('#downBtn').style.display = "none";
 }
 
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
