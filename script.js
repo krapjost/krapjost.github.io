@@ -57,14 +57,14 @@ function onCondition(cb) {
     return function () {
       const maxheight = document.body.offsetHeight - window.innerHeight;
       const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;
-      return requestAnimationFrame(() => {
+      // return requestAnimationFrame(() => {
         switch (condition) {
           case false:
             break;
           case true:
             return cb();
         }
-      });
+      // });
 
     };
   }
@@ -82,8 +82,6 @@ function onScroll() {
     })();
   window.oldScroll = window.scrollY;
 
-
-
   switch (direction) {
     case false: //up
       nav.className = nav.className.split(' ')[0];
@@ -94,10 +92,10 @@ function onScroll() {
       break;
     case true: //down
       // 의사코드
-      if (window.scrollY === h2[0].offsetTop) {
-        h2[0].style.position = "fixed";
-        h2[0].style.width = "100%";
-      }
+      // if (window.scrollY === h2[0].offsetTop) {
+      //   h2[0].style.position = "fixed";
+      //   h2[0].style.width = "100%";
+      // }
       nav.className = "nav nav-up";
       upBtn.style.display = "none";
       downBtn.style.display = "block";
@@ -192,8 +190,10 @@ selectAll('.li')[1].addEventListener('click', event => switchPage(event));
 selectAll('.li')[2].addEventListener('click', event => switchPage(event));
 selectAll('.v-mode')[0].addEventListener('click', event => nightModeChange(event));
 selectAll('.v-mode')[1].addEventListener('click', event => nightModeChange(event));
-select('#upBtn').addEventListener("click", toTop);
-select('#downBtn').addEventListener("click", toBottom);
+select('#upBtn').addEventListener("mousedown", toTop);
+select('#downBtn').addEventListener("mousedown", toBottom);
+select('#upBtn').addEventListener("touchstart", toTop);
+select('#downBtn').addEventListener("touchstart", toBottom);
 window.addEventListener('scroll', onCondition(onScroll), {
   passive: true
 });
