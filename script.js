@@ -58,13 +58,19 @@ function onCondition(cb) {
   if (ticking) {
     return;
   }
-  console.log("ticking is", ticking);
 
   if (!ticking) {
     ticking = true;
     return () => {
       const maxheight = document.body.offsetHeight - window.innerHeight;
       const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;
+      
+      if(window.scrollY === maxheight) {
+        downBtn.style.visibility = "hidden";
+      } else if (window.scrollY === 0) {
+        upBtn.style.visibility = "hidden";
+      }
+      
       return requestAnimationFrame(() => {
         if (condition === false) {
           console.log("condition is", condition);
@@ -80,6 +86,8 @@ function onCondition(cb) {
 function onScroll() {
   console.log('scrolling', window.scrollY);
 
+
+
   const direction = (window.scrollY < window.oldScroll) ?
     (() => {
       return false; //scroll up
@@ -91,7 +99,7 @@ function onScroll() {
 
 
   switch (direction) {
-    case false:
+    case false: //up
       if (upBtn.style.visibility === "visible") {
         ticking = false;
         break;
@@ -102,7 +110,7 @@ function onScroll() {
       console.log('Dom Manipulating while scroll Up');
       break;
 
-    case true:
+    case true: //down
       if (downBtn.style.visibility === "visible") {
         ticking = false;
 
@@ -185,14 +193,12 @@ function nightModeChange(e) {
 }
 
 function toTop() {
-  upBtn.style.visibility = "hidden";
   window.scroll({
     top: 0,
   });
 }
 
 function toBottom() {
-  downBtn.style.visibility = "hidden";
   window.scroll({
     top: document.body.scrollHeight,
   });
