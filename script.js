@@ -62,17 +62,15 @@ function onCondition(cb) {
   if (!ticking) {
     ticking = true;
     return () => {
-      const maxheight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
-      const condition = window.scrollY > 200 && window.scrollY < maxheight - 200;
-      
-      if(window.scrollY === maxheight) {
-        downBtn.style.visibility = "hidden";
-      } else if (window.scrollY === 0) {
-        upBtn.style.visibility = "hidden";
-      }
-      
+      const maxHeight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      const condition = scrollPosition > 300 && scrollPosition < maxHeight - 300;
+
       return requestAnimationFrame(() => {
         if (condition === false) {
+          downBtn.style.visibility = "hidden";
+          upBtn.style.visibility = "hidden";
           console.log("condition is", condition);
           return;
         } else {
@@ -86,44 +84,34 @@ function onCondition(cb) {
 function onScroll() {
   console.log('scrolling', window.scrollY);
 
-
-
-  const direction = (window.scrollY < window.oldScroll) ?
-    (() => {
-      return false; //scroll up
-    })() :
-    (() => {
-      return true; //scroll down
-    })();
+  let direction = true; // down
+  if (window.scrollY < window.oldScroll) {
+    direction = false; //up
+  }
   window.oldScroll = window.scrollY;
 
-
-  switch (direction) {
-    case false: //up
-      if (upBtn.style.visibility === "visible") {
-        ticking = false;
-        break;
-      }
-      nav.className = nav.className.split(' ')[0];
-      downBtn.style.visibility = "hidden";
-      upBtn.style.visibility = "visible";
-      console.log('Dom Manipulating while scroll Up');
-      break;
-
-    case true: //down
-      if (downBtn.style.visibility === "visible") {
-        ticking = false;
-
-        break;
-      }
-
-      nav.className = "nav nav-up";
-      upBtn.style.visibility = "hidden";
-      downBtn.style.visibility = "visible";
-      console.log('Dom Manipulating while scroll Down');
-      break;
+  if (!direction) {
+    if (upBtn.style.visibility === "visible") {
+      ticking = false;
+      return;
+    }
+    nav.className = nav.className.split(' ')[0];
+    downBtn.style.visibility = "hidden";
+    upBtn.style.visibility = "visible";
+    console.log('Dom Manipulating while scroll Up');
+    return;
+  } else {
+    if (downBtn.style.visibility === "visible") {
+      ticking = false;
+      return;
+    }
+    nav.className = "nav nav-up";
+    upBtn.style.visibility = "hidden";
+    downBtn.style.visibility = "visible";
+    console.log('Dom Manipulating while scroll Down');
+    return;
   }
-  return;
+
 }
 
 function nightModeChange(e) {
