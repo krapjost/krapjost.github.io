@@ -189,14 +189,14 @@ function toTop() {
   window.scroll({
     top: 0,
   });
-  select('#upBtn').style.display = "none";
+  upBtn.style.visibility = "hidden";
 }
 
 function toBottom() {
   window.scroll({
     top: document.body.scrollHeight,
   });
-  select('#downBtn').style.display = "none";
+  downBtn.style.visibility = "hidden";
 }
 
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
