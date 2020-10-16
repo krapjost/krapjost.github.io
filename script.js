@@ -147,8 +147,8 @@ function nightModeChange(e) {
       body.style.backgroundColor = "#222831";
       body.style.color = "#eeeeee";
 
-      sun.style.display = "block";
-      moon.style.display = "none";
+      sun.style.visibility = "visible";
+      moon.style.visibility = "hidden";
 
       break;
 
@@ -177,8 +177,8 @@ function nightModeChange(e) {
       body.style.backgroundColor = "#eeeeee";
       body.style.color = "#222831";
 
-      moon.style.display = "block";
-      sun.style.display = "none";
+      moon.style.visibility = "visible";
+      sun.style.visibility = "hidden";
 
       break;
   }
@@ -186,17 +186,17 @@ function nightModeChange(e) {
 }
 
 function toTop() {
+  upBtn.style.visibility = "hidden";
   window.scroll({
     top: 0,
   });
-  upBtn.style.visibility = "hidden";
 }
 
 function toBottom() {
+  downBtn.style.visibility = "hidden";
   window.scroll({
     top: document.body.scrollHeight,
   });
-  downBtn.style.visibility = "hidden";
 }
 
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
