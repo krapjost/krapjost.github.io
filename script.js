@@ -194,6 +194,6 @@ select('#upBtn').addEventListener("mousedown", toTop);
 select('#downBtn').addEventListener("mousedown", toBottom);
 select('#upBtn').addEventListener("touchstart", toTop);
 select('#downBtn').addEventListener("touchstart", toBottom);
-window.addEventListener('scroll', onCondition(onScroll), {
+window.addEventListener('scroll', onScroll, {
   passive: true
 });
