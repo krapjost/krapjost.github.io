@@ -27,7 +27,7 @@
 
 </head>
 
-<body name="top">
+<body class="container">
   <noscript>
     <div>현재 사용 중인 브라우저는 javascript를 지원하지 않거나, 해당 기능이 활성화되어 있지 않습니다.</div>
   </noscript>
@@ -55,58 +55,78 @@
 
     <div id="profile">
       <article>
-        <h2>인적사항</h2>
-        <h3><p class="joke">let</p>박기둥<p class="joke">= "Web Developer";</p> </h3>
+        <h1>인적사항</h1>
+
+        <div id="name">
+          <h2>
+            <p class="let">let</p>
+            <p class="my_name">박기둥</p>
+            <p class="let">= "Web Developer" ;</p>
+          </h2>
+        </div>
 
         <h3>.Career</h3>
         <span>
           2020.07.06 ~ 2020.09.29<br>
           구공팩토리 웹 개발자 부트캠프
         </span>
-        
+
         <h3>.Contact</h3>
-        <a href="mailto:krapjost@gmail.com">
-          <i class="i fas fa-envelope"></i>
-           메일을 전송합니다.
-        </a>
+          <a href="mailto:krapjost@gmail.com">
+            <span class="subtitle">메일을 전송합니다.</span>
+            <i class="i fas fa-envelope"></i>
+          </a>
+
         <span>krapjost@gmail.com</span>
-        
+
         <h3>.Github</h3>
         <a href="https://github.com/krapjost" target="_blank">
+          <span class="subtitle">아래로 이동됩니다.</span>
           <i class="i fab fa-github-alt"></i>
-          아래 주소로 연결됩니다.
         </a>
         <span>https://github.com/krapjost</span>
-        
+
       </article>
       <article>
-        <h2>현재 보유 능력</h2>
-        <div>
+        <h1>현재 보유 능력</h1>
+        <a href="#html5">
+          <span id="html5" class="subtitle">HTML5 공부기록</span>
           <i class="i fab fa-html5 fa-3x"></i>
+        </a>
+        <div>
           <ol>
             <li>시맨틱 태그를 이해하고 검색 엔진 최적화를 이뤄낼 수 있다.</li>
             <li>커스텀 엘리먼트를 활용하여 싱글 페이지 앱을 구현할 수 있다.</li>
           </ol>
         </div>
-        
-        <div>
+
+        <a href="#html5"><span id="css3" class="subtitle">CSS3 공부기록</span>
           <i class="i fab fa-css3-alt fa-3x"></i>
+        </a>
+
+        <div>
           <ol>
             <li>미디어 쿼리를 활용하여 반응형 웹을 구현할 수 있다.</li>
             <li>플렉스와 그리드를 활용하여 반응형 웹을 구현할 수 있다.</li>
           </ol>
         </div>
-        
+
         <div>
-          <i class="i fab fa-sass fa-3x"></i>
+          <a href="#html5"><span id="scss" class="subtitle">SCSS 공부기록</span>
+            <i class="i fab fa-sass fa-3x"></i>
+          </a>
           <ol>
             <li>css파일을 최적화할 수 있다.</li>
             <li>조건문을 사용할 수 있다.</li>
           </ol>
+
         </div>
-        
+
         <div>
-          <i class="i fab fa-js-square fa-3x"></i>
+          <a href="#html5"><span id="javascript" class="subtitle">JavaScript 공부기록</span>
+            <i class="i fab fa-js-square fa-3x"></i>
+          </a>
+
           <ol>
             <li>es6+문법을 이해하고 활용할 수 있다.</li>
             <li>바닐라 자바스크립트로 싱글 페이지 앱을 구현할 수 있다.</li>
@@ -114,17 +134,23 @@
             <li>타입 스크립트의 정적 타이핑을 이해하고 활용할 수 있다.</li>
           </ol>
         </div>
-        
+
         <div>
-          <i class="i fab fa-node fa-3x"></i>
+          <a href="#html5"><span id="node-js" class="subtitle">Node-JS 공부기록</span>
+            <i class="i fab fa-node fa-3x"></i>
+          </a>
           <ol>
             <li>express를 사용하여 서버를 구축할 수 있다.</li>
             <li>mvc 패턴을 이해하고 활용할 수 있다.</li>
           </ol>
+
         </div>
-        
+
         <div>
-          <i class="i fas fa-database fa-3x"></i>
+          <a href="#html5"><span id="database" class="subtitle">DataBase 공부기록</span>
+
+            <i class="i fas fa-database fa-3x"></i>
+          </a>
           <ol>
             <li>mysql을 활용하여 데이터베이스를 구축할 수 있다.</li>
             <li>외래키를 활용한 테이블 연결을 이해하고 활용할 수 있다.</li>
@@ -132,90 +158,105 @@
             <li>쿼리문을 이해하고 사용할 수 있다.</li>
           </ol>
         </div>
-        
+
       </article>
 
       <article>
-        <h2>공부하고 싶은 것</h2>
+        <h1>공부하고 싶은 것</h1>
         <div>
-          <i class="i fab fa-react fa-3x"></i>
+          <a href="#html5"><span id="react" class="subtitle">React 공부기록</span>
+
+            <i class="i fab fa-react fa-3x"></i>
+          </a>
           <ol>
             <li>리액트를 활용하여 더 쉽게 SPA를 구현하는 경험을 해보고 싶다.</li>
             <li>리액트의 코드를 읽어보고 구동 원리를 이해하고 싶다.</li>
           </ol>
         </div>
-        
+
         <div>
-          <i class="i fab fa-rust fa-3x"></i>
+          <a href="#html5"><span id="rust" class="subtitle">Rust 공부기록</span>
+            <i class="i fab fa-rust fa-3x"></i>
+
+          </a>
           <ol>
             <li>러스트를 공부하여 웹 어셈블리의 활용에 대해 이해하고 싶다.</li>
           </ol>
         </div>
 
         <div>
-          <i class="i fab fa-python fa-3x"></i>
+          <a href="#html5"><span id="python" class="subtitle">Python 공부기록</span>
+            <i class="i fab fa-python fa-3x"></i>
+
+          </a>
           <ol>
             <li>파이썬을 공부하여 머신러닝에 대해 이해하고 웹 서비스에 적용하고 싶다.</li>
           </ol>
         </div>
 
         <div>
-          <i class="i fab fa-aws fa-3x"></i>
+          <a href="#html5"><span id="aws" class="subtitle">AWS 공부기록</span>
+            <i class="i fab fa-aws fa-3x"></i>
+          </a>
           <ol>
             <li>AWS를 공부하여 서버리스로 웹 서비스를 배포하는 경험을 해보고 싶다.</li>
           </ol>
         </div>
 
         <div>
-          <i class="i fab fa-linux fa-3x"></i>
+          <a href="#html5"><span id="linux" class="subtitle">Linux 공부기록</span>
+            <i class="i fab fa-linux fa-3x"></i>
+          </a>
           <ol>
             <li>리눅스 쉘 스크립트로 업무 자동화를 이루는 것에 관심이 많다.</li>
             <li>리눅스로 운영체제에 대해 이해하고 그 지식을 서버를 구축할 때 활용하고 싶다. </li>
           </ol>
         </div>
-        
+
       </article>
       <article>
-        <h2>자기 소개</h2>
+        <h1>자기 소개</h1>
         <h3>.성격</h3>
         <span>
           MBTI = INTJ
         </span>
-          <h4>
-            평소 생각이 많고 어려운 문제 해결을 즐긴다.
-          </h4>
-          <p>
-            프로그래밍을 배우기 전에는 막연하고 당장 해결 불가능한 문제들에 대한 생각들만 반복하며 생산적이지 못한 시간을 많이 보냈지만 개발 공부를 시작하고부터는 그 에너지를 당장 해결해야하는 구체적인 문제를 해결하는 것에 쏟을 수 있어 긍정적인 시간을 보내고 있다.
-          </p>
-          <h4>
-            목표지향적이며 자기계발에 욕심이 많다.
-          </h4>
-          <p>
-            목표가 정해지면 어떻게든 해내고자 노력하며 그 노력으로 인해 나 자신이 한층 발전된 것을 발견할 때 큰 보람을 느낀다. 하지만 너무 한 문제에 몰두하다 보면 다른 문제들은 전혀 신경도 쓰지 못하는 경향이 있어 문제가 생긴 적이 많았고 스스로 해결해야 할 점이라고 생각하고 있다.
-          </p>
+        <h4>
+          평소 생각이 많고 어려운 문제 해결을 즐긴다.
+        </h4>
+        <p>
+          프로그래밍을 배우기 전에는 막연하고 당장 해결 불가능한 문제들에 대한 생각들만 반복하며 생산적이지 못한 시간을 많이 보냈지만 개발 공부를 시작하고부터는 그 에너지를 당장 해결해야하는 구체적인 문제를
+          해결하는 것에 쏟을 수 있어 긍정적인 시간을 보내고 있다.
+        </p>
+        <h4>
+          목표지향적이며 자기계발에 욕심이 많다.
+        </h4>
+        <p>
+          목표가 정해지면 어떻게든 해내고자 노력하며 그 노력으로 인해 나 자신이 한층 발전된 것을 발견할 때 큰 보람을 느낀다. 하지만 너무 한 문제에 몰두하다 보면 다른 문제들은 전혀 신경도 쓰지 못하는
+          경향이 있어 문제가 생긴 적이 많았고 스스로 해결해야 할 점이라고 생각하고 있다.
+        </p>
         <h3>.목표</h3>
         <span>
           즐거운 생각을 하며 살 수 있는 환경 만들기
         </span>
-          <h4>
-            스타트업에 취업하기
-          </h4>
-          <p>
-            내게 많은 책임과 의무가 주어지는 곳에서 일하고 싶다. 그 요구에 충족되는 실력을 기르기 위해 나 자신이 더 많은 노력을 하게 될 것이기 때문이다.
-          </p>
-          <h4>
-            사이드 프로젝트로 부수입 만들기
-          </h4>
-          <p>
-            자기계발의 일환으로 평소 생각해둔 여러가지 토이 프로젝트들을 진행하고 싶다. 최종 목표는 그 중 시장성이 보이는 것을 찾아 스타트업을 창업하고 싶다.
-          </p>
-        
+        <h4>
+          스타트업에 취업하기
+        </h4>
+        <p>
+          내게 많은 책임과 의무가 주어지는 곳에서 일하고 싶다. 그 요구에 충족되는 실력을 기르기 위해 나 자신이 더 많은 노력을 하게 될 것이기 때문이다.
+        </p>
+        <h4>
+          사이드 프로젝트로 부수입 만들기
+        </h4>
+        <p>
+          자기계발의 일환으로 평소 생각해둔 여러가지 토이 프로젝트들을 진행하고 싶다. 최종 목표는 그 중 시장성이 보이는 것을 찾아 스타트업을 창업하고 싶다.
+        </p>
+
       </article>
     </div>
 
     <div id="project">
       <article>
-        <h2>주차장 관리</h2>
+        <h1>주차장 관리</h1>
         <h3>개발 기간</h3>
         <span>2020.08.17~2020.08.28</span>
         <h3>개요</h3>
@@ -223,13 +264,17 @@
           자동화 주차장 시스템을 구상하고 구현해보았다.<br>
           입차부터 출차까지의 과정에 관리자가 신경써야 할 부분을 최소화 하고,
           또한 사용자의 입장에서도 이용이 최대한 직관적으로 느껴지게 만들고 싶었다.
-          <h4>frontEnd</h4>
+        </p>
+        <h4>frontEnd</h4>
+        <p>
           서버 사이드 렌더링으로 ejs템플릿을 사용하여 동적 웹을 만들었다.
           구상 단계부터 핸드폰으로 모든 과정을 해결할 수 있게끔 만들고 싶었기에
           렌더링 시 DB에서 데이터를 받아와 주차 가능한 공간을 실시간으로 띄워주도록 만들었다.
           입차하면 입차 시간이 DB에 저장되며 해당 정보를 받아와 주차 시간을 실시간으로 계산하여 보여준다.
           그 시간 정보를 프론트 단에서 금액으로 환산하여 출차 시 해당 금액을 결제하도록 만들었다.
-          <h4>backEnd</h4>
+        </p>
+        <h4>backEnd</h4>
+        <p>
           node.js, express 프레임워크를 사용하여 구축하였다.
           데이터베이스는 mysql을 사용하였고 디자인 패턴은 MVC로 설계했다.
           starUML을 사용하여 데이터베이스 구조를 설계했다. 하지만 개발 도중에 설계의 결함이 발견되어 처음부터 다시 만들기도 했다.
@@ -238,13 +283,15 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/PKL" target="_blank" rel="noopener noreferrer">
-            <i class="i fab fa-github"></i>주차장 깃허브로 연결됩니다.
+            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./PKL/index.html" target="_blank" rel="noopener noreferrer">
-            <i class="i fas fa-parking"></i>주차장 페이지로 연결됩니다.
+            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <i class="i fas fa-parking"></i>
           </a>
         </div>
       </article>
@@ -252,7 +299,7 @@
       <article>
 
 
-        <h2>농산물 직거래</h2>
+        <h1>농산물 직거래</h1>
 
         <h3>개발 기간</h3>
         <span>2020.08.17~2020.08.28</span>
@@ -261,13 +308,17 @@
           자동화 주차장 시스템을 구상하고 구현해보았다.<br>
           입차부터 출차까지의 과정에 관리자가 신경써야 할 부분을 최소화 하고,
           또한 사용자의 입장에서도 이용이 최대한 직관적으로 느껴지게 만들고 싶었다.
-          <h4>frontEnd</h4>
+        </p>
+        <h4>frontEnd</h4>
+        <p>
           서버 사이드 렌더링으로 ejs템플릿을 사용하여 동적 웹을 만들었다.
           구상 단계부터 핸드폰으로 모든 과정을 해결할 수 있게끔 만들고 싶었기에
           렌더링 시 DB에서 데이터를 받아와 주차 가능한 공간을 실시간으로 띄워주도록 만들었다.
           입차하면 입차 시간이 DB에 저장되며 해당 정보를 받아와 주차 시간을 실시간으로 계산하여 보여준다.
           그 시간 정보를 프론트 단에서 금액으로 환산하여 출차 시 해당 금액을 결제하도록 만들었다.
-          <h4>backEnd</h4>
+        </p>
+        <h4>backEnd</h4>
+        <p>
           node.js, express 프레임워크를 사용하여 구축하였다.
           데이터베이스는 mysql을 사용하였고 디자인 패턴은 MVC로 설계했다.
           starUML을 사용하여 데이터베이스 구조를 설계했다. 하지만 개발 도중에 설계의 결함이 발견되어 처음부터 다시 만들기도 했다.
@@ -276,13 +327,16 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/teamProject_frontend" target="_blank" rel="noopener noreferrer">
-            <i class="i fab fa-github"></i>농산물 깃허브로 연결됩니다.
+            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./farmers/index.html" target="_blank" rel="noopener noreferrer">
-            <i class="i fas fa-seedling"></i>농산물 페이지로 연결됩니다.
+            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <i class="i fas fa-seedling"></i>
+
           </a>
         </div>
       </article>
@@ -290,7 +344,7 @@
 
     <div id="studyLog">
       <article>
-        <h2>공부기록</h2>
+        <h1>공부기록</h1>
         <div>javascript</div>
         <div>html</div>
         <div>css</div>

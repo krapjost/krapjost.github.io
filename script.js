@@ -65,10 +65,11 @@ function onCondition(cb) {
       const maxHeight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-      const condition = scrollPosition > 300 && scrollPosition < maxHeight - 300;
+      const condition = scrollPosition > 10 && scrollPosition < maxHeight - 300;
 
       return requestAnimationFrame(() => {
         if (condition === false) {
+          
           downBtn.style.visibility = "hidden";
           upBtn.style.visibility = "hidden";
           console.log("condition is", condition);
@@ -131,12 +132,12 @@ function nightModeChange(e) {
       for (let i = 0; i < span.length; i++) {
         span[i].style.color = "#eeeeee";
       }
-      for (let i = 0; i < h2.length; i++) {
-        h2[i].style.backgroundColor = "#eeeeee";
-        h2[i].style.color = "#222831";
-      }
       for (let i = 0; i < h1.length; i++) {
-        h1[i].style.color = "#eeeeee";
+        h1[i].style.backgroundColor = "#eeeeee";
+        h1[i].style.color = "#222831";
+      }
+      for (let i = 0; i < h2.length; i++) {
+        h2[i].style.color = "#eeeeee";
       }
 
       body.style.backgroundColor = "#222831";
@@ -161,12 +162,12 @@ function nightModeChange(e) {
       for (let i = 0; i < span.length; i++) {
         span[i].style.color = "#222831";
       }
-      for (let i = 0; i < h2.length; i++) {
-        h2[i].style.backgroundColor = "#222831";
-        h2[i].style.color = "#eeeeee";
-      }
       for (let i = 0; i < h1.length; i++) {
-        h1[i].style.color = "#222831";
+        h1[i].style.backgroundColor = "#222831";
+        h1[i].style.color = "#eeeeee";
+      }
+      for (let i = 0; i < h2.length; i++) {
+        h2[i].style.color = "#222831";
       }
 
       body.style.backgroundColor = "#eeeeee";

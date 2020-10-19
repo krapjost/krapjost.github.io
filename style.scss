@@ -1,20 +1,18 @@
-$foundation-palette: (primary: #222831,
-    secondary: #657894,
-    third: #00adb5,
-    fourth: #eeeeee);
+$primary: #222831;
+$secondary: #657894;
+$third: #00adb5;
+$fourth: #eeeeee;
 
 $font-stack: Arial,
 Helvetica,
 sans-serif;
 
-$z-index: (topper: 100,
-    topp: 15,
-    tom: 10,
-    mid: 5,
-    mib: 3,
-    bot: 1);
+$z-top: 10;
+$z-mid: 5;
+$z-bot: 2;
 
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -23,443 +21,320 @@ $z-index: (topper: 100,
 
 body {
     font-family: $font-stack;
-    color: map-get($foundation-palette, primary);
-    background-color: map-get($foundation-palette, fourth);
+    color: $primary;
+    background-color: $fourth;
     line-height: 1.7;
     width: 100%;
     transition: all 0.3s ease-out;
-    a {
-        color: map-get($foundation-palette, primary);
+
+}
+
+
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+#project {
+    display: none;
+}
+
+#studyLog {
+    display: none;
+}
+
+//nav
+.nav-up {
+    top: -60px;
+    transition: all .5s ease-out;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .current {
+            background-color: $fourth;
+
+            span {
+                display: none;
+            }
+
+            i {
+                width: 100%;
+                font-size: x-large;
+                color: $primary;
+                transition: all .5s ease-in-out;
+            }
+        }
+
+        .li-hover:hover {
+            background-color: $fourth;
+            transition: all .1s;
+            cursor: pointer;
+
+            span {
+                display: none;
+            }
+
+            i {
+                width: 100%;
+                // padding: 15px;
+                font-size: x-large;
+                color: $primary;
+                transition: all .1s;
+            }
+        }
+
+        li {
+            align-items: center;
+            background-color: $fourth;
+            list-style: none;
+            width: 100%;
+            text-align: center;
+            transition: all .3s ease-out;
+
+            span {
+                color: $primary;
+                font-weight: 600;
+            }
+
+            i {
+                padding: 15px;
+                color: $primary;
+            }
+        }
     }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+    height: fit-content;
+
+    div {
+        width: 100%;
+        margin: 10px 0;
+
+        article {
+
+            text-align: left;
+            padding: 20px 0;
+            margin: auto;
+
+
+            h1 {
+                position: sticky;
+                z-index: 5;
+                top: 0;
+                left: 0;
+                font-size: larger;
+                padding: 10px;
+                // margin: 20px;
+                color: $fourth;
+                background-color: $primary;
+                text-align: center;
+                transition: all .3s ease-in-out;
+                // border-radius: 0 0 100px 100px;
+            }
+
+
+            #name {
+                margin: auto;
+                width: 80%;
+            }
+
+            h2 {
+
+                display: flex;
+                flex-flow: row;
+                // justify-content: flex-start;
+
+                font-size: x-large;
+                overflow: hidden;
+                height: 50px;
+                color: $primary;
+   
+                .my_name {
+                    padding: 15px 0;
+                    width: 100%;
+                    text-align: center;
+                    transition: all .5s;
+
+                }
+
+                .let {
+                    word-break: break-all;
+                    font-size: 22px;
+                    width: 0;
+                    height: 50px;
+                    padding: 15px 0;
+                    overflow: hidden;
+                    color: $secondary;
+                }
+            }
+
+            h2:hover {
+
+                .my_name {
+                    width: 25%;
+                    transition: all 1s ease;
+                }
+
+                .let {
+                    max-width: max-content;
+                    width: 100%;
+                    transition: all 3s ease;
+                }
+
+            }
+
+
+
+            h3 {
+                width: fit-content;
+                font-size: larger;
+                margin: 15px 45px;
+            }
+
+            h4 {
+                text-align: center;
+                margin: 15px 30px;
+            }
+
+            ol {
+                margin: 15px 45px;
+                list-style: square;
+
+                li {
+                    font-weight: 500;
+                }
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                font-weight: bolder;
+                text-align: center;
+                padding: 0 35px;
+
+            }
+
+            p {
+                text-align: left;
+                padding: 10px 35px;
+            }
+        }
+    }
+
+
+
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        margin: 0 auto;
+        color: $primary;
+        // transition: all 1s;
+    }
+
 
     a:hover {
-        color: map-get($foundation-palette, third);
+        
+        .i {
+            color: $third;
+            transition: all .8s;
+        }
+
+        .subtitle {
+            width: 100%;
+            transition: all .8s;
+        }
+    }
+
+    .i {
+        margin: 10px;
+        font-size: 50px;
+        color: $primary;
+        transition: all .3s;
+    }
+    .subtitle {
+        
+        color: $third;
+        padding: 0;
+        margin: 0;
+        width: 0px;
+        height: 22px;
+        text-align: left;
+        overflow: hidden;
+        word-break: break-all;
+        transition: all .3s;
     }
 }
 
-@media (min-width: 200px) and (max-width:800px) {
-    .v-hidden {
-        visibility: hidden;
-    }
-
-    .d-none {
-        display: none;
-    }
-
-    #project {
-        display: none;
-    }
-
-    #studyLog {
-        display: none;
-    }
-
-    //nav
-    .nav-up {
-        top: -60px;
-        transition: all .5s ease-out;
-    }
-
-    nav {
-        width: 100%;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-
-            .current {
-                background-color: map-get($foundation-palette, fourth);
-
-                span {
-                    display: none;
-                }
-
-                i {
-                    width: 100%;
-                    font-size: x-large;
-                    color: map-get($foundation-palette, primary);
-                    transition: all .5s ease-in-out;
-                }
-            }
-
-            .li-hover:hover {
-                background-color: map-get($foundation-palette, fourth);
-                transition: all .1s;
-                cursor: pointer;
-
-                span {
-                    display: none;
-                }
-
-                i {
-                    width: 100%;
-                    // padding: 15px;
-                    font-size: x-large;
-                    color: map-get($foundation-palette, primary);
-                    transition: all .1s;
-                }
-            }
-
-            li {
-                align-items: center;
-                background-color: map-get($foundation-palette, fourth);
-                list-style: none;
-                width: 100%;
-                text-align: center;
-                transition: all .3s ease-out;
-
-                span {
-                    color: map-get($foundation-palette, primary);
-                    font-weight: 600;
-                }
-
-                i {
-                    padding: 15px;
-                    color: map-get($foundation-palette, primary);
-                }
-            }
-        }
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-        width: 100%;
-        height: fit-content;
-
-        div {
-            width: 100%;
-            margin: 10px 0;
-
-            article {
-                width: 95%;
-                text-align: left;
-                padding: 20px;
-                margin: auto;
-
-                h1 {
-                    font-size: x-large;
-                    color: map-get($foundation-palette, primary);
-                    margin: 10px;
-                }
-
-                h2 {
-                    position: sticky;
-                    top: 0;
-                    left: 0;
-                    font-size: larger;
-                    padding: 10px;
-                    margin: 0;
-                    color: map-get($foundation-palette, fourth);
-                    background-color: map-get($foundation-palette, primary);
-                    text-align: center;
-                    transition: all .3s ease-in-out;
-                    // border-radius: 0 0 50px 50px;
-                }
-
-                h3 {
-                    font-size: larger;
-                    margin: 10px;
-                }
-
-                h4 {
-                    text-align: center;
-                    margin: 10px 0;
-                }
-                ol {
-                    margin-left: 20px;
-                    list-style: square;
-                    li {
-                        font-weight: 500;
-                    }
-                }
-                span {
-                    display: inline-block;
-                    width: 100%;
-                    font-weight: bolder;
-                    text-align: center;
-                    margin: 5px auto;
-                }
-                .joke {
-                    display: inline;
-                    font-size: 17px;
-                    font-weight: bold;
-                    color: map-get($foundation-palette, secondary);
-                }
-                p {
-                    text-align: left;
-                    padding: 10px;
-                }
-            }
-        }
-
-        .i {
-            font-size: 50px;
-            text-align: center;
-            margin: 20px;
-            color: map-get($foundation-palette, primary);
-        }
-
-        i:hover {
-            cursor: pointer;
-            color: map-get($foundation-palette, third);
-        }
-    }
 
 
+.v-mode {
+    position: fixed;
 
-    .v-mode {
-        position: fixed;
+    bottom: 80px;
+    right: 30px;
 
-        bottom: 80px;
-        right: 30px;
+    width: 40px;
+    height: 30px;
 
-        width: 40px;
-        height: 30px;
+    border-radius: 30px;
+    padding: 6px 12px;
 
-        border-radius: 30px;
-        padding: 6px 12px;
-
-        // transition: all .3s ease-in-out;
-
-    }
-
-
-    .v-mode:hover {
-        cursor: pointer;
-        
-    }
-
-    .fa-moon {
-        background-color: #393e4650;
-    }
-
-    .fa-sun {
-        background-color: #393e4650;
-    }
-
-    .scroll-btn {
-        position: fixed;
-
-        bottom: 45px;
-        right: 30px;
-
-        width: 40px;
-        height: 30px;
-
-        border-radius: 30px;
-        padding: 6px 14px;
-        background-color: #393e4650;
-        // transition: all .3s ease-in-out;
-    }
-
-    .scroll-btn:hover {
-        cursor: pointer;
-    }
+    // transition: all .3s ease-in-out;
 
 }
 
 
-@media (min-width: 801px) {
+.v-mode:hover {
+    cursor: pointer;
 
-    .v-hidden {
-        visibility: hidden;
-    }
+}
 
-    .d-none {
-        display: none;
-    }
+.fa-moon {
+    background-color: #393e4650;
+}
 
-    #project {
-        display: none;
-    }
+.fa-sun {
+    background-color: #393e4650;
+}
 
-    #studyLog {
-        display: none;
-    }
+.scroll-btn {
+    position: fixed;
 
-    //nav
-    .nav-up {
-        top: -160px;
-        transition: all .5s;
-    }
+    bottom: 45px;
+    right: 30px;
 
-    nav {
-        width: 30%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: all .5s;
+    width: 40px;
+    height: 30px;
 
-        ul {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+    border-radius: 30px;
+    padding: 6px 14px;
+    background-color: #393e4650;
+    // transition: all .3s ease-in-out;
+}
 
-            .current {
-                background-color: map-get($foundation-palette, fourth);
-                position: absolute;
-                top: 0;
-                left: -300px;
-                span {
-                    display: none;
-                }
-
-                i {
-                    width: 100%;
-                    font-size: x-large;
-                    color: map-get($foundation-palette, primary);
-                    transition: all .5s ease-in-out;
-                }
-            }
-
-            .li-hover:hover {
-                background-color: map-get($foundation-palette, primary);
-                transition: all .1s;
-                cursor: pointer;
-
-                span {
-                    display: none;
-                }
-
-                i {
-                    width: 100%;
-                    // padding: 15px;
-                    font-size: x-large;
-                    color: map-get($foundation-palette, third);
-                    transition: all .1s;
-                }
-            }
-
-            li {
-                align-items: center;
-                background-color: map-get($foundation-palette, fourth);
-                list-style: none;
-                width: 100%;
-                text-align: center;
-                span {
-                    color: map-get($foundation-palette, primary);
-                    font-weight: 600;
-                }
-
-                i {
-                    padding: 15px;
-                    color: map-get($foundation-palette, primary);
-                }
-            }
-        }
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-        width: 100%;
-        height: fit-content;
-        div {
-            width: 100%;
-            margin: 10px 0;
-
-            article {
-                width: 95%;
-                text-align: center;
-                padding: 20px;
-                margin: auto;
-
-                h1 {
-                    font-size: x-large;
-                    color: map-get($foundation-palette, primary);
-                    margin: 10px;
-                }
-
-                h2 {
-                    font-size: larger;
-                    padding: 10px;
-                    margin: 20px 0;
-                    color: map-get($foundation-palette, fourth);
-                    background-color: map-get($foundation-palette, primary);
-                    text-align: center;
-                }
-
-                h3 {
-                    font-size: larger;
-                    margin: 10px 0;
-                }
-
-                ol {
-                    margin-left: 20px;
-                    list-style: square;
-                }
-            }
-        }
-
-        .i {
-            font-size: 50px;
-            font-weight: bolder;
-            text-align: center;
-            margin: 0 20px;
-            color: map-get($foundation-palette, primary);
-
-        }
-
-        i:hover {
-            cursor: pointer;
-            color: map-get($foundation-palette, third);
-        }
-    }
-
-
-
-    .v-mode {
-        position: fixed;
-
-        bottom: 80px;
-        right: 30px;
-
-        width: 40px;
-        height: 30px;
-
-        border-radius: 30px;
-        padding: 6px 12px;
-
-    }
-
-
-    .v-mode:hover {
-        cursor: pointer;
-    }
-
-    .fa-moon {
-        background-color: #393e4650;
-        
-    }
-
-    .fa-sun {
-        background-color: #393e4650;
-        
-    }
-
-    .scroll-btn {
-        position: fixed;
-
-        bottom: 45px;
-        right: 30px;
-
-        width: 40px;
-        height: 30px;
-
-        border-radius: 30px;
-        padding: 6px 14px;
-        background-color: #393e4650;
-        // transition: all .3s ease-in-out;
-    }
-
+.scroll-btn:hover {
+    cursor: pointer;
 }
