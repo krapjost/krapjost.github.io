@@ -26,10 +26,16 @@ body {
     line-height: 1.7;
     width: 100%;
     transition: all 0.3s ease-out;
-
 }
 
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 400px));
+    grid-template-rows: repeat(4, minmax(25%, auto));
+    grid-auto-flow: dense;
+    justify-content: center;
 
+}
 
 .v-hidden {
     visibility: hidden;
@@ -119,9 +125,9 @@ nav {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     padding-top: 50px;
     width: 100%;
     height: fit-content;
@@ -134,7 +140,7 @@ main {
 
             text-align: left;
             padding: 20px 0;
-            margin: auto;
+            // margin: auto;
 
 
             h1 {
@@ -144,7 +150,7 @@ main {
                 left: 0;
                 font-size: larger;
                 padding: 10px;
-                // margin: 20px;
+                margin: 30px;
                 color: $fourth;
                 background-color: $primary;
                 text-align: center;
@@ -256,13 +262,10 @@ main {
 
 
     a:hover {
-        
         .i {
-            color: $third;
             transition: all .8s;
         }
-
-        .subtitle {
+        .description {
             width: 100%;
             transition: all .8s;
         }
@@ -274,13 +277,13 @@ main {
         color: $primary;
         transition: all .3s;
     }
-    .subtitle {
-        
-        color: $third;
+    .description {     
+        color: $secondary;
         padding: 0;
         margin: 0;
         width: 0px;
         height: 22px;
+        font-weight: bold;
         text-align: left;
         overflow: hidden;
         word-break: break-all;

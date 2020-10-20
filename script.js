@@ -1,7 +1,7 @@
 const nav = select('nav');
 const upBtn = select('#upBtn');
 const downBtn = select('#downBtn');
-
+const current = select('.current');
 const moon = select('#moon');
 const sun = select('#sun');
 const body = select('body');
@@ -34,15 +34,15 @@ const switchPage = e => {
       if (t.lastElementChild.innerText === "프로필") {
         select('#project').style.display = "none";
         select('#studyLog').style.display = "none";
-        select('#profile').style.display = "block";
+        select('#profile').style.display = "grid";
       } else if (t.lastElementChild.innerText === "프로젝트") {
         select('#studyLog').style.display = "none";
         select('#profile').style.display = "none";
-        select('#project').style.display = "block";
+        select('#project').style.display = "grid";
       } else if (t.lastElementChild.innerText === "공부기록") {
         select('#project').style.display = "none";
         select('#profile').style.display = "none";
-        select('#studyLog').style.display = "block";
+        select('#studyLog').style.display = "grid";
       }
       break;
   }
@@ -116,7 +116,6 @@ function onScroll() {
 }
 
 function nightModeChange(e) {
-
   switch (e.target) {
     case moon:
       for (let i = 0; i < li.length; i++) {

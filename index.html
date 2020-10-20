@@ -27,12 +27,12 @@
 
 </head>
 
-<body class="container">
+<body class="">
   <noscript>
     <div>현재 사용 중인 브라우저는 javascript를 지원하지 않거나, 해당 기능이 활성화되어 있지 않습니다.</div>
   </noscript>
 
-  <header class="">
+  <header>
     <nav class="nav">
       <ul class="">
         <li class="li current">
@@ -48,15 +48,11 @@
     </nav>
   </header>
 
-  <aside class="aside">
-  </aside>
-
   <main>
 
-    <div id="profile">
-      <article>
+    <div class="grid-box" id="profile">
+      <article class="item">
         <h1>인적사항</h1>
-
         <div id="name">
           <h2>
             <p class="let">let</p>
@@ -72,25 +68,26 @@
         </span>
 
         <h3>.Contact</h3>
-          <a href="mailto:krapjost@gmail.com">
-            <span class="subtitle">메일을 전송합니다.</span>
-            <i class="i fas fa-envelope"></i>
-          </a>
+        <a href="mailto:krapjost@gmail.com">
+          <p class="description">메일을 전송합니다.</p>
+          <i class="i fas fa-envelope"></i>
+        </a>
 
         <span>krapjost@gmail.com</span>
 
         <h3>.Github</h3>
         <a href="https://github.com/krapjost" target="_blank">
-          <span class="subtitle">아래로 이동됩니다.</span>
+          <p class="description">아래 주소로 이동됩니다.</p>
           <i class="i fab fa-github-alt"></i>
         </a>
         <span>https://github.com/krapjost</span>
 
       </article>
-      <article>
+
+      <article class="item">
         <h1>현재 보유 능력</h1>
         <a href="#html5">
-          <span id="html5" class="subtitle">HTML5 공부기록</span>
+          <p id="html5" class="description">HTML5 공부기록</p>
           <i class="i fab fa-html5 fa-3x"></i>
         </a>
         <div>
@@ -100,7 +97,8 @@
           </ol>
         </div>
 
-        <a href="#html5"><span id="css3" class="subtitle">CSS3 공부기록</span>
+        <a href="#html5">
+          <p id="css3" class="description">CSS3 공부기록</p>
           <i class="i fab fa-css3-alt fa-3x"></i>
         </a>
 
@@ -112,7 +110,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="scss" class="subtitle">SCSS 공부기록</span>
+          <a href="#html5">
+            <p id="scss" class="description">SCSS 공부기록</p>
             <i class="i fab fa-sass fa-3x"></i>
           </a>
           <ol>
@@ -123,7 +122,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="javascript" class="subtitle">JavaScript 공부기록</span>
+          <a href="#html5">
+            <p id="javascript" class="description">JavaScript 공부기록</p>
             <i class="i fab fa-js-square fa-3x"></i>
           </a>
 
@@ -136,7 +136,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="node-js" class="subtitle">Node-JS 공부기록</span>
+          <a href="#html5">
+            <p id="node-js" class="description">Node-JS 공부기록</p>
             <i class="i fab fa-node fa-3x"></i>
           </a>
           <ol>
@@ -147,7 +148,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="database" class="subtitle">DataBase 공부기록</span>
+          <a href="#html5">
+            <p id="database" class="description">DataBase 공부기록</p>
 
             <i class="i fas fa-database fa-3x"></i>
           </a>
@@ -161,10 +163,11 @@
 
       </article>
 
-      <article>
+      <article class="item">
         <h1>공부하고 싶은 것</h1>
         <div>
-          <a href="#html5"><span id="react" class="subtitle">React 공부기록</span>
+          <a href="#html5">
+            <p id="react" class="description">React 공부기록</p>
 
             <i class="i fab fa-react fa-3x"></i>
           </a>
@@ -175,7 +178,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="rust" class="subtitle">Rust 공부기록</span>
+          <a href="#html5">
+            <p id="rust" class="description">Rust 공부기록</p>
             <i class="i fab fa-rust fa-3x"></i>
 
           </a>
@@ -185,7 +189,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="python" class="subtitle">Python 공부기록</span>
+          <a href="#html5">
+            <p id="python" class="description">Python 공부기록</p>
             <i class="i fab fa-python fa-3x"></i>
 
           </a>
@@ -195,7 +200,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="aws" class="subtitle">AWS 공부기록</span>
+          <a href="#html5">
+            <p id="aws" class="description">AWS 공부기록</p>
             <i class="i fab fa-aws fa-3x"></i>
           </a>
           <ol>
@@ -204,7 +210,8 @@
         </div>
 
         <div>
-          <a href="#html5"><span id="linux" class="subtitle">Linux 공부기록</span>
+          <a href="#html5">
+            <p id="linux" class="description">Linux 공부기록</p>
             <i class="i fab fa-linux fa-3x"></i>
           </a>
           <ol>
@@ -214,7 +221,8 @@
         </div>
 
       </article>
-      <article>
+
+      <article class="item">
         <h1>자기 소개</h1>
         <h3>.성격</h3>
         <span>
@@ -252,16 +260,17 @@
         </p>
 
       </article>
+
     </div>
 
-    <div id="project">
-      <article>
+    <div class="grid-box" id="project">
+      <article class="item">
         <h1>주차장 관리</h1>
         <h3>개발 기간</h3>
         <span>2020.08.17~2020.08.28</span>
         <h3>개요</h3>
         <p>
-          자동화 주차장 시스템을 구상하고 구현해보았다.<br>
+          주차장 자동화 시스템을 구상하고 구현해보았다.<br>
           입차부터 출차까지의 과정에 관리자가 신경써야 할 부분을 최소화 하고,
           또한 사용자의 입장에서도 이용이 최대한 직관적으로 느껴지게 만들고 싶었다.
         </p>
@@ -283,20 +292,20 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/PKL" target="_blank" rel="noopener noreferrer">
-            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <p class="description">주차장 깃허브로 이동합니다.</p>
             <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./PKL/index.html" target="_blank" rel="noopener noreferrer">
-            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <p class="description">주차장 페이지로 이동합니다.</p>
             <i class="i fas fa-parking"></i>
           </a>
         </div>
       </article>
 
-      <article>
+      <article class="item">
 
 
         <h1>농산물 직거래</h1>
@@ -327,14 +336,14 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/teamProject_frontend" target="_blank" rel="noopener noreferrer">
-            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <p class="description">아래 주소로 메일을 전송합니다.</p>
             <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./farmers/index.html" target="_blank" rel="noopener noreferrer">
-            <span class="subtitle">아래 주소로 메일을 전송합니다.</span>
+            <p class="description">아래 주소로 메일을 전송합니다.</p>
             <i class="i fas fa-seedling"></i>
 
           </a>
@@ -342,28 +351,30 @@
       </article>
     </div>
 
-    <div id="studyLog">
-      <article>
-        <h1>공부기록</h1>
-        <div>javascript</div>
-        <div>html</div>
-        <div>css</div>
-        <div>sass</div>
-        <div>node</div>
-        <div>http</div>
-        <div>design-pattern</div>
+    <div class="grid-box" id="studyLog">
+      <article class="item">
+
+        <h1>javascript</h1>
+
+        <h1>html</h1>
+        <h1>css</h1>
+        <h1>sass</h1>
+        <h1>node</h1>
+        <h1>http</h1>
+        <h1>design-pattern</h1>
       </article>
 
     </div>
 
   </main>
 
-  <footer>
+  <aside>
     <i id="moon" class="v-mode fas fa-moon"></i>
     <i id="sun" class="v-mode fas fa-sun v-hidden"></i>
     <i id="upBtn" class="scroll-btn fas fa-angle-double-up v-hidden"></i>
     <i id="downBtn" class="scroll-btn fas fa-angle-double-down v-hidden"></i>
-  </footer>
+  </aside>
+
   <script src="./script.js"></script>
 
 </body>
