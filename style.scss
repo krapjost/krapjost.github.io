@@ -24,15 +24,21 @@ body {
     color: $primary;
     background-color: $fourth;
     line-height: 1.7;
+    // font-size: larger;
     width: 100%;
     transition: all 0.3s ease-out;
 }
 
 .grid-box {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20%, 400px));
-    grid-template-rows: repeat(4, minmax(25%, auto));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 800px));
     grid-auto-flow: dense;
+    justify-content: center;
+}
+
+.article-grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
     justify-content: center;
 
 }
@@ -282,7 +288,7 @@ main {
         padding: 0;
         margin: 0;
         width: 0px;
-        height: 22px;
+        height: 26px;
         font-weight: bold;
         text-align: left;
         overflow: hidden;
