@@ -32,16 +32,10 @@ const switchPage = e => {
       t.className = "li current";
       if (t.lastElementChild.innerText === "프로필") {
         select('#project').style.display = "none";
-        select('#studyLog').style.display = "none";
         select('#profile').style.display = "grid";
       } else if (t.lastElementChild.innerText === "프로젝트") {
-        select('#studyLog').style.display = "none";
         select('#profile').style.display = "none";
         select('#project').style.display = "grid";
-      } else if (t.lastElementChild.innerText === "공부기록") {
-        select('#project').style.display = "none";
-        select('#profile').style.display = "none";
-        select('#studyLog').style.display = "grid";
       }
       break;
   }
@@ -137,7 +131,7 @@ function nightModeChange(e) {
       for (let i = 0; i < h2.length; i++) {
         h2[i].style.color = "#eeeeee";
       }
-
+      
       body.style.backgroundColor = "#222831";
       body.style.color = "#eeeeee";
 
@@ -193,7 +187,6 @@ function toBottom() {
 
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
 selectAll('.li')[1].addEventListener('click', event => switchPage(event));
-selectAll('.li')[2].addEventListener('click', event => switchPage(event));
 selectAll('.v-mode')[0].addEventListener('click', event => nightModeChange(event));
 selectAll('.v-mode')[1].addEventListener('click', event => nightModeChange(event));
 select('#upBtn').addEventListener("mousedown", toTop);

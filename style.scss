@@ -61,7 +61,7 @@ body {
 
 //nav
 .nav-up {
-    top: -60px;
+    top: -65px;
     transition: all .5s ease-out;
 }
 
@@ -70,11 +70,14 @@ nav {
     position: fixed;
     z-index: 10;
     top: 0;
+    background-color: $secondary;
+    transition: all .3s ease-in;
 
     ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        background-color: $secondary;
 
         .current {
             background-color: $fourth;
@@ -85,7 +88,7 @@ nav {
 
             i {
                 width: 100%;
-                font-size: x-large;
+                font-size: xx-large;
                 color: $primary;
                 transition: all .5s ease-in-out;
             }
@@ -115,6 +118,7 @@ nav {
             list-style: none;
             width: 100%;
             text-align: center;
+            font-size: medium;
             transition: all .3s ease-out;
 
             span {
@@ -213,8 +217,9 @@ main {
 
             h3 {
                 width: fit-content;
-                font-size: larger;
+                font-size: large;
                 margin: 15px 45px;
+                border-bottom: 1px solid $primary;
             }
 
             h4 {
