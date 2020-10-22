@@ -55,11 +55,19 @@
         <h1>인적사항</h1>
         <div class="article-grid-box">
           <div class="item" id="name">
-            <h2>
+            <h3>.이름</h3>
+            <span class="name-is">
               <p class="let">let</p>
               <p class="my_name">박기둥</p>
               <p class="let">= "Web Developer" ;</p>
-            </h2>
+            </span>
+          </div>
+
+          <div class="item">
+            <h3>.생년월일</h3>
+            <span>
+              1993.01.30
+            </span>
           </div>
 
           <div class="item">
@@ -69,6 +77,7 @@
               구공팩토리 웹 개발자 부트캠프
             </span>
           </div>
+
 
           <div class="item">
             <h3>.연락처</h3>
@@ -88,18 +97,57 @@
             <span>https://github.com/krapjost</span>
           </div>
 
-          <!-- <div class="item">
-            <h3>.좋아하는 음식</h3>
-            <span>{
-              라면,
-              만두,
-              피자
-              }
-            </span>
-          </div> -->
         </div>
 
       </article>
+
+      <article class="item">
+        <h1>자기 소개</h1>
+        <div class="item">
+
+          <h3>.성격</h3>
+          <span>
+            MBTI = INTJ
+          </span>
+          <h4>
+            평소 생각이 많고 어려운 문제 해결을 즐긴다.
+          </h4>
+          <p>
+            프로그래밍을 배우기 전에는 막연하고 당장 해결 불가능한 문제들에 대한 생각들만 반복하며 생산적이지 못한 시간을 많이 보냈지만 개발 공부를 시작하고부터는 그 에너지를 당장 해결해야하는 구체적인
+            문제를
+            해결하는 것에 쏟을 수 있어 긍정적인 시간을 보내고 있다.
+          </p>
+          <h4>
+            목표지향적이며 자기계발에 욕심이 많다.
+          </h4>
+          <p>
+            목표가 정해지면 어떻게든 해내고자 노력하며 그 노력으로 인해 나 자신이 한층 발전된 것을 발견할 때 큰 보람을 느낀다. 하지만 너무 한 문제에 몰두하다 보면 다른 문제들은 전혀 신경도 쓰지
+            못하는
+            경향이 있어 문제가 생긴 적이 많았고 스스로 해결해야 할 점이라고 생각하고 있다.
+          </p>
+        </div>
+        <div class="item">
+
+          <h3>.목표</h3>
+          <span>
+            즐거운 생각을 하며 살 수 있는 환경 만들기
+          </span>
+          <h4>
+            스타트업에 취업하기
+          </h4>
+          <p>
+            내게 많은 책임과 의무가 주어지는 곳에서 일하고 싶다. 그 요구에 충족되는 실력을 기르기 위해 나 자신이 더 많은 노력을 하게 될 것이기 때문이다.
+          </p>
+          <h4>
+            사이드 프로젝트로 부수입 만들기
+          </h4>
+          <p>
+            자기계발의 일환으로 평소 생각해둔 여러가지 토이 프로젝트들을 진행하고 싶다. 최종 목표는 그 중 시장성이 보이는 것을 찾아 스타트업을 창업하고 싶다.
+          </p>
+        </div>
+
+      </article>
+
 
       <article class="item">
         <h1>현재 보유 능력</h1>
@@ -116,7 +164,7 @@
             </ol>
           </div>
 
-          <a href="#html5">
+          <a href="#css3">
             <p id="css3" class="description">CSS3 공부기록</p>
             <i class="i fab fa-css3-alt fa-3x"></i>
           </a>
@@ -128,7 +176,7 @@
             </ol>
           </div>
 
-          <a href="#html5">
+          <a href="#scss">
             <p id="scss" class="description">SCSS 공부기록</p>
             <i class="i fab fa-sass fa-3x"></i>
           </a>
@@ -140,7 +188,7 @@
 
           </div>
 
-          <a href="#html5">
+          <a href="#havascript">
             <p id="javascript" class="description">JavaScript 공부기록</p>
             <i class="i fab fa-js-square fa-3x"></i>
           </a>
@@ -154,7 +202,7 @@
             </ol>
           </div>
 
-          <a href="#html5">
+          <a href="#node-js">
             <p id="node-js" class="description">Node-JS 공부기록</p>
             <i class="i fab fa-node fa-3x"></i>
           </a>
@@ -166,7 +214,7 @@
 
           </div>
 
-          <a href="#html5">
+          <a href="#database">
             <p id="database" class="description">DataBase 공부기록</p>
 
             <i class="i fas fa-database fa-3x"></i>
@@ -187,8 +235,7 @@
         <h1>공부하고 싶은 것</h1>
         <div class="article-grid-box">
 
-          <div>
-            <a href="#html5">
+            <a href="#react">
               <p id="react" class="description">React 공부기록</p>
 
               <i class="i fab fa-react fa-3x"></i>
@@ -197,10 +244,8 @@
               <li>리액트를 활용하여 더 쉽게 SPA를 구현하는 경험을 해보고 싶다.</li>
               <li>리액트의 코드를 읽어보고 구동 원리를 이해하고 싶다.</li>
             </ol>
-          </div>
 
-          <div>
-            <a href="#html5">
+            <a href="#rust">
               <p id="rust" class="description">Rust 공부기록</p>
               <i class="i fab fa-rust fa-3x"></i>
 
@@ -208,10 +253,8 @@
             <ol>
               <li>러스트를 공부하여 웹 어셈블리의 활용에 대해 이해하고 싶다.</li>
             </ol>
-          </div>
 
-          <div>
-            <a href="#html5">
+            <a href="#python">
               <p id="python" class="description">Python 공부기록</p>
               <i class="i fab fa-python fa-3x"></i>
 
@@ -219,20 +262,17 @@
             <ol>
               <li>파이썬을 공부하여 머신러닝에 대해 이해하고 웹 서비스에 적용하고 싶다.</li>
             </ol>
-          </div>
 
-          <div>
-            <a href="#html5">
+          
+            <a href="#aws">
               <p id="aws" class="description">AWS 공부기록</p>
               <i class="i fab fa-aws fa-3x"></i>
             </a>
             <ol>
               <li>AWS를 공부하여 서버리스로 웹 서비스를 배포하는 경험을 해보고 싶다.</li>
             </ol>
-          </div>
 
-          <div>
-            <a href="#html5">
+            <a href="#linux">
               <p id="linux" class="description">Linux 공부기록</p>
               <i class="i fab fa-linux fa-3x"></i>
             </a>
@@ -240,47 +280,7 @@
               <li>리눅스 쉘 스크립트로 업무 자동화를 이루는 것에 관심이 많다.</li>
               <li>리눅스로 운영체제에 대해 이해하고 그 지식을 서버를 구축할 때 활용하고 싶다. </li>
             </ol>
-          </div>
         </div>
-      </article>
-
-      <article class="item">
-        <h1>자기 소개</h1>
-        <h3>.성격</h3>
-        <span>
-          MBTI = INTJ
-        </span>
-        <h4>
-          평소 생각이 많고 어려운 문제 해결을 즐긴다.
-        </h4>
-        <p>
-          프로그래밍을 배우기 전에는 막연하고 당장 해결 불가능한 문제들에 대한 생각들만 반복하며 생산적이지 못한 시간을 많이 보냈지만 개발 공부를 시작하고부터는 그 에너지를 당장 해결해야하는 구체적인 문제를
-          해결하는 것에 쏟을 수 있어 긍정적인 시간을 보내고 있다.
-        </p>
-        <h4>
-          목표지향적이며 자기계발에 욕심이 많다.
-        </h4>
-        <p>
-          목표가 정해지면 어떻게든 해내고자 노력하며 그 노력으로 인해 나 자신이 한층 발전된 것을 발견할 때 큰 보람을 느낀다. 하지만 너무 한 문제에 몰두하다 보면 다른 문제들은 전혀 신경도 쓰지 못하는
-          경향이 있어 문제가 생긴 적이 많았고 스스로 해결해야 할 점이라고 생각하고 있다.
-        </p>
-        <h3>.목표</h3>
-        <span>
-          즐거운 생각을 하며 살 수 있는 환경 만들기
-        </span>
-        <h4>
-          스타트업에 취업하기
-        </h4>
-        <p>
-          내게 많은 책임과 의무가 주어지는 곳에서 일하고 싶다. 그 요구에 충족되는 실력을 기르기 위해 나 자신이 더 많은 노력을 하게 될 것이기 때문이다.
-        </p>
-        <h4>
-          사이드 프로젝트로 부수입 만들기
-        </h4>
-        <p>
-          자기계발의 일환으로 평소 생각해둔 여러가지 토이 프로젝트들을 진행하고 싶다. 최종 목표는 그 중 시장성이 보이는 것을 찾아 스타트업을 창업하고 싶다.
-        </p>
-
       </article>
 
     </div>
@@ -314,14 +314,14 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/PKL" target="_blank" rel="noopener noreferrer">
-            <p class="description">주차장 깃허브로 이동합니다.</p>
+            <p class="description">주차장 리파지토리로 이동합니다.</p>
             <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./PKL/index.html" target="_blank" rel="noopener noreferrer">
-            <p class="description">주차장 페이지로 이동합니다.</p>
+            <p class="description">주차장 더미 페이지로 이동합니다.</p>
             <i class="i fas fa-parking"></i>
           </a>
         </div>
@@ -343,10 +343,10 @@
         </p>
         <h4>frontEnd</h4>
         <p>
-          <a href="https://miro.com/app/board/o9J_kmLLrsU=/" target="_blank">와이어 프레임 제작에는 Miro를 사용했다.</a>
-          프론트 사이드 렌더링으로 싱글 페이지 앱을 만들었다. 템플릿 태그를 활용하여
+          &nbsp프론트 사이드 렌더링으로 싱글 페이지 앱을 만들었다. 와이어 프레임 제작에는 Miro를 사용했다.
+          템플릿 태그를 활용하여
           렌더링 될 내용을 미리 저장해두고 클릭 이벤트가 발생하면 ajax나 fetch로 서버에서 필요한
-          데이터를 받아온 후 템플릿에 넣고 그 내용을 복사하여 커스텀 엘리먼트에 렌더링하는 식으로 구현했다.
+          데이터를 받아온 후 템플릿에 넣고 그 내용을 복사하여 커스텀 엘리먼트에 식으로 구현했다.
         </p>
 
         <h3>와이어 프레임</h3>
@@ -359,14 +359,14 @@
         <h3>깃허브</h3>
         <div>
           <a href="https://github.com/krapjost/teamProject_frontend" target="_blank" rel="noopener noreferrer">
-            <p class="description">농산물 깃허브로 이동합니다.</p>
+            <p class="description">농산물 리파지토리로 이동합니다.</p>
             <i class="i fab fa-github"></i>
           </a>
         </div>
         <h3>더미 사이트</h3>
         <div>
           <a href="./farmers/index.html" target="_blank" rel="noopener noreferrer">
-            <p class="description">농산물 페이지로 이동합니다.</p>
+            <p class="description">농산물 더미 페이지로 이동합니다.</p>
             <i class="i fas fa-seedling"></i>
 
           </a>
@@ -376,31 +376,36 @@
 
     <div class="grid-box" id="studyLog">
       <article class="item">
-
         <h1>javascript</h1>
+        <a href="https://docs.google.com/document/d/1zH-Si4zPTKFvPR-M5YDDqnEeYCBouCifqJK96Jm76bc/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">자바스크립트는 어떻게 작동하는가</a>
+        <a href="https://docs.google.com/document/d/1cKPIgO3F_PLzRjvvy3xK2bw8Boct7MlTvozfJUh_pO8/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">브라우저는 어떻게 작동하는가</a>
+        <a href="https://docs.google.com/document/d/1ruyOCFjitDqFE5euWjFRmWO7Eh_-VA1SVrU0y7A7CvQ/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">멀티 스레드 프로그래밍의 필요성</a>
+        <a href="https://docs.google.com/document/d/1CmwivXoROmB3Iu4DYtqsSLTpMRoa4mP6zSGXjt4Lca8/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">비동기 프로그래밍의 필요성</a>
+        <a href="https://github.com/rwaldron/idiomatic.js/tree/master/translations/ko_KR" target="_blank"
+          rel="noopener noreferrer">일관성 있는 코딩 스타일의 중요성</a>
+        <a href="https://docs.google.com/document/d/1xU2rC5KqlKENJs0tDP5tM5dLrAgv9aYl8wg1tgy_B6Q/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">SOLID/ Demeter 법칙</a>
       </article>
       <article class="item">
-        <h1>html</h1>
+        <h1>network</h1>
+        <a href="https://docs.google.com/document/d/1a2UWUQ57bR4ENGR3zQ9LRBOAxHN2dptVn5Le8e6Atbg/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">tcp/udp</a>
       </article>
 
       <article class="item">
-        <h1>css</h1>
-      </article>
-
-      <article class="item">
-        <h1>sass</h1>
-      </article>
-
-      <article class="item">
-        <h1>node</h1>
-      </article>
-
-      <article class="item">
-        <h1>http</h1>
+        <h1>업무 관련</h1>
+        <a href="https://docs.google.com/document/d/1RGsqqCXIPJZFPGUr-UPwRqCpoXeDXmGGp-TVe95z2f0/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">DevOps/오픈 소스</a>
       </article>
 
       <article class="item">
         <h1>design-pattern</h1>
+        <a href="https://docs.google.com/document/d/1ohatstX0ysnpdKx4DLDsAcK7M23nkMWnuG0F6yH7Li4/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">MVC/MVP/MVVM</a>
       </article>
 
 

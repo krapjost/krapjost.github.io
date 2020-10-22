@@ -12,8 +12,6 @@ const h1 = selectAll('h1');
 const a = selectAll('a');
 const span = selectAll('span');
 
-
-
 function select(selector) {
   return document.querySelector(selector);
 }
@@ -21,6 +19,7 @@ function select(selector) {
 function selectAll(selector) {
   return document.querySelectorAll(selector);
 }
+
 
 
 const switchPage = e => {

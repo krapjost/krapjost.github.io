@@ -165,24 +165,18 @@ main {
             }
 
 
-            #name {
-                margin: auto;
-                width: 80%;
-            }
 
-            h2 {
+            .name-is {
 
                 display: flex;
                 flex-flow: row;
-                // justify-content: flex-start;
-
-                font-size: x-large;
                 overflow: hidden;
-                height: 50px;
+                height: 40px;
                 color: $primary;
-   
+
                 .my_name {
-                    padding: 15px 0;
+                    padding: 10px 0;
+                    font-size: 20px;
                     width: 100%;
                     text-align: center;
                     transition: all .5s;
@@ -190,17 +184,17 @@ main {
                 }
 
                 .let {
+                    margin: 0 10px;
                     word-break: break-all;
-                    font-size: 22px;
+                    font-size: 20px;
                     width: 0;
-                    height: 50px;
-                    padding: 15px 0;
+                    padding: 10px 0;
                     overflow: hidden;
                     color: $secondary;
                 }
             }
 
-            h2:hover {
+            .name-is:hover {
 
                 .my_name {
                     width: 25%;
@@ -230,7 +224,7 @@ main {
 
             ol {
                 margin: 15px 45px;
-                list-style: square;
+                list-style: lower-alpha;
 
                 li {
                     font-weight: 500;
@@ -271,6 +265,7 @@ main {
         .i {
             transition: all .8s;
         }
+
         .description {
             width: 100%;
             transition: all .8s;
@@ -283,7 +278,8 @@ main {
         color: $primary;
         transition: all .3s;
     }
-    .description {     
+
+    .description {
         color: $secondary;
         padding: 0;
         margin: 0;
