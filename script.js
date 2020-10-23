@@ -28,6 +28,7 @@ const switchPage = e => {
     case "li current":
       break;
     case "li li-hover":
+      console.log(t);
       select(".current").className = "li li-hover";
       t.className = "li current";
       if (t.lastElementChild.innerText === "프로필") {
@@ -36,6 +37,11 @@ const switchPage = e => {
       } else if (t.lastElementChild.innerText === "프로젝트") {
         select('#profile').style.display = "none";
         select('#project').style.display = "grid";
+      }
+      if (select(".current").style.backgroundColor!=="") {
+        select(".current").style.backgroundColor = body.style.backgroundColor;
+        select(".current").firstElementChild.style.color = body.style.color;
+        select(".current").firstElementChild.nextElementSibling.style.color = body.style.color;
       }
       break;
   }
@@ -131,7 +137,24 @@ function nightModeChange(e) {
       for (let i = 0; i < h2.length; i++) {
         h2[i].style.color = "#eeeeee";
       }
-      
+
+      current.style.backgroundColor = "#222831";
+      current.style.color = "#eeeeee";
+
+      if (current.nextElementSibling === null) {
+        return;
+      } else if (current.nextElementSibling) {
+        current.nextElementSibling.style.backgroundColor = "#eeeeee";
+        current.nextElementSibling.firstElementChild.style.color = "#222831";
+        current.nextElementSibling.firstElementChild.nextElementSibling.style.color = "#222831";
+      } else if (current.previousElementSibling === null) {
+        return;
+      } else if (current.previousElementSibling) {
+        current.previousElementSibling.style.backgroundColor = "#eeeeee";
+        current.previousElementSibling.firstElementChild.style.color = "#222831";
+        current.previousElementSibling.firstElementChild.nextElementSibling.style.color = "#222831";
+      }
+
       body.style.backgroundColor = "#222831";
       body.style.color = "#eeeeee";
 
@@ -161,6 +184,24 @@ function nightModeChange(e) {
       for (let i = 0; i < h2.length; i++) {
         h2[i].style.color = "#222831";
       }
+
+      current.style.backgroundColor = "#eeeeee";
+      current.style.color = "#222831";
+      
+      if (current.nextElementSibling === null) {
+        return;
+      } else if (current.nextElementSibling) {
+        current.nextElementSibling.style.backgroundColor = "#222831";
+        current.nextElementSibling.firstElementChild.style.color = "#eeeeee";
+        current.nextElementSibling.firstElementChild.nextElementSibling.style.color = "#eeeeee";
+      } else if (current.previousElementSibling === null) {
+        return;
+      } else if (current.previousElementSibling) {
+        current.previousElementSibling.style.backgroundColor = "#222831";
+        current.previousElementSibling.firstElementChild.style.color = "#eeeeee";
+        current.previousElementSibling.firstElementChild.nextElementSibling.style.color = "#eeeeee";
+      }
+
 
       body.style.backgroundColor = "#eeeeee";
       body.style.color = "#222831";
