@@ -9,7 +9,7 @@ const sun = select('#sun');
 const body = select('body');
 const li = selectAll('.li');
 const icon = selectAll("i");
-const h2 = selectAll('h2');
+const h4 = selectAll('h4');
 const h1 = selectAll('h1');
 const a = selectAll('a');
 const span = selectAll('span');
@@ -84,7 +84,7 @@ function onCondition(cb) {
       const maxHeight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-      const condition = scrollPosition > 10 && scrollPosition < maxHeight - 300;
+      const condition = scrollPosition > 300 && scrollPosition < maxHeight - 300;
 
       return requestAnimationFrame(() => {
         if (condition === false) {
@@ -131,7 +131,34 @@ function onScroll() {
     console.log('Dom Manipulating while scroll Down');
     return;
   }
+}
 
+function moveBtnEventAdder() {
+
+
+
+  let direction = true; // down
+  if (window.scrollY < window.oldScroll) {
+    direction = false; //up
+  }
+  window.oldScroll = window.scrollY;
+
+  if (!direction) {
+    if (!upBtn.classList.contains('v-hidden')) {
+      return;
+    }
+    downBtn.classList.add('v-hidden');
+    upBtn.classList.remove('v-hidden');
+
+    return;
+  } else {
+    if (!downBtn.classList.contains('v-hidden')) {
+      return;
+    }
+    upBtn.classList.add('v-hidden');
+    downBtn.classList.remove('v-hidden');
+    return;
+  }
 }
 
 function nightModeChange(e) {
@@ -154,8 +181,8 @@ function nightModeChange(e) {
         h1[i].style.backgroundColor = "#eeeeee";
         h1[i].style.color = "#222831";
       }
-      for (let i = 0; i < h2.length; i++) {
-        h2[i].style.color = "#eeeeee";
+      for (let i = 0; i < h4.length; i++) {
+        h4[i].style.color = "#eeeeee";
       }
       for (let i = 0; i < articleItem.length; i++) {
         articleItem[i].style.border = "2px solid #eeeeee";
@@ -194,8 +221,8 @@ function nightModeChange(e) {
         h1[i].style.backgroundColor = "#222831";
         h1[i].style.color = "#eeeeee";
       }
-      for (let i = 0; i < h2.length; i++) {
-        h2[i].style.color = "#222831";
+      for (let i = 0; i < h4.length; i++) {
+        h4[i].style.color = "#222831";
       }
       for (let i = 0; i < articleItem.length; i++) {
         articleItem[i].style.border = "2px solid #222831";
@@ -222,12 +249,16 @@ function nightModeChange(e) {
 function toTop() {
   window.scroll({
     top: 0,
+    left: 0,
+    behavior: "smooth"
   });
 }
 
 function toBottom() {
   window.scroll({
     top: document.body.scrollHeight,
+    left: 0,
+    behavior: "smooth"
   });
 }
 
@@ -239,6 +270,9 @@ select('#upBtn').addEventListener("mousedown", toTop);
 select('#downBtn').addEventListener("mousedown", toBottom);
 select('#upBtn').addEventListener("touchstart", toTop);
 select('#downBtn').addEventListener("touchstart", toBottom);
-window.addEventListener('scroll', onCondition(onScroll), {
+// window.addEventListener('scroll', onCondition(onScroll), {
+//   passive: true
+// });
+window.addEventListener('scroll', moveBtnEventAdder, {
   passive: true
 });

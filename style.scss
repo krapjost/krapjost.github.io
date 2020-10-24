@@ -31,7 +31,7 @@ body {
 .grid-box {
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1000px));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 800px));
     grid-auto-flow: dense;
     justify-content: center;
     margin-top: 50px;
@@ -42,14 +42,14 @@ body {
     gap: 30px;
     margin: 0 auto;
     padding-bottom: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
     justify-content: center;
 }
 
 article.item {
     width: 95%;
     border: 2px solid $primary;
-    padding: 15px 0;
+    padding: 0;
     margin: 0 auto;
 }
 
@@ -57,7 +57,7 @@ div.item {
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    margin-top: 30px;
+    // margin-top: 30px;
     padding: 15px;
     border: 2px solid $secondary;
 }
@@ -187,7 +187,7 @@ main {
                 background-color: $primary;
                 text-align: center;
                 transition: all .3s ease-in-out;
-                
+                margin-bottom: 30px;
             }
 
 
