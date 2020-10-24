@@ -147,16 +147,20 @@ function moveBtnEventAdder() {
     if (!upBtn.classList.contains('v-hidden')) {
       return;
     }
-    downBtn.classList.add('v-hidden');
-    upBtn.classList.remove('v-hidden');
+    setTimeout(function() {
+      downBtn.classList.add('v-hidden');
+      upBtn.classList.remove('v-hidden');
+    }, 250);
 
     return;
   } else {
     if (!downBtn.classList.contains('v-hidden')) {
       return;
     }
-    upBtn.classList.add('v-hidden');
-    downBtn.classList.remove('v-hidden');
+    setTimeout(function() {
+      upBtn.classList.add('v-hidden');
+      downBtn.classList.remove('v-hidden');
+    }, 250);
     return;
   }
 }
