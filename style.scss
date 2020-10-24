@@ -1,5 +1,5 @@
 $primary: #222831;
-$secondary: #90a3bd;
+$secondary: #777777b6;
 $third: #00adb5;
 $fourth: #eeeeee;
 $black: #000;
@@ -31,7 +31,7 @@ body {
 .grid-box {
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 825px));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1000px));
     grid-auto-flow: dense;
     justify-content: center;
     margin-top: 50px;
@@ -39,17 +39,17 @@ body {
 
 .article-grid-box {
     display: grid;
-    gap: 15px;
+    gap: 30px;
     margin: 0 auto;
-    // border: 1px solid $primary;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 350px));
+    padding-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
     justify-content: center;
-
 }
 
 article.item {
-    border: 1px solid $primary;
     width: 95%;
+    border: 2px solid $primary;
+    padding: 15px 0;
     margin: 0 auto;
 }
 
@@ -57,8 +57,9 @@ div.item {
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    // border: 1px solid $primary;
-    margin: 15px 0;
+    margin-top: 30px;
+    padding: 15px;
+    border: 2px solid $secondary;
 }
 
 
@@ -100,7 +101,7 @@ nav {
 
         .current {
             background-color: $fourth;
-            margin: 10px 5px 0 5px;
+            margin: 10px 0 0 0;
             border-radius: 20px 20px 0 0;
 
             span {
@@ -116,7 +117,7 @@ nav {
         }
 
         .li-hover:hover {
-            background-color: $fourth;
+            // background-color: $secondary;
             transition: all .1s;
 
             cursor: pointer;
@@ -128,7 +129,7 @@ nav {
             i {
                 width: 100%;
                 font-size: x-large;
-                color: $primary;
+                color: $fourth;
                 transition: all .1s;
             }
         }
@@ -167,7 +168,7 @@ main {
 
     div {
         width: 100%;
-        margin: 10px 0;
+        margin: 0;
 
         article {
 
@@ -177,19 +178,16 @@ main {
 
 
             h1 {
-                border: 1px solid $primary;
                 position: sticky;
                 z-index: 5;
                 top: 0;
-                // left: 0;
                 font-size: large;
-                // margin: 10px 0;
                 padding: 8px;
                 color: $fourth;
                 background-color: $primary;
                 text-align: center;
                 transition: all .3s ease-in-out;
-                // border-radius: 0 0 100px 100px;
+                
             }
 
 
@@ -199,13 +197,13 @@ main {
                 width: max-content;
                 flex-flow: row;
                 overflow: hidden;
-                height: 30px;
-                margin: 0 auto;
+                height: 26px;
+                margin: 5px auto;
                 color: $primary;
-                padding: 0;
+                // padding: 5px;
                 .my_name {
                     text-align: center;
-                    // transition: all .5s;
+                    // padding: 5px;
                     margin: 0 auto;
                 }
 
@@ -232,16 +230,15 @@ main {
             }
 
 
-
             h3 {
-                display: inline;
+                display: block;
                 width: 100%;
-                height: 30px;
+                // height: 30px;
                 text-align: center;
-                font-size: large;
-                margin: 15px auto;
-                border-top: 1px solid $primary;
-                border-bottom: 1px solid $primary;
+                font-size: medium;
+                margin: 0;
+                padding: 5px;
+                background-color: $secondary;
             }
 
             h4 {
@@ -265,12 +262,11 @@ main {
                 width: 100%;
                 font-weight: bolder;
                 text-align: center;
-
+                margin: 5px 0;
             }
 
             p {
                 text-align: left;
-                // padding: 10px 35px;
             }
         }
     }
@@ -280,19 +276,17 @@ main {
     a {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-items: center;
         width: max-content;
-        margin: 0 auto;
+        margin: 5px auto;
         color: $primary;
         // transition: all 1s;
     }
 
 
     a:hover {
-        .i {
-            transition: all .8s;
-        }
+
 
         .description {
             width: 100%;
@@ -301,24 +295,21 @@ main {
     }
 
     .i {
-        padding: 10px;
-        font-size: 35px;
-        width: max-content;
-        background-color: $secondary;
-        border: 2px solid $secondary;
-        border-radius: 50px;
-        margin: 0 15px;
+        justify-self: flex-start;
+        align-self: flex-start;
+        font-size: xx-large;
+        width: fit-content;
+        margin: 0 auto;
         color: $primary;
         transition: all .3s;
     }
 
     .description {
-        color: $secondary;
-        padding: 0;
-        margin: 0;
+        padding: 5px 0;
+        margin: 0 5px;
         width: 0px;
-        font-size: medium;
-        height: 26px;
+        font-size: 14px;
+        height: 24px;
         font-weight: bold;
         text-align: left;
         overflow: hidden;
@@ -352,11 +343,11 @@ main {
 }
 
 .fa-moon {
-    background-color: #393e4650;
+    background-color: #77777777;
 }
 
 .fa-sun {
-    background-color: #393e4650;
+    background-color: #77777777;
 }
 
 .scroll-btn {
@@ -370,7 +361,7 @@ main {
 
     border-radius: 30px;
     padding: 6px 14px;
-    background-color: #393e4650;
+    background-color: #77777777;
     // transition: all .3s ease-in-out;
 }
 

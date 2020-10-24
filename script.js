@@ -2,6 +2,8 @@ const nav = select('nav');
 const upBtn = select('#upBtn');
 const downBtn = select('#downBtn');
 const current = select('.current');
+const liHover = select('.li-hover');
+
 const moon = select('#moon');
 const sun = select('#sun');
 const body = select('body');
@@ -11,6 +13,7 @@ const h2 = selectAll('h2');
 const h1 = selectAll('h1');
 const a = selectAll('a');
 const span = selectAll('span');
+const articleItem = selectAll('article.item');
 
 function select(selector) {
   return document.querySelector(selector);
@@ -26,6 +29,7 @@ const switchPage = e => {
   const t = e.target.parentNode;
   switch (t.className) {
     case "li current":
+      console.log(t);
       break;
     case "li li-hover":
       console.log(t);
@@ -34,15 +38,31 @@ const switchPage = e => {
       if (t.lastElementChild.innerText === "프로필") {
         select('#project').style.display = "none";
         select('#profile').style.display = "grid";
+        t.style.backgroundColor = body.style.backgroundColor;
+        t.firstElementChild.style.color = body.style.color;
+        t.parentNode.style.backgroundColor = body.style.color;
+
+        t.nextElementSibling.style.backgroundColor = body.style.color;
+        t.nextElementSibling.firstElementChild.style.color = body.style.backgroundColor;
+        t.nextElementSibling.lastElementChild.style.color = body.style.backgroundColor;
+
       } else if (t.lastElementChild.innerText === "프로젝트") {
         select('#profile').style.display = "none";
         select('#project').style.display = "grid";
+        t.style.backgroundColor = body.style.backgroundColor;
+        t.firstElementChild.style.color = body.style.color;
+        t.parentNode.style.backgroundColor = body.style.color;
+
+        t.previousElementSibling.style.backgroundColor = body.style.color;
+        t.previousElementSibling.firstElementChild.style.color = body.style.backgroundColor;
+        t.previousElementSibling.lastElementChild.style.color = body.style.backgroundColor;
+
       }
-      if (select(".current").style.backgroundColor!=="") {
-        select(".current").style.backgroundColor = body.style.backgroundColor;
-        select(".current").firstElementChild.style.color = body.style.color;
-        select(".current").firstElementChild.nextElementSibling.style.color = body.style.color;
-      }
+      // if (select(".current").style.backgroundColor!=="") {
+      //   current.style.backgroundColor = 
+      //   current.firstElementChild.style.color = body.style.color;
+      //   current.firstElementChild.nextElementSibling.style.color = body.style.color;
+      // }
       break;
   }
 
@@ -68,7 +88,7 @@ function onCondition(cb) {
 
       return requestAnimationFrame(() => {
         if (condition === false) {
-          
+
           downBtn.style.visibility = "hidden";
           upBtn.style.visibility = "hidden";
           console.log("condition is", condition);
@@ -137,23 +157,16 @@ function nightModeChange(e) {
       for (let i = 0; i < h2.length; i++) {
         h2[i].style.color = "#eeeeee";
       }
-
-      current.style.backgroundColor = "#222831";
-      current.style.color = "#eeeeee";
-
-      if (current.nextElementSibling === null) {
-        return;
-      } else if (current.nextElementSibling) {
-        current.nextElementSibling.style.backgroundColor = "#eeeeee";
-        current.nextElementSibling.firstElementChild.style.color = "#222831";
-        current.nextElementSibling.firstElementChild.nextElementSibling.style.color = "#222831";
-      } else if (current.previousElementSibling === null) {
-        return;
-      } else if (current.previousElementSibling) {
-        current.previousElementSibling.style.backgroundColor = "#eeeeee";
-        current.previousElementSibling.firstElementChild.style.color = "#222831";
-        current.previousElementSibling.firstElementChild.nextElementSibling.style.color = "#222831";
+      for (let i = 0; i < articleItem.length; i++) {
+        articleItem[i].style.border = "2px solid #eeeeee";
       }
+
+      select('.current').style.color = "#eeeeee";
+      select('.li-hover').style.backgroundColor = "#eeeeee";
+      select('.current').parentNode.style.backgroundColor = "#eeeeee";
+      select('.current').style.backgroundColor = "#222831";
+      select('.li-hover').lastElementChild.style.color = "#222831";
+      select('.li-hover').firstElementChild.style.color = "#222831";
 
       body.style.backgroundColor = "#222831";
       body.style.color = "#eeeeee";
@@ -184,24 +197,16 @@ function nightModeChange(e) {
       for (let i = 0; i < h2.length; i++) {
         h2[i].style.color = "#222831";
       }
-
-      current.style.backgroundColor = "#eeeeee";
-      current.style.color = "#222831";
-      
-      if (current.nextElementSibling === null) {
-        return;
-      } else if (current.nextElementSibling) {
-        current.nextElementSibling.style.backgroundColor = "#222831";
-        current.nextElementSibling.firstElementChild.style.color = "#eeeeee";
-        current.nextElementSibling.firstElementChild.nextElementSibling.style.color = "#eeeeee";
-      } else if (current.previousElementSibling === null) {
-        return;
-      } else if (current.previousElementSibling) {
-        current.previousElementSibling.style.backgroundColor = "#222831";
-        current.previousElementSibling.firstElementChild.style.color = "#eeeeee";
-        current.previousElementSibling.firstElementChild.nextElementSibling.style.color = "#eeeeee";
+      for (let i = 0; i < articleItem.length; i++) {
+        articleItem[i].style.border = "2px solid #222831";
       }
 
+      select('.current').parentNode.style.backgroundColor = "#222831";
+      select('.li-hover').style.backgroundColor = "#222831";
+      select('.current').style.color = "#222831";
+      select('.current').style.backgroundColor = "#eeeeee";
+      select('.li-hover').firstElementChild.style.color = "#eeeeee";
+      select('.li-hover').lastElementChild.style.color = "#eeeeee";
 
       body.style.backgroundColor = "#eeeeee";
       body.style.color = "#222831";
