@@ -266,6 +266,8 @@ function toBottom() {
   });
 }
 
+
+
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
 selectAll('.li')[1].addEventListener('click', event => switchPage(event));
 selectAll('.v-mode')[0].addEventListener('click', event => nightModeChange(event));
@@ -274,9 +276,60 @@ select('#upBtn').addEventListener("mousedown", toTop);
 select('#downBtn').addEventListener("mousedown", toBottom);
 select('#upBtn').addEventListener("touchstart", toTop);
 select('#downBtn').addEventListener("touchstart", toBottom);
-// window.addEventListener('scroll', onCondition(onScroll), {
-//   passive: true
-// });
-window.addEventListener('scroll', moveBtnEventAdder, {
+window.addEventListener('scroll', onCondition(onScroll), {
   passive: true
 });
+
+body.addEventListener('touchmove', e=>onMove(e), false);
+
+
+function getMoveType(x, y) {
+  let htTouchInfo = {
+    nStartX : -1,
+    nStartY : -1,
+    nStartTime : 0,
+  };
+
+  let nHSlope = ((window.innerHeight / 2) / window.innerWidth).toFixed(2) * 1;
+  
+  let nMoveType = -1;
+  let nX = Math.abs(htTouchInfo.nStartX - x);
+  let nY = Math.abs(htTouchInfo.nStartY- y);
+  let nDis = nX + nY;
+  console.log("nX",nX);
+  console.log("nY",nY);
+  console.log("nDis",nDis);
+
+
+  if(nDis < 25) { return nMoveType;}
+
+  let nSlope = parseFloat((nY / nX).toFixed(2), 10);
+
+  console.log("nSlope", nSlope);
+  console.log("nHSlope", nHSlope);
+
+  if (nSlope > nHSlope) {
+    nMoveType = 1;
+  } else {
+    nMoveType = 0;
+  }
+
+  return nMoveType;
+
+}
+
+function onMove(e) {
+  console.log(e);
+  console.log('start');
+  let nX = e.changedTouches[0].pageX;
+  let nY = e.changedTouches[0].pageY;
+  console.log(nX);
+  console.log(nY);
+ nMoveType = getMoveType(nX, nY);
+ console.log(nMoveType);
+
+}
+
+// window.addEventListener('scroll', moveBtnEventAdder, {
+//   passive: true
+// });
