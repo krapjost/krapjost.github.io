@@ -63,7 +63,7 @@ function redirect() {
     // change URL!!
     const myURL = 'http://127.0.0.1:5000/timer/:' + idIs;
     console.log(myURL);
-    document.getElementById('timerbtn').href = myURL;
+    // document.getElementById('timerbtn').href = myURL;
 }
 
 timerBtn.addEventListener('click', redirect, false);

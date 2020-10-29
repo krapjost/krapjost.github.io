@@ -25,7 +25,7 @@
 
   <main id="main">
 
-    <form action="/timer" id="formwrap" method="POST">
+    <form action="" id="formwrap" method="">
       <div id="methodwrap">
         <input type="radio" name="method" value="card" id="card">
         <label for="card" class="label">card</label>
@@ -35,7 +35,7 @@
       </div>
       <input type="text" id="tcost" maxlength="8" value="<%= cost %>" name="tcost" required>
       <input style="display: none;" type="text" id="user_id" maxlength="8" value="<%= id %>" name="user_id" required>
-      <button type="submit" id="postbtn">PAY</button>
+      <a href="./out.html"><button type="button" id="postbtn">PAY</button></a>
     </form>
 
   </main>
