@@ -62,6 +62,26 @@ div.item {
     border: 2px solid $secondary;
 }
 
+div.item {
+
+    .slider {
+
+        flex-direction: row;
+        display: flex;
+        overflow: auto;
+        width: 100%;
+
+        .slide-item {
+            background-color: #ffffff;
+            
+            img {
+                display: block;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
 
 .v-hidden {
     visibility: hidden;
@@ -199,6 +219,7 @@ main {
                 height: 26px;
                 margin: 5px auto;
                 color: $primary;
+
                 // padding: 5px;
                 .my_name {
                     text-align: center;
@@ -219,7 +240,7 @@ main {
 
             .name-is:hover {
 
-   
+
                 .let {
                     max-width: max-content;
                     width: 100%;
