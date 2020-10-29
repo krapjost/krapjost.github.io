@@ -287,14 +287,14 @@ function getMoveType(x, y) {
   let htTouchInfo = {
     nStartX : -1,
     nStartY : -1,
-    nStartTime : 0,
+    nStartTime : 0
   };
 
   let nHSlope = ((window.innerHeight / 2) / window.innerWidth).toFixed(2) * 1;
   
   let nMoveType = -1;
   let nX = Math.abs(htTouchInfo.nStartX - x);
-  let nY = Math.abs(htTouchInfo.nStartY- y);
+  let nY = Math.abs(htTouchInfo.nStartY - y);
   let nDis = nX + nY;
   console.log("nX",nX);
   console.log("nY",nY);
