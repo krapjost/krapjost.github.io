@@ -68,12 +68,14 @@ div.item {
 
         flex-direction: row;
         display: flex;
+        flex: none;
         overflow: auto;
         width: 100%;
-
+        scroll-snap-type: x mandatory;
+        align-items: center;
         .slide-item {
             background-color: #ffffff;
-            
+            scroll-snap-align: start;
             img {
                 display: block;
                 max-width: 320px;
