@@ -60,12 +60,11 @@ div.item {
     // margin-top: 30px;
     padding: 15px;
     border: 2px solid $secondary;
-}
-
-div.item {
-
+    position: relative;
     .slider {
-
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
         flex-direction: row;
         display: flex;
         flex: none;
@@ -73,16 +72,59 @@ div.item {
         width: 100%;
         scroll-snap-type: x mandatory;
         align-items: center;
+
         .slide-item {
+            position: relative;
             background-color: #ffffff;
             scroll-snap-align: start;
+            margin: 5px;
             img {
                 display: block;
-                max-width: 320px;
-                margin: 0 auto;
+                width: 320px;
+                // margin: 0 auto;
             }
         }
+
     }
+
+    
+    .slider::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera*/
+    }
+    
+    .fa-angle-left {
+        position: absolute;
+        top: auto;
+        left: 30px;
+        color: #ffffff70;
+        transition: all .3s ease;
+
+    }
+    .fa-angle-right {
+        position: absolute;
+        top: auto;
+        right: 30px; 
+        color: #ffffff70;
+        transition: all .3s ease;
+
+    }
+    .fa-angle-left:hover {
+        color: $third;
+    }
+    .fa-angle-right:hover {
+        color: $third;
+    }
+    .fa-angle-left:active {
+        color: #ffffff;
+        transition: all .3s ease;
+    }
+    .fa-angle-right:active {
+        color: #ffffff;
+        transition: all .3s ease;
+
+    }
+
 }
 
 .v-hidden {
