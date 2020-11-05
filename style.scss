@@ -55,10 +55,7 @@ body {
     }
 }
 @media (min-width: 800px) {
-    // .nav-up {
-    //     top: 0;
-    //     right: 0;
-    // }
+
     .span-2 {
         grid-column: auto / span 2;
     }
@@ -72,10 +69,11 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     }
     .nav {
-        width: 8em;
+        width: 6em;
+        height: 100px;
         position: fixed;
         z-index: 10;
-        top: 3em;
+        top: 6em;
         right: 0em;
         background-color: #ffffff00;
 
@@ -99,7 +97,7 @@ body {
     
                 i {
                     // width: 100%;
-                    font-size: 3em;
+                    font-size: xx-large;
                     color: $primary;
                     transition: all .5s ease-in-out;
                 }
@@ -113,7 +111,7 @@ body {
     
                 i {
  
-                    font-size: xx-large;
+                    font-size: x-large;
 
                     padding: 15px;
                     color: $fourth;
@@ -140,7 +138,7 @@ body {
     
                 i {
                     height: 100%;
-                    font-size: xx-large;
+                    font-size: x-large;
 
                     padding: 15px;
                     color: $fourth;
@@ -501,11 +499,11 @@ main {
 .v-mode {
     position: fixed;
 
-    bottom: 9em;
-    right: 2em;
+    bottom: 7em;
+    right: 1.2em;
 
     width: 50px;
-    height: 35px;
+    height: 30px;
 
     border-radius: 30px;
     padding: 6px 12px;
@@ -524,29 +522,26 @@ main {
 
 .fa-moon {
     background-color: #77777777;
-    font-size: 20px;
 }
 
 .fa-sun {
     background-color: #77777777;
-    font-size: 20px;
 
 }
 
 .scroll-btn {
     position: fixed;
 
-    bottom: 7em;
-    right: 2em;
+    bottom: 5em;
+    right: 1.2em;
 
     width: 50px;
-    height: 35px;
+    height: 30px;
     text-align: center;
     border-radius: 30px;
     padding: 6px 14px;
     background-color: #77777777;
     // transition: all .3s ease-in-out;
-    font-size: 20px;
 }
 
 .scroll-btn:hover {
