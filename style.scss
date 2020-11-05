@@ -74,21 +74,21 @@ div.item {
         scrollbar-width: none;
         flex-direction: row;
         display: flex;
-        flex: none;
         overflow: auto;
         width: 100%;
         scroll-snap-type: x mandatory;
         align-items: center;
-
+        // position: relative;
         .slide-item {
-            position: relative;
-            background-color: #ffffff;
+            background-color: #000000;
             scroll-snap-align: start;
             margin: 5px;
-
+            padding: 10px;
+            height: 60vh;
+          min-width: 100%;
             img {
                 display: block;
-                width: 320px;
+                width: 100%;
                 // margin: 0 auto;
             }
         }
@@ -105,7 +105,7 @@ div.item {
         position: absolute;
         top: auto;
         left: 30px;
-        color: #ffffff70;
+        color: #ffffffb0;
         transition: all .3s ease;
 
     }
@@ -114,7 +114,7 @@ div.item {
         position: absolute;
         top: auto;
         right: 30px;
-        color: #ffffff70;
+        color: #ffffffb0;
         transition: all .3s ease;
 
     }
@@ -221,7 +221,7 @@ nav {
             text-align: center;
             font-size: medium;
             border-radius: 20px 20px 0 0;
-            transition: all .3s ease-out;
+            // transition: all .3s ease-out;
 
             span {
                 color: $fourth;
@@ -589,7 +589,7 @@ main {
                 text-align: center;
                 font-size: medium;
                 border-radius:0 5em 5em 0;
-                transition: all .3s ease-out;
+                // transition: all .3s ease-out;
 
                 span {
                     display: none;
