@@ -84,7 +84,7 @@ function onCondition(cb) {
       const maxHeight = document.body.offsetHeight - window.innerHeight || document.body.offsetHeight;
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-      const condition = scrollPosition > 300 && scrollPosition < maxHeight - 300;
+      const condition = scrollPosition > 100 && scrollPosition < maxHeight - 100;
 
       return requestAnimationFrame(() => {
         if (condition === false) {
