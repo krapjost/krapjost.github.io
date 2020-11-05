@@ -192,7 +192,7 @@ function nightModeChange(e) {
 
       select('.current').style.color = "#eeeeee";
       select('.li-hover').style.backgroundColor = "#eeeeee";
-      select('.current').parentNode.style.backgroundColor = "#eeeeee";
+      select('.current').parentNode.style.backgroundColor = "#ffffff00";
       select('.current').style.backgroundColor = "#222831";
       select('.li-hover').lastElementChild.style.color = "#222831";
       select('.li-hover').firstElementChild.style.color = "#222831";
@@ -228,7 +228,7 @@ function nightModeChange(e) {
       }
       
 
-      select('.current').parentNode.style.backgroundColor = "#222831";
+      select('.current').parentNode.style.backgroundColor = "#ffffff00";
       select('.li-hover').style.backgroundColor = "#222831";
       select('.current').style.color = "#222831";
       select('.current').style.backgroundColor = "#eeeeee";
