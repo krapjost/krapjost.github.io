@@ -188,9 +188,7 @@ function nightModeChange(e) {
       for (let i = 0; i < h4.length; i++) {
         h4[i].style.color = "#eeeeee";
       }
-      for (let i = 0; i < articleItem.length; i++) {
-        articleItem[i].style.border = "2px solid #eeeeee";
-      }
+      
 
       select('.current').style.color = "#eeeeee";
       select('.li-hover').style.backgroundColor = "#eeeeee";
@@ -228,9 +226,7 @@ function nightModeChange(e) {
       for (let i = 0; i < h4.length; i++) {
         h4[i].style.color = "#222831";
       }
-      for (let i = 0; i < articleItem.length; i++) {
-        articleItem[i].style.border = "2px solid #222831";
-      }
+      
 
       select('.current').parentNode.style.backgroundColor = "#222831";
       select('.li-hover').style.backgroundColor = "#222831";
