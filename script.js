@@ -40,7 +40,7 @@ const switchPage = e => {
         select('#profile').style.display = "grid";
         t.style.backgroundColor = body.style.backgroundColor;
         t.firstElementChild.style.color = body.style.color;
-        t.parentNode.style.backgroundColor = body.style.color;
+        // t.parentNode.style.backgroundColor = body.style.color;
 
         t.nextElementSibling.style.backgroundColor = body.style.color;
         t.nextElementSibling.firstElementChild.style.color = body.style.backgroundColor;
@@ -51,7 +51,7 @@ const switchPage = e => {
         select('#project').style.display = "grid";
         t.style.backgroundColor = body.style.backgroundColor;
         t.firstElementChild.style.color = body.style.color;
-        t.parentNode.style.backgroundColor = body.style.color;
+        // t.parentNode.style.backgroundColor = body.style.color;
 
         t.previousElementSibling.style.backgroundColor = body.style.color;
         t.previousElementSibling.firstElementChild.style.color = body.style.backgroundColor;
