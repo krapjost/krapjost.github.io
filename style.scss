@@ -189,14 +189,14 @@ div.item {
         .slide-item {
             background-color: #000000;
             scroll-snap-align: start;
-            margin: 5px;
-            padding: 10px;
+
             height: 80vh;
             min-width: 100%;
             overflow: auto;
 
             img {
                 display: block;
+                height: 100%;
                 width: 100%;
                 // margin: 0 auto;
             }
@@ -212,56 +212,53 @@ div.item {
 
     .fa-angle-left {
         position: absolute;
-        top: auto;
-        left: 1em;
-        color: black;
-        background-color: #aaaaaa50;
-        border-radius: 5em;
-        width: 1em;
-        height: 2em;
-        padding-top: 25px;
-        text-align: center;
+        top: 0;
+        left: 0;
+        background-color: #aaaaaa00;
+        color: #ffffffb9;
+        width: 20%;
+        height: 100%;
+        text-align: left;
+        padding-top: 45vh;
+        padding-left: 10%;
         transition: all .3s ease;
-
+        font-size: 5em;
     }
 
     .fa-angle-right {
         position: absolute;
-        top: auto;
-        right: 1em;
-        color: black;
-        background-color: #aaaaaa50;
-        border-radius: 5em;
-        width: 1em;
-        height: 2em;
-        padding-top: 25px;
-        text-align: center;
+        top: 0;
+        right: 0;
+        background-color: #aaaaaa00;
+        color: #ffffffb9;
+        width: 20%;
+        height: 100%;
+        text-align: right;
+        padding-top: 45vh;
+        padding-right: 10%;
         transition: all .3s ease;
-
+        font-size: 5em;
     }
 
     .fa-angle-left:hover {
-        color: #8b8b8b;
-        background-color: #7e7e7e50;
+        color: #ffffff;
 
     }
 
     .fa-angle-right:hover {
-        color: #3254b1;
-        background-color: #70707050;
-
+        color: #ffffff;
     }
 
     .fa-angle-left:active {
-        color: #ffffff;
-        background-color: #ffffff50;
+        color: $third;
+        transform: rotateY(60deg);
 
         transition: all .3s ease;
     }
 
     .fa-angle-right:active {
-        color: #ffffff;
-        background-color: #ffffff50;
+        color: $third;
+        transform: rotateY(60deg);
 
         transition: all .3s ease;
 
@@ -459,10 +456,18 @@ main {
 
             ol {
                 margin: 15px 45px;
-                list-style: lower-alpha;
-
+                list-style: none;
+                
                 li {
                     font-weight: 500;
+                    counter-increment: item;
+                }
+                li::before {
+                    font-weight: bold;
+                    padding-right: .5em;
+                    content: counter(item) ".";
+                    font-style: italic;
+                    font-size: 20px;
                 }
             }
 
@@ -486,7 +491,7 @@ main {
     a {
         display: flex;
         flex-direction: row;
-        // align-items: center;
+        align-items: center;
         // justify-items: center;
         width: max-content;
         margin: 5px auto;
@@ -496,11 +501,13 @@ main {
 
 
     a:hover {
-
-
-        .description {
-            width: 100%;
-            transition: all .8s;
+        .i{
+            color: $third;
+        }
+    }
+    a:active {
+        .i{
+            color: $third;
         }
     }
 
@@ -517,9 +524,8 @@ main {
     .description {
         padding: 5px 0;
         margin: 0 5px;
-        width: 0px;
+        width: 100%;
         font-size: 14px;
-        height: 24px;
         font-weight: bold;
         text-align: left;
         overflow: hidden;
