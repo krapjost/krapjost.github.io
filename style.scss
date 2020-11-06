@@ -184,9 +184,11 @@ div.item {
         width: 100%;
         scroll-snap-type: x mandatory;
         align-items: center;
+        border-radius: .5em;
 
         // position: relative;
         .slide-item {
+
             background-color: #000000;
             scroll-snap-align: start;
 
@@ -210,60 +212,46 @@ div.item {
         /* Chrome, Safari, Opera*/
     }
 
+    .fa-angle-left, .fa-angle-right {
+        position: absolute;
+        top: 0;
+        background-color: #aaaaaa00;
+        border-radius: 1em;
+        color: #ffffffb9;
+        width: 20vw;
+        height: 100%;
+        padding-top: 45vh;
+        transition: all .1s ease;
+        font-size: 5em;
+    }
+
     .fa-angle-left {
-        position: absolute;
-        top: 0;
         left: 0;
-        background-color: #aaaaaa00;
-        color: #ffffffb9;
-        width: 20%;
-        height: 100%;
         text-align: left;
-        padding-top: 45vh;
-        padding-left: 10%;
-        transition: all .3s ease;
-        font-size: 5em;
-    }
+        padding-left: 8vw;
 
+    }
     .fa-angle-right {
-        position: absolute;
-        top: 0;
         right: 0;
-        background-color: #aaaaaa00;
-        color: #ffffffb9;
-        width: 20%;
-        height: 100%;
         text-align: right;
-        padding-top: 45vh;
-        padding-right: 10%;
-        transition: all .3s ease;
-        font-size: 5em;
-    }
-
-    .fa-angle-left:hover {
-        color: #ffffff;
-
-    }
-
-    .fa-angle-right:hover {
-        color: #ffffff;
+        padding-right: 8vw;
     }
 
     .fa-angle-left:active {
-        color: $third;
         transform: rotateY(60deg);
-
         transition: all .3s ease;
     }
 
     .fa-angle-right:active {
-        color: $third;
-        transform: rotateY(60deg);
-
+        transform: rotateY(-60deg);
         transition: all .3s ease;
-
     }
 
+}
+
+.active {
+    background: linear-gradient(0deg, #ffffff4d 0%, #00000000 60%);
+    color: white !important;
 }
 
 .v-hidden {

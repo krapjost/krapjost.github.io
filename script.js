@@ -25,15 +25,20 @@ function selectAll(selector) {
 
 
 const sliderLeft = e => {
+  e.target.classList.add('active');
   const t = e.target.parentNode;
-  console.log(t);
-  let width = t.lastElementChild.scrollWidth;
+  console.log(e.target);
+  let width = t.lastElementChild.offsetWidth;
+
   if (t.scrollLeft <= 1) {
     t.scroll({
       top: 0,
       left: t.scrollWidth - width,
       behavior: "smooth"
     });
+    setTimeout(function () {
+      e.target.classList.remove('active');
+    }, 300);
     return;
   }
   t.scrollBy({
@@ -42,18 +47,30 @@ const sliderLeft = e => {
     behavior: "smooth"
   });
 
+  setTimeout(function () {
+    e.target.classList.remove('active');
+  }, 300);
+
 };
 
 const sliderRight = e => {
+  e.target.classList.add('active');
   const t = e.target.parentNode;
   console.log(t);
-  const width = t.lastElementChild.scrollWidth;
+  const width = t.lastElementChild.offsetWidth;
+
   if (t.scrollLeft >= t.scrollWidth - width) {
     t.scroll({
       top: 0,
       left: 0,
       behavior: "smooth"
     });
+
+    setTimeout(function () {
+      e.target.classList.remove('active');
+    }, 300);
+
+
     return;
   }
   t.scrollBy({
@@ -62,6 +79,9 @@ const sliderRight = e => {
     behavior: "smooth"
   });
 
+  setTimeout(function () {
+    e.target.classList.remove('active');
+  }, 300);
 };
 
 const switchPage = e => {
@@ -235,6 +255,8 @@ function nightModeChange(e) {
       select('.current').style.backgroundColor = "#222831";
       select('.li-hover').lastElementChild.style.color = "#222831";
       select('.li-hover').firstElementChild.style.color = "#222831";
+      select('.fa-angle-left').style.color = "#ffffffb9";
+      select('.fa-angle-right').style.color = "#ffffffb9";
 
       body.style.backgroundColor = "#222831";
       body.style.color = "#eeeeee";
@@ -273,6 +295,8 @@ function nightModeChange(e) {
       select('.current').style.backgroundColor = "#eeeeee";
       select('.li-hover').firstElementChild.style.color = "#eeeeee";
       select('.li-hover').lastElementChild.style.color = "#eeeeee";
+      select('.fa-angle-left').style.color = "#ffffffb9";
+      select('.fa-angle-right').style.color = "#ffffffb9";
 
       body.style.backgroundColor = "#eeeeee";
       body.style.color = "#222831";
