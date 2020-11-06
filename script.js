@@ -28,7 +28,7 @@ const sliderLeft = e => {
   const t = e.target.parentNode;
   console.log(t);
   let width = t.lastElementChild.scrollWidth;
-  if (t.scrollLeft === 0) {
+  if (t.scrollLeft <= 1) {
     t.scroll({
       top: 0,
       left: t.scrollWidth - width,
@@ -48,7 +48,7 @@ const sliderRight = e => {
   const t = e.target.parentNode;
   console.log(t);
   const width = t.lastElementChild.scrollWidth;
-  if (t.scrollLeft === t.scrollWidth - width) {
+  if (t.scrollLeft >= t.scrollWidth - width) {
     t.scroll({
       top: 0,
       left: 0,
