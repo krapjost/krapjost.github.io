@@ -27,32 +27,32 @@ function selectAll(selector) {
 const sliderLeft = e => {
   const t = e.target.parentNode;
   console.log(t);
-  let width = t.scrollWidth - t.scrollLeftMax;
+  let width = t.lastElementChild.scrollWidth;
   if (t.scrollLeft === 0) {
     console.log('first Page');
-    t.scrollLeft = t.scrollLeftMax;
+    t.scrollLeft = t.scrollWidth - width;
     return;
   }
-  t.scroll({
+  t.scrollBy({
     top: 0,
-    left: t.scrollLeft - width,
+    left: -width,
     behavior: "smooth"
   });
 
 };
 
 const sliderRight = e => {
-  console.log(e);
   const t = e.target.parentNode;
-  const width = t.scrollWidth - t.scrollLeftMax;
-  if (t.scrollLeft === t.scrollLeftMax) {
+  console.log(t);
+  const width = t.lastElementChild.scrollWidth;
+  if (t.scrollLeft === t.scrollWidth - width) {
     console.log('first Page');
     t.scrollLeft = 0;
     return;
   }
-  t.scroll({
+  t.scrollBy({
     top: 0,
-    left: t.scrollLeft + width,
+    left: width,
     behavior: "smooth"
   });
 
