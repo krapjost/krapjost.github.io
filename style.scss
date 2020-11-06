@@ -84,8 +84,10 @@ div.item {
             scroll-snap-align: start;
             margin: 5px;
             padding: 10px;
-            height: 60vh;
+            height: 80vh;
           min-width: 100%;
+          overflow: auto;
+
             img {
                 display: block;
                 width: 100%;
@@ -104,8 +106,14 @@ div.item {
     .fa-angle-left {
         position: absolute;
         top: auto;
-        left: 30px;
-        color: #ffffffb0;
+        left: 1em;
+        color: black;
+        background-color: #aaaaaa50;
+        border-radius: 5em;
+        width: 1em;
+        height: 2em;
+        padding-top: 25px;
+        text-align: center;
         transition: all .3s ease;
 
     }
@@ -113,27 +121,41 @@ div.item {
     .fa-angle-right {
         position: absolute;
         top: auto;
-        right: 30px;
-        color: #ffffffb0;
+        right: 1em;
+        color: black;
+        background-color: #aaaaaa50;
+        border-radius: 5em;
+        width: 1em;
+        height: 2em;
+        padding-top: 25px;
+        text-align: center;
         transition: all .3s ease;
 
     }
 
     .fa-angle-left:hover {
-        color: $third;
+        color: #8b8b8b;
+        background-color: #7e7e7e50;
+
     }
 
     .fa-angle-right:hover {
-        color: $third;
+        color: #3254b1;
+        background-color: #70707050;
+
     }
 
     .fa-angle-left:active {
         color: #ffffff;
+        background-color: #ffffff50;
+
         transition: all .3s ease;
     }
 
     .fa-angle-right:active {
         color: #ffffff;
+        background-color: #ffffff50;
+
         transition: all .3s ease;
 
     }
@@ -489,26 +511,19 @@ main {
                 p {
                     font-size: 18px;
                 }
+                .description {
+                    font-size: 18px;
+                    height: 40px;
+
+                }
+
+                .i {
+                    font-size: 50px;
+                }
             }
         }
 
 
-
-
-        a:hover {
-            .description {
-                width: 100%;
-                transition: all .8s;
-            }
-        }
-
-        .i {
-            font-size: xx-large;
-        }
-
-        .description {
-            font-size: 14px;
-        }
     }
 
 
@@ -597,7 +612,7 @@ main {
 
                 i {
                     height: 100%;
-                    font-size: x-large;
+                    font-size: xx-large;
 
                     padding: 15px;
                     color: $fourth;
@@ -643,6 +658,13 @@ main {
 
                 p {
                     font-size: 20px;
+                }
+                .description {
+                    font-size: 20px;
+                    height: 40px;
+                }
+                .i {
+                    font-size: 60px;
                 }
             }
         }
