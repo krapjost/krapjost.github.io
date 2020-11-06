@@ -24,6 +24,39 @@ function selectAll(selector) {
 }
 
 
+const sliderLeft = e => {
+  const t = e.target.parentNode;
+  console.log(t);
+  let width = t.scrollWidth - t.scrollLeftMax;
+  if (t.scrollLeft === 0) {
+    console.log('first Page');
+    t.scrollLeft = t.scrollLeftMax;
+    return;
+  }
+  t.scroll({
+    top: 0,
+    left: t.scrollLeft - width,
+    behavior: "smooth"
+  });
+
+};
+
+const sliderRight = e => {
+  console.log(e);
+  const t = e.target.parentNode;
+  const width = t.scrollWidth - t.scrollLeftMax;
+  if (t.scrollLeft === t.scrollLeftMax) {
+    console.log('first Page');
+    t.scrollLeft = 0;
+    return;
+  }
+  t.scroll({
+    top: 0,
+    left: t.scrollLeft + width,
+    behavior: "smooth"
+  });
+
+};
 
 const switchPage = e => {
   const t = e.target.parentNode;
@@ -147,7 +180,7 @@ function moveBtnEventAdder() {
     if (!upBtn.classList.contains('v-hidden')) {
       return;
     }
-    setTimeout(function() {
+    setTimeout(function () {
       downBtn.classList.add('v-hidden');
       upBtn.classList.remove('v-hidden');
     }, 250);
@@ -157,7 +190,7 @@ function moveBtnEventAdder() {
     if (!downBtn.classList.contains('v-hidden')) {
       return;
     }
-    setTimeout(function() {
+    setTimeout(function () {
       upBtn.classList.add('v-hidden');
       downBtn.classList.remove('v-hidden');
     }, 250);
@@ -188,7 +221,7 @@ function nightModeChange(e) {
       for (let i = 0; i < h4.length; i++) {
         h4[i].style.color = "#eeeeee";
       }
-      
+
 
       select('.current').style.color = "#eeeeee";
       select('.li-hover').style.backgroundColor = "#eeeeee";
@@ -226,7 +259,7 @@ function nightModeChange(e) {
       for (let i = 0; i < h4.length; i++) {
         h4[i].style.color = "#222831";
       }
-      
+
 
       select('.current').parentNode.style.backgroundColor = "#ffffff00";
       select('.li-hover').style.backgroundColor = "#222831";
@@ -263,7 +296,10 @@ function toBottom() {
 }
 
 
-
+selectAll('.fa-angle-left')[0].addEventListener('click', event => sliderLeft(event));
+selectAll('.fa-angle-right')[0].addEventListener('click', event => sliderRight(event));
+selectAll('.fa-angle-left')[1].addEventListener('click', event => sliderLeft(event));
+selectAll('.fa-angle-right')[1].addEventListener('click', event => sliderRight(event));
 selectAll('.li')[0].addEventListener('click', event => switchPage(event));
 selectAll('.li')[1].addEventListener('click', event => switchPage(event));
 selectAll('.v-mode')[0].addEventListener('click', event => nightModeChange(event));
@@ -276,28 +312,30 @@ window.addEventListener('scroll', onCondition(onScroll), {
   passive: true
 });
 
-body.addEventListener('touchmove', e=>onMove(e), false);
+body.addEventListener('touchmove', e => onMove(e), false);
 
 
 function getMoveType(x, y) {
   let htTouchInfo = {
-    nStartX : -1,
-    nStartY : -1,
-    nStartTime : 0
+    nStartX: -1,
+    nStartY: -1,
+    nStartTime: 0
   };
 
   let nHSlope = ((window.innerHeight / 2) / window.innerWidth).toFixed(2) * 1;
-  
+
   let nMoveType = -1;
   let nX = Math.abs(htTouchInfo.nStartX - x);
   let nY = Math.abs(htTouchInfo.nStartY - y);
   let nDis = nX + nY;
-  console.log("nX",nX);
-  console.log("nY",nY);
-  console.log("nDis",nDis);
+  console.log("nX", nX);
+  console.log("nY", nY);
+  console.log("nDis", nDis);
 
 
-  if(nDis < 25) { return nMoveType;}
+  if (nDis < 25) {
+    return nMoveType;
+  }
 
   let nSlope = parseFloat((nY / nX).toFixed(2), 10);
 
@@ -321,8 +359,8 @@ function onMove(e) {
   let nY = e.changedTouches[0].pageY;
   console.log(nX);
   console.log(nY);
- nMoveType = getMoveType(nX, nY);
- console.log(nMoveType);
+  nMoveType = getMoveType(nX, nY);
+  console.log(nMoveType);
 
 }
 

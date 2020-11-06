@@ -190,14 +190,14 @@ div.item {
             background-color: #000000;
             scroll-snap-align: start;
 
-            height: 80vh;
+            height: 70vh;
             min-width: 100%;
             overflow: auto;
 
             img {
                 display: block;
-                height: 100%;
-                width: 100%;
+                min-height: 100%;
+                min-width: 100%;
                 // margin: 0 auto;
             }
         }
@@ -452,8 +452,8 @@ main {
                 font-size: 15px;
                 color: $primary;
                 margin: 15px auto;
-                border-radius: 5em;
-                background: linear-gradient(-70deg, #777777b6 0%, #ffffff00 50%);
+                border-radius: 1em;
+                background: linear-gradient(-30deg, #77777765 0%, #ffffff00 50%);
                 padding: 5px 15px 5px 15px;
             }
 
