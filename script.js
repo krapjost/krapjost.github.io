@@ -29,8 +29,11 @@ const sliderLeft = e => {
   console.log(t);
   let width = t.lastElementChild.scrollWidth;
   if (t.scrollLeft === 0) {
-    console.log('first Page');
-    t.scrollLeft = t.scrollWidth - width;
+    t.scroll({
+      top: 0,
+      left: t.scrollWidth - width,
+      behavior: "smooth"
+    });
     return;
   }
   t.scrollBy({
@@ -46,8 +49,11 @@ const sliderRight = e => {
   console.log(t);
   const width = t.lastElementChild.scrollWidth;
   if (t.scrollLeft === t.scrollWidth - width) {
-    console.log('first Page');
-    t.scrollLeft = 0;
+    t.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
     return;
   }
   t.scrollBy({
