@@ -442,7 +442,7 @@ main {
                 width: 100%;
                 text-align: center;
                 font-size: medium;
-                margin: 0;
+                margin-bottom: 15px;
                 padding: 5px;
                 background-color: $secondary;
             }
@@ -452,6 +452,9 @@ main {
                 font-size: 15px;
                 color: $primary;
                 margin: 15px auto;
+                border-radius: 5em;
+                background: linear-gradient(-70deg, #777777b6 0%, #ffffff00 50%);
+                padding: 5px 15px 5px 15px;
             }
 
             ol {
