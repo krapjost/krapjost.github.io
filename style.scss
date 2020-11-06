@@ -24,7 +24,7 @@ $z-bot: 2;
         border-radius: 50em;
         // border: 15px solid #ffffff;
         // background-color: #ffffff7e ;
-        background: radial-gradient( #777777b6 0%, #ffffff00 100%);
+        background: radial-gradient(#777777b6 0%, #ffffff00 100%);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -34,7 +34,7 @@ $z-bot: 2;
         width: 70%;
         height: 250px;
         margin: 15px;
-        box-shadow: 0px 0px 5px #777777 inset ;
+        box-shadow: 0px 0px 5px #777777 inset;
         // box-shadow: 10px -10px 30px #00acb5  ;
     }
 
@@ -69,7 +69,7 @@ $z-bot: 2;
     width: 100%;
     height: 100%;
     min-height: 70px;
-    
+
 }
 
 .content {
@@ -101,6 +101,7 @@ $z-bot: 2;
     animation-delay: -7s;
     animation-duration: 7s;
 }
+
 .parallax>use:nth-child(4) {
     animation-delay: -10s;
     animation-duration: 10s;
@@ -188,31 +189,39 @@ div.item {
 
         // position: relative;
         .slide-item {
-
-            background-color: #000000;
             scroll-snap-align: start;
-
             height: 70vh;
             min-width: 100%;
             overflow: auto;
-
-            img {
-                display: block;
-                min-height: 100%;
-                width: 100%;
-                // margin: 0 auto;
-            }
         }
+
+
 
     }
 
+    .parking-lot {
+        .slide-item:nth-child(3) {
+            background-image: url('./common/img/Android\ -\ 1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .slide-item:nth-child(4) {
+            background-image: url('./common/img/Android\ -\ 2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    }
 
     .slider::-webkit-scrollbar {
         display: none;
         /* Chrome, Safari, Opera*/
     }
 
-    .fa-angle-left, .fa-angle-right {
+    .fa-angle-left,
+    .fa-angle-right {
         position: absolute;
         top: 0;
         background-color: #aaaaaa00;
@@ -231,6 +240,7 @@ div.item {
         padding-left: 8vw;
 
     }
+
     .fa-angle-right {
         right: 0;
         text-align: right;
@@ -448,11 +458,12 @@ main {
             ol {
                 margin: 15px 45px;
                 list-style: none;
-                
+
                 li {
                     font-weight: 500;
                     counter-increment: item;
                 }
+
                 li::before {
                     font-weight: bold;
                     padding-right: .5em;
@@ -492,12 +503,13 @@ main {
 
 
     a:hover {
-        .i{
+        .i {
             color: $third;
         }
     }
+
     a:active {
-        .i{
+        .i {
             color: $third;
         }
     }
@@ -625,6 +637,8 @@ main {
                 .i {
                     font-size: 50px;
                 }
+
+
             }
         }
 
@@ -723,6 +737,21 @@ main {
                     color: $fourth;
                 }
             }
+        }
+    }
+    .parking-lot {
+        .slide-item:nth-child(3) {
+            background-image: url("./common/img/Desktop\ -\ 1.png") !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .slide-item:nth-child(4) {
+            background-image: url("./common/img/Desktop\ -\ 2.png") !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
         }
     }
 }
