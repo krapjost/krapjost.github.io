@@ -69,7 +69,6 @@ $z-bot: 2;
     width: 100%;
     height: 100%;
     min-height: 70px;
-
 }
 
 .content {
@@ -88,23 +87,23 @@ $z-bot: 2;
 }
 
 .parallax>use:nth-child(1) {
-    animation-delay: -3s;
-    animation-duration: 3s;
+    animation-delay: -6s;
+    animation-duration: 9s;
 }
 
 .parallax>use:nth-child(2) {
-    animation-delay: -5s;
-    animation-duration: 5s;
-}
-
-.parallax>use:nth-child(3) {
-    animation-delay: -7s;
+    animation-delay: -4s;
     animation-duration: 7s;
 }
 
+.parallax>use:nth-child(3) {
+    animation-delay: -2s;
+    animation-duration: 5s;
+}
+
 .parallax>use:nth-child(4) {
-    animation-delay: -10s;
-    animation-duration: 10s;
+    animation-delay: -1s;
+    animation-duration: 4s;
 }
 
 @keyframes move-forever {
@@ -134,7 +133,6 @@ body {
     width: 100%;
     transition: all 0.3s ease-out;
 }
-
 
 .grid-box {
     padding: 2em;
@@ -209,6 +207,22 @@ div.item {
 
         .slide-item:nth-child(4) {
             background-image: url('./common/img/Android\ -\ 2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    }
+
+    .farmers-sl {
+        .slide-item:nth-child(3) {
+            background-image: url("./common/img/farmers-mobile.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .slide-item:nth-child(4) {
+            background-image: url("./common/img/farmers-mobile.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: 50%;
@@ -684,9 +698,9 @@ main {
                 margin: 10px 0 0 0;
                 border-radius: 0 5em 5em 0;
 
-                // span {
-                //     display: none;
-                // }
+                span {
+                    display: none;
+                }
 
                 i {
                     // width: 100%;
@@ -694,13 +708,19 @@ main {
                     color: $primary;
                     transition: all .5s ease-in-out;
                 }
+
+                i {
+                    display: block;
+                }
             }
 
             .li-hover:hover {
                 left: 0px;
                 transition: all .1s;
-
                 cursor: pointer;
+                // span {
+                //     display: none;
+                // }
 
                 i {
 
@@ -708,12 +728,13 @@ main {
 
                     padding: 15px;
                     color: $fourth;
+                    display: block;
                 }
             }
 
             li {
                 position: absolute;
-                left: -2em;
+                left: -1em;
                 box-shadow: 0px 10px 20px #00000042;
                 margin: .5em 0 .5em 0;
                 align-items: center;
@@ -723,22 +744,22 @@ main {
                 text-align: center;
                 font-size: medium;
                 border-radius: 0 5em 5em 0;
-                // transition: all .3s ease-out;
-
+                transition: all .3s ease-out;
+                height: max-content;
                 span {
-                    display: none;
+                    font-size: 18px;  
+                    display: block;
+                    padding: 13px;   
+                    font-weight: bolder;              
                 }
 
                 i {
-                    height: 100%;
-                    font-size: xx-large;
-
-                    padding: 15px;
-                    color: $fourth;
+                    display: none;
                 }
             }
         }
     }
+
     .parking-lot {
         .slide-item:nth-child(3) {
             background-image: url("./common/img/Desktop\ -\ 1.png") !important;
@@ -749,6 +770,21 @@ main {
 
         .slide-item:nth-child(4) {
             background-image: url("./common/img/Desktop\ -\ 2.png") !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    }
+    .farmers-sl {
+        .slide-item:nth-child(3) {
+            background-image: url("./common/img/farmers-desktop.png") !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .slide-item:nth-child(4) {
+            background-image: url("./common/img/farmers-desktop.png") !important;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: 50%;
