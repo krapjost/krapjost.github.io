@@ -141,6 +141,15 @@ const prod = [[&amp;#39;운동화&amp;#39;, 1000], [&amp;#39;구두&amp;#39;, 20
     
     <item>
       <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiply.clj/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiply.clj/</guid>
+      <description>(ns multiply.bug.fix) ;; My solution (defn multiply [a b] (* a b)) ;; Best practice (def multiply *) ( comment 배운 것 1. 클린코드를 쓴 엉클밥은 최후의 프로그래밍 언어가 있다면 클로저일 것이라고 말했다고 한다. 2. 클로저는 statement가 없다. 모두 expression. expression을 포함하는 것이 statement. 정확하게 차이를 정리해서 이해할 것 3. ns는 네임스페이스, def는 정의문, defn은 def + fn 함수를 정의 ) </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://krapjost.github.io/ps/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -287,7 +296,7 @@ space = %20 때로는 공백문자가 %2520 로 표기될 때도 있는데 이�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://krapjost.github.io/til/readme/</guid>
-      <description>TIL Today I Learned   url encoding 21/06/20 210622 21/06/22 210623 21/06/23 210624 21/06/24  </description>
+      <description>TIL Today I Learned   210622 21/06/22 210623 21/06/23 210624 21/06/24 210625 21/06/25 210701 21/07/01 210703 21/07/03 210708 21/07/08 210709 21/07/09 210713 21/07/13 210715 21/07/15 210716 21/07/16 210719 21/07/19  </description>
     </item>
     
   </channel>

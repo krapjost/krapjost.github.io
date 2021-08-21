@@ -25,24 +25,26 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><h1 id="til">TIL</h1>
-<pre><code>Today I Learned
-</code></pre>
-<ol>
-<li><a href="/til/210622">210622</a> 21/06/22</li>
-<li><a href="/til/210623">210623</a> 21/06/23</li>
-<li><a href="/til/210624">210624</a> 21/06/24</li>
-<li><a href="/til/210625">210625</a> 21/06/25</li>
-<li><a href="/til/210701">210701</a> 21/07/01</li>
-<li><a href="/til/210703">210703</a> 21/07/03</li>
-<li><a href="/til/210708">210708</a> 21/07/08</li>
-<li><a href="/til/210709">210709</a> 21/07/09</li>
-<li><a href="/til/210713">210713</a> 21/07/13</li>
-<li><a href="/til/210715">210715</a> 21/07/15</li>
-<li><a href="/til/210716">210716</a> 21/07/16</li>
-<li><a href="/til/210719">210719</a> 21/07/19</li>
-</ol>
-</span>
+    <span id=terminal><h1 id='title'></h1><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clj" data-lang="clj">(<span style="color:#66d9ef">ns </span>multiply.bug.fix)
+
+<span style="color:#75715e">;; My solution</span>
+(<span style="color:#66d9ef">defn </span>multiply [a b]
+ (* a b))
+
+<span style="color:#75715e">;; Best practice</span>
+(<span style="color:#66d9ef">def </span>multiply *)
+
+( comment
+  
+  배운 것
+
+  <span style="color:#ae81ff">1</span><span style="color:#66d9ef">. </span>클린코드를 쓴 엉클밥은 최후의 프로그래밍 언어가 있다면 클로저일 것이라고 말했다고 한다.
+  <span style="color:#ae81ff">2</span><span style="color:#66d9ef">. </span>클로저는 statement가 없다. 모두 expression.
+      expression을 포함하는 것이 statement. 정확하게 차이를 정리해서 이해할 것
+  <span style="color:#ae81ff">3</span><span style="color:#66d9ef">. </span>ns는 네임스페이스, def는 정의문, defn은 <span style="color:#66d9ef">def </span>+ <span style="color:#66d9ef">fn </span>함수를 정의
+  
+)
+</code></pre></div></span>
 
 
         </div></body>
