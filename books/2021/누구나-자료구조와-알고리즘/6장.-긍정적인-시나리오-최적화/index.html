@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><h1 id="6장-긍정적인-시나리오-최적화">6장. 긍정적인 시나리오 최적화</h1>
+<p>최악의 시나리오에서의 효율성과 평균 시나리오에서의 효율성</p>
+<p>최악을 우선으로 최적화하고 그 다음 다른 상황을 최적화하자.</p>
+<h2 id="삽입-정렬">삽입 정렬</h2>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_sort</span>(x):
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(x)):
+		j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		key <span style="color:#f92672">=</span> x[i]
+		<span style="color:#66d9ef">while</span> x[j] <span style="color:#f92672">&gt;</span> key <span style="color:#f92672">and</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+			x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[j]
+			j <span style="color:#f92672">=</span> j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> key
+	<span style="color:#66d9ef">return</span> x
+</code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>삽입 정렬</th>
+<th>선택 정렬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최악의 경우</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> + 2N -2</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+</tr>
+<tr>
+<td>평균적인 경우</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="최선-평균-최악의-경우">최선, 평균, 최악의 경우</h3>
+<p>예를 들어 다룰 데이터가 대부분 역순으로 정렬될 것이라고 예상한다면 선택 정렬이 가장 빠르며 데이터가 어떨지 전혀 알 수 없다면 기본적으로 평균적인 경우이며 둘 다 같다.</p>
+<h3 id="결론">결론</h3>
+<p>사용할 알고리즘을 고를 때 다뤄야할 데이터의 특성을 고려하여 최선, 평균, 최악의 시나리오를 구분하여 선택하자.</p>
+<p>대부분의 경우는 평균의 경우임을 명심하자.</p>
+</span>
+
+
+        </div></body>
+</html>

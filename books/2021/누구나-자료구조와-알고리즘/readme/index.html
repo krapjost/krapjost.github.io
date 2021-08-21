@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><h1 id="누구나-자료-구조와-알고리즘">누구나 자료 구조와 알고리즘</h1>
+<h3 id="목차">목차</h3>
+<ol>
+<li>자료 구조가 중요한 까닭</li>
+<li>알고리즘이 중요한 까닭</li>
+<li>빅 오 표기법</li>
+<li>빅 오로 코드 속도 올리기</li>
+<li>빅 오를 사용하거나 사용하지 않는 코드 최적화</li>
+<li>긍정적인 시나리오 최적화</li>
+<li>해시 테이블로 매우 빠른 룩업</li>
+<li>스택과 큐로 간결한 코드 생성</li>
+<li>재귀를 사용한 재귀적 반복</li>
+<li>속도를 높이는 재귀 알고리즘</li>
+<li>노드 기반 자료 구조</li>
+<li>이진 트리로 속도 향상</li>
+<li>그래프로 뭐든지 연결하기</li>
+<li>그래프로 뭐든지 연결하기</li>
+</ol>
+<h2 id="1장-자료구조가-중요한-까닭">1장. 자료구조가 중요한 까닭</h2>
+<blockquote>
+<ul>
+<li>
+<p>프로그래밍은 데이터를 다루는 일이다.</p>
+</li>
+<li>
+<p>데이터는 모든 유형의 정보를 말한다.</p>
+</li>
+<li>
+<p>매우 복잡한 데이터도 대개 수와 문자열 묶음으로 나뉜다.</p>
+</li>
+</ul>
+</blockquote>
+<p>이 책은 데이터를 조직하는 방법이 아니라 데이터를 조직하는 방법이 <strong>코드의 실행 속도</strong>에 미치는 영향을 가르치고자 한다.</p>
+<p>좋은 소프트웨어를 개발하려면 다양한 자료 구조를 알고, 각 자료 구조가 성능에 어떤 영향을 미칠지 확실하게 이해하고 있어야 한다.</p>
+<blockquote>
+<p>자료구조의 성능을 알려면 코드가 자료구조와 일반적으로 어떻게 상호 작용하는지 분석해야 한다.</p>
+</blockquote>
+<p>자료 구조와의 상호작용에는 보통 다음 네 가지 기본 방법을 사용하며, 이를 <strong>연산</strong>이라 부른다.</p>
+<ul>
+<li>읽기 : 자료 구조 내 <strong>특정 위치의 값</strong>을 찾는 것.</li>
+<li>검색 : 자료 구조 내 <strong>특정 값의 위치</strong>, 여부를 찾는 것.</li>
+<li>삽입 : 자료 구조 내 <strong>값을 추가</strong>하는 것.</li>
+<li>삭제 : 자료 구조에서 <strong>값을 제거</strong>하는 것.</li>
+</ul>
+<h4 id="연산이-얼마나-빠른가를-측정할-때에는-얼마나-많은-단계가-필요한가로-논한다">연산이 얼마나 &ldquo;빠른가&quot;를 측정할 때에는 얼마나 많은 단계가 필요한가로 논한다.</h4>
+<p>왜냐하면 동일한 알고리즘이 적용된 프로그램이라도 컴퓨터의 하드웨어 사양에 따라 시간은 달라지기 마련이다. 걸리는 시간으로 측정하면 신뢰할 수 없다. 하지만 연산 A에 5단계가 필요하고 B에는 500단계가 필요하다고 하면 모든 하드웨어에서 A가 B보다 빠를 거라고 가정할 수 있다.</p>
+<h3 id="배열">배열</h3>
+<p>배열은 단순히 데이터 원소들의 리스트이다.</p>
+<p>배열에 쓰이는 네 가지 연산은 각각 얼마나 많은 단계가 필요한가</p>
+<h4 id="읽기">읽기</h4>
+<p>​	배열에서의 읽기는 단 한 단계다. 컴퓨터는 배열 내 특정 인덱스에 한 번에 접근해서 볼 수 있다.</p>
+<h4 id="검색">검색</h4>
+<p>​	배열에서의 검색은 모든 메모리 주소를 일일이 뒤져봐야한다. 이를 선형 검색이라고 부른다.</p>
+<h4 id="삽입">삽입</h4>
+<p>​	배열에 데이터를 삽입하는 연산은 삽입하는 위치에 따라 효율성이 다르다. 배열의 마지막에 삽입하는 경우는 한 단계이지만 배열의 처음에 삽입하는 경우는 뒤의 모든 셀을 뒤로 이동시켜야 하기 때문에 원소 갯수 + 1 번의 연산이 필요하다.</p>
+<h4 id="삭제">삭제</h4>
+<p>​	배열은 중간에 빈 공간을 허락하지 않는다. 배열 중간의 원소를 하나 삭제한다면 그 뒤의 모든 원소를 앞으로 당기는 연산이 뒤따른다.</p>
+<h3 id="집합">집합</h3>
+<p>​	집합은 중복값을 허용하지 않는 자료 구조다. 집합의 종류는 다양하지만 여기에서는 배열을 기반으로 한 집합을 다룬다. 이 때 집합과 배열의 유일한 차이점은 집합이 중복값은 허용하지 않는다는 것</p>
+<p>집합에 쓰이는 네 가지 연산은 각각 얼마나 많은 단계가 필요한가 ( 배열 기반 집합 )</p>
+<h4 id="읽기-1">읽기</h4>
+<p>​	배열과 동일하다.</p>
+<h4 id="검색-1">검색</h4>
+<p>​	배열과 동일하다.</p>
+<h4 id="삽입-1">삽입</h4>
+<p>​	배열에서 맨 마지막 셀에 삽입하는 경우 한 단계의 연산으로 끝났던 것과 달리 중복값을 허용하지 않는 집합의 특성상 모든 데이터를 추가하기 전에 중복값이 있는지 검색하는 연산이 우선된다. 따라서 최선의 경우 N + 1, 최악의 경우 2N +1이 된다.</p>
+<h4 id="삭제-1">삭제</h4>
+<p>​	배열과 동일하다.</p>
+<p>배열보다 집합이 느리지만 중복 데이터가 없어야 할 때는 집합이 답이다. 개발하고자 하는 프로그램의 요구사항에 맞춰 어떤 자료구조가 더 적합한지 결정해야 한다.</p>
+<h2 id="2장-알고리즘이-중요한-까닭">2장. 알고리즘이 중요한 까닭</h2>
+<blockquote>
+<p>같은 자료구조를 사용할지라도 알고리즘에 따라 더 나은 성능을 구현할 수 있다.</p>
+</blockquote>
+<p>알고리즘은 단순히 문제를 해결하는 절차일 뿐이다.</p>
+<h3 id="정렬된-배열--ordered-array-">정렬된 배열 ( ordered array )</h3>
+<p>​	배열 각 원소들이 항상 순서대로 위치하도록 하는 배열이다. 정렬된 배열은 배열을 기반으로 한 집합과 마찬가지로 삽입 연산 외에는 배열과 동일한 연산 횟수를 가진다.</p>
+<blockquote>
+<p>정렬된 배열에 삽입할 때는 항상 실제 삽입 전에 검색을 먼저 수행해서 삽입할 위치를 정해야 한다.</p>
+</blockquote>
+<p>삽입할 때 검색을 해야한다는 점에서 일반 배열보다 비효율적이지만 정렬된 다음부터는 검색 연산에서 강점이 있다.</p>
+<h4 id="정렬된-배열의-검색">정렬된 배열의 검색</h4>
+<h5 id="선형-검색일-때">선형 검색일 때</h5>
+<ul>
+<li>
+<p>정렬되지 않은 배열에서 검색을 수행할 때는 검색하는 값이 배열 내 존재하지 않는 경우 배열의 마지막 원소까지 탐색하게 된다.</p>
+</li>
+<li>
+<p>정렬된 배열에서 검색을 수행할 때는 검색하는 값이 배열 내 존재하지 않는 경우 해당 값보다 더 큰 값을 만나면 탐색을 중단한다.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">linearSearch</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">val</span>) {
+    <span style="color:#66d9ef">for</span> ( <span style="color:#a6e22e">item</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span> ) {
+        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">item</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">val</span> ) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">val</span>
+        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">item</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">val</span> ) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+}
+</code></pre></div><p>보통은 더 빠르겠지만 찾으려는 값이 배열의 마지막 값이거나 마지막 값보다 크다면 마찬가지로 모든 셀을 검색해야 한다.</p>
+<p>하지만 선형검색이 유일한 검색 알고리즘이 아니다.</p>
+<p>알고리즘은 절차일 뿐, 절차를 달리해보자.</p>
+<p>정렬된 배열이 일반 배열보다 큰 장점이 될 수 있는 것은 이진 검색이라는 알고리즘이 있어서이다.</p>
+<h3 id="이진-검색">이진 검색</h3>
+<p>​	배열이 정렬되어 있어야만 가능한 검색 알고리즘이다.</p>
+<pre><code>1. 배열의 가운데 메모리 주소로 이동한다. ( 배열의 길이를 2로 나눈 값을 인덱스로 하여 )
+2. 해당 주소의 값을 찾고자 하는 값과 비교한다. 
+3. 주소의 값이 더 작다면 주소로부터 왼쪽에 위치한 모든 값을 검색에서 제외할 수 있다.
+4. 반이 줄어든 배열의 중앙으로 이동하여 위를 반복한다.
+</code></pre>
+<h3 id="이진-검색-vs-선형-검색">이진 검색 vs 선형 검색</h3>
+<blockquote>
+<p>이진 검색은 배열의 크기가 2배로 늘 때마다 검색 완료에 요구되는 단계의 수가 1씩 증가한다.
+반면 선형 검색은 배열의 크기가 1개 늘 때마다 요구되는 단계의 수가 1씩, 선형적으로 증가한다.
+정렬된 배열을 사용하면 삽입은 일반 배열보다 다소 느리지만 검색은 훨씬 빠르다.
+다시 말하면 검색이 필요없을 때는 굳이 정렬된 배열을 만들 필요가 없을 것이고
+검색이 필요할 때에는 정렬된 배열을 사용하는 것이 옳을 것이다.</p>
+</blockquote>
+</span>
+
+
+        </div></body>
+</html>

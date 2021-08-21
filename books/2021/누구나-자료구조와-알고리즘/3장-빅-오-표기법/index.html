@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><p>[TOC]</p>
+<h1 id="3장-빅-오-표기법">3장. 빅 오 표기법</h1>
+<p>알고리즘의 효율성은 수행에 걸리는 단계수로 측정한다.</p>
+<p>빅오 표기법이란 그 단계수를 간결하고 이해하기 쉽게 표기하기 위한 방법이다.</p>
+<h2 id="on">O(N)</h2>
+<p>원소가 10개인 배열을 다룰 때 완료까지 10번이 걸리는 선형 알고리즘이 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loop</span>(<span style="color:#a6e22e">arr</span>) {
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+		<span style="color:#75715e">// do something
+</span><span style="color:#75715e"></span>	}
+}
+</code></pre></div><p>이때 원소 갯수에 따라 수행에 필요한 단계 수도 일정하게 변한다.</p>
+<p>단계 수를 N으로 표기하고 그 복잡함의 크기를 O라고 표기하자.</p>
+<blockquote>
+<p>Big O 표기법에서 O의 의미는 어떤 것의 크기, 양을 말할 때의 order의 축약이다.</p>
+<p>독일 수학자 Paul Bachmann가 처음으로 사용했다고 한다.</p>
+<p><a href="https://softwareengineering.stackexchange.com/questions/107976/what-is-o-in-big-o">https://softwareengineering.stackexchange.com/questions/107976/what-is-o-in-big-o</a></p>
+</blockquote>
+<p>따라서 위 선형 알고리즘의 복잡도는 Big O 표기법을 사용했을 때 O(N) 으로 쓰고 order of n 으로 읽는다. 일반적으로 &ldquo;오 n&rdquo; 이라고 말한다.</p>
+<p>또한 10개의 원소를 검색하지만 중도에 일치하는 것을 찾으면 리턴되는 함수가 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getItemIdx</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">item</span>) {
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> ) {
+		<span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">item</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>
+	}
+}
+<span style="color:#a6e22e">getItemIdx</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><p>이 때 배열의 첫번 째 순서에 들어있는 1을 검색하면 필요한 단계 수는 1이지만 최악의 경우 원소의 갯수인 10번이 필요하므로 이 또한 O(N)이다.</p>
+<h2 id="o1">O(1)</h2>
+<p>배열에 특정 값을 읽을 때 위치를 알고 있다면 한 번에 접근할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getLastItem</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arr</span>) =&gt; <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div><p>이 때는 배열의 크기와 상관없이 단계 수는 일정하게 단 한 단계면 된다.</p>
+<h2 id="상수-시간과-선형-시간">상수 시간과 선형 시간</h2>
+<blockquote>
+<ul>
+<li>O(1)은 상수 시간( constant time )</li>
+<li>O(N)은 선형 시간( linear time )</li>
+</ul>
+</blockquote>
+<h4 id="상수-시간은-데이터의-양과-관계-없이-일정한-단계-수를-유지한다">상수 시간은 데이터의 양과 관계 없이 일정한 단계 수를 유지한다.</h4>
+<p>데이터의 수를 <strong>1</strong> 로 표기하지만 처리하는데 1000번의 단계가 걸리더라도 그 단계 수가 데이터의 양과 상관없이 일정하다면 상수 시간 <strong>O(1)</strong> 로 본다.</p>
+<p>같은 문제를 해결할 때 O(N)의 알고리즘이 더 나아보일 수도 있다. 처리에 무조건 1000번의 단계가 필요한 O(1) 알고리즘과 비교해서 O(N) 알고리즘은 데이터가 1개일 때 1번의 단계로 해결되기 때문이다.</p>
+<p>하지만 알고리즘의 효율성은 항상 최악을 고려하여 평가해야 한다. 데이터의 양이 1000을 넘기는 순간부터는 무한대의 양까지 O(1)이 효율적이다.</p>
+<blockquote>
+<p>만약에 처리해야할 데이터의 양을 알고있다면?</p>
+<p>처리할 데이터가 100개 이하로 고정된 경우라면 O(N)을 사용하는 것이 나아보인다.</p>
+</blockquote>
+<h2 id="olog-n">O(log N)</h2>
+<p>로그 시간의 시간 복잡도를 가진 알고리즘에는 이진 검색 ( binary search ) 이 있다.</p>
+<h3 id="데이터가-두-배로-증가할-때마다-한-단계씩-늘어나는-알고리즘">데이터가 두 배로 증가할 때마다 한 단계씩 늘어나는 알고리즘</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">*=</span><span style="color:#ae81ff">2</span>) {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);  
+    }
+}
+</code></pre></div><p>매 반복마다 i 에 2를 곱하여 순회하게 만들 수 있다면 주어진 n의 갯수보다 항상 더 적은 반복으로 문제를 해결할 수 있다.</p>
+<p>많은 양의 데이터를 처리할 때 확실한 효율성을 드러낸다.</p>
+<blockquote>
+<p><a href="https://dev.to/b0nbon1/understanding-big-o-notation-with-javascript-25mc">출처</a></p>
+</blockquote>
+<h2 id="로그log-로가리즘logarithm">로그(log), 로가리즘(logarithm)</h2>
+<blockquote>
+<p>로그는 로가리즘의 줄임말이다.</p>
+</blockquote>
+<h4 id="로그란">로그란?</h4>
+<p><strong>a<!-- raw HTML omitted -->x<!-- raw HTML omitted --> = b</strong> 이라고 할 때</p>
+<ul>
+<li>a는 밑수 ( base )</li>
+<li>x는 지수 ( exponent | power )</li>
+<li>b는 진수 ( value )</li>
+</ul>
+<p><strong>x = log<!-- raw HTML omitted -->a<!-- raw HTML omitted -->b</strong> 로 정의된다.</p>
+<p>**즉 log란 밑수를 진수로 만드는 지수 x를 찾기위한 과정을 말한다. **</p>
+<h3 id="로그식과-지수식">로그식과 지수식</h3>
+<table>
+<thead>
+<tr>
+<th>로그식</th>
+<th>지수식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->1000 = 3</td>
+<td>10<!-- raw HTML omitted -->3<!-- raw HTML omitted --> = 1000</td>
+</tr>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->10000 = 4</td>
+<td>10<!-- raw HTML omitted -->4<!-- raw HTML omitted --> = 10000</td>
+</tr>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->100000 = 5</td>
+<td>10<!-- raw HTML omitted -->5<!-- raw HTML omitted --> = 100000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="선형-복잡도와-로그-복잡도의-효율성-차이">선형 복잡도와 로그 복잡도의 효율성 차이</h3>
+<table>
+<thead>
+<tr>
+<th>원소 갯수</th>
+<th>O(N)</th>
+<th>O(log N)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>32</td>
+<td>32</td>
+<td>5</td>
+</tr>
+<tr>
+<td>64</td>
+<td>64</td>
+<td>6</td>
+</tr>
+<tr>
+<td>128</td>
+<td>128</td>
+<td>7</td>
+</tr>
+<tr>
+<td>256</td>
+<td>256</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="시간복잡도-그래프">시간복잡도 그래프</h3>
+<p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--NR3M1nw8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/z4bbf8o1ly77wmkjdgge.png" alt="시간복잡도"></p>
+</span>
+
+
+        </div></body>
+</html>

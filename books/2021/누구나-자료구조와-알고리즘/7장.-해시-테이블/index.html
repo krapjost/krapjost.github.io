@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><h1 id="7장-해시-테이블로-매우-빠른-룩업">7장. 해시 테이블로 매우 빠른 룩업</h1>
+<p>제품마다 다른 가격을 가지고 있는 데이터가 있다.</p>
+<p>이때 배열을 사용할 경우 비효율적이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prod</span> <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;운동화&#39;</span>, <span style="color:#ae81ff">1000</span>], [<span style="color:#e6db74">&#39;구두&#39;</span>, <span style="color:#ae81ff">2000</span>], [<span style="color:#e6db74">&#39;농구공&#39;</span>, <span style="color:#ae81ff">3000</span>]]
+</code></pre></div><p>제품 구매가 발생했을 때 어떤 제품을 구매했는지 찾아야 할 때 일일이 순회해야 하기 때문이다. 정렬된 배열의 경우라도 log N의 복잡도로 이뤄진다.</p>
+<p>이 때 해시 테이블을 사용하면 O(1) 만에 검색할 수 있게 된다.</p>
+<h2 id="해시-테이블이란">해시 테이블이란</h2>
+<p>해시 테이블은 여러 프로그래밍 언어에서 다른 이름으로 불린다.</p>
+<p>해시, 맵, 해시 맵, 딕셔너리, 연관 배열 등의 이름을 갖는다.</p>
+<p>해시 테이블은 키와 값의 쌍으로 이뤄진 값들의 리스트이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">menu</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;운동화&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;농구공&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2000</span>};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ball</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">menu</span>[<span style="color:#e6db74">&#39;농구공&#39;</span>];
+</code></pre></div><p>이런식으로 해당 키의 값을 한 번에 찾아볼 수 있다.</p>
+<h3 id="해싱이란">해싱이란?</h3>
+<p>​	문자를 가져와 숫자로 변환하는 과정을 <strong>해싱</strong>이라 부른다.</p>
+<p>​	글자를 특정 숫자로 변환하는 데 사용한 코드를 <strong>해시 함수</strong>라고 부른다.</p>
+<p>해시함수가 유효하려면 다음 한 가지 기준을 충족해야 한다.</p>
+<blockquote>
+<p>해시 함수는 <strong>동일한 문자열</strong>을 해시 함수에 적용할 때마다 항상 <strong>동일한 숫자</strong>로 변환해야 한다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 의사 코드
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hashFunc</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">key</span>) =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">key</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span>=&gt;{
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hash</span>[<span style="color:#a6e22e">x</span>]
+    }.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>)
+}
+<span style="color:#a6e22e">hashFunc</span>(<span style="color:#e6db74">&#39;bad&#39;</span>)
+<span style="color:#75715e">// return : 214
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>hashFunc에 각 키에 해당하는 값으로 덧셈, 곱셈 등 어떤 연산을 사용해 해시값을 만들어도  되지만 같은 값을 주었을 때 항상 나오는 값이 동일해야 한다. 따라서 항상 변하는 datetime 등의 값을 연산 과정에 넣어선 안된다.</p>
+<p>해시 테이블은 내부적으로 데이터를 한 줄로 이뤄진 셀 묶음에 저장한다. 그리고 각 셀마다 주소가 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hashTable</span> <span style="color:#f92672">=</span> {}
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hashTable</span>[<span style="color:#e6db74">&#39;iu&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;아이유&#34;</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center">&lsquo;아이유&rsquo;</th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<p>해싱 함수가 키 &lsquo;iu&rsquo; 를 받았을 때 나오는 값이 4라면 4번 메모리 주소 에 값 &lsquo;아이유&rsquo;가 들어간다.</p>
+<h3 id="해시테이블의-문제">해시테이블의 문제</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hashTable</span>[<span style="color:#e6db74">&#39;ui&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;유아인&#39;</span>
+</code></pre></div><p>만약에 해싱 함수가 곱셈을 사용하여 스펠링 순서 차이는 상관하지 않고 같은 값(메모리 번지 수)를 뱉어낸다면 이미 &lsquo;아이유&rsquo;가 들어가 있는 4번 메모리 주소에 &lsquo;유아인&rsquo;를 넣으려고 할 것이다.</p>
+<p>이를 <strong>충돌</strong>이라고 부른다.</p>
+<h3 id="충돌-해결법">충돌 해결법</h3>
+<ul>
+<li>분리 연결법</li>
+</ul>
+<p>충돌이 발생했을 때 셀에 <strong>하나의 값</strong>을 넣는 대신 **<!-- raw HTML omitted -->배열<!-- raw HTML omitted -->**로의 참조를 넣는 방법.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 의사코드
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">cosnt</span> <span style="color:#a6e22e">eg</span> <span style="color:#f92672">=</span> {[{<span style="color:#e6db74">&#39;iu&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;아이유&#39;</span>}, {<span style="color:#e6db74">&#39;ui&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;유아인&#39;</span>}]}
+</code></pre></div><p>이 때 &lsquo;ui&rsquo;를 찾으려고 하면 컴퓨터는 같은 4번 번지수를 먼저 찾고 거기에 저장된 값이 단일 값이 아닌 <strong><!-- raw HTML omitted -->배열이라면<!-- raw HTML omitted --></strong> &lsquo;ui&rsquo;를 찾을 때까지 배열을 차례대로 선형 검색한다.</p>
+<p>이러한 방법을 사용했을 때 또한 최악의 상황을 고려해보면 사실상 배열 선형검색 O(N) 과 다를 바 없다. 같은 메모리 주소에 모든 데이터가 들어갈 경우도 있을 것이기 때문이다.</p>
+<h3 id="충돌이-적게-일어나게-해시-테이블을-구현하려면">충돌이 적게 일어나게 해시 테이블을 구현하려면?</h3>
+<p>좋은 해시함수는 <strong>사용 가능한 모든 셀</strong>에 데이터를 분산시키는 함수이다.</p>
+<p>좋은 해시 테이블은 반드시 충돌 조정을 수행해야 한다.</p>
+<p>좋은 해시 테이블은 많은 메모리를 낭비하지 않으면서 충돌을 피한다.</p>
+<h3 id="데이터와-셀-간의-비율">데이터와 셀 간의 비율</h3>
+<p>데이터와 셀 간의 비율을 부하율이라고 한다.</p>
+<p>원소 7 대 셀 10 개의 비율이 이상적이다.</p>
+<p>해시 테이블 내부는 대부분 컴퓨터 언어에서 관리하므로 원리 이해를 위한 목적이 아니면 구현할 필요는 없을 것이다.</p>
+</span>
+
+
+        </div></body>
+</html>
