@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><p>/*
+For example, encode(&ldquo;hello&rdquo;) would return &ldquo;h2ll4&rdquo;. There is no need to worry about uppercase vowels in this kata.</p>
+<p>Step 2: Now create a function called decode() to turn the numbers back into vowels according to the same pattern shown above.</p>
+<p>For example, decode(&ldquo;h3 th2r2&rdquo;) would return &ldquo;hi there&rdquo;.
+*/</p>
+<p>// My Solution
+function encode(string) {
+return [&ldquo;a&rdquo;,&ldquo;e&rdquo;,&ldquo;i&rdquo;,&ldquo;o&rdquo;,&ldquo;u&rdquo;].reduce((acc, cur, idx) =&gt; {
+return acc.replace(RegExp(cur, &ldquo;g&rdquo;), idx+1)
+}, string)
+}</p>
+<p>function decode(string) {
+return [&ldquo;a&rdquo;,&ldquo;e&rdquo;,&ldquo;i&rdquo;,&ldquo;o&rdquo;,&ldquo;u&rdquo;].reduce((acc, cur, idx) =&gt; {
+return acc.replace(RegExp(idx+1, &ldquo;g&rdquo;), cur)
+}, string)
+}</p>
+<p>// Best Practice
+function encode(string){
+return string.replace(/[aeiou]/g, function (x) { return &lsquo;_aeiou&rsquo;.indexOf(x) });
+}</p>
+<p>function decode(string){
+return string.replace(/[1-5]/g, function (x) { return &lsquo;_aeiou&rsquo;.charAt(x) });
+}</p>
+<p>/*
+배운 것</p>
+<pre><code>1. string.replace 두번째 param에 숫자를 넣어도 알아서 문자가 됨.
+2. RegExp 두번째 param에 &quot;g&quot;, &quot;i&quot; 등 플래그
+3. 반복 안 돌려도 됐었구나... 다음에는 charAt과 indexOf를 써보자.
+</code></pre>
+<p>*/</p>
+</span>
+
+
+        </div></body>
+</html>
