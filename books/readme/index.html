@@ -25,20 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><h1 id="books">books</h1>
-<p>독서 기록</p>
-<h3 id="2021-읽을-책-목록">2021 읽을 책 목록</h3>
-<blockquote>
-<ol>
-<li><a href="./2021/%ED%95%A8%EC%88%98%ED%98%95%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20(%EB%A3%A8%EC%9D%B4%EC%8A%A4%20%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4).md">함수형 자바스크립트 (루이스 아텐시오) 초판 2018</a></li>
-<li><a href="./2021/%ED%95%A8%EC%88%98%ED%98%95%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20(%EB%A7%88%EC%9D%B4%ED%81%B4%20%ED%8F%AC%EA%B1%B0%EC%8A%A4).md">함수형 자바스크립트 (마이클 포거스) 초판 2014</a></li>
-<li><a href="./2021/ECMAScript6%20%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0%20(%EB%82%98%EB%9D%BC%EC%96%80%20%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0).md">ECMAScript 6 길들이기 (나라얀 프루스티) 초판 2015</a></li>
-<li><a href="./2021/Doit!%20%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20(%EC%A0%84%EC%98%88%ED%99%8D).md">Doit! 타입스크립트 프로그래밍 (전예홍) 초판 2020</a></li>
-<li><a href="./2021/Doit!%20Node.js%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20(%EC%A0%95%EC%9E%AC%EA%B3%A4).md">Doit! Node.js 프로그래밍 (정재곤) 초판 2017</a></li>
-<li><a href="./2021/%ED%95%9C%20%EA%B6%8C%EC%9C%BC%EB%A1%9C%20%EC%9D%BD%EB%8A%94%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B5%AC%EC%A1%B0%EC%99%80%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20(%EC%A1%B0%EB%84%88%EC%84%A0%20%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8).md">한 권으로 읽는 컴퓨터 구조와 프로그래밍 (조너선 스타인하트) 초판 2019</a></li>
-</ol>
-</blockquote>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003ch1 id=\u0022books\u0022\u003ebooks\u003c\/h1\u003e\n\u003ch2 id=\u00222021\u0022\u003e2021\u003c\/h2\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/%ED%95%A8%EC%88%98%ED%98%95_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4\u0022\u003e함수형 자바스크립트 (루이스 아텐시오) 초판 2018\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/%ED%95%A8%EC%88%98%ED%98%95_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%ED%8F%AC%EA%B1%B0%EC%8A%A4\u0022\u003e함수형 자바스크립트 (마이클 포거스) 초판 2014\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/ecmascript6_%EB%82%98%EB%9D%BC%EC%96%80\u0022\u003eECMAScript 6 길들이기 (나라얀 프루스티) 초판 2015\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/doit_typescript_%EC%A0%84%EC%98%88%ED%99%8D\u0022\u003eDoit! 타입스크립트 프로그래밍 (전예홍) 초판 2020\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/doit_nodejs_%EC%A0%95%EC%9E%AC%EA%B3%A4\u0022\u003eDoit! Node.js 프로그래밍 (정재곤) 초판 2017\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0%EC%99%80_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8\u0022\u003e한 권으로 읽는 컴퓨터 구조와 프로그래밍 (조너선 스타인하트) 초판 2019\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022\/books\/2021\/%EB%88%84%EA%B5%AC%EB%82%98_%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98\u0022\u003e누구나 자료구조와 알고리즘\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

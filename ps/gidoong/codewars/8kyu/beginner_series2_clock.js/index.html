@@ -25,12 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>Clock shows h hours, m minutes and s seconds after midnight.</p>
-<p>Your task is to write a function which returns the time since midnight in milliseconds.</p>
-<p>function past(h, m, s){
-return s<em>1000 + m</em>1000<em>60 + h</em>1000<em>60</em>60
-}</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003eClock shows h hours, m minutes and s seconds after midnight.\u003c\/p\u003e\n\u003cp\u003eYour task is to write a function which returns the time since midnight in milliseconds.\u003c\/p\u003e\n\u003cp\u003efunction past(h, m, s){\nreturn s\u003cem\u003e1000 \u002b m\u003c\/em\u003e1000\u003cem\u003e60 \u002b h\u003c\/em\u003e1000\u003cem\u003e60\u003c\/em\u003e60\n}\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

@@ -25,29 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>/*
-단어들로 이뤄진 문자열이 주어지면 그 중 가장 짧은 단어의 길이를 리턴하라.
-*/</p>
-<p>//my first solution
-function findShort(s){
-return s.split(' &lsquo;).sort((a,b)=&gt;a.length-b.length)[0].length
-}</p>
-<p>//best practice
-function findShort(s){
-return Math.min.apply(null, s.split(&rsquo; &lsquo;).map(w =&gt; w.length));
-}</p>
-<p>//my second solution
-function findShort(s){
-return Math.min(&hellip;s.split(&rsquo; &lsquo;).map(x=&gt;x.length))
-}</p>
-<p>/*
-배운 것</p>
-<pre><code>Math.min.apply
-apply는 공부해두면 활용도가 높을 것 같다.
-map에 전개 연산자를 넣어도 잘 동작한다.
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\n단어들로 이뤄진 문자열이 주어지면 그 중 가장 짧은 단어의 길이를 리턴하라.\n*\/\u003c\/p\u003e\n\u003cp\u003e\/\/my first solution\nfunction findShort(s){\nreturn s.split(\u0027 \u0026lsquo;).sort((a,b)=\u0026gt;a.length-b.length)[0].length\n}\u003c\/p\u003e\n\u003cp\u003e\/\/best practice\nfunction findShort(s){\nreturn Math.min.apply(null, s.split(\u0026rsquo; \u0026lsquo;).map(w =\u0026gt; w.length));\n}\u003c\/p\u003e\n\u003cp\u003e\/\/my second solution\nfunction findShort(s){\nreturn Math.min(\u0026hellip;s.split(\u0026rsquo; \u0026lsquo;).map(x=\u0026gt;x.length))\n}\u003c\/p\u003e\n\u003cp\u003e\/*\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003eMath.min.apply\napply는 공부해두면 활용도가 높을 것 같다.\nmap에 전개 연산자를 넣어도 잘 동작한다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

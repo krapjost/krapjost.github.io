@@ -25,21 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>// 숫자 배열을 받고 가장 작은 숫자를 리턴 ( 음수 인정 )</p>
-<p>//Time: 861ms Passed: 2 Failed: 0
-class SmallestIntegerFinder {
-findSmallestInt(args) {
-return Math.min(&hellip;args)
-}
-}</p>
-<p>//Time: 915ms Passed: 2 Failed: 0
-const SmallestIntegerFinder = Function;
-SmallestIntegerFinder.prototype.findSmallestInt = (a) =&gt; Math.min(&hellip;a)</p>
-<p>/* 배운 것</p>
-<pre><code>1. prototype에 직접 달아줘도 class 문법과 동일하게 동작하는 것 같다. (확실하지 않음)
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 숫자 배열을 받고 가장 작은 숫자를 리턴 ( 음수 인정 )\u003c\/p\u003e\n\u003cp\u003e\/\/Time: 861ms Passed: 2 Failed: 0\nclass SmallestIntegerFinder {\nfindSmallestInt(args) {\nreturn Math.min(\u0026hellip;args)\n}\n}\u003c\/p\u003e\n\u003cp\u003e\/\/Time: 915ms Passed: 2 Failed: 0\nconst SmallestIntegerFinder = Function;\nSmallestIntegerFinder.prototype.findSmallestInt = (a) =\u0026gt; Math.min(\u0026hellip;a)\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. prototype에 직접 달아줘도 class 문법과 동일하게 동작하는 것 같다. (확실하지 않음)\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

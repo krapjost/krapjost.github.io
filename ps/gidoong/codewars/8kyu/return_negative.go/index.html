@@ -25,18 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>package kata</p>
-<p>import (
-&ldquo;math&rdquo;
-)</p>
-<p>func MakeNegative(x int) int {
-num := math.Signbit(float64(x))
-if num {
-return x
-}
-return -x
-}</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003epackage kata\u003c\/p\u003e\n\u003cp\u003eimport (\n\u0026ldquo;math\u0026rdquo;\n)\u003c\/p\u003e\n\u003cp\u003efunc MakeNegative(x int) int {\nnum := math.Signbit(float64(x))\nif num {\nreturn x\n}\nreturn -x\n}\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

@@ -25,22 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>const findOdd = (A) =&gt; A.reduce((a, b, i) =&gt; {
-console.log(<code>${i}:: a,b : ${a},${b}; a ^ b : ${a^b}</code>);
-return a^b}
-);</p>
-<p>function findOdd2(A) {
-const result = A.sort().reduce((acc,cur,i)=&gt;{acc.push(cur);
-if (acc.length &gt; 0 &amp;&amp; acc[acc.length-2] - cur === 0){
-acc[acc.length-2]=&quot;&quot;, acc[i]=&quot;&quot;
-}
-return acc
-},[])
-return result.filter(x=&gt;Number.isInteger(x))[0]
-}</p>
-<p>console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
-console.log(findOdd2([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003econst findOdd = (A) =\u0026gt; A.reduce((a, b, i) =\u0026gt; {\nconsole.log(\u003ccode\u003e${i}:: a,b : ${a},${b}; a ^ b : ${a^b}\u003c\/code\u003e);\nreturn a^b}\n);\u003c\/p\u003e\n\u003cp\u003efunction findOdd2(A) {\nconst result = A.sort().reduce((acc,cur,i)=\u0026gt;{acc.push(cur);\nif (acc.length \u0026gt; 0 \u0026amp;\u0026amp; acc[acc.length-2] - cur === 0){\nacc[acc.length-2]=\u0026quot;\u0026quot;, acc[i]=\u0026quot;\u0026quot;\n}\nreturn acc\n},[])\nreturn result.filter(x=\u0026gt;Number.isInteger(x))[0]\n}\u003c\/p\u003e\n\u003cp\u003econsole.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))\nconsole.log(findOdd2([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

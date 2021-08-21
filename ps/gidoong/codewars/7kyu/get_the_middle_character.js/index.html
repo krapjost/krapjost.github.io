@@ -25,33 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>/*</p>
-<p>Kata.getMiddle(&ldquo;test&rdquo;) should return &ldquo;es&rdquo;</p>
-<p>Kata.getMiddle(&ldquo;testing&rdquo;) should return &ldquo;t&rdquo;</p>
-<p>Kata.getMiddle(&ldquo;middle&rdquo;) should return &ldquo;dd&rdquo;</p>
-<p>Kata.getMiddle(&ldquo;A&rdquo;) should return &ldquo;A&rdquo;</p>
-<p>*/</p>
-<p>//Best practice
-function getMiddle(s){
-return s.slice((s.length-1)/2, s.length/2+1);
-}
-// or
-const getMiddle = s =&gt; s.slice((s.length-1)/2, s.length/2+1);
-// or
-const getMiddle = s =&gt; s.substring((s.length-1)/2, s.length/2+1);</p>
-<p>//My solution
-function getMiddle(s) {
-if (s.length % 2) {
-return s.substring(s.length/2, s.length/2+1)
-}
-return s.substring(s.length/2-1, s.length/2+1)
-}</p>
-<p>/*
-배운 것</p>
-<pre><code>1. substring과 slice 모두 인자에 float이 들어오면 소숫점을 버린 int로 인식한다.
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\u003c\/p\u003e\n\u003cp\u003eKata.getMiddle(\u0026ldquo;test\u0026rdquo;) should return \u0026ldquo;es\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003eKata.getMiddle(\u0026ldquo;testing\u0026rdquo;) should return \u0026ldquo;t\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003eKata.getMiddle(\u0026ldquo;middle\u0026rdquo;) should return \u0026ldquo;dd\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003eKata.getMiddle(\u0026ldquo;A\u0026rdquo;) should return \u0026ldquo;A\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/Best practice\nfunction getMiddle(s){\nreturn s.slice((s.length-1)\/2, s.length\/2\u002b1);\n}\n\/\/ or\nconst getMiddle = s =\u0026gt; s.slice((s.length-1)\/2, s.length\/2\u002b1);\n\/\/ or\nconst getMiddle = s =\u0026gt; s.substring((s.length-1)\/2, s.length\/2\u002b1);\u003c\/p\u003e\n\u003cp\u003e\/\/My solution\nfunction getMiddle(s) {\nif (s.length % 2) {\nreturn s.substring(s.length\/2, s.length\/2\u002b1)\n}\nreturn s.substring(s.length\/2-1, s.length\/2\u002b1)\n}\u003c\/p\u003e\n\u003cp\u003e\/*\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. substring과 slice 모두 인자에 float이 들어오면 소숫점을 버린 int로 인식한다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

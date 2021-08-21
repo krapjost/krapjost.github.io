@@ -25,36 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>/*</p>
-<pre><code>Example
-
-highAndLow(&quot;1 2 3 4 5&quot;);  // return &quot;5 1&quot;
-highAndLow(&quot;1 2 -3 4 5&quot;); // return &quot;5 -3&quot;
-highAndLow(&quot;1 9 3 4 -5&quot;); // return &quot;9 -5&quot;
-</code></pre>
-<p>*/</p>
-<p>// My solution
-function highAndLow(numbers){
-const sorted = numbers.split(&quot; &ldquo;).sort((a, b)=&gt;a-b)
-return <code>${sorted[sorted.length-1]} ${sorted[0]}</code>
-}</p>
-<p>// Best Practice
-function highAndLow(numbers){
-numbers = numbers.split(' &lsquo;);
-return <code>${Math.max(...numbers)} ${Math.min(...numbers)}</code>;
-}</p>
-<p>/*</p>
-<pre><code>배운 것
-
-1. 정확한 Math.max와 spread 연산자 사용법
-	numbers split 하면 string 배열이지만 숫자로 인식해준다.
-
-2. parameter에 바로 재할당하는 방법
-	잘 모르겠지만 변수를 새로 선언하는 것보다
-	메모리 효율이 더 좋지 않을까 생각이 든다. 코드도 줄이고...
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003eExample\n\nhighAndLow(\u0026quot;1 2 3 4 5\u0026quot;);  \/\/ return \u0026quot;5 1\u0026quot;\nhighAndLow(\u0026quot;1 2 -3 4 5\u0026quot;); \/\/ return \u0026quot;5 -3\u0026quot;\nhighAndLow(\u0026quot;1 9 3 4 -5\u0026quot;); \/\/ return \u0026quot;9 -5\u0026quot;\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ My solution\nfunction highAndLow(numbers){\nconst sorted = numbers.split(\u0026quot; \u0026ldquo;).sort((a, b)=\u0026gt;a-b)\nreturn \u003ccode\u003e${sorted[sorted.length-1]} ${sorted[0]}\u003c\/code\u003e\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ Best Practice\nfunction highAndLow(numbers){\nnumbers = numbers.split(\u0027 \u0026lsquo;);\nreturn \u003ccode\u003e${Math.max(...numbers)} ${Math.min(...numbers)}\u003c\/code\u003e;\n}\u003c\/p\u003e\n\u003cp\u003e\/*\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e배운 것\n\n1. 정확한 Math.max와 spread 연산자 사용법\n\tnumbers split 하면 string 배열이지만 숫자로 인식해준다.\n\n2. parameter에 바로 재할당하는 방법\n\t잘 모르겠지만 변수를 새로 선언하는 것보다\n\t메모리 효율이 더 좋지 않을까 생각이 든다. 코드도 줄이고...\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

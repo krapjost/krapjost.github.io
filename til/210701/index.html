@@ -25,48 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><h1 id="til-210701">TIL 210701</h1>
-<h2 id="리눅스-파일--디렉터리-변경">리눅스 파일 / 디렉터리 변경</h2>
-<ul>
-<li><code>cp</code></li>
-<li><code>scp</code></li>
-<li><code>mv</code></li>
-<li><code>rename</code></li>
-</ul>
-<h2 id="cp">cp</h2>
-<h5 id="파일-복사">파일 복사</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp file file.bak
-</code></pre></div><h5 id="디렉터리-재귀-복사">디렉터리 재귀 복사</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -r dir/ dir_bak/
-</code></pre></div><h5 id="파일디렉터리-소유자-권한-등-모든-정보-복사">파일/디렉터리 소유자, 권한 등 모든 정보 복사</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -rp dir/ dir_bak
-</code></pre></div><h4 id="option-">option ?</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-p same as --preserve<span style="color:#f92672">=</span>mode,ownership,timestamps
--r same as --recursive<span style="color:#f92672">=</span>copy directories recursively
-</code></pre></div><h2 id="scp">scp</h2>
-<h5 id="원격지로-파일-복사">원격지로 파일 복사</h5>
-<blockquote>
-<p>scp file [원격지계정]@[원격지ip]:[이동시킬 위치]</p>
-<p>다른 건 cp 사용법과 동일하다.</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">scp file root@192.168.200.11:/root/
-</code></pre></div><h2 id="mv">mv</h2>
-<h5 id="파일-이동">파일 이동</h5>
-<blockquote>
-<p>cp 하고 rm 실행 하는 것과 동일</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ./file /path/to/move
-</code></pre></div><h5 id="디렉터리-재귀-이동">디렉터리 재귀 이동</h5>
-<blockquote>
-<p>아래 방식은 숨겨진 파일 이동되지 않음</p>
-</blockquote>
-<pre><code>mv /dir/* /path/to/move
-</code></pre><h5 id="이름-변경">이름 변경</h5>
-<blockquote>
-<p>파일 / 디렉터리 상관없이 적용</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv dir dir_bak
-</code></pre></div></span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003ch1 id=\u0022til-210701\u0022\u003eTIL 210701\u003c\/h1\u003e\n\u003ch2 id=\u0022리눅스-파일--디렉터리-변경\u0022\u003e리눅스 파일 \/ 디렉터리 변경\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003ecp\u003c\/code\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ccode\u003escp\u003c\/code\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ccode\u003emv\u003c\/code\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ccode\u003erename\u003c\/code\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022cp\u0022\u003ecp\u003c\/h2\u003e\n\u003ch5 id=\u0022파일-복사\u0022\u003e파일 복사\u003c\/h5\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003ecp file file.bak\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch5 id=\u0022디렉터리-재귀-복사\u0022\u003e디렉터리 재귀 복사\u003c\/h5\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003ecp -r dir\/ dir_bak\/\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch5 id=\u0022파일디렉터리-소유자-권한-등-모든-정보-복사\u0022\u003e파일\/디렉터리 소유자, 권한 등 모든 정보 복사\u003c\/h5\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003ecp -rp dir\/ dir_bak\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch4 id=\u0022option-\u0022\u003eoption ?\u003c\/h4\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e-p same as --preserve\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003emode,ownership,timestamps\n-r same as --recursive\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003ecopy directories recursively\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch2 id=\u0022scp\u0022\u003escp\u003c\/h2\u003e\n\u003ch5 id=\u0022원격지로-파일-복사\u0022\u003e원격지로 파일 복사\u003c\/h5\u003e\n\u003cblockquote\u003e\n\u003cp\u003escp file [원격지계정]@[원격지ip]:[이동시킬 위치]\u003c\/p\u003e\n\u003cp\u003e다른 건 cp 사용법과 동일하다.\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003escp file root@192.168.200.11:\/root\/\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch2 id=\u0022mv\u0022\u003emv\u003c\/h2\u003e\n\u003ch5 id=\u0022파일-이동\u0022\u003e파일 이동\u003c\/h5\u003e\n\u003cblockquote\u003e\n\u003cp\u003ecp 하고 rm 실행 하는 것과 동일\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003emv .\/file \/path\/to\/move\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch5 id=\u0022디렉터리-재귀-이동\u0022\u003e디렉터리 재귀 이동\u003c\/h5\u003e\n\u003cblockquote\u003e\n\u003cp\u003e아래 방식은 숨겨진 파일 이동되지 않음\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cpre\u003e\u003ccode\u003emv \/dir\/* \/path\/to\/move\n\u003c\/code\u003e\u003c\/pre\u003e\u003ch5 id=\u0022이름-변경\u0022\u003e이름 변경\u003c\/h5\u003e\n\u003cblockquote\u003e\n\u003cp\u003e파일 \/ 디렉터리 상관없이 적용\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003emv dir dir_bak\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

@@ -25,22 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>// 문자열 공백 제거</p>
-<p>const noSpace1 = str =&gt; str.replace(/\s/g, &lsquo;')</p>
-<p>function noSpace2 (str) {
-let newStr = '&rsquo;
-for(const t of str) {
-if (t !== ' &lsquo;) newStr += t
-}
-return newStr
-}</p>
-<p>/* 배운 것</p>
-<pre><code>1. regex에서 (space) \s는 공백문자, \S는 공백문자가 아닌 것.
-2. 마찬가지로 (digit) \d는 숫자, \D는 숫자 아닌 것.
-3. trim(' ')은 문자열의 양끝만 정리해준다.
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 문자열 공백 제거\u003c\/p\u003e\n\u003cp\u003econst noSpace1 = str =\u0026gt; str.replace(\/\\s\/g, \u0026lsquo;\u0027)\u003c\/p\u003e\n\u003cp\u003efunction noSpace2 (str) {\nlet newStr = \u0027\u0026rsquo;\nfor(const t of str) {\nif (t !== \u0027 \u0026lsquo;) newStr \u002b= t\n}\nreturn newStr\n}\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. regex에서 (space) \\s는 공백문자, \\S는 공백문자가 아닌 것.\n2. 마찬가지로 (digit) \\d는 숫자, \\D는 숫자 아닌 것.\n3. trim(\u0027 \u0027)은 문자열의 양끝만 정리해준다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

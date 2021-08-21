@@ -25,18 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>// 숫자와 문자열을 받고 숫자만큼 문자열 반복</p>
-<p>function repeatStr (n, s) {
-let newS = ''
-for (i=0; i&lt;n; i++) newS += s;
-return newS
-}</p>
-<p>const repeatStr = (n, s) =&gt; s.repeat(n)</p>
-<p>/*배운 것
-1. for문도 {} 생략 가능
-2. string repeat 메소드
-*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 숫자와 문자열을 받고 숫자만큼 문자열 반복\u003c\/p\u003e\n\u003cp\u003efunction repeatStr (n, s) {\nlet newS = \u0027\u0027\nfor (i=0; i\u0026lt;n; i\u002b\u002b) newS \u002b= s;\nreturn newS\n}\u003c\/p\u003e\n\u003cp\u003econst repeatStr = (n, s) =\u0026gt; s.repeat(n)\u003c\/p\u003e\n\u003cp\u003e\/*배운 것\n1. for문도 {} 생략 가능\n2. string repeat 메소드\n*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

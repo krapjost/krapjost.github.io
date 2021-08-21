@@ -25,18 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>// 년도를 받고 세기를 리턴한다.
-// Given a year, return the century it is in.</p>
-<p>function century1 (year) {
-return (year + 99) / 100 | 0;
-}</p>
-<p>const century2 = (y) =&gt; Math.ceil(y/100)</p>
-<p>/* 배운 것</p>
-<pre><code>1. 비트단위 논리합 '|' 연산자, 비트단위 연산에 익숙해지고 싶다. 아직 잘 모르겠음.
-2. Math.round는 반올림, Math.ceil은 주어진 수보다 크거나 같은 수 중 가장 작은 정수를 반환한다.
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 년도를 받고 세기를 리턴한다.\n\/\/ Given a year, return the century it is in.\u003c\/p\u003e\n\u003cp\u003efunction century1 (year) {\nreturn (year \u002b 99) \/ 100 | 0;\n}\u003c\/p\u003e\n\u003cp\u003econst century2 = (y) =\u0026gt; Math.ceil(y\/100)\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. 비트단위 논리합 \u0027|\u0027 연산자, 비트단위 연산에 익숙해지고 싶다. 아직 잘 모르겠음.\n2. Math.round는 반올림, Math.ceil은 주어진 수보다 크거나 같은 수 중 가장 작은 정수를 반환한다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

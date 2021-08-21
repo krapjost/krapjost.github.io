@@ -25,29 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>/*
-Given two integer arrays a, b, both of length &gt;= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
-*/</p>
-<p>// 다른 사람의 해결법
-const sumPwrs = (a, p) =&gt; a.reduce( (s, n) =&gt; s + n ** p, 0);
-const arrayMadness1 = (a, b) =&gt; sumPwrs(a, 2) &gt; sumPwrs(b, 3);</p>
-<p>// 나의 해결법
-function arrayMadness2(a, b) {
-const sumSquareA = a.reduce((acc,cur)=&gt;acc+cur<strong>2,0)
-const sumCubeB = b.reduce((acc,cur)=&gt;acc+cur</strong>3,0)
-return sumSquareA&gt;sumCubeB
-}</p>
-<p>// 배운 것
-/*</p>
-<ol>
-<li>squares, cubes라는 네이밍은 2승하면 사각형, 3승하면 큐브가 나와서였다. 영어 이름은 직관적으로 붙은 게 많은 듯!</li>
-<li>reduce에 초깃값을 넣고 안 넣고의 차이. 0을 안줘도 될 줄 알았는데 아니었다. 초기값을 명시적으로 주지 않으면 배열의 첫번째 원소가 초깃값이 된다. 빈 배열에서는 초기값 없을 시 에러.</li>
-<li>함수형 프로그래밍은 함수를 나눌 수 없을 때까지 나누는 것, 재사용성의 극대화, 다른 사람의 코드를 보니 너무 깔끔하다.
-*/</li>
-</ol>
-<p>console.log((arrayMadness1([4,5,6],[1,2,3]))
-console.log((arrayMadness2([4,5,6],[1,2,3]))</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\nGiven two integer arrays a, b, both of length \u0026gt;= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.\n*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ 다른 사람의 해결법\nconst sumPwrs = (a, p) =\u0026gt; a.reduce( (s, n) =\u0026gt; s \u002b n ** p, 0);\nconst arrayMadness1 = (a, b) =\u0026gt; sumPwrs(a, 2) \u0026gt; sumPwrs(b, 3);\u003c\/p\u003e\n\u003cp\u003e\/\/ 나의 해결법\nfunction arrayMadness2(a, b) {\nconst sumSquareA = a.reduce((acc,cur)=\u0026gt;acc\u002bcur\u003cstrong\u003e2,0)\nconst sumCubeB = b.reduce((acc,cur)=\u0026gt;acc\u002bcur\u003c\/strong\u003e3,0)\nreturn sumSquareA\u0026gt;sumCubeB\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ 배운 것\n\/*\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003esquares, cubes라는 네이밍은 2승하면 사각형, 3승하면 큐브가 나와서였다. 영어 이름은 직관적으로 붙은 게 많은 듯!\u003c\/li\u003e\n\u003cli\u003ereduce에 초깃값을 넣고 안 넣고의 차이. 0을 안줘도 될 줄 알았는데 아니었다. 초기값을 명시적으로 주지 않으면 배열의 첫번째 원소가 초깃값이 된다. 빈 배열에서는 초기값 없을 시 에러.\u003c\/li\u003e\n\u003cli\u003e함수형 프로그래밍은 함수를 나눌 수 없을 때까지 나누는 것, 재사용성의 극대화, 다른 사람의 코드를 보니 너무 깔끔하다.\n*\/\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003cp\u003econsole.log((arrayMadness1([4,5,6],[1,2,3]))\nconsole.log((arrayMadness2([4,5,6],[1,2,3]))\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

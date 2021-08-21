@@ -25,36 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>/*
-주어진 숫자에 제곱근이 있다면 true || false</p>
-<pre><code>    25 =&gt; true
-    26 =&gt; false
-</code></pre>
-<p>*/</p>
-<p>// my solution
-function isSquare(n) {
-return Number.isInteger(Math.sqrt(n))
-}</p>
-<p>// clever
-function isSquare(n) {
-n = Math.sqrt(n);
-return ~~n === n;
-}
-/*
-제곱근을 구하는 내장함수 sqrt
-&lsquo;~&rsquo; 연산자는 비트를 역전시킨다.</p>
-<pre><code>    0 =&gt; 1; 1 =&gt; 0;
-
-    비트 연산자는 내부적으로 연산되는 수를 32-bit integer로 다룬다.
-    따라서 float 타입을 integer로 변환시키는 작업에도 사용할 수 있다.
-
-    ~12.1234 === -13;
-    ~~12.1234 === 12;
-
-    하지만 큰 수의 경우 과도한 메모리 사용으로 오버플로우가 일어날 가능성이 있기에 실제로 사용되진 않는다.
-</code></pre>
-<p>*/</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\n주어진 숫자에 제곱근이 있다면 true || false\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e    25 =\u0026gt; true\n    26 =\u0026gt; false\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ my solution\nfunction isSquare(n) {\nreturn Number.isInteger(Math.sqrt(n))\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ clever\nfunction isSquare(n) {\nn = Math.sqrt(n);\nreturn ~~n === n;\n}\n\/*\n제곱근을 구하는 내장함수 sqrt\n\u0026lsquo;~\u0026rsquo; 연산자는 비트를 역전시킨다.\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e    0 =\u0026gt; 1; 1 =\u0026gt; 0;\n\n    비트 연산자는 내부적으로 연산되는 수를 32-bit integer로 다룬다.\n    따라서 float 타입을 integer로 변환시키는 작업에도 사용할 수 있다.\n\n    ~12.1234 === -13;\n    ~~12.1234 === 12;\n\n    하지만 큰 수의 경우 과도한 메모리 사용으로 오버플로우가 일어날 가능성이 있기에 실제로 사용되진 않는다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>

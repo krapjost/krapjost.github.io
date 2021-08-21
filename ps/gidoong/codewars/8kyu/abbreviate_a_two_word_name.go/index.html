@@ -25,18 +25,14 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     
     
     <div id=typewriter></div>
-    <span id=terminal><h1 id='title'></h1><p>package kata
-import &ldquo;strings&rdquo;
-import &ldquo;fmt&rdquo;</p>
-<p>func AbbrevName(name string) string{
-words := strings.Split(name, &quot; &ldquo;)
-return strings.ToUpper(string(words[0][0])) + &ldquo;.&rdquo; + strings.ToUpper(string(words[1][0]))
-}</p>
-<p>func AbbrevName2(name string) string{
-arr := strings.Split(name, &quot; &ldquo;)
-return fmt.Sprintf(&quot;%s.%s&rdquo;, strings.ToUpper(string([]rune(arr[0])[0])), strings.ToUpper(string([]rune(arr[1])[0])))
-}</p>
-</span>
+    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003epackage kata\nimport \u0026ldquo;strings\u0026rdquo;\nimport \u0026ldquo;fmt\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003efunc AbbrevName(name string) string{\nwords := strings.Split(name, \u0026quot; \u0026ldquo;)\nreturn strings.ToUpper(string(words[0][0])) \u002b \u0026ldquo;.\u0026rdquo; \u002b strings.ToUpper(string(words[1][0]))\n}\u003c\/p\u003e\n\u003cp\u003efunc AbbrevName2(name string) string{\narr := strings.Split(name, \u0026quot; \u0026ldquo;)\nreturn fmt.Sprintf(\u0026quot;%s.%s\u0026rdquo;, strings.ToUpper(string([]rune(arr[0])[0])), strings.ToUpper(string([]rune(arr[1])[0])))\n}\u003c\/p\u003e\n\u003c\/span\u003e',
+            delay: '0.1',
+            autoStart: true,
+        });
+    </script>
 
 
         </div></body>
