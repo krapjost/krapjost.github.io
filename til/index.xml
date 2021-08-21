@@ -57,6 +57,17 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
+      <link>https://www.example.com/til/object.values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/object.values/</guid>
+      <description>Object.values() **Object.values()** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 for...in 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
+validateAdminInfoInput을 부를 때 반복되는 input을 깨끗하고 읽기쉽게 넣어주고 싶다.
+function validateAdminInfoInput(dsptch, ...input) { const [boxAdminId, boxAdminPw, pwConfirm, boxAdminName] = input; const pwMatch = boxAdminPw === pwConfirm; if (!boxAdminId) return showMsg(&amp;#39;관리자 아이디를 입력해주세요&amp;#39;, dsptch); if (!boxAdminPw) return showMsg(&amp;#39;관리자 패스워드를 입력해주세요.&amp;#39;, dsptch); if (!</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.example.com/til/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -85,6 +96,17 @@ react-app-best-practice</description>
       
       <guid>https://www.example.com/til/til-210625/</guid>
       <description>TIL 210625 Javascript(react) map 에서 index 활용 const [focused, setFocused] = useState(0); products.map((product, index) =&amp;gt; { return ( &amp;lt;li className={focused === index ? &amp;#39;active&amp;#39; : &amp;#39;&amp;#39;} onClick={() =&amp;gt; { setFocused(index); }}&amp;gt; &amp;lt;span className=&amp;#34;people&amp;#34;&amp;gt; {product.name} &amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; ); }) NaN 은 number const n = NaN typeof(n) &amp;#34;number&amp;#34; Controlled Component? Uncontrolled Component?  Warning: A component is changing an uncontrolled input of type password to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/til-210701/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/til-210701/</guid>
+      <description>TIL 210701 리눅스 파일 / 디렉터리 변경  cp scp mv rename  cp 파일 복사 cp file file.bak 디렉터리 재귀 복사 cp -r dir/ dir_bak/ 파일/디렉터리 소유자, 권한 등 모든 정보 복사 cp -rp dir/ dir_bak option ? -p same as --preserve=mode,ownership,timestamps -r same as --recursive=copy directories recursively scp 원격지로 파일 복사  scp file [원격지계정]@[원격지ip]:[이동시킬 위치]
+다른 건 cp 사용법과 동일하다.
+ scp file root@192.168.200.11:/root/ mv 파일 이동  cp 하고 rm 실행 하는 것과 동일</description>
     </item>
     
     <item>
