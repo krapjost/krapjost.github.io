@@ -16,21 +16,34 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003efunction multiTable(number) {\nlet res = \u0026lsquo;\u0027;\nfor ( let i = 1; i \u0026lt; 11; i\u002b\u002b ){\nif ( i === 10) {\nres \u002b= \u003ccode\u003e${i} * ${number} = ${i*number}\u003c\/code\u003e\n} else {\nres \u002b= \u003ccode\u003e${i} * ${number} = ${i*number}\u003c\/code\u003e\u002b\u0027\\n\u0026rsquo;\n};\n};\nreturn res\n}\u003c\/p\u003e\n\u003cp\u003efunction multiTable(number) {\nlet res = \u0026lsquo;\u0027;\nfor ( let i = 1; i \u0026lt; 11; i\u002b\u002b ){\nres \u002b= \u003ccode\u003e${i} * ${number} = ${i*number}\u003c\/code\u003e\u002b(i\u0026lt;10 ? \u0026lsquo;\\n\u0026rsquo; : \u0026lsquo;\u0027)\n};\nreturn res\n}\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>function multiTable(number) {
+let res = &lsquo;';
+for ( let i = 1; i &lt; 11; i++ ){
+if ( i === 10) {
+res += <code>${i} * ${number} = ${i*number}</code>
+} else {
+res += <code>${i} * ${number} = ${i*number}</code>+'\n&rsquo;
+};
+};
+return res
+}</p>
+<p>function multiTable(number) {
+let res = &lsquo;';
+for ( let i = 1; i &lt; 11; i++ ){
+res += <code>${i} * ${number} = ${i*number}</code>+(i&lt;10 ? &lsquo;\n&rsquo; : &lsquo;')
+};
+return res
+}</p>
+</span>
 
 
         </div></body>

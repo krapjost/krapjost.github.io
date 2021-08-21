@@ -16,21 +16,41 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003epackage kata\u003c\/p\u003e\n\u003cp\u003efunc QuarterOf1(month int) (res int) {\nswitch month {\ncase 1, 2, 3 : res=1\ncase 4, 5, 6 : res=2\ncase 7, 8, 9 : res=3\ncase 10,11,12: res=4\n}\nreturn\n}\u003c\/p\u003e\n\u003cp\u003efunc QuarterOf2(month int) int {\nif month \u0026lt;= 3 {\nreturn 1\n}\nif month \u0026lt;= 6 \u0026amp;\u0026amp; month \u0026gt; 3 {\nreturn 2\n}\nif month \u0026lt;= 9 \u0026amp;\u0026amp; month \u0026gt; 6 {\nreturn 3\n}\nif month \u0026lt;= 12 \u0026amp;\u0026amp; month \u0026gt; 9 {\nreturn 4\n}\nreturn 0\n}\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>package kata</p>
+<p>func QuarterOf1(month int) (res int) {
+switch month {
+case 1, 2, 3 : res=1
+case 4, 5, 6 : res=2
+case 7, 8, 9 : res=3
+case 10,11,12: res=4
+}
+return
+}</p>
+<p>func QuarterOf2(month int) int {
+if month &lt;= 3 {
+return 1
+}
+if month &lt;= 6 &amp;&amp; month &gt; 3 {
+return 2
+}
+if month &lt;= 9 &amp;&amp; month &gt; 6 {
+return 3
+}
+if month &lt;= 12 &amp;&amp; month &gt; 9 {
+return 4
+}
+return 0
+}</p>
+</span>
 
 
         </div></body>

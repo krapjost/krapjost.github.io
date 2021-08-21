@@ -16,21 +16,22 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003edef bool_to_word1(boolean):\nreturn \u0026ldquo;Yes\u0026rdquo; if boolean else \u0026ldquo;No\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003edef bool_to_word2(boolean):\nif boolean:\nreturn \u0026ldquo;Yes\u0026rdquo;\nreturn \u0026ldquo;No\u0026rdquo;\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>def bool_to_word1(boolean):
+return &ldquo;Yes&rdquo; if boolean else &ldquo;No&rdquo;</p>
+<p>def bool_to_word2(boolean):
+if boolean:
+return &ldquo;Yes&rdquo;
+return &ldquo;No&rdquo;</p>
+</span>
 
 
         </div></body>

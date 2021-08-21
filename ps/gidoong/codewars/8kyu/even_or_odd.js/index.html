@@ -16,21 +16,27 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 숫자를 인자로 받고 홀수면 \u0026ldquo;Odd\u0026rdquo; 아니면 \u0026ldquo;Even\u0026rdquo; 리턴\u003c\/p\u003e\n\u003cp\u003econst even_or_odd1 = n =\u0026gt; n%2 ? \u0026lsquo;Odd\u0026rsquo; : \u0026lsquo;Even\u0026rsquo;\u003c\/p\u003e\n\u003cp\u003efunction even_or_odd2 (number) {\nreturn (number%2) ? \u0026lsquo;Odd\u0026rsquo; : \u0026lsquo;Even\u0026rsquo;\n}\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. 삼항연산자에 괄호는 쓰는 게 가독성에 좋을 것 같다.\n2. 이렇게 간단한 건 화살표 함수가 좋을 듯!\n3. 하지만 화살표 함수에 괄호쓰면 함수 안에 함수인지 헷갈린다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>// 숫자를 인자로 받고 홀수면 &ldquo;Odd&rdquo; 아니면 &ldquo;Even&rdquo; 리턴</p>
+<p>const even_or_odd1 = n =&gt; n%2 ? &lsquo;Odd&rsquo; : &lsquo;Even&rsquo;</p>
+<p>function even_or_odd2 (number) {
+return (number%2) ? &lsquo;Odd&rsquo; : &lsquo;Even&rsquo;
+}</p>
+<p>/* 배운 것</p>
+<pre><code>1. 삼항연산자에 괄호는 쓰는 게 가독성에 좋을 것 같다.
+2. 이렇게 간단한 건 화살표 함수가 좋을 듯!
+3. 하지만 화살표 함수에 괄호쓰면 함수 안에 함수인지 헷갈린다.
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>

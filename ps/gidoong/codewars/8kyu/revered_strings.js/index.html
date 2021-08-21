@@ -16,21 +16,30 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003efunction solution1(str){\nlet arr = []\nlet res = \u0026quot;\u0026quot;\nfor (let i = 0 , l = str.length-1; i\u0026lt;=l; l\u0026ndash;){\narr.push(str[l])\nres \u002b= arr.pop()\n}\nreturn res\n}\u003c\/p\u003e\n\u003cp\u003efunction solution2(str){\nreturn str.split(\u0026quot;\u0026quot;).reverse().join(\u0026quot;\u0026quot;)\n}\u003c\/p\u003e\n\u003cp\u003econsole.log(solution1(\u0026ldquo;reverse me\u0026rdquo;))\nconsole.log(solution2(\u0026ldquo;reverse me\u0026rdquo;))\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>function solution1(str){
+let arr = []
+let res = &quot;&quot;
+for (let i = 0 , l = str.length-1; i&lt;=l; l&ndash;){
+arr.push(str[l])
+res += arr.pop()
+}
+return res
+}</p>
+<p>function solution2(str){
+return str.split(&quot;&quot;).reverse().join(&quot;&quot;)
+}</p>
+<p>console.log(solution1(&ldquo;reverse me&rdquo;))
+console.log(solution2(&ldquo;reverse me&rdquo;))</p>
+</span>
 
 
         </div></body>

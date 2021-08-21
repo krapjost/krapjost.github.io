@@ -16,21 +16,59 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\ninput  = [1,2,3,4,5,6,7,8,9,0]\noutput = \u0026ldquo;(123) 456-7890\u0026rdquo;\n*\/\npackage kata\nimport (\n\u0026ldquo;strconv\u0026rdquo;\n)\u003c\/p\u003e\n\u003cp\u003efunc CreatePhoneNumber1(numbers [10]uint) string {\nvar phoneNumber = \u0026ldquo;(\u0026rdquo;\nfor i, v := range numbers {\ns := strconv.Itoa(int(v))\nif i\u0026lt;2 {\nphoneNumber \u002b= s\n}\nif i == 2 {\nphoneNumber \u002b= s\u002b\u0026quot;) \u0026quot;\n}\nif i\u0026gt;2 \u0026amp;\u0026amp; i\u0026lt;5 {\nphoneNumber \u002b= s\n}\nif i == 5 {\nphoneNumber \u002b= s\u002b\u0026quot;-\u0026quot;\n}\nif i\u0026gt;5 {\nphoneNumber \u002b= s\n}\n}\nreturn phoneNumber\n}\u003c\/p\u003e\n\u003cp\u003efunc CreatePhoneNumber2(n [10]uint) string {\nreturn fmt.Sprintf(\u0026quot;(%d%d%d) %d%d%d-%d%d%d%d\u0026quot;, n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7], n[8], n[9])\n}\u003c\/p\u003e\n\u003cp\u003e\/*\nwhat i learn\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. strconv.Itoa\n\tconvert int to string ( not unit )\n2. strconv.Atoi\n\tconvert string to int\n3. need to handling string conversion that has a format ?\n\tmake format string first\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>/*
+input  = [1,2,3,4,5,6,7,8,9,0]
+output = &ldquo;(123) 456-7890&rdquo;
+*/
+package kata
+import (
+&ldquo;strconv&rdquo;
+)</p>
+<p>func CreatePhoneNumber1(numbers [10]uint) string {
+var phoneNumber = &ldquo;(&rdquo;
+for i, v := range numbers {
+s := strconv.Itoa(int(v))
+if i&lt;2 {
+phoneNumber += s
+}
+if i == 2 {
+phoneNumber += s+&quot;) &quot;
+}
+if i&gt;2 &amp;&amp; i&lt;5 {
+phoneNumber += s
+}
+if i == 5 {
+phoneNumber += s+&quot;-&quot;
+}
+if i&gt;5 {
+phoneNumber += s
+}
+}
+return phoneNumber
+}</p>
+<p>func CreatePhoneNumber2(n [10]uint) string {
+return fmt.Sprintf(&quot;(%d%d%d) %d%d%d-%d%d%d%d&quot;, n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7], n[8], n[9])
+}</p>
+<p>/*
+what i learn</p>
+<pre><code>1. strconv.Itoa
+	convert int to string ( not unit )
+2. strconv.Atoi
+	convert string to int
+3. need to handling string conversion that has a format ?
+	make format string first
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>

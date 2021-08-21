@@ -16,21 +16,58 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\nCreate a RomanNumerals class that can convert a roman numeral to and from an integer value. It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.\u003c\/p\u003e\n\u003cp\u003eModern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.\u003c\/p\u003e\n\u003cp\u003e\u0026mdash; Example \u0026mdash;\nRomanNumerals.toRoman(1000); \/\/ should return \u0026lsquo;M\u0026rsquo;\nRomanNumerals.fromRoman(\u0026lsquo;M\u0026rsquo;); \/\/ should return 1000\u003c\/p\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003eclass RomanNumerals {\ngetKeyByValue(object, value) {\nreturn Object.keys(object).find(key =\u0026gt; object[key] === value);\n}\u003c\/p\u003e\n\u003cp\u003estatic numObj = {\n1:\u0026ldquo;I\u0026rdquo;,\n5:\u0026ldquo;V\u0026rdquo;,\n10:\u0026ldquo;X\u0026rdquo;,\n50:\u0026ldquo;L\u0026rdquo;,\n100:\u0026ldquo;C\u0026rdquo;,\n500:\u0026ldquo;D\u0026rdquo;,\n1000:\u0026ldquo;M\u0026rdquo;\n}\ngetZeroDigitStr(arr, idx) {\nlet digit = \u0026quot;\u0026quot;\nfor (let i = idx, len = arr.length; i\u0026lt;len; i\u002b\u002b) {\ndigit \u002b= \u0026ldquo;0\u0026rdquo;\n}\nreturn digit;\n}\ngetSumOfDigit(arr, idx){\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003ethis.numObj\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e}\nstatic toRoman(arabic) {\nconst numArr = arabic.toString().split(\u0026quot;\u0026quot;)\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003ethis.numObj[numArr[0]\u002b\u0026quot;000\u0026quot;]\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e}\u003c\/p\u003e\n\u003cp\u003estatic fromRoman(roman) {\u003c\/p\u003e\n\u003cp\u003e}\n}\u003c\/p\u003e\n\u003cp\u003e\/*\n아직 푸는 중\u0026hellip;\n*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>/*
+Create a RomanNumerals class that can convert a roman numeral to and from an integer value. It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.</p>
+<p>Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.</p>
+<p>&mdash; Example &mdash;
+RomanNumerals.toRoman(1000); // should return &lsquo;M&rsquo;
+RomanNumerals.fromRoman(&lsquo;M&rsquo;); // should return 1000</p>
+<p>*/</p>
+<p>class RomanNumerals {
+getKeyByValue(object, value) {
+return Object.keys(object).find(key =&gt; object[key] === value);
+}</p>
+<p>static numObj = {
+1:&ldquo;I&rdquo;,
+5:&ldquo;V&rdquo;,
+10:&ldquo;X&rdquo;,
+50:&ldquo;L&rdquo;,
+100:&ldquo;C&rdquo;,
+500:&ldquo;D&rdquo;,
+1000:&ldquo;M&rdquo;
+}
+getZeroDigitStr(arr, idx) {
+let digit = &quot;&quot;
+for (let i = idx, len = arr.length; i&lt;len; i++) {
+digit += &ldquo;0&rdquo;
+}
+return digit;
+}
+getSumOfDigit(arr, idx){</p>
+<pre><code>this.numObj
+</code></pre>
+<p>}
+static toRoman(arabic) {
+const numArr = arabic.toString().split(&quot;&quot;)</p>
+<pre><code>this.numObj[numArr[0]+&quot;000&quot;]
+</code></pre>
+<p>}</p>
+<p>static fromRoman(roman) {</p>
+<p>}
+}</p>
+<p>/*
+아직 푸는 중&hellip;
+*/</p>
+</span>
 
 
         </div></body>

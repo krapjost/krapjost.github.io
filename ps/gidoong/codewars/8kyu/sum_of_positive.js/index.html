@@ -16,21 +16,38 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 숫자 배열을 받고 양수의 합을 리턴, 양수가 없으면 0을 리턴.\u003c\/p\u003e\n\u003cp\u003efunction positiveSum(arr) {\nlet sum = 0\nfor (const x of arr) {\n(x\u0026gt;0)?sum\u002b=x:null\n}\nreturn sum\n}\u003c\/p\u003e\n\u003cp\u003econst positiveSum = (arr) =\u0026gt;\narr.reduce((acc, x) =\u0026gt; acc \u002b ((x\u0026gt;0) ? x : 0), 0)\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. 삼항연산자를 사용할 때 괄호를 신경써서 사용하자!\n\tacc \u002b x\u0026gt;0 ? x : 0\n\t^ 이렇게 하면 안됨.\n\tacc \u002b (x\u0026gt;0) ? x : 0\n\t^ 이래도 안됨\n\tacc \u002b (x\u0026gt;0 ? x: 0)\n\t^ 이래야 됨\n2. 너무 단축해서 쓰려고 해도 가독성 떨어짐. 길어지면\n\t{} 쓰고 return 명시해주자\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>// 숫자 배열을 받고 양수의 합을 리턴, 양수가 없으면 0을 리턴.</p>
+<p>function positiveSum(arr) {
+let sum = 0
+for (const x of arr) {
+(x&gt;0)?sum+=x:null
+}
+return sum
+}</p>
+<p>const positiveSum = (arr) =&gt;
+arr.reduce((acc, x) =&gt; acc + ((x&gt;0) ? x : 0), 0)</p>
+<p>/* 배운 것</p>
+<pre><code>1. 삼항연산자를 사용할 때 괄호를 신경써서 사용하자!
+	acc + x&gt;0 ? x : 0
+	^ 이렇게 하면 안됨.
+	acc + (x&gt;0) ? x : 0
+	^ 이래도 안됨
+	acc + (x&gt;0 ? x: 0)
+	^ 이래야 됨
+2. 너무 단축해서 쓰려고 해도 가독성 떨어짐. 길어지면
+	{} 쓰고 return 명시해주자
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>

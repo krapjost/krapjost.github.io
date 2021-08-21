@@ -16,21 +16,98 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003ch1 id=\u0022os-버전-확인\u0022\u003eos 버전 확인\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003ecat \/etc\/os-release\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022유저-권한-수정\u0022\u003e유저 권한 수정\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003esudo vim \/etc\/sudoers\n\u0026gt; %sudo all=nopasswd: \/usr\/bin\/mkdir\n\u0026gt; mkdir 프로그램 비밀번호 없이 실행할 수 있게 권한 설정\nlinux user root 권한 설정\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cp\u003evisudo\nvi  \/etc\/passwd\u003c\/p\u003e\n\u003cp\u003elinux router ip 찾기\nnetstat -rn\nroute -n\nip -r\u003c\/p\u003e\n\u003cp\u003elinux chown 파일\/디렉터리 소유권\u003c\/p\u003e\n\u003cp\u003edrwxr-xr-x  2  root  root  4096 Apr 22 16:59 conory\u003c\/p\u003e\n\u003cp\u003e파일Type 퍼미션정보 링크수 소유자 소유그룹 용량 생성날짜 파일이름\u003c\/p\u003e\n\u003cp\u003e확인\nls -al\n소유권 변경\nchown {소유권자}:{그룹식별자} {변경할 파일}\nchown aaa:bbb test.sh\u003c\/p\u003e\n\u003cp\u003e하위 디렉터리까지 모두 소유권 변경\nchown -R {소유권자}:{그룹식별자} {디렉터리}\nchown -R aaa:bbb \/home\/test\u003c\/p\u003e\n\u003ch1 id=\u0022명령어-binary-위치\u0022\u003e명령어 binary 위치\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e\/usr\/bin\/\n\/usr\/sbin\/\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022네트워크-설정\u0022\u003e네트워크 설정\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e\/etc\/sysconfig\/network-scripts\/\nls\nvim ifcfg-*\nsystemctl start networkmanager\nnmcli networking off\nnmcli networking on\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022broken-pipe\u0022\u003ebroken pipe\u003c\/h1\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/may0301.tistory.com\/10\u0022\u003e참조\u003c\/a\u003e\u003c\/p\u003e\n\u003ch1 id=\u0022메일-보내기\u0022\u003e메일 보내기\u003c\/h1\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/www.lesstif.com\/lpt\/send-mail-from-linux-command-line-24445045.html\u0022\u003e참조\u003c\/a\u003e\n\u003ca href=\u0022https:\/\/sehoi.github.io\/2014-10-17\/linux-sendmail\/\u0022\u003e참조\u003c\/a\u003e\u003c\/p\u003e\n\u003ch3 id=\u0022파일첨부\u0022\u003e파일첨부\u003c\/h3\u003e\n\u003cblockquote\u003e\n\u003cp\u003e$ mail -s \u0026ldquo;메일 테스트\u0026rdquo; -a test.pdf \u003ca href=\u0022mailto:user@example.com\u0022\u003euser@example.com\u003c\/a\u003e \u0026laquo;\u0026lt; \u0026lsquo;메일 본문입니다\u0026rsquo;\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022네트워크-패킷-확인\u0022\u003e네트워크 패킷 확인\u003c\/h1\u003e\n\u003ch2 id=\u0022tcpdump---패킷-가로채기\u0022\u003etcpdump - 패킷 가로채기\u003c\/h2\u003e\n\u003ch4 id=\u0022189에서-157로-오는-패킷-가로채기\u0022\u003e189에서 157로 오는 패킷 가로채기\u003c\/h4\u003e\n\u003cblockquote\u003e\n\u003cp\u003etcpdump -eni ens33 host 192.168.200.157 and host 192.168.40.189\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022사용중인-머신-열려있는-포트-확인하기\u0022\u003e사용중인 머신 열려있는 포트 확인하기\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003enetstat -nlpt\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022iptables-적용-상태-확인\u0022\u003eiptables 적용 상태 확인\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003eiptables -nvl\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022mv\u0022\u003emv\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e파일 \/ 디렉터리 이동\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022cp\u0022\u003ecp\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e파일 \/ 디렉터리 카피\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022scp\u0022\u003escp\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e파일 \/ 디렉터리 ssh를 통해 다른 서버로 카피\nscp [file] [username]@[ip_address]:[path_to_copy]\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch1 id=\u0022wget--curl\u0022\u003ewget \/ curl\u003c\/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003eurl로 파일 다운로드\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><h1 id="os-버전-확인">os 버전 확인</h1>
+<blockquote>
+<p>cat /etc/os-release</p>
+</blockquote>
+<h1 id="유저-권한-수정">유저 권한 수정</h1>
+<blockquote>
+<p>sudo vim /etc/sudoers
+&gt; %sudo all=nopasswd: /usr/bin/mkdir
+&gt; mkdir 프로그램 비밀번호 없이 실행할 수 있게 권한 설정
+linux user root 권한 설정</p>
+</blockquote>
+<p>visudo
+vi  /etc/passwd</p>
+<p>linux router ip 찾기
+netstat -rn
+route -n
+ip -r</p>
+<p>linux chown 파일/디렉터리 소유권</p>
+<p>drwxr-xr-x  2  root  root  4096 Apr 22 16:59 conory</p>
+<p>파일Type 퍼미션정보 링크수 소유자 소유그룹 용량 생성날짜 파일이름</p>
+<p>확인
+ls -al
+소유권 변경
+chown {소유권자}:{그룹식별자} {변경할 파일}
+chown aaa:bbb test.sh</p>
+<p>하위 디렉터리까지 모두 소유권 변경
+chown -R {소유권자}:{그룹식별자} {디렉터리}
+chown -R aaa:bbb /home/test</p>
+<h1 id="명령어-binary-위치">명령어 binary 위치</h1>
+<blockquote>
+<p>/usr/bin/
+/usr/sbin/</p>
+</blockquote>
+<h1 id="네트워크-설정">네트워크 설정</h1>
+<blockquote>
+<p>/etc/sysconfig/network-scripts/
+ls
+vim ifcfg-*
+systemctl start networkmanager
+nmcli networking off
+nmcli networking on</p>
+</blockquote>
+<h1 id="broken-pipe">broken pipe</h1>
+<p><a href="https://may0301.tistory.com/10">참조</a></p>
+<h1 id="메일-보내기">메일 보내기</h1>
+<p><a href="https://www.lesstif.com/lpt/send-mail-from-linux-command-line-24445045.html">참조</a>
+<a href="https://sehoi.github.io/2014-10-17/linux-sendmail/">참조</a></p>
+<h3 id="파일첨부">파일첨부</h3>
+<blockquote>
+<p>$ mail -s &ldquo;메일 테스트&rdquo; -a test.pdf <a href="mailto:user@example.com">user@example.com</a> &laquo;&lt; &lsquo;메일 본문입니다&rsquo;</p>
+</blockquote>
+<h1 id="네트워크-패킷-확인">네트워크 패킷 확인</h1>
+<h2 id="tcpdump---패킷-가로채기">tcpdump - 패킷 가로채기</h2>
+<h4 id="189에서-157로-오는-패킷-가로채기">189에서 157로 오는 패킷 가로채기</h4>
+<blockquote>
+<p>tcpdump -eni ens33 host 192.168.200.157 and host 192.168.40.189</p>
+</blockquote>
+<h1 id="사용중인-머신-열려있는-포트-확인하기">사용중인 머신 열려있는 포트 확인하기</h1>
+<blockquote>
+<p>netstat -nlpt</p>
+</blockquote>
+<h1 id="iptables-적용-상태-확인">iptables 적용 상태 확인</h1>
+<blockquote>
+<p>iptables -nvl</p>
+</blockquote>
+<h1 id="mv">mv</h1>
+<blockquote>
+<p>파일 / 디렉터리 이동</p>
+</blockquote>
+<h1 id="cp">cp</h1>
+<blockquote>
+<p>파일 / 디렉터리 카피</p>
+</blockquote>
+<h1 id="scp">scp</h1>
+<blockquote>
+<p>파일 / 디렉터리 ssh를 통해 다른 서버로 카피
+scp [file] [username]@[ip_address]:[path_to_copy]</p>
+</blockquote>
+<h1 id="wget--curl">wget / curl</h1>
+<blockquote>
+<p>url로 파일 다운로드</p>
+</blockquote>
+</span>
 
 
         </div></body>

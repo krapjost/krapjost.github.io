@@ -16,21 +16,35 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003efunction isPangram(string){\nreturn [\u0026hellip;\u0026ldquo;qwertyuiopasdfghjklzxcvbnm\u0026rdquo;]\n.every(l=\u0026gt;string.toLowerCase().includes(l))\n}\u003c\/p\u003e\n\u003cp\u003efunction isPangram2(string){\nconst letters = [\u0026lsquo;a\u0026rsquo;,\u0026lsquo;b\u0026rsquo;,\u0026lsquo;c\u0026rsquo;,\u0026rsquo;d\u0027,\u0026lsquo;e\u0026rsquo;,\u0026lsquo;f\u0026rsquo;,\u0026lsquo;g\u0026rsquo;,\n\u0026lsquo;h\u0026rsquo;,\u0026lsquo;i\u0026rsquo;,\u0026lsquo;j\u0026rsquo;,\u0026lsquo;k\u0026rsquo;,\u0026lsquo;l\u0026rsquo;,\u0026rsquo;m\u0027,\u0026lsquo;n\u0026rsquo;,\n\u0026lsquo;o\u0026rsquo;,\u0026lsquo;p\u0026rsquo;,\u0026lsquo;q\u0026rsquo;,\u0026lsquo;r\u0026rsquo;,\u0026rsquo;s\u0027,\u0026rsquo;t\u0027,\u0026lsquo;u\u0026rsquo;,\n\u0026lsquo;v\u0026rsquo;,\u0026lsquo;w\u0026rsquo;,\u0026lsquo;x\u0026rsquo;,\u0026lsquo;y\u0026rsquo;,\u0026lsquo;z\u0026rsquo;]\nlet cnt = 0\nfor (let i=0; i\u0026lt;=letters.length; i\u002b\u002b) {\nif (string.toLowerCase().includes(letters[i])) {\ncnt \u002b\u002b\n}\n}\nreturn cnt === letters.length ? true : false\n}\u003c\/p\u003e\n\u003cp\u003econsole.log(isPangram(\u0026ldquo;The quick brown fox jumps over the lazy dog.\u0026quot;))\nconsole.log(isPangram2(\u0026ldquo;The quick brown fox jumps over the lazy dog.\u0026quot;))\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>function isPangram(string){
+return [&hellip;&ldquo;qwertyuiopasdfghjklzxcvbnm&rdquo;]
+.every(l=&gt;string.toLowerCase().includes(l))
+}</p>
+<p>function isPangram2(string){
+const letters = [&lsquo;a&rsquo;,&lsquo;b&rsquo;,&lsquo;c&rsquo;,&rsquo;d',&lsquo;e&rsquo;,&lsquo;f&rsquo;,&lsquo;g&rsquo;,
+&lsquo;h&rsquo;,&lsquo;i&rsquo;,&lsquo;j&rsquo;,&lsquo;k&rsquo;,&lsquo;l&rsquo;,&rsquo;m',&lsquo;n&rsquo;,
+&lsquo;o&rsquo;,&lsquo;p&rsquo;,&lsquo;q&rsquo;,&lsquo;r&rsquo;,&rsquo;s',&rsquo;t',&lsquo;u&rsquo;,
+&lsquo;v&rsquo;,&lsquo;w&rsquo;,&lsquo;x&rsquo;,&lsquo;y&rsquo;,&lsquo;z&rsquo;]
+let cnt = 0
+for (let i=0; i&lt;=letters.length; i++) {
+if (string.toLowerCase().includes(letters[i])) {
+cnt ++
+}
+}
+return cnt === letters.length ? true : false
+}</p>
+<p>console.log(isPangram(&ldquo;The quick brown fox jumps over the lazy dog.&quot;))
+console.log(isPangram2(&ldquo;The quick brown fox jumps over the lazy dog.&quot;))</p>
+</span>
 
 
         </div></body>

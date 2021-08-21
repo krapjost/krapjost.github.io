@@ -16,21 +16,62 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\naccum(\u0026ldquo;abcd\u0026rdquo;) -\u0026gt; \u0026ldquo;A-Bb-Ccc-Dddd\u0026rdquo;\naccum(\u0026ldquo;RqaEzty\u0026rdquo;) -\u0026gt; \u0026ldquo;R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy\u0026rdquo;\naccum(\u0026ldquo;cwAt\u0026rdquo;) -\u0026gt; \u0026ldquo;C-Ww-Aaa-Tttt\u0026rdquo;\n*\/\u003c\/p\u003e\n\u003cp\u003epackage kata\nimport \u0026ldquo;strings\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003e\/\/ My Solution\nfunc Accum(s string) string {\nuS := strings.ToUpper(s);\nvar res string;\nfor i := 0; i \u0026lt; len(uS); i\u002b\u002b {\nres \u002b= string(uS[i])\nfor k := 1; k \u0026lt;= i; k\u002b\u002b {\nres \u002b= string(strings.ToLower(string(uS[i])))\n}\nif i == len(uS)-1 {\nbreak\n}\nres \u002b= \u0026ldquo;-\u0026rdquo;\n}\nreturn res\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ Best Practice\nfunc Accum2(s string) string {\nparts := make([]string, len(s))\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003efor i := 0; i \u0026lt; len(s); i\u002b\u002b {\n  parts[i] = strings.ToUpper(string(s[i])) \u002b strings.Repeat(strings.ToLower(string(s[i])), i)\n}\n\nreturn strings.Join(parts, \u0026quot;-\u0026quot;)\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e}\u003c\/p\u003e\n\u003cp\u003e\/*\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. 만들어야 할 배열의 길이를 알고 있을 경우 make([]type, length)\n2. 자바스크립트와 다르게 string 타입의 배열 인덱스에 직접 접근하면\n  uint8 타입 바이트 숫자가 나온다. string으로 감싸서 타입 캐스팅 해줘야 함.\n3. 타입을 확인하려면 \u0026quot;reflect\u0026quot; 패키지, reflect.TypeOf(s)\n\ns := \u0026quot;string\u0026quot;\nfmt.Println(reflect.TypeOf(s), reflect.TypeOf(s[0]), s[0], string(s[0]))\n\nstring uint8 115 s\t\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>/*
+accum(&ldquo;abcd&rdquo;) -&gt; &ldquo;A-Bb-Ccc-Dddd&rdquo;
+accum(&ldquo;RqaEzty&rdquo;) -&gt; &ldquo;R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy&rdquo;
+accum(&ldquo;cwAt&rdquo;) -&gt; &ldquo;C-Ww-Aaa-Tttt&rdquo;
+*/</p>
+<p>package kata
+import &ldquo;strings&rdquo;</p>
+<p>// My Solution
+func Accum(s string) string {
+uS := strings.ToUpper(s);
+var res string;
+for i := 0; i &lt; len(uS); i++ {
+res += string(uS[i])
+for k := 1; k &lt;= i; k++ {
+res += string(strings.ToLower(string(uS[i])))
+}
+if i == len(uS)-1 {
+break
+}
+res += &ldquo;-&rdquo;
+}
+return res
+}</p>
+<p>// Best Practice
+func Accum2(s string) string {
+parts := make([]string, len(s))</p>
+<pre><code>for i := 0; i &lt; len(s); i++ {
+  parts[i] = strings.ToUpper(string(s[i])) + strings.Repeat(strings.ToLower(string(s[i])), i)
+}
+
+return strings.Join(parts, &quot;-&quot;)
+</code></pre>
+<p>}</p>
+<p>/*
+배운 것</p>
+<pre><code>1. 만들어야 할 배열의 길이를 알고 있을 경우 make([]type, length)
+2. 자바스크립트와 다르게 string 타입의 배열 인덱스에 직접 접근하면
+  uint8 타입 바이트 숫자가 나온다. string으로 감싸서 타입 캐스팅 해줘야 함.
+3. 타입을 확인하려면 &quot;reflect&quot; 패키지, reflect.TypeOf(s)
+
+s := &quot;string&quot;
+fmt.Println(reflect.TypeOf(s), reflect.TypeOf(s[0]), s[0], string(s[0]))
+
+string uint8 115 s	
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>

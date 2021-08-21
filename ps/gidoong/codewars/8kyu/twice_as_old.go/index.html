@@ -16,21 +16,40 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003epackage kata\nimport \u0026ldquo;math\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003efunc TwiceAsOld(dadYearsOld, sonYearsOld int) int {\nreturn int(math.Abs(float64(sonYearsOld*2-dadYearsOld)))\n}\u003c\/p\u003e\n\u003cp\u003efunc TwiceAsOld2(dadYearsOld, sonYearsOld int) int {\nvar res int\nif (sonYearsOld * 2 \u0026lt; dadYearsOld) {\nfor {\nif (sonYearsOld * 2 == dadYearsOld) {\nbreak\n}\nsonYearsOld\u002b\u002b; dadYearsOld \u002b\u002b; res\u002b\u002b;\n}\n} else if (sonYearsOld * 2 \u0026gt; dadYearsOld) {\nfor {\nif (sonYearsOld * 2 == dadYearsOld) {\nbreak\n}\nsonYearsOld\u0026ndash;; dadYearsOld\u0026ndash;; res\u0026ndash;;\n}\n}\nreturn int(math.Abs(float64(res)))\n}\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>package kata
+import &ldquo;math&rdquo;</p>
+<p>func TwiceAsOld(dadYearsOld, sonYearsOld int) int {
+return int(math.Abs(float64(sonYearsOld*2-dadYearsOld)))
+}</p>
+<p>func TwiceAsOld2(dadYearsOld, sonYearsOld int) int {
+var res int
+if (sonYearsOld * 2 &lt; dadYearsOld) {
+for {
+if (sonYearsOld * 2 == dadYearsOld) {
+break
+}
+sonYearsOld++; dadYearsOld ++; res++;
+}
+} else if (sonYearsOld * 2 &gt; dadYearsOld) {
+for {
+if (sonYearsOld * 2 == dadYearsOld) {
+break
+}
+sonYearsOld&ndash;; dadYearsOld&ndash;; res&ndash;;
+}
+}
+return int(math.Abs(float64(res)))
+}</p>
+</span>
 
 
         </div></body>

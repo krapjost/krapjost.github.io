@@ -16,21 +16,514 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e[TOC]\u003c\/p\u003e\n\u003ch1 id=\u00223장-빅-오-표기법\u0022\u003e3장. 빅 오 표기법\u003c\/h1\u003e\n\u003cp\u003e알고리즘의 효율성은 수행에 걸리는 단계수로 측정한다.\u003c\/p\u003e\n\u003cp\u003e빅오 표기법이란 그 단계수를 간결하고 이해하기 쉽게 표기하기 위한 방법이다.\u003c\/p\u003e\n\u003ch2 id=\u0022on\u0022\u003eO(N)\u003c\/h2\u003e\n\u003cp\u003e원소가 10개인 배열을 다룰 때 완료까지 10번이 걸리는 선형 알고리즘이 있다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e [\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e3\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e4\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e5\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e6\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e7\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e8\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e9\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e10\u003c\/span\u003e]\n\u003cspan style=\u0022color:#66d9ef\u0022\u003efunction\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eloop\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e) {\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e (\u003cspan style=\u0022color:#66d9ef\u0022\u003elet\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003elen\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003elength\u003c\/span\u003e; \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003elen\u003c\/span\u003e; \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u002b\u003c\/span\u003e) {\n\t\t\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ do something\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\t}\n}\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e이때 원소 갯수에 따라 수행에 필요한 단계 수도 일정하게 변한다.\u003c\/p\u003e\n\u003cp\u003e단계 수를 N으로 표기하고 그 복잡함의 크기를 O라고 표기하자.\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eBig O 표기법에서 O의 의미는 어떤 것의 크기, 양을 말할 때의 order의 축약이다.\u003c\/p\u003e\n\u003cp\u003e독일 수학자 Paul Bachmann가 처음으로 사용했다고 한다.\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/softwareengineering.stackexchange.com\/questions\/107976\/what-is-o-in-big-o\u0022\u003ehttps:\/\/softwareengineering.stackexchange.com\/questions\/107976\/what-is-o-in-big-o\u003c\/a\u003e\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cp\u003e따라서 위 선형 알고리즘의 복잡도는 Big O 표기법을 사용했을 때 O(N) 으로 쓰고 order of n 으로 읽는다. 일반적으로 \u0026ldquo;오 n\u0026rdquo; 이라고 말한다.\u003c\/p\u003e\n\u003cp\u003e또한 10개의 원소를 검색하지만 중도에 일치하는 것을 찾으면 리턴되는 함수가 있다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e [\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e3\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e4\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e5\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e6\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e7\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e8\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e9\u003c\/span\u003e,\u003cspan style=\u0022color:#ae81ff\u0022\u003e10\u003c\/span\u003e]\n\u003cspan style=\u0022color:#66d9ef\u0022\u003efunction\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003egetItemIdx\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eitem\u003c\/span\u003e) {\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e (\u003cspan style=\u0022color:#66d9ef\u0022\u003elet\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003elen\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003elength\u003c\/span\u003e; \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u002b\u003c\/span\u003e ) {\n\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e ( \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e===\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eitem\u003c\/span\u003e) \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e\n\t}\n}\n\u003cspan style=\u0022color:#a6e22e\u0022\u003egetItemIdx\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e)\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e이 때 배열의 첫번 째 순서에 들어있는 1을 검색하면 필요한 단계 수는 1이지만 최악의 경우 원소의 갯수인 10번이 필요하므로 이 또한 O(N)이다.\u003c\/p\u003e\n\u003ch2 id=\u0022o1\u0022\u003eO(1)\u003c\/h2\u003e\n\u003cp\u003e배열에 특정 값을 읽을 때 위치를 알고 있다면 한 번에 접근할 수 있다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003egetLastItem\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e) =\u0026gt; \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003elength\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e]\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e이 때는 배열의 크기와 상관없이 단계 수는 일정하게 단 한 단계면 된다.\u003c\/p\u003e\n\u003ch2 id=\u0022상수-시간과-선형-시간\u0022\u003e상수 시간과 선형 시간\u003c\/h2\u003e\n\u003cblockquote\u003e\n\u003cul\u003e\n\u003cli\u003eO(1)은 상수 시간( constant time )\u003c\/li\u003e\n\u003cli\u003eO(N)은 선형 시간( linear time )\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/blockquote\u003e\n\u003ch4 id=\u0022상수-시간은-데이터의-양과-관계-없이-일정한-단계-수를-유지한다\u0022\u003e상수 시간은 데이터의 양과 관계 없이 일정한 단계 수를 유지한다.\u003c\/h4\u003e\n\u003cp\u003e데이터의 수를 \u003cstrong\u003e1\u003c\/strong\u003e 로 표기하지만 처리하는데 1000번의 단계가 걸리더라도 그 단계 수가 데이터의 양과 상관없이 일정하다면 상수 시간 \u003cstrong\u003eO(1)\u003c\/strong\u003e 로 본다.\u003c\/p\u003e\n\u003cp\u003e같은 문제를 해결할 때 O(N)의 알고리즘이 더 나아보일 수도 있다. 처리에 무조건 1000번의 단계가 필요한 O(1) 알고리즘과 비교해서 O(N) 알고리즘은 데이터가 1개일 때 1번의 단계로 해결되기 때문이다.\u003c\/p\u003e\n\u003cp\u003e하지만 알고리즘의 효율성은 항상 최악을 고려하여 평가해야 한다. 데이터의 양이 1000을 넘기는 순간부터는 무한대의 양까지 O(1)이 효율적이다.\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e만약에 처리해야할 데이터의 양을 알고있다면?\u003c\/p\u003e\n\u003cp\u003e처리할 데이터가 100개 이하로 고정된 경우라면 O(N)을 사용하는 것이 나아보인다.\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch2 id=\u0022olog-n\u0022\u003eO(log N)\u003c\/h2\u003e\n\u003cp\u003e로그 시간의 시간 복잡도를 가진 알고리즘에는 이진 검색 ( binary search ) 이 있다.\u003c\/p\u003e\n\u003ch3 id=\u0022데이터가-두-배로-증가할-때마다-한-단계씩-늘어나는-알고리즘\u0022\u003e데이터가 두 배로 증가할 때마다 한 단계씩 늘어나는 알고리즘\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunction\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003elog\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003en\u003c\/span\u003e) {\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e (\u003cspan style=\u0022color:#66d9ef\u0022\u003elet\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e; \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003en\u003c\/span\u003e; \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e*=\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e) {\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eresult\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e;\n        \u003cspan style=\u0022color:#a6e22e\u0022\u003econsole\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003elog\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eresult\u003c\/span\u003e);  \n    }\n}\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e매 반복마다 i 에 2를 곱하여 순회하게 만들 수 있다면 주어진 n의 갯수보다 항상 더 적은 반복으로 문제를 해결할 수 있다.\u003c\/p\u003e\n\u003cp\u003e많은 양의 데이터를 처리할 때 확실한 효율성을 드러낸다.\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/dev.to\/b0nbon1\/understanding-big-o-notation-with-javascript-25mc\u0022\u003e출처\u003c\/a\u003e\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch2 id=\u0022로그log-로가리즘logarithm\u0022\u003e로그(log), 로가리즘(logarithm)\u003c\/h2\u003e\n\u003cblockquote\u003e\n\u003cp\u003e로그는 로가리즘의 줄임말이다.\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch4 id=\u0022로그란\u0022\u003e로그란?\u003c\/h4\u003e\n\u003cp\u003e\u003cstrong\u003ea\u003c!-- raw HTML omitted --\u003ex\u003c!-- raw HTML omitted --\u003e = b\u003c\/strong\u003e 이라고 할 때\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003ea는 밑수 ( base )\u003c\/li\u003e\n\u003cli\u003ex는 지수 ( exponent | power )\u003c\/li\u003e\n\u003cli\u003eb는 진수 ( value )\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003ex = log\u003c!-- raw HTML omitted --\u003ea\u003c!-- raw HTML omitted --\u003eb\u003c\/strong\u003e 로 정의된다.\u003c\/p\u003e\n\u003cp\u003e**즉 log란 밑수를 진수로 만드는 지수 x를 찾기위한 과정을 말한다. **\u003c\/p\u003e\n\u003ch3 id=\u0022로그식과-지수식\u0022\u003e로그식과 지수식\u003c\/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003e로그식\u003c\/th\u003e\n\u003cth\u003e지수식\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003elog\u003c!-- raw HTML omitted --\u003e10\u003c!-- raw HTML omitted --\u003e1000 = 3\u003c\/td\u003e\n\u003ctd\u003e10\u003c!-- raw HTML omitted --\u003e3\u003c!-- raw HTML omitted --\u003e = 1000\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003elog\u003c!-- raw HTML omitted --\u003e10\u003c!-- raw HTML omitted --\u003e10000 = 4\u003c\/td\u003e\n\u003ctd\u003e10\u003c!-- raw HTML omitted --\u003e4\u003c!-- raw HTML omitted --\u003e = 10000\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003elog\u003c!-- raw HTML omitted --\u003e10\u003c!-- raw HTML omitted --\u003e100000 = 5\u003c\/td\u003e\n\u003ctd\u003e10\u003c!-- raw HTML omitted --\u003e5\u003c!-- raw HTML omitted --\u003e = 100000\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003ch3 id=\u0022선형-복잡도와-로그-복잡도의-효율성-차이\u0022\u003e선형 복잡도와 로그 복잡도의 효율성 차이\u003c\/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003e원소 갯수\u003c\/th\u003e\n\u003cth\u003eO(N)\u003c\/th\u003e\n\u003cth\u003eO(log N)\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e8\u003c\/td\u003e\n\u003ctd\u003e8\u003c\/td\u003e\n\u003ctd\u003e3\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e16\u003c\/td\u003e\n\u003ctd\u003e16\u003c\/td\u003e\n\u003ctd\u003e4\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e5\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e64\u003c\/td\u003e\n\u003ctd\u003e64\u003c\/td\u003e\n\u003ctd\u003e6\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e128\u003c\/td\u003e\n\u003ctd\u003e128\u003c\/td\u003e\n\u003ctd\u003e7\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e256\u003c\/td\u003e\n\u003ctd\u003e256\u003c\/td\u003e\n\u003ctd\u003e8\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003ch3 id=\u0022시간복잡도-그래프\u0022\u003e시간복잡도 그래프\u003c\/h3\u003e\n\u003cp\u003e\u003cimg src=\u0022https:\/\/res.cloudinary.com\/practicaldev\/image\/fetch\/s--NR3M1nw8--\/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880\/https:\/\/thepracticaldev.s3.amazonaws.com\/i\/z4bbf8o1ly77wmkjdgge.png\u0022 alt=\u0022시간복잡도\u0022\u003e\u003c\/p\u003e\n\u003ch1 id=\u0022빅-오로-코드-속도-올리기\u0022\u003e빅 오로 코드 속도 올리기\u003c\/h1\u003e\n\u003ch2 id=\u0022버블-정렬\u0022\u003e버블 정렬\u003c\/h2\u003e\n\u003cp\u003e\u003cimg src=\u0022https:\/\/upload.wikimedia.org\/wikipedia\/commons\/2\/2a\/Bubble_sort_with_flag.gif\u0022 alt=\u0022bubblesort\u0022\u003e\u003c\/p\u003e\n\u003ch2 id=\u0022각-정렬-알고리즘-비교-애니메이션\u0022\u003e각 정렬 알고리즘 비교 애니메이션\u003c\/h2\u003e\n\u003ch3 id=\u0022bubble--버블-정렬-\u0022\u003ebubble ( 버블 정렬 )\u003c\/h3\u003e\n\u003cp\u003eO(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/p\u003e\n\u003cp\u003e두 인접한 원소를 검사하여 정렬하는 방법\u003c\/p\u003e\n\u003ch4 id=\u0022heading\u0022\u003e\u003c\/h4\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003edef\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ebubbleSort\u003c\/span\u003e(x):\n\tlength \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e len(x)\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(length):\n\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(length\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003ei):\n\t\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e x[j] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e x[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e]:\n\t\t\t\tx[j], x[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e], x[j]\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e x\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch3 id=\u0022selection--선택-정렬-\u0022\u003eselection ( 선택 정렬 )\u003c\/h3\u003e\n\u003cp\u003eO(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e주어진 리스트 중에 최소값을 찾는다.\u003c\/li\u003e\n\u003cli\u003e그 값을 맨 앞에 위치한 값과 교체한다(패스(pass)).\u003c\/li\u003e\n\u003cli\u003e맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003cp\u003e비교하는 것이 상수 시간에 이루어진다는 가정 아래, n개의 주어진 리스트를 이와 같은 방법으로 정렬하는 데에는 \u003ca href=\u0022https:\/\/ko.wikipedia.org\/wiki\/%EB%8C%80%EB%AC%B8%EC%9E%90_O_%ED%91%9C%EA%B8%B0%EB%B2%95\u0022\u003eΘ\u003c\/a\u003e(n2) 만큼의 시간이 걸린다.\u003c\/p\u003e\n\u003cp\u003e선택 정렬은 알고리즘이 단순하며 사용할 수 있는 메모리가 제한적인 경우에 사용시 성능 상의 이점이 있다.\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003edef\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eselectionSort\u003c\/span\u003e(x):\n\tlength \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e len(x)\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(length\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e):\n\t    indexMin \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e i\n\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(i\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, length):\n\t\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e x[indexMin] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e x[j]:\n\t\t\t\tindexMin \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e j\n\t\tx[i], x[indexMin] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[indexMin], x[i]\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e x\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch3 id=\u0022insertion--삽입-정렬-\u0022\u003eInsertion ( 삽입 정렬 )\u003c\/h3\u003e\n\u003cp\u003eO(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/ko.wikipedia.org\/wiki\/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC\u0022\u003e선택 정렬\u003c\/a\u003e이나 \u003ca href=\u0022https:\/\/ko.wikipedia.org\/wiki\/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC\u0022\u003e거품 정렬\u003c\/a\u003e과 같은 같은 \u003ca href=\u0022https:\/\/ko.wikipedia.org\/wiki\/%EC%A0%90%EA%B7%BC_%ED%91%9C%EA%B8%B0%EB%B2%95\u0022\u003eO\u003c\/a\u003e(n2) 알고리즘에 비교하여 빠르며, 안정 정렬이고 in-place 알고리즘이다.\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003edef\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003einsert_sort\u003c\/span\u003e(x):\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, len(x)):\n\t\tj \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e\n\t\tkey \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[i]\n\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ewhile\u003c\/span\u003e x[j] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e key \u003cspan style=\u0022color:#f92672\u0022\u003eand\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c\/span\u003e:\n\t\t\tx[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[j]\n\t\t\tj \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e\n\t\tx[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e key\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e x\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch3 id=\u0022merge--병합-정렬-\u0022\u003eMerge ( 병합 정렬 )\u003c\/h3\u003e\n\u003cp\u003e최악 시간복잡도 O(\u003cem\u003en\u003c\/em\u003e log \u003cem\u003en\u003c\/em\u003e)\u003c\/p\u003e\n\u003cp\u003e공간복잡도 O(n)\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003ch3 id=\u0022counting--계수-정렬-\u0022\u003ecounting ( 계수 정렬 )\u003c\/h3\u003e\n\u003cp\u003eO(n)\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/bowbowbow.tistory.com\/8\u0022\u003ehttps:\/\/bowbowbow.tistory.com\/8\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003ch3 id=\u0022oddeven--홀짝-정렬-\u0022\u003eOddEven ( 홀짝 정렬 )\u003c\/h3\u003e\n\u003cp\u003e버블정렬과 같지만 홀수자리와 짝수자리를 나눠 비교해 정렬.\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/dejavuqa.tistory.com\/365\u0022\u003ehttps:\/\/dejavuqa.tistory.com\/365\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003ch3 id=\u0022gnome--난쟁이-정렬-\u0022\u003eGnome ( 난쟁이 정렬 )\u003c\/h3\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/dejavuqa.tistory.com\/357?category=318995\u0022\u003ehttps:\/\/dejavuqa.tistory.com\/357?category=318995\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003ch3 id=\u0022comb---빗질-정렬-\u0022\u003eComb (  빗질 정렬 )\u003c\/h3\u003e\n\u003cp\u003e버블 정렬과 비슷, 비교 대상을 배열의 앞과 뒤에서부터 시작, 간격을 좁혀가며 정렬.\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/dejavuqa.tistory.com\/361?category=318995\u0022\u003ehttps:\/\/dejavuqa.tistory.com\/361?category=318995\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cp\u003eQuick ( 퀵 정렬 )\u003c\/p\u003e\n\u003cp\u003e최악 O(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/p\u003e\n\u003cp\u003e평균 O(n log n)\u003c\/p\u003e\n\u003cp\u003e비교 정렬\u003c\/p\u003e\n\u003cp\u003e불안정 정렬\u003c\/p\u003e\n\u003cp\u003e분할 정복\u003c\/p\u003e\n\u003cp\u003e일반적 상황에서 가장 빠른 정렬, 정렬을 위해 O(n log n) 만큼의 memory가 필요하다.\u003c\/p\u003e\n\u003cp\u003e원소들 중 같은 값이 있는 경우 같은 값들의 정렬 이후 순서가 초기 순서와 달라질 수 있다.\u003c\/p\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003edef\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003equicksort\u003c\/span\u003e(x):\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e len(x) \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e:\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e x\n\n    pivot \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[len(x) \u003cspan style=\u0022color:#f92672\u0022\u003e\/\/\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e]\n    less \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e []\n    more \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e []\n    equal \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e []\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e a \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e x:\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e a \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e pivot:\n            less\u003cspan style=\u0022color:#f92672\u0022\u003e.\u003c\/span\u003eappend(a)\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003eelif\u003c\/span\u003e a \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e pivot:\n            more\u003cspan style=\u0022color:#f92672\u0022\u003e.\u003c\/span\u003eappend(a)\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003eelse\u003c\/span\u003e:\n            equal\u003cspan style=\u0022color:#f92672\u0022\u003e.\u003c\/span\u003eappend(a)\n\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e quicksort(less) \u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e equal \u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e quicksort(more)\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\/**\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * 퀵 정렬\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * 시간 복잡도: 최악 - O(n2), 최선 - O(nlogn), 평균 - O(nlogn)\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * 공간 복잡도: O(1)\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * @param {Array} arr\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * @param {int} left\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * @param {int} right\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e * @code\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e    var arr = [ 4, 5, 1, 2, 11, 8, 3, 1, 2, 5 ];\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e    quicksort(arr, 0, arr.length-1);\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e *\/\u003c\/span\u003e\n\u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003equicksort\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003efunction\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e) {\n\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e) {\n\n        \u003cspan style=\u0022color:#75715e\u0022\u003e\/\/기준점을 찾고 기준점을 중심으로 더 작은수, 더 큰수 분류\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e        \u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e  \u003cspan style=\u0022color:#a6e22e\u0022\u003eposition\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e);\n        \u003cspan style=\u0022color:#75715e\u0022\u003e\/\/기준점 기준 좌측 정렬\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e        \u003cspan style=\u0022color:#a6e22e\u0022\u003equicksort\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e);\n        \u003cspan style=\u0022color:#75715e\u0022\u003e\/\/기준점 기준 우측 정렬\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e        \u003cspan style=\u0022color:#a6e22e\u0022\u003equicksort\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e);\n    }\n\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e;\n};\n\n\u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eposition\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003efunction\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e) {\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e;\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eright\u003c\/span\u003e;\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003epivot\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e];\n\n    \u003cspan style=\u0022color:#75715e\u0022\u003e\/\/제자리 더 큰수\/더 작은 수 좌우 배치.\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e    \u003cspan style=\u0022color:#66d9ef\u0022\u003ewhile\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e) {\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003ewhile\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003epivot\u003c\/span\u003e) \u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e--\u003c\/span\u003e;\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003ewhile\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026amp;\u0026amp;\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026lt;=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003epivot\u003c\/span\u003e) \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u002b\u003c\/span\u003e;\n\n        \u003cspan style=\u0022color:#a6e22e\u0022\u003etmp\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e];\n        \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e];\n        \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003etmp\u003c\/span\u003e;\n    }\n    \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003eleft\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e];\n    \u003cspan style=\u0022color:#a6e22e\u0022\u003earr\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003epivot\u003c\/span\u003e;\n\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ej\u003c\/span\u003e;\n}\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch1 id=\u00225장-빅-오를-사용하거나-사용하지-않는-코드-최적화\u0022\u003e5장. 빅 오를 사용하거나 사용하지 않는 코드 최적화\u003c\/h1\u003e\n\u003ch2 id=\u0022빅-오-표기법상-같다고-성능이-다-같은-것이-아니다\u0022\u003e빅 오 표기법상 같다고 성능이 다 같은 것이 아니다.\u003c\/h2\u003e\n\u003ch3 id=\u0022선택정렬과-버블정렬\u0022\u003e선택정렬과 버블정렬\u003c\/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003e\u003c\/th\u003e\n\u003cth\u003e선택 정렬\u003c\/th\u003e\n\u003cth\u003e버블 정렬\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e빅 오 표기\u003c\/td\u003e\n\u003ctd\u003eO(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/td\u003e\n\u003ctd\u003eO(n\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e애니메이션\u003c\/td\u003e\n\u003ctd\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eN개의 원소\u003c\/td\u003e\n\u003ctd\u003e최대 단계 수\u003c\/td\u003e\n\u003ctd\u003e최대 단계 수\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e5\u003c\/td\u003e\n\u003ctd\u003e14\u003c\/td\u003e\n\u003ctd\u003e20\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e10\u003c\/td\u003e\n\u003ctd\u003e54\u003c\/td\u003e\n\u003ctd\u003e90\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e20\u003c\/td\u003e\n\u003ctd\u003e199\u003c\/td\u003e\n\u003ctd\u003e380\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e40\u003c\/td\u003e\n\u003ctd\u003e819\u003c\/td\u003e\n\u003ctd\u003e1560\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e80\u003c\/td\u003e\n\u003ctd\u003e3239\u003c\/td\u003e\n\u003ctd\u003e6320\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e선택정렬이 2배 가량 더 빠르지만 빅 오 표기법상 같은 방식으로 설명한다.\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e빅 오 표기법은 데이터 원소 수에 비례해 얼마나 많은 단계 수가 필요한가를 기술한 것.\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003ch3 id=\u0022빅-오-표기법은-상수를-무시한다\u0022\u003e빅 오 표기법은 상수를 무시한다.\u003c\/h3\u003e\n\u003cp\u003eO(N\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e) == O(N\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e \/ 2)\u003c\/p\u003e\n\u003cp\u003e같은 O(N\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e) 알고리즘이지만 후자는 전자보다 2배 빠르다.\u003c\/p\u003e\n\u003cp\u003eO(100N) == O(2N) == O(N) == O(N \/ 2)\u003c\/p\u003e\n\u003cp\u003e같은 O(N)으로 분류되어도 100배 느릴 수도 2배 빠를수도.\u003c\/p\u003e\n\u003ch3 id=\u0022빅-오는-알고리즘의-장기적인-증가율을-분류하는-방법\u0022\u003e빅 오는 알고리즘의 장기적인 증가율을 분류하는 방법\u003c\/h3\u003e\n\u003cp\u003e어느 정도 크기의 데이터에 대해서는 O(N)이 항상 O(N\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e)보다 빠르다. O(N)에서 N이 100N이어도 상관없이 그렇다.\u003c\/p\u003e\n\u003cp\u003e지수적으로 증가하는가 \/ 선형적으로 증가하는가\u003c\/p\u003e\n\u003cp\u003e어떤 시점까지는 당장에 필요한 단계 수가 많은 100N의 알고리즘이 더 느릴 수 있지만 그 시점이 지나고 나면 항상 N제곱 알고리즘보다 더 빠르다.\u003c\/p\u003e\n\u003ch3 id=\u0022결론\u0022\u003e결론\u003c\/h3\u003e\n\u003cp\u003e알고리즘을 선택할 때 두 알고리즘이 같은 분류에 속한다면 어떤 알고리즘이 더 빠를지 알기 위해 분석해야 한다.\u003c\/p\u003e\n\u003ch1 id=\u00226장-긍정적인-시나리오-최적화\u0022\u003e6장. 긍정적인 시나리오 최적화\u003c\/h1\u003e\n\u003cp\u003e최악의 시나리오에서의 효율성과 평균 시나리오에서의 효율성\u003c\/p\u003e\n\u003cp\u003e최악을 우선으로 최적화하고 그 다음 다른 상황을 최적화하자.\u003c\/p\u003e\n\u003ch2 id=\u0022삽입-정렬\u0022\u003e삽입 정렬\u003c\/h2\u003e\n\u003cp\u003e\u003c!-- raw HTML omitted --\u003e\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003edef\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003einsert_sort\u003c\/span\u003e(x):\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003ein\u003c\/span\u003e range(\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, len(x)):\n\t\tj \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e i \u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e\n\t\tkey \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[i]\n\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ewhile\u003c\/span\u003e x[j] \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;\u003c\/span\u003e key \u003cspan style=\u0022color:#f92672\u0022\u003eand\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026gt;=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c\/span\u003e:\n\t\t\tx[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e x[j]\n\t\t\tj \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e j \u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e\n\t\tx[j\u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e key\n\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e x\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003e\u003c\/th\u003e\n\u003cth\u003e삽입 정렬\u003c\/th\u003e\n\u003cth\u003e선택 정렬\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e최악의 경우\u003c\/td\u003e\n\u003ctd\u003eN\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e \u002b 2N -2\u003c\/td\u003e\n\u003ctd\u003eN\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e \/ 2\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e평균적인 경우\u003c\/td\u003e\n\u003ctd\u003eN\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e \/ 2\u003c\/td\u003e\n\u003ctd\u003eN\u003c!-- raw HTML omitted --\u003e2\u003c!-- raw HTML omitted --\u003e \/ 2\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003ch3 id=\u0022최선-평균-최악의-경우\u0022\u003e최선, 평균, 최악의 경우\u003c\/h3\u003e\n\u003cp\u003e예를 들어 다룰 데이터가 대부분 역순으로 정렬될 것이라고 예상한다면 선택 정렬이 가장 빠르며 데이터가 어떨지 전혀 알 수 없다면 기본적으로 평균적인 경우이며 둘 다 같다.\u003c\/p\u003e\n\u003ch3 id=\u0022결론-1\u0022\u003e결론\u003c\/h3\u003e\n\u003cp\u003e사용할 알고리즘을 고를 때 다뤄야할 데이터의 특성을 고려하여 최선, 평균, 최악의 시나리오를 구분하여 선택하자.\u003c\/p\u003e\n\u003cp\u003e대부분의 경우는 평균의 경우임을 명심하자.\u003c\/p\u003e\n\u003ch1 id=\u00227장-해시-테이블로-매우-빠른-룩업\u0022\u003e7장. 해시 테이블로 매우 빠른 룩업\u003c\/h1\u003e\n\u003cp\u003e제품마다 다른 가격을 가지고 있는 데이터가 있다.\u003c\/p\u003e\n\u003cp\u003e이때 배열을 사용할 경우 비효율적이다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eprod\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e [[\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;운동화\u0026#39;\u003c\/span\u003e, \u003cspan style=\u0022color:#ae81ff\u0022\u003e1000\u003c\/span\u003e], [\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;구두\u0026#39;\u003c\/span\u003e, \u003cspan style=\u0022color:#ae81ff\u0022\u003e2000\u003c\/span\u003e], [\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;농구공\u0026#39;\u003c\/span\u003e, \u003cspan style=\u0022color:#ae81ff\u0022\u003e3000\u003c\/span\u003e]]\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e제품 구매가 발생했을 때 어떤 제품을 구매했는지 찾아야 할 때 일일이 순회해야 하기 때문이다. 정렬된 배열의 경우라도 log N의 복잡도로 이뤄진다.\u003c\/p\u003e\n\u003cp\u003e이 때 해시 테이블을 사용하면 O(1) 만에 검색할 수 있게 된다.\u003c\/p\u003e\n\u003ch2 id=\u0022해시-테이블이란\u0022\u003e해시 테이블이란\u003c\/h2\u003e\n\u003cp\u003e해시 테이블은 여러 프로그래밍 언어에서 다른 이름으로 불린다.\u003c\/p\u003e\n\u003cp\u003e해시, 맵, 해시 맵, 딕셔너리, 연관 배열 등의 이름을 갖는다.\u003c\/p\u003e\n\u003cp\u003e해시 테이블은 키와 값의 쌍으로 이뤄진 값들의 리스트이다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003emenu\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e {\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;운동화\u0026#39;\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e:\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1000\u003c\/span\u003e, \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;농구공\u0026#39;\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e:\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e2000\u003c\/span\u003e};\n\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eball\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003emenu\u003c\/span\u003e[\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;농구공\u0026#39;\u003c\/span\u003e];\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e이런식으로 해당 키의 값을 한 번에 찾아볼 수 있다.\u003c\/p\u003e\n\u003ch3 id=\u0022해싱이란\u0022\u003e해싱이란?\u003c\/h3\u003e\n\u003cp\u003e​\t문자를 가져와 숫자로 변환하는 과정을 \u003cstrong\u003e해싱\u003c\/strong\u003e이라 부른다.\u003c\/p\u003e\n\u003cp\u003e​\t글자를 특정 숫자로 변환하는 데 사용한 코드를 \u003cstrong\u003e해시 함수\u003c\/strong\u003e라고 부른다.\u003c\/p\u003e\n\u003cp\u003e해시함수가 유효하려면 다음 한 가지 기준을 충족해야 한다.\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e해시 함수는 \u003cstrong\u003e동일한 문자열\u003c\/strong\u003e을 해시 함수에 적용할 때마다 항상 \u003cstrong\u003e동일한 숫자\u003c\/strong\u003e로 변환해야 한다.\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ 의사 코드\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ehash\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e {\u003cspan style=\u0022color:#a6e22e\u0022\u003ea\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eb\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e3\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ed\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e4\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ee\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e5\u003c\/span\u003e};\n\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ehashFunc\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e (\u003cspan style=\u0022color:#a6e22e\u0022\u003ekey\u003c\/span\u003e) =\u0026gt; {\n    \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u002b\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003ekey\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003esplit\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;\u0026#39;\u003c\/span\u003e).\u003cspan style=\u0022color:#a6e22e\u0022\u003emap\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ex\u003c\/span\u003e=\u0026gt;{\n        \u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ehash\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ex\u003c\/span\u003e]\n    }.\u003cspan style=\u0022color:#a6e22e\u0022\u003ejoin\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;\u0026#39;\u003c\/span\u003e)\n}\n\u003cspan style=\u0022color:#a6e22e\u0022\u003ehashFunc\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;bad\u0026#39;\u003c\/span\u003e)\n\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ return : 214\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003ehashFunc에 각 키에 해당하는 값으로 덧셈, 곱셈 등 어떤 연산을 사용해 해시값을 만들어도  되지만 같은 값을 주었을 때 항상 나오는 값이 동일해야 한다. 따라서 항상 변하는 datetime 등의 값을 연산 과정에 넣어선 안된다.\u003c\/p\u003e\n\u003cp\u003e해시 테이블은 내부적으로 데이터를 한 줄로 이뤄진 셀 묶음에 저장한다. 그리고 각 셀마다 주소가 있다.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003econst\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ehashTable\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e {}\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e1\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e2\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e3\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e4\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e5\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e6\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e7\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e8\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003ehashTable\u003c\/span\u003e[\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;iu\u0026#39;\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;아이유\u0026#34;\u003c\/span\u003e\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u0026lsquo;아이유\u0026rsquo;\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003cth style=\u0022text-align:center\u0022\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e1\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e2\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e3\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e4\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e5\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e6\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e7\u003c\/td\u003e\n\u003ctd style=\u0022text-align:center\u0022\u003e8\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e해싱 함수가 키 \u0026lsquo;iu\u0026rsquo; 를 받았을 때 나오는 값이 4라면 4번 메모리 주소 에 값 \u0026lsquo;아이유\u0026rsquo;가 들어간다.\u003c\/p\u003e\n\u003ch3 id=\u0022해시테이블의-문제\u0022\u003e해시테이블의 문제\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003ehashTable\u003c\/span\u003e[\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;ui\u0026#39;\u003c\/span\u003e] \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;유아인\u0026#39;\u003c\/span\u003e\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e만약에 해싱 함수가 곱셈을 사용하여 스펠링 순서 차이는 상관하지 않고 같은 값(메모리 번지 수)를 뱉어낸다면 이미 \u0026lsquo;아이유\u0026rsquo;가 들어가 있는 4번 메모리 주소에 \u0026lsquo;유아인\u0026rsquo;를 넣으려고 할 것이다.\u003c\/p\u003e\n\u003cp\u003e이를 \u003cstrong\u003e충돌\u003c\/strong\u003e이라고 부른다.\u003c\/p\u003e\n\u003ch3 id=\u0022충돌-해결법\u0022\u003e충돌 해결법\u003c\/h3\u003e\n\u003cul\u003e\n\u003cli\u003e분리 연결법\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e충돌이 발생했을 때 셀에 \u003cstrong\u003e하나의 값\u003c\/strong\u003e을 넣는 대신 **\u003c!-- raw HTML omitted --\u003e배열\u003c!-- raw HTML omitted --\u003e**로의 참조를 넣는 방법.\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\u0022\u003e\u003ccode class=\u0022language-javascript\u0022 data-lang=\u0022javascript\u0022\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ 의사코드\n\u003c\/span\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003ecosnt\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eeg\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e {[{\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;iu\u0026#39;\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e:\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;아이유\u0026#39;\u003c\/span\u003e}, {\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;ui\u0026#39;\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e:\u003c\/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;유아인\u0026#39;\u003c\/span\u003e}]}\n\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e이 때 \u0026lsquo;ui\u0026rsquo;를 찾으려고 하면 컴퓨터는 같은 4번 번지수를 먼저 찾고 거기에 저장된 값이 단일 값이 아닌 \u003cstrong\u003e\u003c!-- raw HTML omitted --\u003e배열이라면\u003c!-- raw HTML omitted --\u003e\u003c\/strong\u003e \u0026lsquo;ui\u0026rsquo;를 찾을 때까지 배열을 차례대로 선형 검색한다.\u003c\/p\u003e\n\u003cp\u003e이러한 방법을 사용했을 때 또한 최악의 상황을 고려해보면 사실상 배열 선형검색 O(N) 과 다를 바 없다. 같은 메모리 주소에 모든 데이터가 들어갈 경우도 있을 것이기 때문이다.\u003c\/p\u003e\n\u003ch3 id=\u0022충돌이-적게-일어나게-해시-테이블을-구현하려면\u0022\u003e충돌이 적게 일어나게 해시 테이블을 구현하려면?\u003c\/h3\u003e\n\u003cp\u003e좋은 해시함수는 \u003cstrong\u003e사용 가능한 모든 셀\u003c\/strong\u003e에 데이터를 분산시키는 함수이다.\u003c\/p\u003e\n\u003cp\u003e좋은 해시 테이블은 반드시 충돌 조정을 수행해야 한다.\u003c\/p\u003e\n\u003cp\u003e좋은 해시 테이블은 많은 메모리를 낭비하지 않으면서 충돌을 피한다.\u003c\/p\u003e\n\u003ch3 id=\u0022데이터와-셀-간의-비율\u0022\u003e데이터와 셀 간의 비율\u003c\/h3\u003e\n\u003cp\u003e데이터와 셀 간의 비율을 부하율이라고 한다.\u003c\/p\u003e\n\u003cp\u003e원소 7 대 셀 10 개의 비율이 이상적이다.\u003c\/p\u003e\n\u003cp\u003e해시 테이블 내부는 대부분 컴퓨터 언어에서 관리하므로 원리 이해를 위한 목적이 아니면 구현할 필요는 없을 것이다.\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>[TOC]</p>
+<h1 id="3장-빅-오-표기법">3장. 빅 오 표기법</h1>
+<p>알고리즘의 효율성은 수행에 걸리는 단계수로 측정한다.</p>
+<p>빅오 표기법이란 그 단계수를 간결하고 이해하기 쉽게 표기하기 위한 방법이다.</p>
+<h2 id="on">O(N)</h2>
+<p>원소가 10개인 배열을 다룰 때 완료까지 10번이 걸리는 선형 알고리즘이 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loop</span>(<span style="color:#a6e22e">arr</span>) {
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+		<span style="color:#75715e">// do something
+</span><span style="color:#75715e"></span>	}
+}
+</code></pre></div><p>이때 원소 갯수에 따라 수행에 필요한 단계 수도 일정하게 변한다.</p>
+<p>단계 수를 N으로 표기하고 그 복잡함의 크기를 O라고 표기하자.</p>
+<blockquote>
+<p>Big O 표기법에서 O의 의미는 어떤 것의 크기, 양을 말할 때의 order의 축약이다.</p>
+<p>독일 수학자 Paul Bachmann가 처음으로 사용했다고 한다.</p>
+<p><a href="https://softwareengineering.stackexchange.com/questions/107976/what-is-o-in-big-o">https://softwareengineering.stackexchange.com/questions/107976/what-is-o-in-big-o</a></p>
+</blockquote>
+<p>따라서 위 선형 알고리즘의 복잡도는 Big O 표기법을 사용했을 때 O(N) 으로 쓰고 order of n 으로 읽는다. 일반적으로 &ldquo;오 n&rdquo; 이라고 말한다.</p>
+<p>또한 10개의 원소를 검색하지만 중도에 일치하는 것을 찾으면 리턴되는 함수가 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getItemIdx</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">item</span>) {
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> ) {
+		<span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">item</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>
+	}
+}
+<span style="color:#a6e22e">getItemIdx</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><p>이 때 배열의 첫번 째 순서에 들어있는 1을 검색하면 필요한 단계 수는 1이지만 최악의 경우 원소의 갯수인 10번이 필요하므로 이 또한 O(N)이다.</p>
+<h2 id="o1">O(1)</h2>
+<p>배열에 특정 값을 읽을 때 위치를 알고 있다면 한 번에 접근할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getLastItem</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arr</span>) =&gt; <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div><p>이 때는 배열의 크기와 상관없이 단계 수는 일정하게 단 한 단계면 된다.</p>
+<h2 id="상수-시간과-선형-시간">상수 시간과 선형 시간</h2>
+<blockquote>
+<ul>
+<li>O(1)은 상수 시간( constant time )</li>
+<li>O(N)은 선형 시간( linear time )</li>
+</ul>
+</blockquote>
+<h4 id="상수-시간은-데이터의-양과-관계-없이-일정한-단계-수를-유지한다">상수 시간은 데이터의 양과 관계 없이 일정한 단계 수를 유지한다.</h4>
+<p>데이터의 수를 <strong>1</strong> 로 표기하지만 처리하는데 1000번의 단계가 걸리더라도 그 단계 수가 데이터의 양과 상관없이 일정하다면 상수 시간 <strong>O(1)</strong> 로 본다.</p>
+<p>같은 문제를 해결할 때 O(N)의 알고리즘이 더 나아보일 수도 있다. 처리에 무조건 1000번의 단계가 필요한 O(1) 알고리즘과 비교해서 O(N) 알고리즘은 데이터가 1개일 때 1번의 단계로 해결되기 때문이다.</p>
+<p>하지만 알고리즘의 효율성은 항상 최악을 고려하여 평가해야 한다. 데이터의 양이 1000을 넘기는 순간부터는 무한대의 양까지 O(1)이 효율적이다.</p>
+<blockquote>
+<p>만약에 처리해야할 데이터의 양을 알고있다면?</p>
+<p>처리할 데이터가 100개 이하로 고정된 경우라면 O(N)을 사용하는 것이 나아보인다.</p>
+</blockquote>
+<h2 id="olog-n">O(log N)</h2>
+<p>로그 시간의 시간 복잡도를 가진 알고리즘에는 이진 검색 ( binary search ) 이 있다.</p>
+<h3 id="데이터가-두-배로-증가할-때마다-한-단계씩-늘어나는-알고리즘">데이터가 두 배로 증가할 때마다 한 단계씩 늘어나는 알고리즘</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">*=</span><span style="color:#ae81ff">2</span>) {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);  
+    }
+}
+</code></pre></div><p>매 반복마다 i 에 2를 곱하여 순회하게 만들 수 있다면 주어진 n의 갯수보다 항상 더 적은 반복으로 문제를 해결할 수 있다.</p>
+<p>많은 양의 데이터를 처리할 때 확실한 효율성을 드러낸다.</p>
+<blockquote>
+<p><a href="https://dev.to/b0nbon1/understanding-big-o-notation-with-javascript-25mc">출처</a></p>
+</blockquote>
+<h2 id="로그log-로가리즘logarithm">로그(log), 로가리즘(logarithm)</h2>
+<blockquote>
+<p>로그는 로가리즘의 줄임말이다.</p>
+</blockquote>
+<h4 id="로그란">로그란?</h4>
+<p><strong>a<!-- raw HTML omitted -->x<!-- raw HTML omitted --> = b</strong> 이라고 할 때</p>
+<ul>
+<li>a는 밑수 ( base )</li>
+<li>x는 지수 ( exponent | power )</li>
+<li>b는 진수 ( value )</li>
+</ul>
+<p><strong>x = log<!-- raw HTML omitted -->a<!-- raw HTML omitted -->b</strong> 로 정의된다.</p>
+<p>**즉 log란 밑수를 진수로 만드는 지수 x를 찾기위한 과정을 말한다. **</p>
+<h3 id="로그식과-지수식">로그식과 지수식</h3>
+<table>
+<thead>
+<tr>
+<th>로그식</th>
+<th>지수식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->1000 = 3</td>
+<td>10<!-- raw HTML omitted -->3<!-- raw HTML omitted --> = 1000</td>
+</tr>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->10000 = 4</td>
+<td>10<!-- raw HTML omitted -->4<!-- raw HTML omitted --> = 10000</td>
+</tr>
+<tr>
+<td>log<!-- raw HTML omitted -->10<!-- raw HTML omitted -->100000 = 5</td>
+<td>10<!-- raw HTML omitted -->5<!-- raw HTML omitted --> = 100000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="선형-복잡도와-로그-복잡도의-효율성-차이">선형 복잡도와 로그 복잡도의 효율성 차이</h3>
+<table>
+<thead>
+<tr>
+<th>원소 갯수</th>
+<th>O(N)</th>
+<th>O(log N)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>32</td>
+<td>32</td>
+<td>5</td>
+</tr>
+<tr>
+<td>64</td>
+<td>64</td>
+<td>6</td>
+</tr>
+<tr>
+<td>128</td>
+<td>128</td>
+<td>7</td>
+</tr>
+<tr>
+<td>256</td>
+<td>256</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="시간복잡도-그래프">시간복잡도 그래프</h3>
+<p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--NR3M1nw8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/z4bbf8o1ly77wmkjdgge.png" alt="시간복잡도"></p>
+<h1 id="빅-오로-코드-속도-올리기">빅 오로 코드 속도 올리기</h1>
+<h2 id="버블-정렬">버블 정렬</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bubble_sort_with_flag.gif" alt="bubblesort"></p>
+<h2 id="각-정렬-알고리즘-비교-애니메이션">각 정렬 알고리즘 비교 애니메이션</h2>
+<h3 id="bubble--버블-정렬-">bubble ( 버블 정렬 )</h3>
+<p>O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</p>
+<p>두 인접한 원소를 검사하여 정렬하는 방법</p>
+<h4 id="heading"></h4>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bubbleSort</span>(x):
+	length <span style="color:#f92672">=</span> len(x)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(length):
+		<span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(length<span style="color:#f92672">-</span>i):
+			<span style="color:#66d9ef">if</span> x[j] <span style="color:#f92672">&gt;</span> x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]:
+				x[j], x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>], x[j]
+	<span style="color:#66d9ef">return</span> x
+</code></pre></div><h3 id="selection--선택-정렬-">selection ( 선택 정렬 )</h3>
+<p>O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</p>
+<ol>
+<li>주어진 리스트 중에 최소값을 찾는다.</li>
+<li>그 값을 맨 앞에 위치한 값과 교체한다(패스(pass)).</li>
+<li>맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.</li>
+</ol>
+<p>비교하는 것이 상수 시간에 이루어진다는 가정 아래, n개의 주어진 리스트를 이와 같은 방법으로 정렬하는 데에는 <a href="https://ko.wikipedia.org/wiki/%EB%8C%80%EB%AC%B8%EC%9E%90_O_%ED%91%9C%EA%B8%B0%EB%B2%95">Θ</a>(n2) 만큼의 시간이 걸린다.</p>
+<p>선택 정렬은 알고리즘이 단순하며 사용할 수 있는 메모리가 제한적인 경우에 사용시 성능 상의 이점이 있다.</p>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">selectionSort</span>(x):
+	length <span style="color:#f92672">=</span> len(x)
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(length<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+	    indexMin <span style="color:#f92672">=</span> i
+		<span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, length):
+			<span style="color:#66d9ef">if</span> x[indexMin] <span style="color:#f92672">&gt;</span> x[j]:
+				indexMin <span style="color:#f92672">=</span> j
+		x[i], x[indexMin] <span style="color:#f92672">=</span> x[indexMin], x[i]
+	<span style="color:#66d9ef">return</span> x
+</code></pre></div><h3 id="insertion--삽입-정렬-">Insertion ( 삽입 정렬 )</h3>
+<p>O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</p>
+<p><a href="https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC">선택 정렬</a>이나 <a href="https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC">거품 정렬</a>과 같은 같은 <a href="https://ko.wikipedia.org/wiki/%EC%A0%90%EA%B7%BC_%ED%91%9C%EA%B8%B0%EB%B2%95">O</a>(n2) 알고리즘에 비교하여 빠르며, 안정 정렬이고 in-place 알고리즘이다.</p>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_sort</span>(x):
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(x)):
+		j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		key <span style="color:#f92672">=</span> x[i]
+		<span style="color:#66d9ef">while</span> x[j] <span style="color:#f92672">&gt;</span> key <span style="color:#f92672">and</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+			x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[j]
+			j <span style="color:#f92672">=</span> j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> key
+	<span style="color:#66d9ef">return</span> x
+</code></pre></div><h3 id="merge--병합-정렬-">Merge ( 병합 정렬 )</h3>
+<p>최악 시간복잡도 O(<em>n</em> log <em>n</em>)</p>
+<p>공간복잡도 O(n)</p>
+<p><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="counting--계수-정렬-">counting ( 계수 정렬 )</h3>
+<p>O(n)</p>
+<p><a href="https://bowbowbow.tistory.com/8">https://bowbowbow.tistory.com/8</a></p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="oddeven--홀짝-정렬-">OddEven ( 홀짝 정렬 )</h3>
+<p>버블정렬과 같지만 홀수자리와 짝수자리를 나눠 비교해 정렬.</p>
+<p><a href="https://dejavuqa.tistory.com/365">https://dejavuqa.tistory.com/365</a></p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="gnome--난쟁이-정렬-">Gnome ( 난쟁이 정렬 )</h3>
+<p><a href="https://dejavuqa.tistory.com/357?category=318995">https://dejavuqa.tistory.com/357?category=318995</a></p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="comb---빗질-정렬-">Comb (  빗질 정렬 )</h3>
+<p>버블 정렬과 비슷, 비교 대상을 배열의 앞과 뒤에서부터 시작, 간격을 좁혀가며 정렬.</p>
+<p><a href="https://dejavuqa.tistory.com/361?category=318995">https://dejavuqa.tistory.com/361?category=318995</a></p>
+<p><!-- raw HTML omitted --></p>
+<p>Quick ( 퀵 정렬 )</p>
+<p>최악 O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</p>
+<p>평균 O(n log n)</p>
+<p>비교 정렬</p>
+<p>불안정 정렬</p>
+<p>분할 정복</p>
+<p>일반적 상황에서 가장 빠른 정렬, 정렬을 위해 O(n log n) 만큼의 memory가 필요하다.</p>
+<p>원소들 중 같은 값이 있는 경우 같은 값들의 정렬 이후 순서가 초기 순서와 달라질 수 있다.</p>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quicksort</span>(x):
+    <span style="color:#66d9ef">if</span> len(x) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">return</span> x
+
+    pivot <span style="color:#f92672">=</span> x[len(x) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>]
+    less <span style="color:#f92672">=</span> []
+    more <span style="color:#f92672">=</span> []
+    equal <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> x:
+        <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&lt;</span> pivot:
+            less<span style="color:#f92672">.</span>append(a)
+        <span style="color:#66d9ef">elif</span> a <span style="color:#f92672">&gt;</span> pivot:
+            more<span style="color:#f92672">.</span>append(a)
+        <span style="color:#66d9ef">else</span>:
+            equal<span style="color:#f92672">.</span>append(a)
+
+    <span style="color:#66d9ef">return</span> quicksort(less) <span style="color:#f92672">+</span> equal <span style="color:#f92672">+</span> quicksort(more)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 퀵 정렬
+</span><span style="color:#75715e"> * 시간 복잡도: 최악 - O(n2), 최선 - O(nlogn), 평균 - O(nlogn)
+</span><span style="color:#75715e"> * 공간 복잡도: O(1)
+</span><span style="color:#75715e"> * @param {Array} arr
+</span><span style="color:#75715e"> * @param {int} left
+</span><span style="color:#75715e"> * @param {int} right
+</span><span style="color:#75715e"> * @code
+</span><span style="color:#75715e">    var arr = [ 4, 5, 1, 2, 11, 8, 3, 1, 2, 5 ];
+</span><span style="color:#75715e">    quicksort(arr, 0, arr.length-1);
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">quicksort</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>) {
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">left</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">right</span>) {
+
+        <span style="color:#75715e">//기준점을 찾고 기준점을 중심으로 더 작은수, 더 큰수 분류
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">position</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>);
+        <span style="color:#75715e">//기준점 기준 좌측 정렬
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">quicksort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+        <span style="color:#75715e">//기준점 기준 우측 정렬
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">quicksort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">right</span>);
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;
+};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">left</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">right</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">left</span>];
+
+    <span style="color:#75715e">//제자리 더 큰수/더 작은 수 좌우 배치.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">j</span>) {
+        <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">pivot</span>) <span style="color:#a6e22e">j</span><span style="color:#f92672">--</span>;
+        <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">pivot</span>) <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
+
+        <span style="color:#a6e22e">tmp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>];
+        <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>];
+        <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">tmp</span>;
+    }
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">left</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>];
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">pivot</span>;
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">j</span>;
+}
+</code></pre></div><h1 id="5장-빅-오를-사용하거나-사용하지-않는-코드-최적화">5장. 빅 오를 사용하거나 사용하지 않는 코드 최적화</h1>
+<h2 id="빅-오-표기법상-같다고-성능이-다-같은-것이-아니다">빅 오 표기법상 같다고 성능이 다 같은 것이 아니다.</h2>
+<h3 id="선택정렬과-버블정렬">선택정렬과 버블정렬</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>선택 정렬</th>
+<th>버블 정렬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>빅 오 표기</td>
+<td>O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</td>
+<td>O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</td>
+</tr>
+<tr>
+<td>애니메이션</td>
+<td><!-- raw HTML omitted --></td>
+<td><!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>N개의 원소</td>
+<td>최대 단계 수</td>
+<td>최대 단계 수</td>
+</tr>
+<tr>
+<td>5</td>
+<td>14</td>
+<td>20</td>
+</tr>
+<tr>
+<td>10</td>
+<td>54</td>
+<td>90</td>
+</tr>
+<tr>
+<td>20</td>
+<td>199</td>
+<td>380</td>
+</tr>
+<tr>
+<td>40</td>
+<td>819</td>
+<td>1560</td>
+</tr>
+<tr>
+<td>80</td>
+<td>3239</td>
+<td>6320</td>
+</tr>
+</tbody>
+</table>
+<p>선택정렬이 2배 가량 더 빠르지만 빅 오 표기법상 같은 방식으로 설명한다.</p>
+<blockquote>
+<p>빅 오 표기법은 데이터 원소 수에 비례해 얼마나 많은 단계 수가 필요한가를 기술한 것.</p>
+</blockquote>
+<h3 id="빅-오-표기법은-상수를-무시한다">빅 오 표기법은 상수를 무시한다.</h3>
+<p>O(N<!-- raw HTML omitted -->2<!-- raw HTML omitted -->) == O(N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2)</p>
+<p>같은 O(N<!-- raw HTML omitted -->2<!-- raw HTML omitted -->) 알고리즘이지만 후자는 전자보다 2배 빠르다.</p>
+<p>O(100N) == O(2N) == O(N) == O(N / 2)</p>
+<p>같은 O(N)으로 분류되어도 100배 느릴 수도 2배 빠를수도.</p>
+<h3 id="빅-오는-알고리즘의-장기적인-증가율을-분류하는-방법">빅 오는 알고리즘의 장기적인 증가율을 분류하는 방법</h3>
+<p>어느 정도 크기의 데이터에 대해서는 O(N)이 항상 O(N<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)보다 빠르다. O(N)에서 N이 100N이어도 상관없이 그렇다.</p>
+<p>지수적으로 증가하는가 / 선형적으로 증가하는가</p>
+<p>어떤 시점까지는 당장에 필요한 단계 수가 많은 100N의 알고리즘이 더 느릴 수 있지만 그 시점이 지나고 나면 항상 N제곱 알고리즘보다 더 빠르다.</p>
+<h3 id="결론">결론</h3>
+<p>알고리즘을 선택할 때 두 알고리즘이 같은 분류에 속한다면 어떤 알고리즘이 더 빠를지 알기 위해 분석해야 한다.</p>
+<h1 id="6장-긍정적인-시나리오-최적화">6장. 긍정적인 시나리오 최적화</h1>
+<p>최악의 시나리오에서의 효율성과 평균 시나리오에서의 효율성</p>
+<p>최악을 우선으로 최적화하고 그 다음 다른 상황을 최적화하자.</p>
+<h2 id="삽입-정렬">삽입 정렬</h2>
+<p><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_sort</span>(x):
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(x)):
+		j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		key <span style="color:#f92672">=</span> x[i]
+		<span style="color:#66d9ef">while</span> x[j] <span style="color:#f92672">&gt;</span> key <span style="color:#f92672">and</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+			x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[j]
+			j <span style="color:#f92672">=</span> j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+		x[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> key
+	<span style="color:#66d9ef">return</span> x
+</code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>삽입 정렬</th>
+<th>선택 정렬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최악의 경우</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> + 2N -2</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+</tr>
+<tr>
+<td>평균적인 경우</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+<td>N<!-- raw HTML omitted -->2<!-- raw HTML omitted --> / 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="최선-평균-최악의-경우">최선, 평균, 최악의 경우</h3>
+<p>예를 들어 다룰 데이터가 대부분 역순으로 정렬될 것이라고 예상한다면 선택 정렬이 가장 빠르며 데이터가 어떨지 전혀 알 수 없다면 기본적으로 평균적인 경우이며 둘 다 같다.</p>
+<h3 id="결론-1">결론</h3>
+<p>사용할 알고리즘을 고를 때 다뤄야할 데이터의 특성을 고려하여 최선, 평균, 최악의 시나리오를 구분하여 선택하자.</p>
+<p>대부분의 경우는 평균의 경우임을 명심하자.</p>
+<h1 id="7장-해시-테이블로-매우-빠른-룩업">7장. 해시 테이블로 매우 빠른 룩업</h1>
+<p>제품마다 다른 가격을 가지고 있는 데이터가 있다.</p>
+<p>이때 배열을 사용할 경우 비효율적이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prod</span> <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;운동화&#39;</span>, <span style="color:#ae81ff">1000</span>], [<span style="color:#e6db74">&#39;구두&#39;</span>, <span style="color:#ae81ff">2000</span>], [<span style="color:#e6db74">&#39;농구공&#39;</span>, <span style="color:#ae81ff">3000</span>]]
+</code></pre></div><p>제품 구매가 발생했을 때 어떤 제품을 구매했는지 찾아야 할 때 일일이 순회해야 하기 때문이다. 정렬된 배열의 경우라도 log N의 복잡도로 이뤄진다.</p>
+<p>이 때 해시 테이블을 사용하면 O(1) 만에 검색할 수 있게 된다.</p>
+<h2 id="해시-테이블이란">해시 테이블이란</h2>
+<p>해시 테이블은 여러 프로그래밍 언어에서 다른 이름으로 불린다.</p>
+<p>해시, 맵, 해시 맵, 딕셔너리, 연관 배열 등의 이름을 갖는다.</p>
+<p>해시 테이블은 키와 값의 쌍으로 이뤄진 값들의 리스트이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">menu</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;운동화&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;농구공&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2000</span>};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ball</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">menu</span>[<span style="color:#e6db74">&#39;농구공&#39;</span>];
+</code></pre></div><p>이런식으로 해당 키의 값을 한 번에 찾아볼 수 있다.</p>
+<h3 id="해싱이란">해싱이란?</h3>
+<p>​	문자를 가져와 숫자로 변환하는 과정을 <strong>해싱</strong>이라 부른다.</p>
+<p>​	글자를 특정 숫자로 변환하는 데 사용한 코드를 <strong>해시 함수</strong>라고 부른다.</p>
+<p>해시함수가 유효하려면 다음 한 가지 기준을 충족해야 한다.</p>
+<blockquote>
+<p>해시 함수는 <strong>동일한 문자열</strong>을 해시 함수에 적용할 때마다 항상 <strong>동일한 숫자</strong>로 변환해야 한다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 의사 코드
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hashFunc</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">key</span>) =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">key</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span>=&gt;{
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hash</span>[<span style="color:#a6e22e">x</span>]
+    }.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>)
+}
+<span style="color:#a6e22e">hashFunc</span>(<span style="color:#e6db74">&#39;bad&#39;</span>)
+<span style="color:#75715e">// return : 214
+</span><span style="color:#75715e"></span>
+</code></pre></div><p>hashFunc에 각 키에 해당하는 값으로 덧셈, 곱셈 등 어떤 연산을 사용해 해시값을 만들어도  되지만 같은 값을 주었을 때 항상 나오는 값이 동일해야 한다. 따라서 항상 변하는 datetime 등의 값을 연산 과정에 넣어선 안된다.</p>
+<p>해시 테이블은 내부적으로 데이터를 한 줄로 이뤄진 셀 묶음에 저장한다. 그리고 각 셀마다 주소가 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hashTable</span> <span style="color:#f92672">=</span> {}
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hashTable</span>[<span style="color:#e6db74">&#39;iu&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;아이유&#34;</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center">&lsquo;아이유&rsquo;</th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<p>해싱 함수가 키 &lsquo;iu&rsquo; 를 받았을 때 나오는 값이 4라면 4번 메모리 주소 에 값 &lsquo;아이유&rsquo;가 들어간다.</p>
+<h3 id="해시테이블의-문제">해시테이블의 문제</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hashTable</span>[<span style="color:#e6db74">&#39;ui&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;유아인&#39;</span>
+</code></pre></div><p>만약에 해싱 함수가 곱셈을 사용하여 스펠링 순서 차이는 상관하지 않고 같은 값(메모리 번지 수)를 뱉어낸다면 이미 &lsquo;아이유&rsquo;가 들어가 있는 4번 메모리 주소에 &lsquo;유아인&rsquo;를 넣으려고 할 것이다.</p>
+<p>이를 <strong>충돌</strong>이라고 부른다.</p>
+<h3 id="충돌-해결법">충돌 해결법</h3>
+<ul>
+<li>분리 연결법</li>
+</ul>
+<p>충돌이 발생했을 때 셀에 <strong>하나의 값</strong>을 넣는 대신 **<!-- raw HTML omitted -->배열<!-- raw HTML omitted -->**로의 참조를 넣는 방법.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 의사코드
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">cosnt</span> <span style="color:#a6e22e">eg</span> <span style="color:#f92672">=</span> {[{<span style="color:#e6db74">&#39;iu&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;아이유&#39;</span>}, {<span style="color:#e6db74">&#39;ui&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;유아인&#39;</span>}]}
+</code></pre></div><p>이 때 &lsquo;ui&rsquo;를 찾으려고 하면 컴퓨터는 같은 4번 번지수를 먼저 찾고 거기에 저장된 값이 단일 값이 아닌 <strong><!-- raw HTML omitted -->배열이라면<!-- raw HTML omitted --></strong> &lsquo;ui&rsquo;를 찾을 때까지 배열을 차례대로 선형 검색한다.</p>
+<p>이러한 방법을 사용했을 때 또한 최악의 상황을 고려해보면 사실상 배열 선형검색 O(N) 과 다를 바 없다. 같은 메모리 주소에 모든 데이터가 들어갈 경우도 있을 것이기 때문이다.</p>
+<h3 id="충돌이-적게-일어나게-해시-테이블을-구현하려면">충돌이 적게 일어나게 해시 테이블을 구현하려면?</h3>
+<p>좋은 해시함수는 <strong>사용 가능한 모든 셀</strong>에 데이터를 분산시키는 함수이다.</p>
+<p>좋은 해시 테이블은 반드시 충돌 조정을 수행해야 한다.</p>
+<p>좋은 해시 테이블은 많은 메모리를 낭비하지 않으면서 충돌을 피한다.</p>
+<h3 id="데이터와-셀-간의-비율">데이터와 셀 간의 비율</h3>
+<p>데이터와 셀 간의 비율을 부하율이라고 한다.</p>
+<p>원소 7 대 셀 10 개의 비율이 이상적이다.</p>
+<p>해시 테이블 내부는 대부분 컴퓨터 언어에서 관리하므로 원리 이해를 위한 목적이 아니면 구현할 필요는 없을 것이다.</p>
+</span>
 
 
         </div></body>

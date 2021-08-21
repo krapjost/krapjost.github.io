@@ -16,21 +16,74 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\nIn DNA strings, symbols \u0026ldquo;A\u0026rdquo; and \u0026ldquo;T\u0026rdquo; are complements of each other, as \u0026ldquo;C\u0026rdquo; and \u0026ldquo;G\u0026rdquo;. You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026quot;A\u0026quot; -\u0026gt; \u0026quot;T\u0026quot;\n\u0026quot;T\u0026quot; -\u0026gt; \u0026quot;A\u0026quot;\n\u0026quot;G\u0026quot; -\u0026gt; \u0026quot;C\u0026quot;\n\u0026quot;C\u0026quot; -\u0026gt; \u0026quot;G\u0026quot;\n\nExample\t\t\n\nDNAStrand (\u0026quot;ATTGC\u0026quot;) \/\/ return \u0026quot;TAACG\u0026quot;\nDNAStrand (\u0026quot;GTAT\u0026quot;) \/\/ return \u0026quot;CATA\u0026quot; \n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/My solution\nfunction DNAStrand(dna){\nreturn dna.split(\u0026quot;\u0026quot;).reduce((acc, cur) =\u0026gt; {\nif (cur === \u0026ldquo;A\u0026rdquo;) acc \u002b= \u0026ldquo;T\u0026rdquo;\nif (cur === \u0026ldquo;T\u0026rdquo;) acc \u002b= \u0026ldquo;A\u0026rdquo;\nif (cur === \u0026ldquo;G\u0026rdquo;) acc \u002b= \u0026ldquo;C\u0026rdquo;\nif (cur === \u0026ldquo;C\u0026rdquo;) acc \u002b= \u0026ldquo;G\u0026rdquo;\nreturn acc\n}, \u0026ldquo;\u0026quot;)\u003c\/p\u003e\n\u003cp\u003e}\u003c\/p\u003e\n\u003cp\u003e\/\/Best Practice\nfunction DNAStrand(dna) {\nreturn dna.replace(\/.\/g, function(c) {\nreturn DNAStrand.pairs[c]\n})\n}\u003c\/p\u003e\n\u003cp\u003eDNAStrand.pairs = {\nA: \u0026lsquo;T\u0026rsquo;,\nT: \u0026lsquo;A\u0026rsquo;,\nC: \u0026lsquo;G\u0026rsquo;,\nG: \u0026lsquo;C\u0026rsquo;,\n}\u003c\/p\u003e\n\u003cp\u003e\/*\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e배운 것\n\n1. regex에서 .은 줄바꿈 문자를 제외하고 모든 문자를 매치\n2. Object를 사용하는 방법\n\t내가 작성한 함수에서는 문자열을 배열로 바꾸고 reduce로\n\t일일이 순회하면서 그 안에서 조건문도 일일이 비교해야 한다.\n\tbest practice 함수에서는 global regex로 변경할 모든 문자열을\n\t한 번에 찾고* Object에 key로 순회 없이 접근하여 변경한다.\n        *정정* regex global은 순회를 하긴하지만 js for loop보다 빠름.\n\t그리고 나라면 const로 따로 선언했을 것 같은데 여기서는\n\t해당 데이터를 사용하는 함수에 체인으로 달아줌으로서 코드를 깔끔하고\n\t읽고 이해하기 쉽게 만들었다.\n\n\t\u0026gt; 그 외의 장점이 있다면 알려주셨으면 좋겠습니다.\n\t\u0026gt; 뭔가 다른 이유도 있을 것 같은데 아직은 잘 모르겠습니다.\t\n\n\n3. string에 regex를 다는 것이 array의 forEach와 같다는 댓글을 보아서 벤치마크를 검색해보았다. 결과는 아래와 같은데 regex가 꽤 큰 격차로 더 좋은 성능을 보인다.\n\n[regex 와 forloop 벤치마크 비교](https:\/\/www.measurethat.net\/Benchmarks\/Show\/7532\/0\/regex-vs-for-loop)\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>/*
+In DNA strings, symbols &ldquo;A&rdquo; and &ldquo;T&rdquo; are complements of each other, as &ldquo;C&rdquo; and &ldquo;G&rdquo;. You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).</p>
+<pre><code>&quot;A&quot; -&gt; &quot;T&quot;
+&quot;T&quot; -&gt; &quot;A&quot;
+&quot;G&quot; -&gt; &quot;C&quot;
+&quot;C&quot; -&gt; &quot;G&quot;
+
+Example		
+
+DNAStrand (&quot;ATTGC&quot;) // return &quot;TAACG&quot;
+DNAStrand (&quot;GTAT&quot;) // return &quot;CATA&quot; 
+</code></pre>
+<p>*/</p>
+<p>//My solution
+function DNAStrand(dna){
+return dna.split(&quot;&quot;).reduce((acc, cur) =&gt; {
+if (cur === &ldquo;A&rdquo;) acc += &ldquo;T&rdquo;
+if (cur === &ldquo;T&rdquo;) acc += &ldquo;A&rdquo;
+if (cur === &ldquo;G&rdquo;) acc += &ldquo;C&rdquo;
+if (cur === &ldquo;C&rdquo;) acc += &ldquo;G&rdquo;
+return acc
+}, &ldquo;&quot;)</p>
+<p>}</p>
+<p>//Best Practice
+function DNAStrand(dna) {
+return dna.replace(/./g, function(c) {
+return DNAStrand.pairs[c]
+})
+}</p>
+<p>DNAStrand.pairs = {
+A: &lsquo;T&rsquo;,
+T: &lsquo;A&rsquo;,
+C: &lsquo;G&rsquo;,
+G: &lsquo;C&rsquo;,
+}</p>
+<p>/*</p>
+<pre><code>배운 것
+
+1. regex에서 .은 줄바꿈 문자를 제외하고 모든 문자를 매치
+2. Object를 사용하는 방법
+	내가 작성한 함수에서는 문자열을 배열로 바꾸고 reduce로
+	일일이 순회하면서 그 안에서 조건문도 일일이 비교해야 한다.
+	best practice 함수에서는 global regex로 변경할 모든 문자열을
+	한 번에 찾고* Object에 key로 순회 없이 접근하여 변경한다.
+        *정정* regex global은 순회를 하긴하지만 js for loop보다 빠름.
+	그리고 나라면 const로 따로 선언했을 것 같은데 여기서는
+	해당 데이터를 사용하는 함수에 체인으로 달아줌으로서 코드를 깔끔하고
+	읽고 이해하기 쉽게 만들었다.
+
+	&gt; 그 외의 장점이 있다면 알려주셨으면 좋겠습니다.
+	&gt; 뭔가 다른 이유도 있을 것 같은데 아직은 잘 모르겠습니다.	
+
+
+3. string에 regex를 다는 것이 array의 forEach와 같다는 댓글을 보아서 벤치마크를 검색해보았다. 결과는 아래와 같은데 regex가 꽤 큰 격차로 더 좋은 성능을 보인다.
+
+[regex 와 forloop 벤치마크 비교](https://www.measurethat.net/Benchmarks/Show/7532/0/regex-vs-for-loop)
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>

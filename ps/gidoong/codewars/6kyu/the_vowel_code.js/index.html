@@ -16,21 +16,46 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body><div id="content">
+</head><body>
+    
+<div id="content">
     
     
 
     
     
     <div id=typewriter></div>
-    <script src="https://cdn.jsdelivr.net/gh/tameemsafi/typewriterjs/dist/core.js"></script>
-    <script type="text/javascript">
-        const instance = new Typewriter('#typewriter', {
-            strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\nFor example, encode(\u0026ldquo;hello\u0026rdquo;) would return \u0026ldquo;h2ll4\u0026rdquo;. There is no need to worry about uppercase vowels in this kata.\u003c\/p\u003e\n\u003cp\u003eStep 2: Now create a function called decode() to turn the numbers back into vowels according to the same pattern shown above.\u003c\/p\u003e\n\u003cp\u003eFor example, decode(\u0026ldquo;h3 th2r2\u0026rdquo;) would return \u0026ldquo;hi there\u0026rdquo;.\n*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ My Solution\nfunction encode(string) {\nreturn [\u0026ldquo;a\u0026rdquo;,\u0026ldquo;e\u0026rdquo;,\u0026ldquo;i\u0026rdquo;,\u0026ldquo;o\u0026rdquo;,\u0026ldquo;u\u0026rdquo;].reduce((acc, cur, idx) =\u0026gt; {\nreturn acc.replace(RegExp(cur, \u0026ldquo;g\u0026rdquo;), idx\u002b1)\n}, string)\n}\u003c\/p\u003e\n\u003cp\u003efunction decode(string) {\nreturn [\u0026ldquo;a\u0026rdquo;,\u0026ldquo;e\u0026rdquo;,\u0026ldquo;i\u0026rdquo;,\u0026ldquo;o\u0026rdquo;,\u0026ldquo;u\u0026rdquo;].reduce((acc, cur, idx) =\u0026gt; {\nreturn acc.replace(RegExp(idx\u002b1, \u0026ldquo;g\u0026rdquo;), cur)\n}, string)\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ Best Practice\nfunction encode(string){\nreturn string.replace(\/[aeiou]\/g, function (x) { return \u0026lsquo;_aeiou\u0026rsquo;.indexOf(x) });\n}\u003c\/p\u003e\n\u003cp\u003efunction decode(string){\nreturn string.replace(\/[1-5]\/g, function (x) { return \u0026lsquo;_aeiou\u0026rsquo;.charAt(x) });\n}\u003c\/p\u003e\n\u003cp\u003e\/*\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. string.replace 두번째 param에 숫자를 넣어도 알아서 문자가 됨.\n2. RegExp 두번째 param에 \u0026quot;g\u0026quot;, \u0026quot;i\u0026quot; 등 플래그\n3. 반복 안 돌려도 됐었구나... 다음에는 charAt과 indexOf를 써보자.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.01',
-            autoStart: true,
-        });
-    </script>
+    <span id=terminal><h1 id='title'></h1><p>/*
+For example, encode(&ldquo;hello&rdquo;) would return &ldquo;h2ll4&rdquo;. There is no need to worry about uppercase vowels in this kata.</p>
+<p>Step 2: Now create a function called decode() to turn the numbers back into vowels according to the same pattern shown above.</p>
+<p>For example, decode(&ldquo;h3 th2r2&rdquo;) would return &ldquo;hi there&rdquo;.
+*/</p>
+<p>// My Solution
+function encode(string) {
+return [&ldquo;a&rdquo;,&ldquo;e&rdquo;,&ldquo;i&rdquo;,&ldquo;o&rdquo;,&ldquo;u&rdquo;].reduce((acc, cur, idx) =&gt; {
+return acc.replace(RegExp(cur, &ldquo;g&rdquo;), idx+1)
+}, string)
+}</p>
+<p>function decode(string) {
+return [&ldquo;a&rdquo;,&ldquo;e&rdquo;,&ldquo;i&rdquo;,&ldquo;o&rdquo;,&ldquo;u&rdquo;].reduce((acc, cur, idx) =&gt; {
+return acc.replace(RegExp(idx+1, &ldquo;g&rdquo;), cur)
+}, string)
+}</p>
+<p>// Best Practice
+function encode(string){
+return string.replace(/[aeiou]/g, function (x) { return &lsquo;_aeiou&rsquo;.indexOf(x) });
+}</p>
+<p>function decode(string){
+return string.replace(/[1-5]/g, function (x) { return &lsquo;_aeiou&rsquo;.charAt(x) });
+}</p>
+<p>/*
+배운 것</p>
+<pre><code>1. string.replace 두번째 param에 숫자를 넣어도 알아서 문자가 됨.
+2. RegExp 두번째 param에 &quot;g&quot;, &quot;i&quot; 등 플래그
+3. 반복 안 돌려도 됐었구나... 다음에는 charAt과 indexOf를 써보자.
+</code></pre>
+<p>*/</p>
+</span>
 
 
         </div></body>
