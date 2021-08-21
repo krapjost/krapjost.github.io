@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003elet bf, af, ms;\u003c\/p\u003e\n\u003cp\u003econst getDivisorsCnt1 = (n) =\u0026gt; {\nlet i = n, c = 0;\nwhile (i\u0026gt;0){\nif (n % i === 0) c\u002b\u002b; i\u0026ndash;;\n}\nreturn c;\n}\u003c\/p\u003e\n\u003cp\u003efunction getDivisorsCnt2(n){\nlet cnt = 1\nfor (let d=n\/2; d\u0026gt;=1; d\u0026ndash;){\nif (Number.isInteger(n\/d)){\ncnt \u002b\u002b\n}\n}\nreturn cnt\n}\u003c\/p\u003e\n\u003cp\u003ebf = Date.now()\nconsole.log(getDivisorsCnt1(50000))\naf = Date.now()\nms = new Date(af - bf).getMilliseconds()\nconsole.log(\u0026ldquo;time took :\u0026rdquo;, ms, \u0026ldquo;ms\u0026rdquo;)\u003c\/p\u003e\n\u003cp\u003ebf = Date.now()\nconsole.log(getDivisorsCnt2(50000))\naf = Date.now()\nms = new Date(af - bf).getMilliseconds()\nconsole.log(\u0026ldquo;time took :\u0026rdquo;, ms, \u0026ldquo;ms\u0026rdquo;)\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

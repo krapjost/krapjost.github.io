@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\u0027\u0027\u0027\naccum(\u0026ldquo;abcd\u0026rdquo;) -\u0026gt; \u0026ldquo;A-Bb-Ccc-Dddd\u0026rdquo;\naccum(\u0026ldquo;RqaEzty\u0026rdquo;) -\u0026gt; \u0026ldquo;R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy\u0026rdquo;\naccum(\u0026ldquo;cwAt\u0026rdquo;) -\u0026gt; \u0026ldquo;C-Ww-Aaa-Tttt\u0026rdquo;\n\u0027\u0027\u0027\u003c\/p\u003e\n\u003ch1 id=\u0022my-solution\u0022\u003emy solution\u003c\/h1\u003e\n\u003cp\u003edef accum(s):\nS = s.upper()\nr = \u0026quot;\u0026quot;\nfor c in enumerate(S):\nr \u002b= c[1]\nfor i in range(c[0]):\nr \u002b= c[1].lower()\nif c[0]==len(s)-1:\nbreak\nr \u002b= \u0026ldquo;-\u0026rdquo;\nreturn r\u003c\/p\u003e\n\u003ch1 id=\u0022best-practice\u0022\u003ebest practice\u003c\/h1\u003e\n\u003cp\u003edef accum(s):\nreturn \u0026lsquo;-\u0027.join(c.upper() \u002b c.lower() * i for i, c in enumerate(s))\u003c\/p\u003e\n\u003cp\u003e\u0027\u0026rsquo;\u0027\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. enumerate 쓰면 순회하는 아이템에 (index, value) 튜플로 담긴다.\n2. range(시작숫자, 종료숫자, step)\n3. string을 곱셈연산자로 i만큼 반복하여 추가할 수 있다.\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e\u0027\u0027\u0027\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

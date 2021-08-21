@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\nspace is one length unit;\nget the area of given triangle\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003eExample\n\n.\n.      .  \n.      .       .      ---\u0026gt; should return 2.0\n\n.\n.      .  \n.      .       .     \n.      .       .      .      ---\u0026gt; should return 4.5\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ My Solution\nfunction tArea(tStr) {\nconst arr = tStr.split(\u0027\\n\u0027);\nconst side = arr[arr.length-2].match(\/\\s\/g).length\nreturn side*side\/2\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ Best Practice\nfunction tArea(tStr) {\nconst side = tStr.split(\u0027\\n\u0027).length - 3\nreturn (side * side) \/ 2\n}\u003c\/p\u003e\n\u003cp\u003e\/*\n배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. 생각을 좀 더 하자~\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

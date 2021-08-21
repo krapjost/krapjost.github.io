@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003efunction toCamelCase1(str){\nreturn str.replace(\/([-_])\u002b\\w\/ig, function(match) {\nreturn match.charAt(match.length - 1).toUpperCase();\n});\n}\u003c\/p\u003e\n\u003cp\u003efunction toCamelCase2(str){\nif (!str) {\nreturn \u0026quot;\u0026quot;\n}\nlet result\nif (\/[a-z]\/.test(str[0])){\nstr.includes(\u0027-\u0027)\n? (()=\u0026gt;{\nresult = str.split(\u0027-\u0027).map(s=\u0026gt;s[0].toUpperCase()\u002bs.slice(1)).join(\u0027\u0027)\nresult = result.replace(result[0], result[0].toLowerCase())\n})()\n: (()=\u0026gt;{\nresult = str.split(\u0027\u003cem\u003e\u0027).map(s=\u0026gt;s[0].toUpperCase()\u002bs.slice(1)).join(\u0027\u0027)\nresult = result.replace(result[0], result[0].toLowerCase())\n})()\n} else {\nstr.includes(\u0027-\u0027)\n? result = str.split(\u0027-\u0027).map(s=\u0026gt;s[0].toUpperCase()\u002bs.slice(1)).join(\u0027\u0027)\n: result = str.split(\u0027\u003c\/em\u003e\u0027).map(s=\u0026gt;s[0].toUpperCase()\u002bs.slice(1)).join(\u0027\u0027)\n}\nreturn result;\n}\u003c\/p\u003e\n\u003cp\u003econsole.log(toCamelCase1(\u0026lsquo;camel\u0026ndash;case\u0026ndash;Me\u0026rsquo;))\nconsole.log(toCamelCase2(\u0026lsquo;Camel__case__me\u0026rsquo;))\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/\/ 숫자를 받고 1부터 숫자까지의 합을 리턴\u003c\/p\u003e\n\u003cp\u003e\/\/Time: 738ms Passed: 105 Failed: 0\nfunction summation1 (num) {\nlet r = 0\nfor (i=1;i\u0026lt;=num;i\u002b\u002b) r\u002b=i\nreturn r\n}\u003c\/p\u003e\n\u003cp\u003e\/\/Time: 725ms Passed: 105 Failed: 0\nconst summation2 = (n) =\u0026gt; {\nfor (i=1,r=0;i\u0026lt;=n;i\u002b\u002b) {\nr\u002b=i; if (i===n) return r\n}\n}\u003c\/p\u003e\n\u003cp\u003e\/\/Time: 713msPassed: 105Failed: 0\nconst summation3 = n =\u0026gt; n * (n \u002b 1) \/ 2;\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\n1. for문은 바로 리턴이 안된다.\n2. for문 안에서 리턴해도 된다.\n3. 숫자까지 증가된 모든 수의 합은 n*(n\u002b1)\/2이다.\n*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

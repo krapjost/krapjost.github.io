@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003e\/*\n1. 2차 배열을 인자로 받고 1차 배열로 푼다.\n2. 배열을 내림차순으로 정렬.\n3. \u0026lsquo;\u0026gt;\u0026rsquo; 를 구분문자로 하여 문자열로 변환.\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003eeg.\nbigToSmall([[1,2],[3,4],[5,6]]) should return \u0026quot;6\u0026gt;5\u0026gt;4\u0026gt;3\u0026gt;2\u0026gt;1\u0026quot;\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003cp\u003e\/\/ Time: 694ms Passed: 103 Failed: 0\nfunction bigToSmall_1(arr) {\nreturn [].concat(\u0026hellip;arr).sort((a,b)=\u0026gt;b-a).join(\u0027\u0026gt;\u0027)\n}\u003c\/p\u003e\n\u003cp\u003e\/\/ Time: 1323ms Passed: 103 Failed: 0\nfunction bigToSmall(arr){\nreturn arr\n.reduce((acc, x)=\u0026gt; acc.concat(x), [])\n.sort((a,b)=\u0026gt;b-a)\n.join(\u0027\u0026gt;\u0027)\n}\u003c\/p\u003e\n\u003cp\u003e\/* 배운 것\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e1. [].flat() 메소드는 node 11 이상부터 가능\n2. sort 메소드 b-a 이면 내림차, a-b 오름차\n3. decomposition syntax\n\tconsole.log(...arr)\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e*\/\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>

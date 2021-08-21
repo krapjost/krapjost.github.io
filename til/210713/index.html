@@ -16,9 +16,7 @@
 
 body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
 
-</head><body>
-    
-<div id="content">
+</head><body><div id="content">
     
     
 
@@ -29,7 +27,7 @@ body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body 
     <script type="text/javascript">
         const instance = new Typewriter('#typewriter', {
             strings: '\u003cspan id=terminal\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c\/h1\u003e\u003cp\u003efind\n\u003ca href=\u0022https:\/\/recipes4dev.tistory.com\/156\u0022\u003ehttps:\/\/recipes4dev.tistory.com\/156\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색\nfind . -name [FILE]\n전체 시스템(루트 디렉토리)에서 파일 검색\nfind \/ -name [FILE]\n파일 이름이 특정 문자열로 시작하는 파일 검색\nfind . -name \u0026ldquo;STR*\u0026rdquo;\n파일 이름에 특정 문자열이 포함된 파일 검색\nfind . -name \u0026ldquo;*STR*\u0026rdquo;\n파일 이름이 특정 문자열로 끝나는 파일 검색\nfind . -name \u0026ldquo;*STR\u0026rdquo;\n빈 디렉토리 또는 크기가 0인 파일 검색\nfind . -empty\n특정 확장자를 가진 모든 파일 검색 후 삭제\nfind . -name \u0026ldquo;*.EXT\u0026rdquo; -delete\n검색된 파일 리스트를 줄 바꿈 없이 이어서 출력하기\nfind . -name [FILE] -print0\n파일 또는 디렉토리만 검색하기\nfind . -name [FILE] -type f\n파일 크기를 사용하여 파일 검색\nfind . -size \u002b[N]c -and -size -[M]c\n검색된 파일에 대한 상세 정보 출력.\n(find \u002b ls)\tfind . -name [FILE] -exec ls -l {} ;\n검색된 파일의 라인 수 출력. (find \u002b wc)\nfind . -name [FILE] -exec wc-l {} ;\n검색된 파일에서 문자열 찾기. (find \u002b grep)\nfind . -name [FILE] -exec grep \u0026ldquo;STR\u0026rdquo; {} ;\n검색 결과를 파일로 저장. (find, redirection)\nfind . -name [FILE] \u0026gt; [SAVE_FILE]\n검색 중 에러 메시지 출력하지 않기 (find, redirection)\nfind . -name [FILE] 2\u0026gt; \/dev\/null\n하위 디렉토리 검색하지 않기\nfind . -maxdepth 1 -name [FILE]\n검색된 파일 복사. (find \u002b cp)\nfind . -name [FILE] -exec cp {} [PATH] ;\u003c\/p\u003e\n\u003c\/span\u003e',
-            delay: '0.1',
+            delay: '0.01',
             autoStart: true,
         });
     </script>
