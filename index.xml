@@ -141,6 +141,201 @@ const prod = [[&amp;#39;운동화&amp;#39;, 1000], [&amp;#39;구두&amp;#39;, 20
     
     <item>
       <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.go/</guid>
+      <description>package kata import &amp;ldquo;strings&amp;rdquo; import &amp;ldquo;fmt&amp;rdquo;
+func AbbrevName(name string) string{ words := strings.Split(name, &amp;quot; &amp;ldquo;) return strings.ToUpper(string(words[0][0])) + &amp;ldquo;.&amp;rdquo; + strings.ToUpper(string(words[1][0])) }
+func AbbrevName2(name string) string{ arr := strings.Split(name, &amp;quot; &amp;ldquo;) return fmt.Sprintf(&amp;quot;%s.%s&amp;rdquo;, strings.ToUpper(string([]rune(arr[0])[0])), strings.ToUpper(string([]rune(arr[1])[0]))) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.js/</guid>
+      <description>function firstLetterOf(arr, index) { return arr[index][0].toUpperCase() } function abbrevName(name){ const arr = name.split(&#39; &amp;lsquo;) return ${firstLetterOf(arr, 0)}.${firstLetterOf(arr, 1)} }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.py/</guid>
+      <description>def abbrev_name(name): arr = name.split() return arr[0][0].upper()+&#39;.&#39;+arr[1][0].upper()</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.go/</guid>
+      <description>package kata
+func Maps(x []int) (res []int) { for _, v := range x { res = append(res, v*2) } return }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.js/</guid>
+      <description>function maps(x){ return x.map(x=&amp;gt;x*2) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.py/</guid>
+      <description>def maps(a): return list(map(lambda x: x*2, a))
+def maps2(a): res = [] for v in a: res.append(v*2) return res</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.go/</guid>
+      <description>// invalid indirect of 2 (type untyped number) // go에서는 ** 연산자가 제곱이 아니다. 포인터가 가리키는 메모리의 값을 가져오는 듯 func Past(h, m, s int) int { return (h*60**2+m*60+s)*1000 } package kata
+func Past(h, m, s int) int { return (h6060+m*60+s)*1000 }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.js/</guid>
+      <description>Clock shows h hours, m minutes and s seconds after midnight.
+Your task is to write a function which returns the time since midnight in milliseconds.
+function past(h, m, s){ return s1000 + m100060 + h10006060 }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.py/</guid>
+      <description>def past(h, m, s): return (h60**2+m60+s)*1000</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/century_from_year.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/century_from_year.js/</guid>
+      <description>// 년도를 받고 세기를 리턴한다. // Given a year, return the century it is in.
+function century1 (year) { return (year + 99) / 100 | 0; }
+const century2 = (y) =&amp;gt; Math.ceil(y/100)
+/* 배운 것
+1. 비트단위 논리합 &#39;|&#39; 연산자, 비트단위 연산에 익숙해지고 싶다. 아직 잘 모르겠음. 2. Math.round는 반올림, Math.ceil은 주어진 수보다 크거나 같은 수 중 가장 작은 정수를 반환한다.  */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.go/</guid>
+      <description>package kata
+func BoolToWord(word bool) string { if word { return &amp;ldquo;Yes&amp;rdquo; } return &amp;ldquo;No&amp;rdquo; }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.js/</guid>
+      <description>function boolToWord( bool ){ return bool ? &amp;ldquo;Yes&amp;rdquo; : &amp;ldquo;No&amp;rdquo; }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.py/</guid>
+      <description>def bool_to_word1(boolean): return &amp;ldquo;Yes&amp;rdquo; if boolean else &amp;ldquo;No&amp;rdquo;
+def bool_to_word2(boolean): if boolean: return &amp;ldquo;Yes&amp;rdquo; return &amp;ldquo;No&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/even_or_odd.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/even_or_odd.js/</guid>
+      <description>// 숫자를 인자로 받고 홀수면 &amp;ldquo;Odd&amp;rdquo; 아니면 &amp;ldquo;Even&amp;rdquo; 리턴
+const even_or_odd1 = n =&amp;gt; n%2 ? &amp;lsquo;Odd&amp;rsquo; : &amp;lsquo;Even&amp;rsquo;
+function even_or_odd2 (number) { return (number%2) ? &amp;lsquo;Odd&amp;rsquo; : &amp;lsquo;Even&amp;rsquo; }
+/* 배운 것
+1. 삼항연산자에 괄호는 쓰는 게 가독성에 좋을 것 같다. 2. 이렇게 간단한 건 화살표 함수가 좋을 듯! 3. 하지만 화살표 함수에 괄호쓰면 함수 안에 함수인지 헷갈린다.  */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/find_the_smallest_integer_in_the_array.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/find_the_smallest_integer_in_the_array.js/</guid>
+      <description>// 숫자 배열을 받고 가장 작은 숫자를 리턴 ( 음수 인정 )
+//Time: 861ms Passed: 2 Failed: 0 class SmallestIntegerFinder { findSmallestInt(args) { return Math.min(&amp;hellip;args) } }
+//Time: 915ms Passed: 2 Failed: 0 const SmallestIntegerFinder = Function; SmallestIntegerFinder.prototype.findSmallestInt = (a) =&amp;gt; Math.min(&amp;hellip;a)
+/* 배운 것
+1. prototype에 직접 달아줘도 class 문법과 동일하게 동작하는 것 같다. (확실하지 않음)  */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.go/</guid>
+      <description>package kata
+func IsDivisible(n, x, y int) bool { return (n%x==0 &amp;amp;&amp;amp; n%y==0) }
+func IsDivisible2(n, x, y int) bool { if (n%x==0&amp;amp;&amp;amp;n%y==0) {return true} return false }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.js/</guid>
+      <description>function isDivisible(n, x, y) { return n%x+n%y===0 }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.py/</guid>
+      <description>def is_divisible(n,x,y): return n%x==0 and n%y==0</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiplication_table_for_number.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiplication_table_for_number.js/</guid>
+      <description>function multiTable(number) { let res = &amp;lsquo;&#39;; for ( let i = 1; i &amp;lt; 11; i++ ){ if ( i === 10) { res += ${i} * ${number} = ${i*number} } else { res += ${i} * ${number} = ${i*number}+&#39;\n&amp;rsquo; }; }; return res }
+function multiTable(number) { let res = &amp;lsquo;&#39;; for ( let i = 1; i &amp;lt; 11; i++ ){ res += ${i} * ${number} = ${i*number}+(i&amp;lt;10 ?</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiply.clj/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -150,12 +345,236 @@ const prod = [[&amp;#39;운동화&amp;#39;, 1000], [&amp;#39;구두&amp;#39;, 20
     
     <item>
       <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/opposite_number.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/opposite_number.js/</guid>
+      <description>// 음수는 양수로, 양수는 음수로
+function opposite1(num) { num = -num return num }
+const opposite2 = n =&amp;gt; -n
+/* 배운 것
+1. -를 붙이면 음양수 변환됨.  */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.go/</guid>
+      <description>package kata
+func QuarterOf1(month int) (res int) { switch month { case 1, 2, 3 : res=1 case 4, 5, 6 : res=2 case 7, 8, 9 : res=3 case 10,11,12: res=4 } return }
+func QuarterOf2(month int) int { if month &amp;lt;= 3 { return 1 } if month &amp;lt;= 6 &amp;amp;&amp;amp; month &amp;gt; 3 { return 2 } if month &amp;lt;= 9 &amp;amp;&amp;amp; month &amp;gt; 6 { return 3 } if month &amp;lt;= 12 &amp;amp;&amp;amp; month &amp;gt; 9 { return 4 } return 0 }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.js/</guid>
+      <description>const quarterOf = (month) =&amp;gt; { return Math.ceil(month/3) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.py/</guid>
+      <description>def quarter_of1(month): return (month+2) // 3
+from math import ceil def quarter_of2(month): return ceil(month/3)
+def quarter_of(month): if month in range(1, 4): return 1 if month in range(4, 7): return 2 if month in range(7, 10): return 3 if month in range(10, 13): return 4</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_first_and_last_character.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_first_and_last_character.js/</guid>
+      <description>/* It&amp;rsquo;s pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You&amp;rsquo;re given one parameter, the original string. You don&amp;rsquo;t have to worry with strings with less than two characters.
+문자열의 처음과 마지막 문자를 제거합시다. */
+function removeChar1(str){ let newStr = &#39;&#39; for (let i=1, l=str.length-1; i&amp;lt;l; i++) { newStr += str[i] } return newStr };
+const removeChar2 = (str) =&amp;gt; str.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_string_spaces.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_string_spaces.js/</guid>
+      <description>// 문자열 공백 제거
+const noSpace1 = str =&amp;gt; str.replace(/\s/g, &amp;lsquo;&#39;)
+function noSpace2 (str) { let newStr = &#39;&amp;rsquo; for(const t of str) { if (t !== &#39; &amp;lsquo;) newStr += t } return newStr }
+/* 배운 것
+1. regex에서 (space) \s는 공백문자, \S는 공백문자가 아닌 것. 2. 마찬가지로 (digit) \d는 숫자, \D는 숫자 아닌 것. 3. trim(&#39; &#39;)은 문자열의 양끝만 정리해준다.  */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/return_negative.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/return_negative.go/</guid>
+      <description>package kata
+import ( &amp;ldquo;math&amp;rdquo; )
+func MakeNegative(x int) int { num := math.Signbit(float64(x)) if num { return x } return -x }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/revered_strings.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/revered_strings.js/</guid>
+      <description>function solution1(str){ let arr = [] let res = &amp;quot;&amp;quot; for (let i = 0 , l = str.length-1; i&amp;lt;=l; l&amp;ndash;){ arr.push(str[l]) res += arr.pop() } return res }
+function solution2(str){ return str.split(&amp;quot;&amp;quot;).reverse().join(&amp;quot;&amp;quot;) }
+console.log(solution1(&amp;ldquo;reverse me&amp;rdquo;)) console.log(solution2(&amp;ldquo;reverse me&amp;rdquo;))</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/speedcode2.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/speedcode2.js/</guid>
+      <description>/* Given two integer arrays a, b, both of length &amp;gt;= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b. */
+// 다른 사람의 해결법 const sumPwrs = (a, p) =&amp;gt; a.reduce( (s, n) =&amp;gt; s + n ** p, 0); const arrayMadness1 = (a, b) =&amp;gt; sumPwrs(a, 2) &amp;gt; sumPwrs(b, 3);</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.go/</guid>
+      <description>package kata
+func SquareSum(numbers []int) (result int) { for _, num := range numbers { result += num*num } return }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.js/</guid>
+      <description>function squareSum(numbers){ return numbers.reduce((a,b)=&amp;gt;{return a+b*b}, 0) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.py/</guid>
+      <description>def square_sum1(numbers): result = 0 for n in numbers: result += n*n return result
+def square_sum2(numbers): return sum(x ** 2 for x in numbers)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/string_repeat.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/string_repeat.js/</guid>
+      <description>// 숫자와 문자열을 받고 숫자만큼 문자열 반복
+function repeatStr (n, s) { let newS = &#39;&#39; for (i=0; i&amp;lt;n; i++) newS += s; return newS }
+const repeatStr = (n, s) =&amp;gt; s.repeat(n)
+/*배운 것 1. for문도 {} 생략 가능 2. string repeat 메소드 */</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/sum_of_positive.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/sum_of_positive.js/</guid>
+      <description>// 숫자 배열을 받고 양수의 합을 리턴, 양수가 없으면 0을 리턴.
+function positiveSum(arr) { let sum = 0 for (const x of arr) { (x&amp;gt;0)?sum+=x:null } return sum }
+const positiveSum = (arr) =&amp;gt; arr.reduce((acc, x) =&amp;gt; acc + ((x&amp;gt;0) ? x : 0), 0)
+/* 배운 것
+1. 삼항연산자를 사용할 때 괄호를 신경써서 사용하자! acc + x&amp;gt;0 ? x : 0 ^ 이렇게 하면 안됨. acc + (x&amp;gt;0) ? x : 0 ^ 이래도 안됨 acc + (x&amp;gt;0 ?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/summation.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/summation.js/</guid>
+      <description>// 숫자를 받고 1부터 숫자까지의 합을 리턴
+//Time: 738ms Passed: 105 Failed: 0 function summation1 (num) { let r = 0 for (i=1;i&amp;lt;=num;i++) r+=i return r }
+//Time: 725ms Passed: 105 Failed: 0 const summation2 = (n) =&amp;gt; { for (i=1,r=0;i&amp;lt;=n;i++) { r+=i; if (i===n) return r } }
+//Time: 713msPassed: 105Failed: 0 const summation3 = n =&amp;gt; n * (n + 1) / 2;
+/* 배운 것 1. for문은 바로 리턴이 안된다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_10.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_10.js/</guid>
+      <description>/* 숫자 배열 하나를 인자로 받아 홀수 배열과 짝수 배열로 나눠 담아 해당 두 배열을 리턴하자. */
+// 내 해결 function pickIt1 (arr){ const odd=[],even=[]; for (let i=0, l=arr.length; i&amp;lt;l; i++){ Number.isInteger(arr[i]/2) ? even.push(arr[i]) : odd.push(arr[i]) } return [odd,even]; }
+// 다른 사람 해결 참고 function pickIt2 (arr) { const odd = []; const even = [];
+for (const x of arr) { ((x % 2) ? odd : even).push(x) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_29.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_29.js/</guid>
+      <description>/* 1. 2차 배열을 인자로 받고 1차 배열로 푼다. 2. 배열을 내림차순으로 정렬. 3. &amp;lsquo;&amp;gt;&amp;rsquo; 를 구분문자로 하여 문자열로 변환.
+eg. bigToSmall([[1,2],[3,4],[5,6]]) should return &amp;quot;6&amp;gt;5&amp;gt;4&amp;gt;3&amp;gt;2&amp;gt;1&amp;quot;  */
+// Time: 694ms Passed: 103 Failed: 0 function bigToSmall_1(arr) { return [].concat(&amp;hellip;arr).sort((a,b)=&amp;gt;b-a).join(&#39;&amp;gt;&#39;) }
+// Time: 1323ms Passed: 103 Failed: 0 function bigToSmall(arr){ return arr .reduce((acc, x)=&amp;gt; acc.concat(x), []) .sort((a,b)=&amp;gt;b-a) .join(&#39;&amp;gt;&#39;) }
+/* 배운 것
+1. [].flat() 메소드는 node 11 이상부터 가능 2. sort 메소드 b-a 이면 내림차, a-b 오름차 3.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.go/</guid>
+      <description>package kata import &amp;ldquo;math&amp;rdquo;
+func TwiceAsOld(dadYearsOld, sonYearsOld int) int { return int(math.Abs(float64(sonYearsOld*2-dadYearsOld))) }
+func TwiceAsOld2(dadYearsOld, sonYearsOld int) int { var res int if (sonYearsOld * 2 &amp;lt; dadYearsOld) { for { if (sonYearsOld * 2 == dadYearsOld) { break } sonYearsOld++; dadYearsOld ++; res++; } } else if (sonYearsOld * 2 &amp;gt; dadYearsOld) { for { if (sonYearsOld * 2 == dadYearsOld) { break } sonYearsOld&amp;ndash;; dadYearsOld&amp;ndash;; res&amp;ndash;; } } return int(math.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.js/</guid>
+      <description>function twiceAsOld(dadYearsOld, sonYearsOld) { return Math.abs(dadYearsOld - sonYearsOld*2) }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.py/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.py/</guid>
+      <description>def twice_as_old(dad_years_old, son_years_old): return abs(dad_years_old-son_years_old*2)</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://krapjost.github.io/ps/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://krapjost.github.io/ps/readme/</guid>
       <description>Problem Solving Logs solve at least one problem each day 매일 한 문제 이상 풀기! codeWarsTogether https://www.codewars.com
-leetcode https://leetcode.com/</description>
+leetcode https://leetcode.com/
+8kyu Multiply.clj abbreviate_a_two_word_name.go abbreviate_a_two_word_name.js abbreviate_a_two_word_name.py beginner_lost_without_a_map.go beginner_lost_without_a_map.js beginner_lost_without_a_map.py beginner_series2_clock.go beginner_series2_clock.js beginner_series2_clock.py century_from_year.js convert_boolean_values_to_strings.go convert_boolean_values_to_strings.js convert_boolean_values_to_strings.py even_or_odd.js find_the_smallest_integer_in_the_array.js is_n_divisible_by_x_and_y.go is_n_divisible_by_x_and_y.js is_n_divisible_by_x_and_y.py multiplication_table_for_number.js opposite_number.js quarter_of_the_year.go quarter_of_the_year.js quarter_of_the_year.py remove_first_and_last_character.js remove_string_spaces.js return_negative.go revered_strings.js speedcode2.js square_sum.go square_sum.js square_sum.py string_repeat.js sum_of_positive.js summation.js training_js_10.js training_js_29.js twice_as_old.go twice_as_old.js twice_as_old.py</description>
     </item>
     
     <item>
