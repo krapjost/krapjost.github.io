@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TILs on My New Hugo Site</title>
-    <link>https://www.example.com/til/</link>
+    <link>https://krapjost.github.io/til/</link>
     <description>Recent content in TILs on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.example.com/til/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://krapjost.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://www.example.com/til/linuxfind/</link>
+      <link>https://krapjost.github.io/til/linuxfind/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/linuxfind/</guid>
+      <guid>https://krapjost.github.io/til/linuxfind/</guid>
       <description>find https://recipes4dev.tistory.com/156
 현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 find . -name [FILE] 전체 시스템(루트 디렉토리)에서 파일 검색 find / -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 find . -name &amp;ldquo;STR*&amp;rdquo; 파일 이름에 특정 문자열이 포함된 파일 검색 find . -name &amp;ldquo;*STR*&amp;rdquo; 파일 이름이 특정 문자열로 끝나는 파일 검색 find . -name &amp;ldquo;*STR&amp;rdquo; 빈 디렉토리 또는 크기가 0인 파일 검색 find . -empty 특정 확장자를 가진 모든 파일 검색 후 삭제 find .</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</link>
+      <link>https://krapjost.github.io/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</guid>
+      <guid>https://krapjost.github.io/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</guid>
       <description>os 버전 확인  cat /etc/os-release
  유저 권한 수정  sudo vim /etc/sudoers &amp;gt; %sudo all=nopasswd: /usr/bin/mkdir &amp;gt; mkdir 프로그램 비밀번호 없이 실행할 수 있게 권한 설정 linux user root 권한 설정
  visudo vi /etc/passwd
@@ -34,10 +34,10 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/reactdeadfile/</link>
+      <link>https://krapjost.github.io/til/reactdeadfile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/reactdeadfile/</guid>
+      <guid>https://krapjost.github.io/til/reactdeadfile/</guid>
       <description>deadfile 리액트 프로젝트에서 사용되지 않는 파일 찾기  yarn global add deadfile
   deadfile ./src/index.js npx deadfile ./src/index.js
  </description>
@@ -45,10 +45,10 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/wslopenssh%EC%84%A4%EC%A0%95/</link>
+      <link>https://krapjost.github.io/til/wslopenssh%EC%84%A4%EC%A0%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/wslopenssh%EC%84%A4%EC%A0%95/</guid>
+      <guid>https://krapjost.github.io/til/wslopenssh%EC%84%A4%EC%A0%95/</guid>
       <description>wsl2 go build 환경 구성 스크립트
 서버에서 확인해야 할 것들
  openssh.server가 설치되어 있는가 22번 포트 방화벽이 열려 있는가 클라이언트에서 만든 ssh public 키가 제대로 입력되었는가 설정 파일 변경 후 sshd를 restart 했는가 원격에서 접속하려는 유저가 admininistrators 권한을 가지고 있는가 (그럴 경우 administrator_authorized_keys 파일에 키를 넣어야 한다.) 접속해야할 클라이언트가 여러 대일 경우 해당 클라이언트의 펍키를administrator_authorized_keys 파일에 이어서 넣어준다. https://gist.github.com/otkrsk/b0ffd4018e8a79b9010c461af298471e  클라이언트에서 확인해야 할 것들
@@ -57,10 +57,10 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/object.values/</link>
+      <link>https://krapjost.github.io/til/object.values/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/object.values/</guid>
+      <guid>https://krapjost.github.io/til/object.values/</guid>
       <description>Object.values() **Object.values()** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 for...in 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
 validateAdminInfoInput을 부를 때 반복되는 input을 깨끗하고 읽기쉽게 넣어주고 싶다.
 function validateAdminInfoInput(dsptch, ...input) { const [boxAdminId, boxAdminPw, pwConfirm, boxAdminName] = input; const pwMatch = boxAdminPw === pwConfirm; if (!boxAdminId) return showMsg(&amp;#39;관리자 아이디를 입력해주세요&amp;#39;, dsptch); if (!boxAdminPw) return showMsg(&amp;#39;관리자 패스워드를 입력해주세요.&amp;#39;, dsptch); if (!</description>
@@ -68,19 +68,19 @@ function validateAdminInfoInput(dsptch, ...input) { const [boxAdminId, boxAdminP
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/readme/</link>
+      <link>https://krapjost.github.io/til/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/readme/</guid>
+      <guid>https://krapjost.github.io/til/readme/</guid>
       <description>TIL Today I Learned   url encoding 21/06/20  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-210624/</link>
+      <link>https://krapjost.github.io/til/til-210624/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-210624/</guid>
+      <guid>https://krapjost.github.io/til/til-210624/</guid>
       <description>TIL 210624 Redux Ducks Pattern  github link
  리덕스는 함수형이다. 객체의 불변성. 원본은 그대로 두고 카피해서 변경한다.
 덕스 패턴은 feature first VIEW Container ​	HOC (higher order component) 로서 세부 뷰 엘리먼트 들은 여기에 담는다. 로직은 여기서만 알면 된다. (smart component)
@@ -91,19 +91,19 @@ react-app-best-practice</description>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-210625/</link>
+      <link>https://krapjost.github.io/til/til-210625/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-210625/</guid>
+      <guid>https://krapjost.github.io/til/til-210625/</guid>
       <description>TIL 210625 Javascript(react) map 에서 index 활용 const [focused, setFocused] = useState(0); products.map((product, index) =&amp;gt; { return ( &amp;lt;li className={focused === index ? &amp;#39;active&amp;#39; : &amp;#39;&amp;#39;} onClick={() =&amp;gt; { setFocused(index); }}&amp;gt; &amp;lt;span className=&amp;#34;people&amp;#34;&amp;gt; {product.name} &amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; ); }) NaN 은 number const n = NaN typeof(n) &amp;#34;number&amp;#34; Controlled Component? Uncontrolled Component?  Warning: A component is changing an uncontrolled input of type password to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa).</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-210701/</link>
+      <link>https://krapjost.github.io/til/til-210701/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-210701/</guid>
+      <guid>https://krapjost.github.io/til/til-210701/</guid>
       <description>TIL 210701 리눅스 파일 / 디렉터리 변경  cp scp mv rename  cp 파일 복사 cp file file.bak 디렉터리 재귀 복사 cp -r dir/ dir_bak/ 파일/디렉터리 소유자, 권한 등 모든 정보 복사 cp -rp dir/ dir_bak option ? -p same as --preserve=mode,ownership,timestamps -r same as --recursive=copy directories recursively scp 원격지로 파일 복사  scp file [원격지계정]@[원격지ip]:[이동시킬 위치]
 다른 건 cp 사용법과 동일하다.
  scp file root@192.168.200.11:/root/ mv 파일 이동  cp 하고 rm 실행 하는 것과 동일</description>
@@ -111,37 +111,37 @@ react-app-best-practice</description>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-62121/</link>
+      <link>https://krapjost.github.io/til/til-62121/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-62121/</guid>
+      <guid>https://krapjost.github.io/til/til-62121/</guid>
       <description>TIL 6/21/21 css overflow: auto 속성을 부모 엘리먼트에 주지 않으면 자식 엘리먼트에서 margin 줬을 때 넘침.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-62221/</link>
+      <link>https://krapjost.github.io/til/til-62221/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-62221/</guid>
+      <guid>https://krapjost.github.io/til/til-62221/</guid>
       <description>TIL 6/22/21 쿠키의 스코프 1. 탭 간에 공유되는가? 2. 새 창을 열면 새로운 세션이 맺어지는가? 3. 쿠키는 포트간에 공유되는가?  Cookies do not provide isolation by port. If a cookie is readable by a service running on one port, the cookie is also readable by a service running on another port of the same server. If a cookie is writable by a service on one port, the cookie is also writable by a service running on another port of the same server.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/til-62321/</link>
+      <link>https://krapjost.github.io/til/til-62321/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/til-62321/</guid>
+      <guid>https://krapjost.github.io/til/til-62321/</guid>
       <description>TIL 6/23/21 사용자의 개인 정보는 브라우저 어디에 보관해야 할까?  로컬 스토리지는 동기식이라 자바스크립트 쓰레드를 막을 수 있다. 꼭 필요한 경우 아니면 안 쓰는 것 추천. 데이터를 보관하지 않아도 되는 경우는 보관하지 말라 ( 암호화는 마지막 선택지 )  sessionStorage  SessionStorage object is used to store data on a temporary basis and cleared when the page session ends. Since SessionStorage is tab specific, it is not accessible from web workers or service workers.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.example.com/til/url_encode/</link>
+      <link>https://krapjost.github.io/til/url_encode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/til/url_encode/</guid>
+      <guid>https://krapjost.github.io/til/url_encode/</guid>
       <description>왜 링크를 주소창에서 복사해오면 %문자가 덕지덕지 붙은 더러운 문자가 되나 궁금했었는데 url에서는 특수문자들을 %로 인코딩 하는 것 같다.
 space = %20 때로는 공백문자가 %2520 로 표기될 때도 있는데 이미 그 url에 %20 공백 문자가 있기 때문에 &amp;lsquo;%&amp;lsquo;가 인코딩 된 값인 %25를 포함해서 적용되는 듯 https://stackoverflow.com/questions/16084935/a-html-space-is-showing-as-2520-instead-of-20
 신기하게도 이모티콘들도 url에서 인코딩 된다. 😀 https://meyerweb.com/eric/tools/dencoder/</description>
