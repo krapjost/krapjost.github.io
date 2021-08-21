@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://krapjost.github.io/</link>
+    <link>https://www.example.com/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://krapjost.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/doit-node.js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%95%EC%9E%AC%EA%B3%A4/</link>
+      <link>https://www.example.com/books/2021/doit-node.js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%95%EC%9E%AC%EA%B3%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/doit-node.js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%95%EC%9E%AC%EA%B3%A4/</guid>
+      <guid>https://www.example.com/books/2021/doit-node.js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%95%EC%9E%AC%EA%B3%A4/</guid>
       <description>Doit! Node.js 프로그래밍 (정재곤) 목차 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/doit-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%84%EC%98%88%ED%99%8D/</link>
+      <link>https://www.example.com/books/2021/doit-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%84%EC%98%88%ED%99%8D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/doit-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%84%EC%98%88%ED%99%8D/</guid>
+      <guid>https://www.example.com/books/2021/doit-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%84%EC%98%88%ED%99%8D/</guid>
       <description>Doit! 타입스크립트 프로그래밍 (전예홍) 목차 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/ecmascript6-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0-%EB%82%98%EB%9D%BC%EC%96%80-%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0/</link>
+      <link>https://www.example.com/books/2021/ecmascript6-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0-%EB%82%98%EB%9D%BC%EC%96%80-%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/ecmascript6-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0-%EB%82%98%EB%9D%BC%EC%96%80-%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0/</guid>
+      <guid>https://www.example.com/books/2021/ecmascript6-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0-%EB%82%98%EB%9D%BC%EC%96%80-%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0/</guid>
       <description>ECMAScript6 길들이기 (나라얀 프루스티) 목차  ecma  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/3%EC%9E%A5-%EB%B9%85-%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/3%EC%9E%A5-%EB%B9%85-%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/3%EC%9E%A5-%EB%B9%85-%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/3%EC%9E%A5-%EB%B9%85-%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
       <description>[TOC]
 3장. 빅 오 표기법 알고리즘의 효율성은 수행에 걸리는 단계수로 측정한다.
 빅오 표기법이란 그 단계수를 간결하고 이해하기 쉽게 표기하기 위한 방법이다.
@@ -49,10 +49,10 @@ const arr = [1,2,3,4,5,6,7,8,9,10] function loop(arr) { for (let i = 0, len = ar
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/4%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A1%9C-%EC%BD%94%EB%93%9C-%EC%86%8D%EB%8F%84-%EC%98%AC%EB%A6%AC%EA%B8%B0/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/4%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A1%9C-%EC%BD%94%EB%93%9C-%EC%86%8D%EB%8F%84-%EC%98%AC%EB%A6%AC%EA%B8%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/4%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A1%9C-%EC%BD%94%EB%93%9C-%EC%86%8D%EB%8F%84-%EC%98%AC%EB%A6%AC%EA%B8%B0/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/4%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A1%9C-%EC%BD%94%EB%93%9C-%EC%86%8D%EB%8F%84-%EC%98%AC%EB%A6%AC%EA%B8%B0/</guid>
       <description>빅 오로 코드 속도 올리기 버블 정렬 각 정렬 알고리즘 비교 애니메이션 bubble ( 버블 정렬 ) O(n2)
 두 인접한 원소를 검사하여 정렬하는 방법
  def bubbleSort(x): length = len(x)-1 for i in range(length): for j in range(length-i): if x[j] &amp;gt; x[j+1]: x[j], x[j+1] = x[j+1], x[j] return x selection ( 선택 정렬 ) O(n2)
@@ -61,19 +61,19 @@ const arr = [1,2,3,4,5,6,7,8,9,10] function loop(arr) { for (let i = 0, len = ar
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/5%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/5%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/5%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/5%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
       <description>5장. 빅 오를 사용하거나 사용하지 않는 코드 최적화 빅 오 표기법상 같다고 성능이 다 같은 것이 아니다. 선택정렬과 버블정렬     선택 정렬 버블 정렬     빅 오 표기 O(n2) O(n2)   애니메이션     N개의 원소 최대 단계 수 최대 단계 수   5 14 20   10 54 90   20 199 380   40 819 1560   80 3239 6320    선택정렬이 2배 가량 더 빠르지만 빅 오 표기법상 같은 방식으로 설명한다.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/6%EC%9E%A5.-%EA%B8%8D%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B5%9C%EC%A0%81%ED%99%94/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/6%EC%9E%A5.-%EA%B8%8D%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B5%9C%EC%A0%81%ED%99%94/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/6%EC%9E%A5.-%EA%B8%8D%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/6%EC%9E%A5.-%EA%B8%8D%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
       <description>6장. 긍정적인 시나리오 최적화 최악의 시나리오에서의 효율성과 평균 시나리오에서의 효율성
 최악을 우선으로 최적화하고 그 다음 다른 상황을 최적화하자.
 삽입 정렬 def insert_sort(x): for i in range(1, len(x)): j = i - 1 key = x[i] while x[j] &amp;gt; key and j &amp;gt;= 0: x[j+1] = x[j] j = j - 1 x[j+1] = key return x     삽입 정렬 선택 정렬     최악의 경우 N2+ 2N -2 N2/ 2   평균적인 경우 N2/ 2 N2/ 2    최선, 평균, 최악의 경우 예를 들어 다룰 데이터가 대부분 역순으로 정렬될 것이라고 예상한다면 선택 정렬이 가장 빠르며 데이터가 어떨지 전혀 알 수 없다면 기본적으로 평균적인 경우이며 둘 다 같다.</description>
@@ -81,10 +81,10 @@ const arr = [1,2,3,4,5,6,7,8,9,10] function loop(arr) { for (let i = 0, len = ar
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/7%EC%9E%A5.-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/7%EC%9E%A5.-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/7%EC%9E%A5.-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/7%EC%9E%A5.-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94/</guid>
       <description>7장. 해시 테이블로 매우 빠른 룩업 제품마다 다른 가격을 가지고 있는 데이터가 있다.
 이때 배열을 사용할 경우 비효율적이다.
 const prod = [[&amp;#39;운동화&amp;#39;, 1000], [&amp;#39;구두&amp;#39;, 2000], [&amp;#39;농구공&amp;#39;, 3000]] 제품 구매가 발생했을 때 어떤 제품을 구매했는지 찾아야 할 때 일일이 순회해야 하기 때문이다. 정렬된 배열의 경우라도 log N의 복잡도로 이뤄진다.
@@ -95,76 +95,138 @@ const prod = [[&amp;#39;운동화&amp;#39;, 1000], [&amp;#39;구두&amp;#39;, 20
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/readme/</link>
+      <link>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/readme/</guid>
+      <guid>https://www.example.com/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/readme/</guid>
       <description>누구나 자료 구조와 알고리즘 목차  자료 구조가 중요한 까닭 알고리즘이 중요한 까닭 빅 오 표기법 빅 오로 코드 속도 올리기 빅 오를 사용하거나 사용하지 않는 코드 최적화 긍정적인 시나리오 최적화 해시 테이블로 매우 빠른 룩업 스택과 큐로 간결한 코드 생성 재귀를 사용한 재귀적 반복 속도를 높이는 재귀 알고리즘 노드 기반 자료 구조 이진 트리로 속도 향상 그래프로 뭐든지 연결하기 그래프로 뭐든지 연결하기  1장. 자료구조가 중요한 까닭    프로그래밍은 데이터를 다루는 일이다.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EC%9D%BD%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A1%B0%EB%84%88%EC%84%A0-%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</link>
+      <link>https://www.example.com/books/2021/%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EC%9D%BD%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A1%B0%EB%84%88%EC%84%A0-%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EC%9D%BD%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A1%B0%EB%84%88%EC%84%A0-%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</guid>
+      <guid>https://www.example.com/books/2021/%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EC%9D%BD%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A1%B0%EB%84%88%EC%84%A0-%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</guid>
       <description>한 권으로 읽는 컴퓨터 구조와 프로그래밍 (조너선 스타인하트) 목차 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A3%A8%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</link>
+      <link>https://www.example.com/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A3%A8%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A3%A8%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</guid>
+      <guid>https://www.example.com/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A3%A8%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</guid>
       <description>함수형 자바스크립트 왜 함수형인가 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%88%EC%9D%B4%ED%81%B4-%ED%8F%AC%EA%B1%B0%EC%8A%A4/</link>
+      <link>https://www.example.com/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%88%EC%9D%B4%ED%81%B4-%ED%8F%AC%EA%B1%B0%EC%8A%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%88%EC%9D%B4%ED%81%B4-%ED%8F%AC%EA%B1%B0%EC%8A%A4/</guid>
+      <guid>https://www.example.com/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%88%EC%9D%B4%ED%81%B4-%ED%8F%AC%EA%B1%B0%EC%8A%A4/</guid>
       <description>함수형 자바스크립트 (마이클 포거스) 목차 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/books/readme/</link>
+      <link>https://www.example.com/books/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/books/readme/</guid>
+      <guid>https://www.example.com/books/readme/</guid>
       <description>books 독서 기록
 2021 읽을 책 목록   함수형 자바스크립트 (루이스 아텐시오) 초판 2018 함수형 자바스크립트 (마이클 포거스) 초판 2014 ECMAScript 6 길들이기 (나라얀 프루스티) 초판 2015 Doit! 타입스크립트 프로그래밍 (전예홍) 초판 2020 Doit! Node.js 프로그래밍 (정재곤) 초판 2017 한 권으로 읽는 컴퓨터 구조와 프로그래밍 (조너선 스타인하트) 초판 2019   </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/ps/readme/</link>
+      <link>https://www.example.com/ps/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/ps/readme/</guid>
+      <guid>https://www.example.com/ps/readme/</guid>
       <description>Problem Solving Logs solve at least one problem each day 매일 한 문제 이상 풀기! codeWarsTogether https://www.codewars.com
 leetcode https://leetcode.com/</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/til/linuxfind/</link>
+      <link>https://www.example.com/til/210622/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/til/linuxfind/</guid>
-      <description>find https://recipes4dev.tistory.com/156
-현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 find . -name [FILE] 전체 시스템(루트 디렉토리)에서 파일 검색 find / -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 find . -name &amp;ldquo;STR*&amp;rdquo; 파일 이름에 특정 문자열이 포함된 파일 검색 find . -name &amp;ldquo;*STR*&amp;rdquo; 파일 이름이 특정 문자열로 끝나는 파일 검색 find . -name &amp;ldquo;*STR&amp;rdquo; 빈 디렉토리 또는 크기가 0인 파일 검색 find . -empty 특정 확장자를 가진 모든 파일 검색 후 삭제 find .</description>
+      <guid>https://www.example.com/til/210622/</guid>
+      <description>TIL 6/22/21 쿠키의 스코프 1. 탭 간에 공유되는가? 2. 새 창을 열면 새로운 세션이 맺어지는가? 3. 쿠키는 포트간에 공유되는가?  Cookies do not provide isolation by port. If a cookie is readable by a service running on one port, the cookie is also readable by a service running on another port of the same server. If a cookie is writable by a service on one port, the cookie is also writable by a service running on another port of the same server.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</link>
+      <link>https://www.example.com/til/210623/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</guid>
+      <guid>https://www.example.com/til/210623/</guid>
+      <description>TIL 6/23/21 사용자의 개인 정보는 브라우저 어디에 보관해야 할까?  로컬 스토리지는 동기식이라 자바스크립트 쓰레드를 막을 수 있다. 꼭 필요한 경우 아니면 안 쓰는 것 추천. 데이터를 보관하지 않아도 되는 경우는 보관하지 말라 ( 암호화는 마지막 선택지 )  sessionStorage  SessionStorage object is used to store data on a temporary basis and cleared when the page session ends. Since SessionStorage is tab specific, it is not accessible from web workers or service workers.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210624/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210624/</guid>
+      <description>TIL 210624 Redux Ducks Pattern  github link
+ 리덕스는 함수형이다. 객체의 불변성. 원본은 그대로 두고 카피해서 변경한다.
+덕스 패턴은 feature first VIEW Container ​	HOC (higher order component) 로서 세부 뷰 엘리먼트 들은 여기에 담는다. 로직은 여기서만 알면 된다. (smart component)
+Component ​	container에 담기는 dumb component.
+Resources Good/Bad of React&amp;amp;Redux
+react-app-best-practice</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210625/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210625/</guid>
+      <description>TIL 210625 Javascript(react) map 에서 index 활용 const [focused, setFocused] = useState(0); products.map((product, index) =&amp;gt; { return ( &amp;lt;li className={focused === index ? &amp;#39;active&amp;#39; : &amp;#39;&amp;#39;} onClick={() =&amp;gt; { setFocused(index); }}&amp;gt; &amp;lt;span className=&amp;#34;people&amp;#34;&amp;gt; {product.name} &amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; ); }) NaN 은 number const n = NaN typeof(n) &amp;#34;number&amp;#34; Controlled Component? Uncontrolled Component?  Warning: A component is changing an uncontrolled input of type password to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210701/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210701/</guid>
+      <description>TIL 210701 리눅스 파일 / 디렉터리 변경  cp scp mv rename  cp 파일 복사 cp file file.bak 디렉터리 재귀 복사 cp -r dir/ dir_bak/ 파일/디렉터리 소유자, 권한 등 모든 정보 복사 cp -rp dir/ dir_bak option ? -p same as --preserve=mode,ownership,timestamps -r same as --recursive=copy directories recursively scp 원격지로 파일 복사  scp file [원격지계정]@[원격지ip]:[이동시킬 위치]
+다른 건 cp 사용법과 동일하다.
+ scp file root@192.168.200.11:/root/ mv 파일 이동  cp 하고 rm 실행 하는 것과 동일</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210703/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210703/</guid>
+      <description>TIL 6/21/21 css overflow: auto 속성을 부모 엘리먼트에 주지 않으면 자식 엘리먼트에서 margin 줬을 때 넘침.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210708/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210708/</guid>
+      <description>Object.values() **Object.values()** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 for...in 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
+validateAdminInfoInput을 부를 때 반복되는 input을 깨끗하고 읽기쉽게 넣어주고 싶다.
+function validateAdminInfoInput(dsptch, ...input) { const [boxAdminId, boxAdminPw, pwConfirm, boxAdminName] = input; const pwMatch = boxAdminPw === pwConfirm; if (!boxAdminId) return showMsg(&amp;#39;관리자 아이디를 입력해주세요&amp;#39;, dsptch); if (!boxAdminPw) return showMsg(&amp;#39;관리자 패스워드를 입력해주세요.&amp;#39;, dsptch); if (!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210709/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210709/</guid>
       <description>os 버전 확인  cat /etc/os-release
  유저 권한 수정  sudo vim /etc/sudoers &amp;gt; %sudo all=nopasswd: /usr/bin/mkdir &amp;gt; mkdir 프로그램 비밀번호 없이 실행할 수 있게 권한 설정 linux user root 권한 설정
  visudo vi /etc/passwd
@@ -177,10 +239,20 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/til/reactdeadfile/</link>
+      <link>https://www.example.com/til/210713/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/til/reactdeadfile/</guid>
+      <guid>https://www.example.com/til/210713/</guid>
+      <description>find https://recipes4dev.tistory.com/156
+현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 find . -name [FILE] 전체 시스템(루트 디렉토리)에서 파일 검색 find / -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 find . -name &amp;ldquo;STR*&amp;rdquo; 파일 이름에 특정 문자열이 포함된 파일 검색 find . -name &amp;ldquo;*STR*&amp;rdquo; 파일 이름이 특정 문자열로 끝나는 파일 검색 find . -name &amp;ldquo;*STR&amp;rdquo; 빈 디렉토리 또는 크기가 0인 파일 검색 find . -empty 특정 확장자를 가진 모든 파일 검색 후 삭제 find .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210715/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210715/</guid>
       <description>deadfile 리액트 프로젝트에서 사용되지 않는 파일 찾기  yarn global add deadfile
   deadfile ./src/index.js npx deadfile ./src/index.js
  </description>
@@ -188,10 +260,21 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/til/wslopenssh%EC%84%A4%EC%A0%95/</link>
+      <link>https://www.example.com/til/210716/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/til/wslopenssh%EC%84%A4%EC%A0%95/</guid>
+      <guid>https://www.example.com/til/210716/</guid>
+      <description>왜 링크를 주소창에서 복사해오면 %문자가 덕지덕지 붙은 더러운 문자가 되나 궁금했었는데 url에서는 특수문자들을 %로 인코딩 하는 것 같다.
+space = %20 때로는 공백문자가 %2520 로 표기될 때도 있는데 이미 그 url에 %20 공백 문자가 있기 때문에 &amp;lsquo;%&amp;lsquo;가 인코딩 된 값인 %25를 포함해서 적용되는 듯 https://stackoverflow.com/questions/16084935/a-html-space-is-showing-as-2520-instead-of-20
+신기하게도 이모티콘들도 url에서 인코딩 된다. 😀 https://meyerweb.com/eric/tools/dencoder/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.example.com/til/210719/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/til/210719/</guid>
       <description>wsl2 go build 환경 구성 스크립트
 서버에서 확인해야 할 것들
  openssh.server가 설치되어 있는가 22번 포트 방화벽이 열려 있는가 클라이언트에서 만든 ssh public 키가 제대로 입력되었는가 설정 파일 변경 후 sshd를 restart 했는가 원격에서 접속하려는 유저가 admininistrators 권한을 가지고 있는가 (그럴 경우 administrator_authorized_keys 파일에 키를 넣어야 한다.) 접속해야할 클라이언트가 여러 대일 경우 해당 클라이언트의 펍키를administrator_authorized_keys 파일에 이어서 넣어준다. https://gist.github.com/otkrsk/b0ffd4018e8a79b9010c461af298471e  클라이언트에서 확인해야 할 것들
@@ -200,94 +283,11 @@ drwxr-xr-x 2 root root 4096 Apr 22 16:59 conory
     
     <item>
       <title></title>
-      <link>https://krapjost.github.io/til/object.values/</link>
+      <link>https://www.example.com/til/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/til/object.values/</guid>
-      <description>Object.values() **Object.values()** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 for...in 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
-validateAdminInfoInput을 부를 때 반복되는 input을 깨끗하고 읽기쉽게 넣어주고 싶다.
-function validateAdminInfoInput(dsptch, ...input) { const [boxAdminId, boxAdminPw, pwConfirm, boxAdminName] = input; const pwMatch = boxAdminPw === pwConfirm; if (!boxAdminId) return showMsg(&amp;#39;관리자 아이디를 입력해주세요&amp;#39;, dsptch); if (!boxAdminPw) return showMsg(&amp;#39;관리자 패스워드를 입력해주세요.&amp;#39;, dsptch); if (!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/readme/</guid>
-      <description>TIL Today I Learned   url encoding 21/06/20  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-210624/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-210624/</guid>
-      <description>TIL 210624 Redux Ducks Pattern  github link
- 리덕스는 함수형이다. 객체의 불변성. 원본은 그대로 두고 카피해서 변경한다.
-덕스 패턴은 feature first VIEW Container ​	HOC (higher order component) 로서 세부 뷰 엘리먼트 들은 여기에 담는다. 로직은 여기서만 알면 된다. (smart component)
-Component ​	container에 담기는 dumb component.
-Resources Good/Bad of React&amp;amp;Redux
-react-app-best-practice</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-210625/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-210625/</guid>
-      <description>TIL 210625 Javascript(react) map 에서 index 활용 const [focused, setFocused] = useState(0); products.map((product, index) =&amp;gt; { return ( &amp;lt;li className={focused === index ? &amp;#39;active&amp;#39; : &amp;#39;&amp;#39;} onClick={() =&amp;gt; { setFocused(index); }}&amp;gt; &amp;lt;span className=&amp;#34;people&amp;#34;&amp;gt; {product.name} &amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; ); }) NaN 은 number const n = NaN typeof(n) &amp;#34;number&amp;#34; Controlled Component? Uncontrolled Component?  Warning: A component is changing an uncontrolled input of type password to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa).</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-210701/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-210701/</guid>
-      <description>TIL 210701 리눅스 파일 / 디렉터리 변경  cp scp mv rename  cp 파일 복사 cp file file.bak 디렉터리 재귀 복사 cp -r dir/ dir_bak/ 파일/디렉터리 소유자, 권한 등 모든 정보 복사 cp -rp dir/ dir_bak option ? -p same as --preserve=mode,ownership,timestamps -r same as --recursive=copy directories recursively scp 원격지로 파일 복사  scp file [원격지계정]@[원격지ip]:[이동시킬 위치]
-다른 건 cp 사용법과 동일하다.
- scp file root@192.168.200.11:/root/ mv 파일 이동  cp 하고 rm 실행 하는 것과 동일</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-62121/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-62121/</guid>
-      <description>TIL 6/21/21 css overflow: auto 속성을 부모 엘리먼트에 주지 않으면 자식 엘리먼트에서 margin 줬을 때 넘침.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-62221/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-62221/</guid>
-      <description>TIL 6/22/21 쿠키의 스코프 1. 탭 간에 공유되는가? 2. 새 창을 열면 새로운 세션이 맺어지는가? 3. 쿠키는 포트간에 공유되는가?  Cookies do not provide isolation by port. If a cookie is readable by a service running on one port, the cookie is also readable by a service running on another port of the same server. If a cookie is writable by a service on one port, the cookie is also writable by a service running on another port of the same server.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/til-62321/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/til-62321/</guid>
-      <description>TIL 6/23/21 사용자의 개인 정보는 브라우저 어디에 보관해야 할까?  로컬 스토리지는 동기식이라 자바스크립트 쓰레드를 막을 수 있다. 꼭 필요한 경우 아니면 안 쓰는 것 추천. 데이터를 보관하지 않아도 되는 경우는 보관하지 말라 ( 암호화는 마지막 선택지 )  sessionStorage  SessionStorage object is used to store data on a temporary basis and cleared when the page session ends. Since SessionStorage is tab specific, it is not accessible from web workers or service workers.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://krapjost.github.io/til/url_encode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://krapjost.github.io/til/url_encode/</guid>
-      <description>왜 링크를 주소창에서 복사해오면 %문자가 덕지덕지 붙은 더러운 문자가 되나 궁금했었는데 url에서는 특수문자들을 %로 인코딩 하는 것 같다.
-space = %20 때로는 공백문자가 %2520 로 표기될 때도 있는데 이미 그 url에 %20 공백 문자가 있기 때문에 &amp;lsquo;%&amp;lsquo;가 인코딩 된 값인 %25를 포함해서 적용되는 듯 https://stackoverflow.com/questions/16084935/a-html-space-is-showing-as-2520-instead-of-20
-신기하게도 이모티콘들도 url에서 인코딩 된다. 😀 https://meyerweb.com/eric/tools/dencoder/</description>
+      <guid>https://www.example.com/til/readme/</guid>
+      <description>TIL Today I Learned   url encoding 21/06/20 210622 21/06/22 210623 21/06/23 210624 21/06/24  </description>
     </item>
     
   </channel>

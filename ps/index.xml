@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PS on My New Hugo Site</title>
-    <link>https://krapjost.github.io/ps/</link>
+    <link>https://www.example.com/ps/</link>
     <description>Recent content in PS on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://krapjost.github.io/ps/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.example.com/ps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://krapjost.github.io/ps/readme/</link>
+      <link>https://www.example.com/ps/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://krapjost.github.io/ps/readme/</guid>
+      <guid>https://www.example.com/ps/readme/</guid>
       <description>Problem Solving Logs solve at least one problem each day 매일 한 문제 이상 풀기! codeWarsTogether https://www.codewars.com
 leetcode https://leetcode.com/</description>
     </item>

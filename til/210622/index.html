@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><h1 id="til-62221">TIL 6/22/21</h1>
+<h3 id="쿠키의-스코프">쿠키의 스코프</h3>
+<h5 id="1-탭-간에-공유되는가">1. 탭 간에 공유되는가?</h5>
+<h5 id="2-새-창을-열면-새로운-세션이-맺어지는가">2. 새 창을 열면 새로운 세션이 맺어지는가?</h5>
+<h5 id="3-쿠키는-포트간에-공유되는가">3. 쿠키는 포트간에 공유되는가?</h5>
+<blockquote>
+<p><strong>Cookies do not provide isolation by port</strong>. If a cookie is readable by a service running on one port, the cookie is also readable by a service running on another port of the same server. If a cookie is writable by a service on one port, the cookie is also writable by a service running on another port of the same server. For this reason, servers SHOULD NOT both run mutually distrusting services on different ports of the same host and use cookies to store security sensitive information.</p>
+<p>하나의 포트에서 쿠키를 읽고 쓸 수 있으면 다른 포트에서도 마찬가지로 읽고 쓸 수 있다. 이런 이유로 <strong>같은 호스트의 다른 포트에서 상호 신뢰하지 않는 서비스를 실행하거나 보안에 민감한 정보를 쿠키에 담아선 안된다.</strong></p>
+</blockquote>
+<h5 id="4-쿠키는-브라우저-로컬에-저장-참조한다">4. 쿠키는 브라우저 로컬에 저장, 참조한다.</h5>
+<h5 id="5-다른-포트로-접속한다고-새로운-쿠키를-발급하지-않는다">5. 다른 포트로 접속한다고 새로운 쿠키를 발급하지 않는다.</h5>
+<h5 id="6-cookie-secure-옵션을-주면-https-에서만-공유된다">6. cookie secure 옵션을 주면 https 에서만 공유된다.</h5>
+<blockquote>
+<p>동일 서버에서 2개의 포트를 띄우고 각각 https와 http 웹을 띄울 경우 ?  https 웹에 쿠키 옵션을 secure로 줄 경우 https 웹에 먼저 접속하여 세션을 맺고 다른 포트로 접근 시 쿠키가 공유되지 않음. 모든 포트를 TLS로 띄워야 함.</p>
+</blockquote>
+<h2 id="resources">Resources</h2>
+<p><a href="https://nsinc.tistory.com/121">cookie secure 옵션 ?</a></p>
+<p><a href="https://www.hahwul.com/2020/01/18/samesite-lax/#section_3">cookie same-site 옵션 ?</a></p>
+<p><a href="https://jeong-pro.tistory.com/80">cookie와 session</a></p>
+<p><a href="https://medium.com/swlh/7-keys-to-the-mystery-of-a-missing-cookie-fdf22b012f09">cookie trouble shooting</a></p>
+<p><a href="https://stackoverflow.com/questions/1612177/are-http-cookies-port-specific">cookie는 포트간에 공유되는가?</a></p>
+<h3 id="리액트-slots-패턴">리액트 slots 패턴</h3>
+<blockquote>
+<p>Warning: Failed prop type: Invalid prop <code>children</code> of type <code>array</code> supplied to <code>AdminWrapper</code>, expected a single ReactElement</p>
+</blockquote>
+<h5 id="jsx-엘리먼트도-일반-named-props로-넘길-수-있다">JSX 엘리먼트도 일반 named props로 넘길 수 있다.</h5>
+<h3 id="resource">Resource</h3>
+<p><a href="https://daveceddia.com/pluggable-slots-in-react-components/">react pattern : slots</a></p>
+<h3 id="abortcontroller">AbortController</h3>
+<blockquote>
+<p>Warning: Can&rsquo;t perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.</p>
+</blockquote>
+<p>비동기와 이벤트를 다룰 때는 메모리 릭이  일어날 수 있으므로 사이드 이펙트에 클린업을 꼭 해주는 것이 좋다.</p>
+<p>이벤트 리스너는 removeEventListener 하면 되지만 비동기 호출은 어떻게 해야할까?</p>
+<hr>
+<h3 id="resources-1">Resources</h3>
+<p><a href="https://dev.to/pallymore/clean-up-async-requests-in-useeffect-hooks-90h">fetch 에서 AbortController 사용하기</a></p>
+<p><a href="https://falsy.me/%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9A%94%EC%B2%AD-%EC%B7%A8%EC%86%8C%ED%95%98%EA%B8%B0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-abortcontroller/">Axios에서는 어떻게</a></p>
+<p><a href="https://github.com/axios/axios#cancellation">Axios cancellation github</a></p>
+</span>
+
+
+        </div></body>
+</html>
