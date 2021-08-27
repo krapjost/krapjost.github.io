@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><p>/*
+Given two integer arrays a, b, both of length &gt;= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+*/</p>
+<p>// 다른 사람의 해결법
+const sumPwrs = (a, p) =&gt; a.reduce( (s, n) =&gt; s + n ** p, 0);
+const arrayMadness1 = (a, b) =&gt; sumPwrs(a, 2) &gt; sumPwrs(b, 3);</p>
+<p>// 나의 해결법
+function arrayMadness2(a, b) {
+const sumSquareA = a.reduce((acc,cur)=&gt;acc+cur<strong>2,0)
+const sumCubeB = b.reduce((acc,cur)=&gt;acc+cur</strong>3,0)
+return sumSquareA&gt;sumCubeB
+}</p>
+<p>// 배운 것
+/*</p>
+<ol>
+<li>squares, cubes라는 네이밍은 2승하면 사각형, 3승하면 큐브가 나와서였다. 영어 이름은 직관적으로 붙은 게 많은 듯!</li>
+<li>reduce에 초깃값을 넣고 안 넣고의 차이. 0을 안줘도 될 줄 알았는데 아니었다. 초기값을 명시적으로 주지 않으면 배열의 첫번째 원소가 초깃값이 된다. 빈 배열에서는 초기값 없을 시 에러.</li>
+<li>함수형 프로그래밍은 함수를 나눌 수 없을 때까지 나누는 것, 재사용성의 극대화, 다른 사람의 코드를 보니 너무 깔끔하다.
+*/</li>
+</ol>
+<p>console.log((arrayMadness1([4,5,6],[1,2,3]))
+console.log((arrayMadness2([4,5,6],[1,2,3]))</p>
+</span>
+
+
+        </div></body>
+</html>

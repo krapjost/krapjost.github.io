@@ -2,69 +2,191 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://krapjost.github.io/books/2021/doit-node.js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%95%EC%9E%AC%EA%B3%A4/</loc>
+    <loc>https://krapjost.github.io/books/2021/doit_nodejs_%EC%A0%95%EC%9E%AC%EA%B3%A4/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/doit-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A0%84%EC%98%88%ED%99%8D/</loc>
+    <loc>https://krapjost.github.io/books/2021/doit_typescript_%EC%A0%84%EC%98%88%ED%99%8D/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/ecmascript6-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0-%EB%82%98%EB%9D%BC%EC%96%80-%ED%94%84%EB%A3%A8%EC%8A%A4%ED%8B%B0/</loc>
+    <loc>https://krapjost.github.io/books/2021/ecmascript6_%EB%82%98%EB%9D%BC%EC%96%80/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/3%EC%9E%A5-%EB%B9%85-%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95/</loc>
+    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98_%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/4%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A1%9C-%EC%BD%94%EB%93%9C-%EC%86%8D%EB%8F%84-%EC%98%AC%EB%A6%AC%EA%B8%B0/</loc>
+    <loc>https://krapjost.github.io/books/2021/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0%EC%99%80_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/5%EC%9E%A5.-%EB%B9%85-%EC%98%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94/</loc>
+    <loc>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/6%EC%9E%A5.-%EA%B8%8D%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B5%9C%EC%A0%81%ED%99%94/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/7%EC%9E%A5.-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/books/2021/%EB%88%84%EA%B5%AC%EB%82%98-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/readme/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/books/2021/%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EC%9D%BD%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%A1%B0%EB%84%88%EC%84%A0-%EC%8A%A4%ED%83%80%EC%9D%B8%ED%95%98%ED%8A%B8/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A3%A8%EC%9D%B4%EC%8A%A4-%EC%95%84%ED%85%90%EC%8B%9C%EC%98%A4/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%88%EC%9D%B4%ED%81%B4-%ED%8F%AC%EA%B1%B0%EC%8A%A4/</loc>
+    <loc>https://krapjost.github.io/books/2021/%ED%95%A8%EC%88%98%ED%98%95_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%ED%8F%AC%EA%B1%B0%EC%8A%A4/</loc>
   </url><url>
     <loc>https://krapjost.github.io/books/readme/</loc>
   </url><url>
     <loc>https://krapjost.github.io/linux/readme/</loc>
   </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/4kyu/roman_numeral_helper.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/convert_string_to_camel_case.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/create_phone_number.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/create_phone_number.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/detect_pangram.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/find_the_odd_int.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/good_vs_evil.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/ip_validation.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/the_vowel_code.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/6kyu/who_likes_it.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/binary_addition.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/complementary_dna.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/count_the_divisors_of_a_number.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/descending_order.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/disemvowel_trolls.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/exes_and_ohs.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/get_the_middle_character.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/highest_and_lowest.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/mumbling.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/mumbling.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/mumbling.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/shortest_word.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/square_every_digits.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/sum_of_odd_numbers.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/triangle_area.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/7kyu/you_are_square.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/abbreviate_a_two_word_name.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_lost_without_a_map.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/beginner_series2_clock.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/century_from_year.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/convert_boolean_values_to_strings.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/even_or_odd.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/find_the_smallest_integer_in_the_array.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/is_n_divisible_by_x_and_y.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiplication_table_for_number.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/multiply.clj/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/opposite_number.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/quarter_of_the_year.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_first_and_last_character.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/remove_string_spaces.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/return_negative.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/revered_strings.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/speedcode2.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/square_sum.py/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/string_repeat.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/sum_of_positive.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/summation.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_10.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/training_js_29.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.go/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.js/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/ps/gidoong/codewars/8kyu/twice_as_old.py/</loc>
+  </url><url>
     <loc>https://krapjost.github.io/ps/readme/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/til/linuxfind/</loc>
+    <loc>https://krapjost.github.io/til/210622/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/til/linux%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A8%EC%9D%8C/</loc>
+    <loc>https://krapjost.github.io/til/210623/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/til/reactdeadfile/</loc>
+    <loc>https://krapjost.github.io/til/210624/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/til/wslopenssh%EC%84%A4%EC%A0%95/</loc>
+    <loc>https://krapjost.github.io/til/210625/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/til/object.values/</loc>
+    <loc>https://krapjost.github.io/til/210701/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210703/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210708/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210709/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210713/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210715/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210716/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/til/210719/</loc>
   </url><url>
     <loc>https://krapjost.github.io/til/readme/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-210624/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-210625/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-210701/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-62121/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-62221/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/til-62321/</loc>
-  </url><url>
-    <loc>https://krapjost.github.io/til/url_encode/</loc>
   </url><url>
     <loc>https://krapjost.github.io/books/</loc>
   </url><url>
     <loc>https://krapjost.github.io/categories/</loc>
   </url><url>
-    <loc>https://krapjost.github.io/</loc>
-  </url><url>
     <loc>https://krapjost.github.io/linux/</loc>
+  </url><url>
+    <loc>https://krapjost.github.io/</loc>
   </url><url>
     <loc>https://krapjost.github.io/ps/</loc>
   </url><url>

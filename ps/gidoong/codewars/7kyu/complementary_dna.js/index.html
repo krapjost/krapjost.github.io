@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><p>/*
+In DNA strings, symbols &ldquo;A&rdquo; and &ldquo;T&rdquo; are complements of each other, as &ldquo;C&rdquo; and &ldquo;G&rdquo;. You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).</p>
+<pre><code>&quot;A&quot; -&gt; &quot;T&quot;
+&quot;T&quot; -&gt; &quot;A&quot;
+&quot;G&quot; -&gt; &quot;C&quot;
+&quot;C&quot; -&gt; &quot;G&quot;
+
+Example		
+
+DNAStrand (&quot;ATTGC&quot;) // return &quot;TAACG&quot;
+DNAStrand (&quot;GTAT&quot;) // return &quot;CATA&quot; 
+</code></pre>
+<p>*/</p>
+<p>//My solution
+function DNAStrand(dna){
+return dna.split(&quot;&quot;).reduce((acc, cur) =&gt; {
+if (cur === &ldquo;A&rdquo;) acc += &ldquo;T&rdquo;
+if (cur === &ldquo;T&rdquo;) acc += &ldquo;A&rdquo;
+if (cur === &ldquo;G&rdquo;) acc += &ldquo;C&rdquo;
+if (cur === &ldquo;C&rdquo;) acc += &ldquo;G&rdquo;
+return acc
+}, &ldquo;&quot;)</p>
+<p>}</p>
+<p>//Best Practice
+function DNAStrand(dna) {
+return dna.replace(/./g, function(c) {
+return DNAStrand.pairs[c]
+})
+}</p>
+<p>DNAStrand.pairs = {
+A: &lsquo;T&rsquo;,
+T: &lsquo;A&rsquo;,
+C: &lsquo;G&rsquo;,
+G: &lsquo;C&rsquo;,
+}</p>
+<p>/*</p>
+<pre><code>배운 것
+
+1. regex에서 .은 줄바꿈 문자를 제외하고 모든 문자를 매치
+2. Object를 사용하는 방법
+	내가 작성한 함수에서는 문자열을 배열로 바꾸고 reduce로
+	일일이 순회하면서 그 안에서 조건문도 일일이 비교해야 한다.
+	best practice 함수에서는 global regex로 변경할 모든 문자열을
+	한 번에 찾고* Object에 key로 순회 없이 접근하여 변경한다.
+        *정정* regex global은 순회를 하긴하지만 js for loop보다 빠름.
+	그리고 나라면 const로 따로 선언했을 것 같은데 여기서는
+	해당 데이터를 사용하는 함수에 체인으로 달아줌으로서 코드를 깔끔하고
+	읽고 이해하기 쉽게 만들었다.
+
+	&gt; 그 외의 장점이 있다면 알려주셨으면 좋겠습니다.
+	&gt; 뭔가 다른 이유도 있을 것 같은데 아직은 잘 모르겠습니다.	
+
+
+3. string에 regex를 다는 것이 array의 forEach와 같다는 댓글을 보아서 벤치마크를 검색해보았다. 결과는 아래와 같은데 regex가 꽤 큰 격차로 더 좋은 성능을 보인다.
+
+[regex 와 forloop 벤치마크 비교](https://www.measurethat.net/Benchmarks/Show/7532/0/regex-vs-for-loop)
+</code></pre>
+<p>*/</p>
+</span>
+
+
+        </div></body>
+</html>

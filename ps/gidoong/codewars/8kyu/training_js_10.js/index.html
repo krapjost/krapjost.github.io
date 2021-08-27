@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><p>/*
+숫자 배열 하나를 인자로 받아 홀수 배열과 짝수 배열로 나눠 담아 해당 두 배열을 리턴하자.
+*/</p>
+<p>// 내 해결
+function pickIt1 (arr){
+const odd=[],even=[];
+for (let i=0, l=arr.length; i&lt;l; i++){
+Number.isInteger(arr[i]/2)
+? even.push(arr[i])
+: odd.push(arr[i])
+}
+return [odd,even];
+}</p>
+<p>// 다른 사람 해결 참고
+function pickIt2 (arr) {
+const odd = [];
+const even = [];</p>
+<p>for (const x of arr) {
+((x % 2) ? odd : even).push(x) <br>
+}</p>
+<p>return [odd, even]
+}</p>
+<p>/*
+배운 것</p>
+<pre><code>1. 2로 %연산하면 1 또는 0으로 나눠지고 0은 false로 boolean 처리된다.
+2. for of 문에서 x는 let이나 const를 명시해줘도 되고 안해도 작동은 하는 것 같은데...차이가 뭘까. 그냥 const 주자.
+3. 삼항연산자에 괄호를 주면 코드를 줄일 수 있다.
+4. for문에서 length를 반복할 때마다 다시 초기화하는 것보다 index 초기화 할 때 같이 한 번만 초기화 하도록 하는 습관을 들이자.
+5. for of 문은 가독성도 좋고 length 캐시한 클래식 for문 만큼 성능이 나온다. forEach와 map은 느린 편이다.
+</code></pre>
+<p>*/</p>
+</span>
+
+
+        </div></body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <style>
+@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{overflow-x:scroll;white-space:pre}
+
+
+
+
+
+
+
+
+
+body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}</style>
+
+</head><body>
+    
+<div id="content">
+    
+    
+
+    
+    
+    <div id=typewriter></div>
+    <span id=terminal><h1 id='title'></h1><h1 id="linux">linux</h1>
+<h2 id="ubuntu">ubuntu</h2>
+<h3 id="os-release">os-release</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@0734b09f8a77:/bin# cat /etc/os-release
+NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ubuntu&#34;</span>
+VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20.04.2 LTS (Focal Fossa)&#34;</span>
+ID<span style="color:#f92672">=</span>ubuntu
+ID_LIKE<span style="color:#f92672">=</span>debian
+PRETTY_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ubuntu 20.04.2 LTS&#34;</span>
+VERSION_ID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20.04&#34;</span>
+HOME_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.ubuntu.com/&#34;</span>
+SUPPORT_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://help.ubuntu.com/&#34;</span>
+BUG_REPORT_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://bugs.launchpad.net/ubuntu/&#34;</span>
+PRIVACY_POLICY_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;</span>
+VERSION_CODENAME<span style="color:#f92672">=</span>focal
+UBUNTU_CODENAME<span style="color:#f92672">=</span>focal
+</code></pre></div><h3 id="default-commands">default commands</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@0734b09f8a77:/bin# ll -a
+total <span style="color:#ae81ff">22956</span>
+drwxr-xr-x.  <span style="color:#ae81ff">2</span> root root      <span style="color:#ae81ff">8192</span> Jul <span style="color:#ae81ff">23</span> 17:38  ./
+drwxr-xr-x. <span style="color:#ae81ff">13</span> root root       <span style="color:#ae81ff">145</span> Jul <span style="color:#ae81ff">23</span> 17:35  ../
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59736</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span> <span style="color:#e6db74">&#39;[&#39;</span>*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  addpart*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">18824</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">88536</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-cache*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">31192</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-cdrom*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">27016</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-config*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47576</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-get*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">27931</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-key*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63960</span> Jun <span style="color:#ae81ff">15</span> 11:05  apt-mark*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39288</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  arch*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">21</span> Jul <span style="color:#ae81ff">23</span> 17:35  awk -&gt; /etc/alternatives/awk*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59768</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  b2sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  base32*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  base64*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  basename*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root   <span style="color:#ae81ff">1183448</span> Jun <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  bash*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">6794</span> Jun <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  bashbug*
+-rwxr-xr-x.  <span style="color:#ae81ff">3</span> root root     <span style="color:#ae81ff">39144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bunzip2*
+-rwxr-xr-x.  <span style="color:#ae81ff">3</span> root root     <span style="color:#ae81ff">39144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzcat*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzcmp -&gt; bzdiff*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2227</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzdiff*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzegrep -&gt; bzgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">4877</span> Sep  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2019</span>  bzexe*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzfgrep -&gt; bzgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">3775</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">3</span> root root     <span style="color:#ae81ff">39144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzip2*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">18584</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzip2recover*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzless -&gt; bzmore*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1297</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  bzmore*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">3</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  captoinfo -&gt; tic*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43416</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  cat*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">3330</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  catchsegv*
+-rwxr-sr-x.  <span style="color:#ae81ff">1</span> root shadow   <span style="color:#ae81ff">84512</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  chage*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14656</span> Feb <span style="color:#ae81ff">14</span>  <span style="color:#ae81ff">2020</span>  chattr*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72024</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  chcon*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">85064</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  chfn*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72024</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  chgrp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63864</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  chmod*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51432</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  choom*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72024</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  chown*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39144</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  chrt*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">53040</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  chsh*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  cksum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14656</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  clear*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jun <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  clear_console*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51296</span> Apr  <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2019</span>  cmp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  comm*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">153976</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  cp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55672</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  csplit*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47480</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  cut*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">129816</span> Jul <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2019</span>  dash*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">108920</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  date*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">80256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  dd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">21328</span> Jun <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2019</span>  deb-systemd-helper*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">4430</span> Jun <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2019</span>  deb-systemd-invoke*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2859</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">11541</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-apt-progress*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root       <span style="color:#ae81ff">608</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-communicate*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1719</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-copydb*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root       <span style="color:#ae81ff">647</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-escape*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2935</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-set-selections*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1827</span> Aug  <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2019</span>  debconf-show*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  delpart*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">93128</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  df*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">219480</span> Apr  <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2019</span>  diff*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67800</span> Apr  <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2019</span>  diff3*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">142144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  dir*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47456</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  dircolors*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  dirname*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">84440</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  dmesg*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">8</span> Nov  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  dnsdomainname -&gt; hostname*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">8</span> Nov  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  domainname -&gt; hostname*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">309944</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">178728</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-deb*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">154208</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-divert*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">20514</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-maintscript-helper*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">166488</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-query*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">125424</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-split*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63760</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-statoverride*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">84472</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  dpkg-trigger*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">108920</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  du*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  echo*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">28</span> Jan <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">2020</span>  egrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  env*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  expand*
+-rwxr-sr-x.  <span style="color:#ae81ff">1</span> root shadow   <span style="color:#ae81ff">31312</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  expiry*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55640</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  expr*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">80248</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  factor*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">23136</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  faillog*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  fallocate*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  false*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">28</span> Jan <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">2020</span>  fgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35096</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  fincore*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">320160</span> Feb <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  find*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">73128</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  findmnt*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35128</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  flock*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47448</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  fmt*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  fold*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">26864</span> May <span style="color:#ae81ff">28</span> 17:27  free*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35112</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  getconf*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39576</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  getent*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22760</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  getopt*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">88464</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  gpasswd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">457880</span> Jan  <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2021</span>  gpgv*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">199136</span> Jan <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">2020</span>  grep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  groups*
+-rwxr-xr-x.  <span style="color:#ae81ff">2</span> root root      <span style="color:#ae81ff">2346</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  gunzip*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">6376</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  gzexe*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">97496</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  gzip*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47480</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  head*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  hostid*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">26856</span> Nov  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  hostname*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  i386 -&gt; setarch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">68000</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  iconv*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47480</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  id*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63880</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  infocmp*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">3</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  infotocap -&gt; tic*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">158112</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  install*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  ionice*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35120</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  ipcmk*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  ipcrm*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67816</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  ipcs*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14536</span> Dec  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  ischroot*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55672</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  join*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> May <span style="color:#ae81ff">28</span> 17:27  kill*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47336</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  last*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">4</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lastb -&gt; last*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">32416</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  lastlog*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">5427</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  ldd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  link*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  linux32 -&gt; setarch*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  linux64 -&gt; setarch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">76160</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  ln*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">58944</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  locale*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14496</span> Jan <span style="color:#ae81ff">27</span>  <span style="color:#ae81ff">2021</span>  locale-check*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">334808</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  localedef*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">52040</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  logger*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">57104</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  login*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  logname*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">142144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  ls*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14656</span> Feb <span style="color:#ae81ff">14</span>  <span style="color:#ae81ff">2020</span>  lsattr*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">133352</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lsblk*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">100584</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lscpu*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">96488</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lsipc*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39480</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lslocks*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67816</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lslogins*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67816</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lsmem*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51440</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  lsns*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root       <span style="color:#ae81ff">320</span> Jul <span style="color:#ae81ff">23</span> 17:38  man*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">162552</span> Feb <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  mawk*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35120</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  mcookie*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47480</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  md5sum*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  md5sum.textutils -&gt; md5sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  mesg*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">88408</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  mkdir*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67928</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  mkfifo*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72024</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  mknod*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47448</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  mktemp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43160</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  more*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55528</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  mount*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  mountpoint*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">149888</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  mv*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  namei*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">22</span> Jul <span style="color:#ae81ff">23</span> 17:35  nawk -&gt; /etc/alternatives/nawk*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">44784</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  newgrp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  nice*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">8</span> Nov  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  nisdomainname -&gt; hostname*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43448</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  nl*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  nohup*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  nproc*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35256</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  nsenter*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67992</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  numfmt*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72056</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  od*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">23</span> Jul <span style="color:#ae81ff">23</span> 17:35  pager -&gt; /etc/alternatives/pager*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">121072</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  partx*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">68208</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  passwd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  paste*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  pathchk*
+-rwxr-xr-x.  <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3478464</span> Oct <span style="color:#ae81ff">19</span>  <span style="color:#ae81ff">2020</span>  perl*
+-rwxr-xr-x.  <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3478464</span> Oct <span style="color:#ae81ff">19</span>  <span style="color:#ae81ff">2020</span>  perl5.30.0*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30968</span> May <span style="color:#ae81ff">28</span> 17:27  pgrep*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">14</span> Feb <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2020</span>  pidof -&gt; /sbin/killall5*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  pinky*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">5</span> May <span style="color:#ae81ff">28</span> 17:27  pkill -&gt; pgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22904</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  pldd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35064</span> May <span style="color:#ae81ff">28</span> 17:27  pmap*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">76216</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  pr*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  printenv*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59736</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  printf*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39672</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  prlimit*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">137688</span> May <span style="color:#ae81ff">28</span> 17:27  ps*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">80280</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  ptx*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  pwd*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> May <span style="color:#ae81ff">28</span> 17:27  pwdx*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">4</span> Jun <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  rbash -&gt; bash*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51544</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  readlink*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51576</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  realpath*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22760</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  rename.ul*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  renice*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">4</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  reset -&gt; tset*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63720</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  resizepart*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  rev*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">30</span> Jan <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  rgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72056</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  rm*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47448</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  rmdir*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">27144</span> Dec  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  run-parts*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  runcon*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">10481</span> Dec  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  savelog*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55528</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  script*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  scriptreplay*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51296</span> Apr  <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2019</span>  sdiff*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">121288</span> Dec <span style="color:#ae81ff">22</span>  <span style="color:#ae81ff">2018</span>  sed*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2442</span> Nov <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2019</span>  <span style="color:#66d9ef">select</span>-editor*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1230</span> Nov <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2019</span>  sensible-browser*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1169</span> Nov <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2019</span>  sensible-editor*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root       <span style="color:#ae81ff">452</span> Nov <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2019</span>  sensible-pager*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51544</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  seq*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">27136</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  setarch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47344</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  setpriv*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  setsid*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47336</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  setterm*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">6</span> May <span style="color:#ae81ff">28</span>  <span style="color:#ae81ff">2020</span>  sg -&gt; newgrp*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">4</span> Jul <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2019</span>  sh -&gt; dash*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51576</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sha1sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59768</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sha224sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59768</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sha256sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67960</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sha384sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67960</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sha512sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">63864</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  shred*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59736</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  shuf*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> May <span style="color:#ae81ff">28</span> 17:27  skill*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22768</span> May <span style="color:#ae81ff">28</span> 17:27  slabtop*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sleep*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">5</span> May <span style="color:#ae81ff">28</span> 17:27  snice -&gt; skill*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">117376</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sort*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">60184</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  split*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">88440</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  stat*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51544</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  stdbuf*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">84344</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  stty*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">67816</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  su*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47456</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sum*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  sync*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">18744</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  tabs*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tac*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">72088</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tail*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">448112</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  tar*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  taskset*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tee*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14360</span> Dec  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  tempfile*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55640</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  test*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">92584</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  tic*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43800</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  timeout*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22776</span> May <span style="color:#ae81ff">28</span> 17:27  tload*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22840</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  toe*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">129072</span> May <span style="color:#ae81ff">28</span> 17:27  top*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">100728</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  touch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">26968</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  tput*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51544</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tr*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  true*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  truncate*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">31040</span> Feb <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">2020</span>  tset*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43352</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tsort*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  tty*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">15378</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  tzselect*
+-rwsr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39144</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  umount*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39288</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  uname*
+-rwxr-xr-x.  <span style="color:#ae81ff">2</span> root root      <span style="color:#ae81ff">2346</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  uncompress*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43384</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  unexpand*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">51576</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  uniq*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  unlink*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">43448</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  unshare*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">55712</span> Mar <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">2020</span>  update-alternatives*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">14568</span> May <span style="color:#ae81ff">28</span> 17:27  uptime*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  users*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">30952</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  utmpdump*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">142144</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  vdir*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39168</span> May <span style="color:#ae81ff">28</span> 17:27  vmstat*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">19</span> Jul <span style="color:#ae81ff">23</span> 17:35  w -&gt; /etc/alternatives/w*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">22760</span> May <span style="color:#ae81ff">28</span> 17:27  w.procps*
+-rwxr-sr-x.  <span style="color:#ae81ff">1</span> root tty      <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  wall*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">27208</span> May <span style="color:#ae81ff">28</span> 17:27  watch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">47456</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  wc*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35048</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  wdctl*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">35496</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  whereis*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root       <span style="color:#ae81ff">946</span> Dec  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  which*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">59768</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  who*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  whoami*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">2020</span>  x86_64 -&gt; setarch*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">76152</span> Feb <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2020</span>  xargs*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">39256</span> Sep  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2019</span>  yes*
+lrwxrwxrwx.  <span style="color:#ae81ff">1</span> root root         <span style="color:#ae81ff">8</span> Nov  <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2019</span>  ypdomainname -&gt; hostname*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1984</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zcat*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1678</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zcmp*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">5880</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zdiff*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">26840</span> Dec <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2020</span>  zdump*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">29</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zegrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root        <span style="color:#ae81ff">29</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zfgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2081</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zforce*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">7585</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zgrep*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">2206</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zless*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">1842</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  zmore*
+-rwxr-xr-x.  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">4553</span> Dec <span style="color:#ae81ff">13</span>  <span style="color:#ae81ff">2019</span>  znew*
+</code></pre></div></span>
+
+
+        </div></body>
+</html>
