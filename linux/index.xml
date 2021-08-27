@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linuxes on krapjost</title>
+    <link>https://krapjost.github.io/linux/</link>
+    <description>Recent content in Linuxes on krapjost</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://krapjost.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://krapjost.github.io/linux/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/linux/readme/</guid>
+      <description>linux ubuntu os-release root@0734b09f8a77:/bin# cat /etc/os-release NAME=&amp;#34;Ubuntu&amp;#34; VERSION=&amp;#34;20.04.2 LTS (Focal Fossa)&amp;#34; ID=ubuntu ID_LIKE=debian PRETTY_NAME=&amp;#34;Ubuntu 20.04.2 LTS&amp;#34; VERSION_ID=&amp;#34;20.04&amp;#34; HOME_URL=&amp;#34;https://www.ubuntu.com/&amp;#34; SUPPORT_URL=&amp;#34;https://help.ubuntu.com/&amp;#34; BUG_REPORT_URL=&amp;#34;https://bugs.launchpad.net/ubuntu/&amp;#34; PRIVACY_POLICY_URL=&amp;#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&amp;#34; VERSION_CODENAME=focal UBUNTU_CODENAME=focal default commands root@0734b09f8a77:/bin# ll -a total 22956 drwxr-xr-x. 2 root root 8192 Jul 23 17:38 ./ drwxr-xr-x. 13 root root 145 Jul 23 17:35 ../ -rwxr-xr-x. 1 root root 59736 Sep 5 2019 &amp;#39;[&amp;#39;* -rwxr-xr-x. 1 root root 30952 Jul 21 2020 addpart* -rwxr-xr-x. 1 root root 18824 Jun 15 11:05 apt* -rwxr-xr-x.</description>
+    </item>
+    
+  </channel>
+</rss>
