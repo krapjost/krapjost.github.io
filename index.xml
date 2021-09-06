@@ -393,6 +393,18 @@ Example . . . . . . ---&amp;gt; should return 2.0 . . . . . . . . . . ---&amp;gt
     
     <item>
       <title></title>
+      <link>https://krapjost.github.io/ps/gidoong/codewars/7kyu/waiting_room.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://krapjost.github.io/ps/gidoong/codewars/7kyu/waiting_room.js/</guid>
+      <description>Waiting room 문제 링크
+ There&amp;rsquo;s a waiting room with N chairs set in single row. Chairs are consecutively numbered from 1 to N. First is closest to the entrance (which is exit as well).
+For some reason people choose a chair in the following way
+ Find a place as far from other people as possible Find a place as close to exit as possible  All chairs must be occupied before the first person will be served</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://krapjost.github.io/ps/gidoong/codewars/7kyu/you_are_square.js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
