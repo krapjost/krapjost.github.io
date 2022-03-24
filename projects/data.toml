@@ -1,0 +1,18 @@
+[[project]]
+name = "Rye"
+desc = "Virtual Coworking Space"
+links = [
+        { name = "Landing", url = "" },
+        { name = "IOS", url = "" },
+        { name = "Android", url = "" },
+]
+
+[[project]]
+name = "Iyagi"
+desc = "Web novel serialization platform"
+links = [{ name = "Landing", url = "" }]
+
+[[project]]
+name = "Goyo"
+desc = "Mindfulness meditation App"
+links = [{ name = "Landing", url = "" }]
