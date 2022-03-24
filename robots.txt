@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://krapjost.github.io/sitemap.xml
