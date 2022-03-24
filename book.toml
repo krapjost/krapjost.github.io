@@ -1,6 +1,8 @@
 [book]
 authors = ["krapjost"]
 language = "en"
-multilingual = false
+multilingual = true
 src = "src"
-title = "IYAGI"
+title = "Iyagi"
+[build]
+build-dir = "./docs"
