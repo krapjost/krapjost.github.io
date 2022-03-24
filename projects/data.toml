@@ -1,18 +1,18 @@
 [[project]]
 name = "Rye"
-desc = "Virtual Coworking Space"
+desc = "Open Source Virtual Coworking Space"
 links = [
-        { name = "Landing", url = "" },
+        { name = "About", url = "" },
         { name = "IOS", url = "" },
         { name = "Android", url = "" },
 ]
 
 [[project]]
 name = "Iyagi"
-desc = "Web novel serialization platform"
-links = [{ name = "Landing", url = "" }]
+desc = "Open Source Web Novel Platform"
+links = [{ name = "About", url = "" }]
 
 [[project]]
 name = "Goyo"
-desc = "Mindfulness meditation App"
-links = [{ name = "Landing", url = "" }]
+desc = "Open Source Mindfulness Meditation App"
+links = [{ name = "About", url = "" }]
