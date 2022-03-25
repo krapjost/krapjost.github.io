@@ -1,18 +1,18 @@
 [[project]]
-name = "Rye"
-desc = "Open Source Virtual Coworking Space"
+name = "Gaji"
+desc = "Task Manager App"
 links = [
-        { name = "About", url = "" },
+        { name = "About", url = "https://github.com/krapjost/gaji" },
         { name = "IOS", url = "" },
         { name = "Android", url = "" },
 ]
 
 [[project]]
 name = "Iyagi"
-desc = "Open Source Web Novel Platform"
+desc = "Web Novel Platform"
 links = [{ name = "About", url = "" }]
 
 [[project]]
 name = "Goyo"
-desc = "Open Source Mindfulness Meditation App"
+desc = "Mindfulness Meditation App"
 links = [{ name = "About", url = "" }]
