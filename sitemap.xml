@@ -7,8 +7,16 @@
         <loc>https://krapjost.github.io/blog/</loc>
     </url>
     <url>
+        <loc>https://krapjost.github.io/blog/flutter-firebase-android-auth/</loc>
+        <lastmod>2022-03-05</lastmod>
+    </url>
+    <url>
         <loc>https://krapjost.github.io/blog/how-to-use-zola/</loc>
         <lastmod>2022-03-25</lastmod>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/blog/til/</loc>
+        <lastmod>2022-05-03</lastmod>
     </url>
     <url>
         <loc>https://krapjost.github.io/categories/</loc>
@@ -27,6 +35,9 @@
     </url>
     <url>
         <loc>https://krapjost.github.io/tags/cs/</loc>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/tags/ilssan/</loc>
     </url>
     <url>
         <loc>https://krapjost.github.io/tags/rust/</loc>
