@@ -11,19 +11,18 @@
         <lastmod>2022-03-05</lastmod>
     </url>
     <url>
-        <loc>https://krapjost.github.io/blog/how-to-use-zola/</loc>
-        <lastmod>2022-03-25</lastmod>
-    </url>
-    <url>
-        <loc>https://krapjost.github.io/blog/languages/</loc>
-        <lastmod>2022-05-04</lastmod>
-    </url>
-    <url>
-        <loc>https://krapjost.github.io/blog/til/</loc>
+        <loc>https://krapjost.github.io/blog/meditation/</loc>
         <lastmod>2022-05-03</lastmod>
     </url>
     <url>
+        <loc>https://krapjost.github.io/blog/programming-languages/</loc>
+        <lastmod>2022-05-04</lastmod>
+    </url>
+    <url>
         <loc>https://krapjost.github.io/categories/</loc>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/categories/ilgi/</loc>
     </url>
     <url>
         <loc>https://krapjost.github.io/categories/josa/</loc>
@@ -38,18 +37,12 @@
         <loc>https://krapjost.github.io/tags/</loc>
     </url>
     <url>
-        <loc>https://krapjost.github.io/tags/blog/</loc>
-    </url>
-    <url>
-        <loc>https://krapjost.github.io/tags/cs/</loc>
-    </url>
-    <url>
         <loc>https://krapjost.github.io/tags/ilssan/</loc>
     </url>
     <url>
         <loc>https://krapjost.github.io/tags/peuroggeraeonco-heoeo/</loc>
     </url>
     <url>
-        <loc>https://krapjost.github.io/tags/rust/</loc>
+        <loc>https://krapjost.github.io/tags/ssaengga/</loc>
     </url>
 </urlset>
