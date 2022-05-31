@@ -12,16 +12,15 @@
 		<updated>2022-05-31T00:00:00+00:00</updated>
 		<link href="https://krapjost.github.io/blog/f-line-length/" type="text/html"/>
 		<id>https://krapjost.github.io/blog/f-line-length/</id>
-		<content type="html">&lt;p&gt;{% codeblock sol1 lang:dart %}
-TextField(
-maxLines: 10,
-minLines: 1,
-onChanged: (String val) {
-text.value = val;
-print(&#x27;\n&#x27;.allMatches(val).length + 1);
-},
-),
-{% endcodeblock %}&lt;&#x2F;p&gt;
+		<content type="html">&lt;pre data-lang=&quot;dart&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-dart &quot;&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;TextField&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    maxLines&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    minLines&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    onChanged&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; val) {
+&lt;&#x2F;span&gt;&lt;span&gt;        text.value &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; val&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;allMatches&lt;&#x2F;span&gt;&lt;span&gt;(val).length &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    },
+&lt;&#x2F;span&gt;&lt;span&gt;),
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;but how to access textPainter.computeLineMetrics method without making custom painter;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;swlh&#x2F;flutter-line-metrics-fd98ab180a64&quot;&gt;ddddd&lt;&#x2F;a&gt;
 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;54091055&#x2F;flutter-how-to-get-the-number-of-text-lines&#x2F;57738556#57738556&quot;&gt;stackoverflow&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
