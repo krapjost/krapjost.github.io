@@ -4,8 +4,29 @@
 	<subtitle>krapjost&#x27;s blog site.</subtitle>
 	<link href="https://krapjost.github.io/blog/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://krapjost.github.io/blog/"/>
-	<updated>2022-05-24T00:00:00+00:00</updated>
+	<updated>2022-05-31T00:00:00+00:00</updated>
 	<id>https://krapjost.github.io/blog/feed.xml</id>
+	<entry xml:lang="en">
+		<title>Flutter: count number of lines of textfield</title>
+		<published>2022-05-31T00:00:00+00:00</published>
+		<updated>2022-05-31T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/f-line-length/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/f-line-length/</id>
+		<content type="html">&lt;p&gt;{% codeblock sol1 lang:dart %}
+TextField(
+maxLines: 10,
+minLines: 1,
+onChanged: (String val) {
+text.value = val;
+print(&#x27;\n&#x27;.allMatches(val).length + 1);
+},
+),
+{% endcodeblock %}&lt;&#x2F;p&gt;
+&lt;p&gt;but how to access textPainter.computeLineMetrics method without making custom painter;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;swlh&#x2F;flutter-line-metrics-fd98ab180a64&quot;&gt;ddddd&lt;&#x2F;a&gt;
+&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;54091055&#x2F;flutter-how-to-get-the-number-of-text-lines&#x2F;57738556#57738556&quot;&gt;stackoverflow&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>딮 드릠</title>
 		<published>2022-05-24T00:00:00+00:00</published>
