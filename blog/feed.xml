@@ -4,8 +4,102 @@
 	<subtitle>krapjost&#x27;s blog site.</subtitle>
 	<link href="https://krapjost.github.io/blog/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://krapjost.github.io/blog/"/>
-	<updated>2022-05-31T00:00:00+00:00</updated>
+	<updated>2022-06-12T00:00:00+00:00</updated>
 	<id>https://krapjost.github.io/blog/feed.xml</id>
+	<entry xml:lang="en">
+		<title>더 나은 계획</title>
+		<published>2022-06-12T00:00:00+00:00</published>
+		<updated>2022-06-12T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/plan-0612/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/plan-0612/</id>
+		<content type="html">&lt;h1 id=&quot;andderoidde-hae-culsi-hwaryo&quot;&gt;안드로이드 앱 출시 완료&lt;&#x2F;h1&gt;
+&lt;p&gt;플레이스토어에 앱 출시했다.
+x86은 제외하고 빌드해야 하드라.
+&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;developer.android.com&#x2F;ndk&#x2F;guides&#x2F;abis?hl=ko&quot;&gt;android doc&lt;&#x2F;a&gt;
+&lt;a href=&quot;vendor&#x2F;unbundled_google&#x2F;libs&#x2F;ndk_translation&#x2F;ndk_translation&#x2F;ir&#x2F;include&#x2F;ndk_translation&#x2F;ir&#x2F;ir.h:685&quot;&gt;flutter issue&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;google-playstore-error-message&quot;&gt;Google playstore Error message&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;Abort&lt;&#x2F;span&gt;&lt;span&gt; message: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;#39;vendor&#x2F;unbundled_google&#x2F;libs&#x2F;ndk_translation&#x2F;ndk_translation&#x2F;ir&#x2F;include&#x2F;ndk_translation&#x2F;ir&#x2F;ir.h:685: CHECK failed: IsAligned(offset, GetFormatSize(format))&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;android-app-build-gradle&quot;&gt;android&#x2F;app&#x2F;build.gradle&lt;&#x2F;h2&gt;
+&lt;p&gt;{% codeblock %}
+android {
+defaultConfig {
+ndk {
+abiFilters &#x27;arm64-v8a&#x27;, &#x27;x86_64&#x27;
+}
+}
+}
+{% endcodeblock %}&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;til&quot;&gt;TIL&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;i386 == x86 -&amp;gt; 오래된 거 안 쓰는거. 시니어 타겟 앱 아닌 이상 지원 안해도 됨.
+&lt;ul&gt;
+&lt;li&gt;플레이스토어에서 x86_64 지원하는 것만 지원. != x86 안 지원.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;안드로이드는 대부분 arm 쓴다. intel 잘 안씀.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;놀러가고 싶다.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;hanggeui-jeddaro-ansseojjida&quot;&gt;한글이 제대로 안써진다.&lt;&#x2F;h1&gt;
+&lt;p&gt;neovim 설정 문제인가 짜증나네.
+영어에 익숙해지고 싶어서 영어만 써보자 했었는데 생각대로 잘 못하고 있다. ㅎㅎ
+영문법 language server 설치.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-should-i-do-for-my-next-project&quot;&gt;What should i do for my next project&lt;&#x2F;h1&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;urgent_important&lt;&#x2F;th&gt;&lt;th&gt;urgent_not_important&lt;&#x2F;th&gt;&lt;th&gt;not_urgent_important&lt;&#x2F;th&gt;&lt;th&gt;not_urgent_not_important&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Make money!&lt;&#x2F;td&gt;&lt;td&gt;Upgrade dev env setting&lt;&#x2F;td&gt;&lt;td&gt;Fulfill my curiocity&lt;&#x2F;td&gt;&lt;td&gt;Planning for summer trip&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Task manager app, Doper&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;for remote team
+&lt;ul&gt;
+&lt;li&gt;f1. Auto planning schedule based on &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;untools.co&#x2F;eisenhower-matrix&quot;&gt;eisenhower-matrix&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;f2. Record time to took to complete each tasks.&lt;&#x2F;li&gt;
+&lt;li&gt;f3. Auto calculated contribution rate based on worker&#x27;s working history.
+{% blockquote %}
+pros: Possibly can be used by me and my future coworkers, boost productivity as reduce my chaotic way of thinking.
+cons: It takes time to earn money by itself.
+{% endblockquote %}&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Novel platform, Iyagi&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;for anyone who wants to be an author, and reader who want lot&#x27;s of free contents.
+&lt;ul&gt;
+&lt;li&gt;f1. Audio book support for every books. (if buy one)&lt;&#x2F;li&gt;
+&lt;li&gt;f2. Auto swapping text to reduce eyeball movement for better reading experience.&lt;&#x2F;li&gt;
+&lt;li&gt;f3. Earn money with Write, Recommand, Translate.
+{% blockquote %}
+pros: Most promising future possibility.
+cons: It takes time to earn money as well, hard to develop.
+{% endblockquote %}&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;AI chatbot, Chappy&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;for English learner
+&lt;ul&gt;
+&lt;li&gt;f1. Can set chatbot&#x27;s character.&lt;&#x2F;li&gt;
+&lt;li&gt;f2. Recommand other sentences to say the same words if possible.&lt;&#x2F;li&gt;
+&lt;li&gt;f3. Translation on hover.
+{% blockquote %}
+pros: Can use GPT-3 api, possibility to make money is more higher than others.
+cons: Difficulty and uncertainty as i don&#x27;t have any experience to use AI.
+{% endblockquote %}&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Flutter: count number of lines of textfield</title>
 		<published>2022-05-31T00:00:00+00:00</published>
@@ -70,7 +164,7 @@
 조금씩 읽어보자. 코딩과 그림 얘기하니까 생각났다.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;opeunsosse-peurojjeteu&quot;&gt;오픈소스 프로젝트&lt;&#x2F;h1&gt;
 &lt;p&gt;오픈소스 프로젝트는 어떻게 시작하는 걸까
-제텐 카르텔 오픈소스 플젝 까보고 커밋할 거 없나 봐봐야겠다.&lt;&#x2F;p&gt;
+제텔 카스텔 오픈소스 플젝 까보고 커밋할 거 없나 봐봐야겠다.&lt;&#x2F;p&gt;
 &lt;p&gt;나도 정보 정리 잘하고 싶다. 머릿 속이 너무 산만하다.
 아는 것도 아는 것 같지 않고, 모르는 것도 아는 것 같고 그렇다.&lt;&#x2F;p&gt;
 &lt;p&gt;정보의 시각화가 제대로 이뤄지면 정말 재밌을 것 같다.
