@@ -11,8 +11,16 @@
         <lastmod>2022-05-03</lastmod>
     </url>
     <url>
+        <loc>https://krapjost.github.io/blog/clojure-d01/</loc>
+        <lastmod>2022-09-22</lastmod>
+    </url>
+    <url>
         <loc>https://krapjost.github.io/blog/deep-dream-0524/</loc>
         <lastmod>2022-05-24</lastmod>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/blog/elixir-01/</loc>
+        <lastmod>2022-06-27</lastmod>
     </url>
     <url>
         <loc>https://krapjost.github.io/blog/f-line-length/</loc>
@@ -21,6 +29,14 @@
     <url>
         <loc>https://krapjost.github.io/blog/firebase-auth-0305/</loc>
         <lastmod>2022-03-05</lastmod>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/blog/gang-ui/</loc>
+        <lastmod>2022-05-03</lastmod>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/blog/gutenberg-i18n/</loc>
+        <lastmod>2022-05-03</lastmod>
     </url>
     <url>
         <loc>https://krapjost.github.io/blog/nokcha-0524/</loc>
@@ -42,7 +58,13 @@
         <loc>https://krapjost.github.io/categories/</loc>
     </url>
     <url>
+        <loc>https://krapjost.github.io/categories/elixir/</loc>
+    </url>
+    <url>
         <loc>https://krapjost.github.io/categories/flutter/</loc>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/categories/ggonbu/</loc>
     </url>
     <url>
         <loc>https://krapjost.github.io/categories/ilgi/</loc>
@@ -60,6 +82,12 @@
         <loc>https://krapjost.github.io/tags/android/</loc>
     </url>
     <url>
+        <loc>https://krapjost.github.io/tags/clojure/</loc>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/tags/clojurescript/</loc>
+    </url>
+    <url>
         <loc>https://krapjost.github.io/tags/devlog/</loc>
     </url>
     <url>
@@ -70,6 +98,9 @@
     </url>
     <url>
         <loc>https://krapjost.github.io/tags/peuroggeraeonco-heoeo/</loc>
+    </url>
+    <url>
+        <loc>https://krapjost.github.io/tags/programming-language/</loc>
     </url>
     <url>
         <loc>https://krapjost.github.io/tags/ssaengga/</loc>

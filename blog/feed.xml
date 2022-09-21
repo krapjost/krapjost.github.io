@@ -4,8 +4,32 @@
 	<subtitle>krapjost&#x27;s blog site.</subtitle>
 	<link href="https://krapjost.github.io/blog/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://krapjost.github.io/blog/"/>
-	<updated>2022-06-12T00:00:00+00:00</updated>
+	<updated>2022-09-22T00:00:00+00:00</updated>
 	<id>https://krapjost.github.io/blog/feed.xml</id>
+	<entry xml:lang="en">
+		<title>클로저 공부 기록 1 일차</title>
+		<published>2022-09-22T00:00:00+00:00</published>
+		<updated>2022-09-22T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/clojure-d01/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/clojure-d01/</id>
+		<content type="html">&lt;h1 id=&quot;hwa-keulrojjereul-bbaugiro-haessna&quot;&gt;왜 클로저를 배우기로 했나?&lt;&#x2F;h1&gt;
+&lt;p&gt;자바스크립트 생태계에는 너무 많은 옵션들이 있고 너무 빨리 &#x27;더 나은 도구&#x27;가 생긴다. 내가 지금 사용하고 있는 리액트라는 도구에 익숙해진다고 해도, 몇 년 후에는 지금의 제이쿼리와 비슷한 위상이 될지도 모른다는 생각이 들었다. 내가 지금 공부하고 있는 것이 미래에 의미 없지 않으려면 어떻게 해야할까. 도구를 공부하지 말고 도구를 이루고 있는 기본적인 부분들, 코드를 올바르게 작성하는 일반적인 방법론들을 익혀야 한다는 생각이 든다. 그 중에서 나와 결이 맞다고 생각이 든 건 함수형이었다. 객체지향형에 비해 함수형이 더 이해하기 쉬웠다. 함수는 단 하나의 역할을 한다. 함수는 가능한 작게 만든다. 함수는 동일한 인풋일 때 동일한 아웃풋이 나온다. 그래서 이름만 읽고도 이 함수가 어떤 역할을 하는지 알 수 있어야 한다. 나는 머리가 좋지 않아서 복잡성을 최대한 감춰가면서 코드를 작성해야 한다.&lt;&#x2F;p&gt;
+&lt;p&gt;자바스크립트도 딱히 나쁘다는 생각은 들지 않았지만 더 나은 옵션을 계속 알아보고 있었다. 다트&#x2F;플러터를 사용해봤다. 다트를 작성하면서 객체지향 작성법과 강타입 시스템이 편리하다는 것을 느꼈다. 타입이 틀리면 lsp가 알아서 알려주니 돌려보기 전에도 알 수 있어 좋다. 코드가 단단하게 작성되고 있다는 느낌이 들었다. 근데 너무 불필요하게 많은 정보가 있어 작성한지 오래된 코드를 보면 눈이 피곤한 느낌도 들었다.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;거인의 어깨 위에 올라선 난쟁이는 거인보다 더 멀리 본다.&amp;quot; 클로저가 그런 언어인 것 같다. 기존에 있는 거대한 자바&#x2F;자바스크립트 에코시스템의 어깨 위에 올라서서 거의 모든 라이브러리를 활용할 수 있다. 아직 이게 어떻게 가능한건지 잘 모르겠다. 왜 리습 계열일까. 왜 클로저의 매크로는 특별한걸까? &lt;&#x2F;p&gt;
+&lt;p&gt;네오빔 세팅을 fennel로 재작성했다. 42 피신 과정 전에 바꿨었지만 그 때는 너무 생각없이 작동만 하도록 작성했어서 다시 보니 머리가 너무 복잡해서 다 지워버리고 싶은 생각이 들었다. 다시 차근차근 작성했다. fennel을 작성하며 기본적인 리습 신택스에 조금 익숙해진 것 같다. 아직 부족하지만 다른 사람들 코드를 보면서 좀 더 우아하게 작성될 수 있도록 점차 리팩터링해봐야겠다. 이맥스도 몇일 써봤지만 작성감이 네오빔이 훨씬 빠르고 좋은 것 같다. 아쉬운 점은 이맥스에 있는 org-mode가 네오빔에서는 좀 부족하다는 것. org-mode는 진짜 신세계였다. 아마 롬 리서치가 클로저로 작성된 이유가 이맥스의 org-mode 사용자가 작성해서 그런게 아닐까 생각도 든다.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;oneul-bbaun-ggeo&quot;&gt;오늘 배운 것&lt;&#x2F;h1&gt;
+&lt;p&gt;reagent는 리액트를 클로저로 작성하는 프레임워크. figwheel은 js를 브라우저&#x2F;노드 환경에서 repl 방식으로 작성할 수 있게 도와주는 도구. repl이 어떤 거고 왜 좋은지 조금 느낄 수 있었다. shadow-cljs는 figwheel과 같은 역할을 하지만 더 많은 것을 다루고 npm를 활용해서 자바스크립트 라이브러리와 같이 작성할 때 좋다고 한다. 정확히 어떤 도구가 필요한지 알 수 없다면 일단 figwheel로 작성하고 필요성을 느낄 때 shadow-cljs를 사용해도 된다고한다. figwheel로 작성된 프로젝트는 shadow-cljs로 넘어가도 작동하기 때문이다. re-frame은 redux같은 상태관리 도구라고 한다. clojuredart도 써봤는데 얘는 아직 좀 불편하다. 일단 툴링이 더 나은 clojurescript를 써야겠다. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>엘릭서를 배워보자 1</title>
+		<published>2022-06-27T00:00:00+00:00</published>
+		<updated>2022-06-27T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/elixir-01/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/elixir-01/</id>
+		<content type="html">&lt;h1 id=&quot;hwa-elrigssenya&quot;&gt;왜 엘릭서냐?&lt;&#x2F;h1&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>더 나은 계획</title>
 		<published>2022-06-12T00:00:00+00:00</published>
@@ -40,12 +64,12 @@ x86은 제외하고 빌드해야 하드라.&lt;br &#x2F;&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;놀러가고 싶다.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;hanggeui-jeddaro-ansseojjida&quot;&gt;한글이 제대로 안써진다.&lt;&#x2F;h1&gt;
-&lt;p&gt;neovim 설정 문제인가 짜증나네.&lt;br &#x2F;&gt;
+&lt;p&gt;Neovim 설정 문제인가 짜증나네.&lt;br &#x2F;&gt;
 영어에 익숙해지고 싶어서 영어만 써보자 했었는데 생각대로 잘 못하고 있다. ㅎㅎ&lt;br &#x2F;&gt;
 영문법 language server 설치.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;what-should-i-do-for-my-next-project&quot;&gt;What should i do for my next project&lt;&#x2F;h1&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;urgent_important&lt;&#x2F;th&gt;&lt;th&gt;urgent_not_important&lt;&#x2F;th&gt;&lt;th&gt;not_urgent_important&lt;&#x2F;th&gt;&lt;th&gt;not_urgent_not_important&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;Make money!&lt;&#x2F;td&gt;&lt;td&gt;Upgrade dev env setting&lt;&#x2F;td&gt;&lt;td&gt;Fulfill my curiocity&lt;&#x2F;td&gt;&lt;td&gt;Planning for summer trip&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Make money!&lt;&#x2F;td&gt;&lt;td&gt;Upgrade dev env setting&lt;&#x2F;td&gt;&lt;td&gt;Fulfill my curiosity&lt;&#x2F;td&gt;&lt;td&gt;Planning for summer trip&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -70,14 +94,14 @@ cons: It takes time to earn money by itself.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;for anyone who wants to be an author, and reader who want lot&#x27;s of free contents.
 &lt;ul&gt;
-&lt;li&gt;f1. Audio book support for every books. (if buy one)&lt;&#x2F;li&gt;
+&lt;li&gt;f1. Audiobook support for every book. (if buy one)&lt;&#x2F;li&gt;
 &lt;li&gt;f2. Auto swapping text to reduce eyeball movement for better reading experience.&lt;&#x2F;li&gt;
-&lt;li&gt;f3. Earn money with Write, Recommand, Translate.
+&lt;li&gt;f3. Earn money with Write, Recommend, Translate.
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;pros: Most promising future possibility.&lt;br &#x2F;&gt;
-cons: It takes time to earn money as well, hard to develop.&lt;&#x2F;p&gt;
+&lt;p&gt;Pros: Most promising future possibility.&lt;br &#x2F;&gt;
+Cons: It takes time to earn money as well, hard to develop.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -88,13 +112,13 @@ cons: It takes time to earn money as well, hard to develop.&lt;&#x2F;p&gt;
 &lt;li&gt;for English learner
 &lt;ul&gt;
 &lt;li&gt;f1. Can set chatbot&#x27;s character.&lt;&#x2F;li&gt;
-&lt;li&gt;f2. Recommand other sentences to say the same words if possible.&lt;&#x2F;li&gt;
+&lt;li&gt;f2. Recommend other sentences to say the same words if possible.&lt;&#x2F;li&gt;
 &lt;li&gt;f3. Translation on hover.
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;pros: Can use GPT-3 api, possibility to make money is more higher than others.&lt;br &#x2F;&gt;
-cons: Difficulty and uncertainty as i don&#x27;t have any experience to use AI.\&lt;&#x2F;p&gt;
+&lt;p&gt;pros: Can use GPT-3 API, possibility to make money is higher than others.&lt;br &#x2F;&gt;
+Cons: Difficulty and uncertainty as I don&#x27;t have any experience to use AI.\&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -285,6 +309,27 @@ OOP도 데이터 모델 작성할 때 편한 것 같다. 그래서 멀티 패러
 &lt;p&gt;기대가 지속적인 발전으로 이어지지 않는 이유는 내가 부응하지 못할 비현실적인 기대이기 때문이다. 비현실적인 기대는 실망으로 이어진다. 
 부족함을 인정하고 현실적인 기대를 하자. 이해되지도 않은 문장인데 이런 것도 이해못하는 내 모습이 싫어서 그냥 이해한 척 넘기고 그랬다.
 그러다보니 재미도 없고 배우는 것도 없었다. 나 자신을 속이면 안된다. &lt;strong&gt;나는 항상 내 기대보다 못하다&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>flutter dev</title>
+		<published>2022-05-03T00:00:00+00:00</published>
+		<updated>2022-05-03T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/gang-ui/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/gang-ui/</id>
+		<content type="html">&lt;p&gt;todo - 쉽게 쓰는 플러터
+목차
+구글 설문으로 신청받기
+자주 쓰는 순서대로 플러터 기본 문서 번역 &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Gutenberg internalization project dev-log</title>
+		<published>2022-05-03T00:00:00+00:00</published>
+		<updated>2022-05-03T00:00:00+00:00</updated>
+		<link href="https://krapjost.github.io/blog/gutenberg-i18n/" type="text/html"/>
+		<id>https://krapjost.github.io/blog/gutenberg-i18n/</id>
+		<content type="html">&lt;h1 id=&quot;about-future&quot;&gt;About Future&lt;&#x2F;h1&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
