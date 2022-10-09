@@ -1,0 +1,20 @@
+- id: Search
+  translation: 검색
+
+- id: Edit this page
+  translation: 페이지 수정
+
+- id: Last modified by
+  translation: 마지막 업데이트
+
+- id: Expand
+  translation: 자세히
+
+- id: bookSearchConfig
+  translation: |
+    {
+      encode: false,
+      tokenize: function(str) {
+        return str.replace(/[\x00-\x7F]/g, '').split('');
+      }
+    }

@@ -1,0 +1,94 @@
+// Used in layout
+$padding-1: 1px !default;
+$padding-4: 0.25rem !default;
+$padding-8: 0.5rem !default;
+$padding-16: 1rem !default;
+
+$font-size-base: 16px !default;
+$font-size-12: 0.75rem !default;
+$font-size-14: 0.875rem !default;
+$font-size-16: 1rem !default;
+
+$border-radius: $padding-1 !default;
+
+$body-font-weight: normal !default;
+
+$body-min-width: 20rem !default;
+$container-max-width: 80rem !default;
+
+$header-height: 3.5rem !default;
+$menu-width: 16rem !default;
+$toc-width: 16rem !default;
+
+// $color-bg: #171717 !default;
+// $color-bg-alt: #222222 !default;
+// $color-base0: #1f2127 !default;
+// $color-base2: #272727 !default;
+// $color-base3: #32353f !default;
+// $color-base4: #494952 !default;
+// $color-base5: #62686e !default;
+// $color-base6: #757b80 !default;
+// $color-base7: #9ca0a4 !default;
+// $color-base8: #faf4c6 !default;
+// $color-fg: #c2c2b0 !default;
+// $color-fg-alt: #5d656b !default;
+
+// $color-grey: #686858 !default;
+// $color-red: #aa4450 !default;
+// $color-orange: #ff9800 !default;
+// $color-green: #87875f !default;
+// $color-green-br: #719611 !default;
+// $color-teal: #578f8f !default;
+// $color-yellow: #cc8800 !default;
+// $color-blue: #87afd7 !default;
+// $color-dark-blue: #6688aa !default;
+// $color-magenta: #8787af !default;
+// $color-violet: #8181a6 !default;
+// $color-cyan: #87ceeb !default;
+// $color-dark-cyan: #528b8b !default;
+
+$mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
+
+$hint-colors: (
+  info: #6bf,
+  warning: #fd6,
+  danger: #f66,
+) !default;
+
+// Themes
+@mixin theme-dark {
+  --gray-100: rgba(250, 244, 198, 1);
+  --gray-200: rgba(250, 244, 198, 0.2);
+  --gray-500: rgba(250, 244, 198, 0.1);
+
+  --color-link: #87afd7;
+  --color-visited-link: #8787af;
+
+  --body-background: #171717;
+  --body-background-alt: #171717;
+  --body-font-color: #c2c2b0;
+
+  --icon-filter: brightness(0) invert(1);
+
+  --hint-color-info: #6688aa;
+  --hint-color-warning: #ff9800;
+  --hint-color-danger: #aa4450;
+}
+
+@mixin theme-light {
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-500: #adb5bd;
+
+  --color-link: #0055bb;
+  --color-visited-link: #8440f1;
+
+  --body-background: white;
+  --body-font-color: black;
+
+  --icon-filter: none;
+
+  --hint-color-info: #6bf;
+  --hint-color-warning: #fd6;
+  --hint-color-danger: #f66;
+}

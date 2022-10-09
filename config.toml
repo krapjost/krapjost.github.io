@@ -1,0 +1,27 @@
+baseURL = 'http://krapjost.github.io/'
+# git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+theme = 'hugo-book'
+defaultContentLang = 'en'
+[markup.goldmark.renderer]
+  unsafe = true
+[menu]
+[[menu.after]]
+  name = "Github"
+  url = "https://github.com/krapjost"
+
+[params]
+  BookTheme = 'dark'
+  BookRepo = 'https://github.com/krapjost/blog'
+  BookSearch = true
+
+[languages]
+[languages.ko]
+  title = '정원'
+  languageName = '한국어'
+  contentDir = 'content_ko'
+  weight = 1
+[languages.en]
+  title = 'Garden'
+  languageName = 'English'
+  contentDir = 'content'
+  weight = 2

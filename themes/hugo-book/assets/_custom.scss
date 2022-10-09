@@ -1,0 +1,26 @@
+// @import "plugins/numbered";
+::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: var(--gray-500);
+}
+
+// MS
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+// Future
+.book-menu nav {
+  scrollbar-color: transparent var(--gray-500);
+}
