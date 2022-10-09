@@ -1,5 +1,4 @@
-baseURL = 'http://krapjost.github.io/'
-# git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+baseURL = 'http://krapjost.github.io'
 theme = 'hugo-book'
 defaultContentLang = 'en'
 [markup.goldmark.renderer]
@@ -11,7 +10,7 @@ defaultContentLang = 'en'
 
 [params]
   BookTheme = 'dark'
-  BookRepo = 'https://github.com/krapjost/blog'
+  BookRepo = 'https://github.com/krapjost/docs'
   BookSearch = true
 
 [languages]
