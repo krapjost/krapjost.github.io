@@ -51,7 +51,6 @@
   strong {
     font-weight: bolder;
   }
-
   a {
     text-decoration: none;
 
@@ -61,6 +60,16 @@
     &:visited {
       color: var(--color-visited-link);
     }
+  }
+
+  div:has(a) {
+    line-height: 1.3;
+  }
+  a[href^="/tags"] {
+    font-size: 0.8em;
+  }
+  a[href^="/categories"] {
+    font-size: 1.1em;
   }
 
   img {
@@ -75,17 +84,20 @@
     font-size: 0.875em;
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    pre:hover {
+      color: #f0fff0 !important;
+      background: #000000 !important;
+      cursor: copy;
+    }
+  }
+
   pre {
     padding: $padding-16;
     color: var(--gray-100) !important;
     background: var(--body-background-alt) !important;
     border-radius: $border-radius;
     overflow-x: auto;
-
-    &:hover {
-      color: #faf4c6 !important;
-      background: #000 !important;
-    }
 
     code {
       padding: 0;
@@ -114,11 +126,15 @@
 
   table {
     overflow: auto;
-    display: block;
+    width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
     margin-top: $padding-16;
     margin-bottom: $padding-16;
+
+    tr th:empty {
+      display: table;
+    }
 
     tr th,
     tr td {
@@ -126,9 +142,9 @@
       border: $padding-1 solid var(--gray-200);
     }
 
-    tr:nth-child(2n) {
-      background: var(--gray-100);
-    }
+    // tr:nth-child(2n) {
+    //   background: var(--gray-500);
+    // }
   }
 
   hr {

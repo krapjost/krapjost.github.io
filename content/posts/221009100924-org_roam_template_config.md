@@ -2,11 +2,18 @@
 title = "org-roam-template config"
 author = ["krapjost"]
 publishDate = 2022-10-09T10:09:00+09:00
-lastmod = 2022-10-09T12:59:11+09:00
+lastmod = 2022-10-09T21:39:18+09:00
 tags = ["org-roam", "hugo"]
 categories = ["emacs"]
 draft = false
 +++
+
+**references**
+  <https://seds.nl/notes/export_org_roam_backlinks_with_gohugo/>
+  <https://www.linuxzen.com/notes/notes/20211231142642-org_roam_export_backlinks_on_hugo/>
+
+---
+
 
 ## Doom-emacs {#doom-emacs}
 
