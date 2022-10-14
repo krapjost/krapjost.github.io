@@ -42,11 +42,11 @@ menu:
 
 #### 프로젝트 {#프로젝트}
 
-| 이름        | 한 줄 설명      | 개발 스택             | 데모 사이트 |
-|-----------|-------------|-------------------|--------|
-| 러브캡슐    | 좋아하는 사람을 찾아줍니다. | Dart/Flutter+Firebase |        |
-| 구텐베르크 북 펫쳐 |                 | Python                |        |
-| 주차장 관리 프로그램 | 주차장 출입 기록 | 바닐라 Js+Node+MariaDB |        |
+| 기간    | 이름                                                | 한 줄 설명         | 개발 스택             | 데모                                               |
+|-------|---------------------------------------------------|----------------|-------------------|--------------------------------------------------|
+| 2022 08 | 러브캡슐                                            | 좋아하는 사람을 찾아줍니다. | Dart/Flutter+Firebase |                                                    |
+| 2021 10 | 화단                                                | 화초 키우는 사람을 위한 SNS. | Dart/Flutter+Firebase |                                                    |
+| 2020 08 | [주차장 시뮬레이터](https://github.com/krapjost/parkinglot) | 귀여운 주차장 출입 기록 프로그램 | 바닐라Js(Node)+MariaDB | [동영상](https://www.youtube.com/watch?v=Rhi-OBtbe5c) |
 
 
 ### - 컴퓨터 스킬 {#컴퓨터-스킬}
@@ -89,4 +89,4 @@ menu:
 
 ### - 흥미 {#흥미}
 
--   Lisp, Clojure, Emacs, 오픈 소스, 텍스트 작성 툴. <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-11 Tue&gt;</span></span>
+-   Lisp, Emacs, 오픈 소스, 텍스트 작성 툴. <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-11 Tue&gt;</span></span>
