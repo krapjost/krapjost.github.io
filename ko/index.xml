@@ -10,7 +10,7 @@ C에서는 선언 시에 배열로 사용될 메모리 주소의 범위를 정�
 const arr = [1, 2, 3]; arr[1]; &amp;gt; 2 arr[&amp;#34;1&amp;#34;]; &amp;gt; 2 인덱스는 특이하게 &amp;ldquo;1&amp;quot;로도 1로도 접근 가능한데 내부적으로 toString() 메소드를 호출하기 때문이라고 한다.</description></item><item><title>자료구조</title><link>http://krapjost.github.io/ko/posts/221017175656-data_structure-ko/</link><pubDate>Mon, 17 Oct 2022 17:56:00 +0900</pubDate><guid>http://krapjost.github.io/ko/posts/221017175656-data_structure-ko/</guid><description>자료구조란 추상 자료형을 구현한 것. 자료(데이터)의 모임, 자료간의 관계, 자료의 입출력 방식.
 왜 자료구조를 알아야 할까 # 주어진 문제를 해결할 때 자료구조를 선택하고 나면 어떤 알고리즘을 사용할지 명확해진다. 구현의 난이도, 결과물의 성능이 자료구조에 크게 의존한다.
 자료구조의 5가지 필수 구성 요소 # 참조 링크
-어떻게 접근 할 것인가. 어떻게 입력 할 것인가. 어떻게 삭제 할 것인가. 어떻게 탐색 할 것인가. 어떻게 정렬 할 것인가. 자료구조 선택 방법 # 자료구조의 분류 # 자료구조는 추상적인 구조인지, 자료간의 관계가 선형(1:1)적인지 비선형적인지 등으로 분류 되어진다.</description></item><item><title>이력서</title><link>http://krapjost.github.io/ko/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://krapjost.github.io/ko/resume/</guid><description>박기둥 # pdf
+어떻게 접근 할 것인가. 어떻게 입력 할 것인가. 어떻게 삭제 할 것인가. 어떻게 탐색 할 것인가. 어떻게 정렬 할 것인가. 자료구조 선택 방법 # 자료구조의 분류 # 자료구조는 추상적인 구조인지, 자료간의 관계가 선형(1:1)적인지 비선형적인지 등으로 분류 되어진다.</description></item><item><title>이력서</title><link>http://krapjost.github.io/ko/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://krapjost.github.io/ko/resume/</guid><description>박기둥 # pdf 버전
 &amp;nbsp;그림 그리길 좋아하다 무언가 작동하는 것을 만드는 것을 좋아하게 되었습니다.
 재밌는 것을 만들어 보고 싶다는 생각으로 프로그래밍을 시작했고, 이제는 더 좋은 코드를 작성하고 싶은 생각으로 개발자의 옷을 입고 있습니다.
 &amp;nbsp;앞으로도 무엇이 나를 더 잘 정의하는 말이 될 수 있을지 알아보고 싶습니다.
