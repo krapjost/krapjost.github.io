@@ -10,7 +10,7 @@ menu:
 
 ## 박기둥 {#박기둥}
 
-[pdf](../resume_ko.pdf)
+[pdf 버전](https://krapjost.github.io/resume_ko.pdf)
 
 <div class="verse">
 
