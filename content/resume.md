@@ -1,12 +1,12 @@
-+++
-title = "Resume"
-author = ["krapjost"]
-draft = false
-[menu]
-  [menu.after]
-    weight = 1002
-    identifier = "resume"
-+++
+---
+title: "Resume"
+author: ["krapjost"]
+draft: false
+menu:
+  after:
+    weight: 1002
+    identifier: "resume"
+---
 
 ## Resume {#resume}
 
