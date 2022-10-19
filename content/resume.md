@@ -19,7 +19,7 @@ draft = false
 
 <div class="verse">
 
-&nbsp;Once i love to draw things, and now i love to build something work.<br />
+&nbsp;i love to draw, and now i love to build something work.<br />
 I started programming with the thought of wanting to build something fun and new.<br />
 I want to work for the joy of process, not for the goal itself.<br />
 
@@ -38,9 +38,9 @@ I want to work for the joy of process, not for the goal itself.<br />
 ### Experiences {#experiences}
 
 
-#### Job {#job}
+#### Work {#work}
 
-|              |               |              |                             |
+|              | Company       | Part         | Tech stack                  |
 |--------------|---------------|--------------|-----------------------------|
 | 2021 01 - 08 | Namu software | Web Frontend | Js/React, Go + Docker + AWS |
 
@@ -61,10 +61,11 @@ I want to work for the joy of process, not for the goal itself.<br />
 
 #### Education {#education}
 
-| 2022 08      | 42 Seoul - picine           | Shell, C     |   |
-|--------------|-----------------------------|--------------|---|
-| 2021 09 - 11 | Like lion - startup school  | Django, Dart |   |
-| 2020 07 - 10 | 90factory - web development | Web, Js      |   |
+|              | Course                      | What i've learned |
+|--------------|-----------------------------|-------------------|
+| 2022 08      | 42 Seoul - picine           | Shell, C          |
+| 2021 09 - 11 | Like lion - startup school  | Django, Dart      |
+| 2020 07 - 10 | 90factory - web development | Web, Js           |
 
 <!--list-separator-->
 
@@ -92,10 +93,11 @@ I want to work for the joy of process, not for the goal itself.<br />
 
 #### Projects {#projects}
 
-| 2022 08 | love capsule                                          |                   | Dart/Flutter + Firebase       | [video](https://vimeo.com/761317519)                 |
-|---------|-------------------------------------------------------|-------------------|-------------------------------|------------------------------------------------------|
-| 2021 10 | zeze                                                  | SNS for gardener. | Dart/Flutter + Firebase       | [video](https://vimeo.com/652749941)                 |
-| 2020 08 | [parking lot](https://github.com/krapjost/parkinglot) | .                 | vanilla Js + NodeJs + MariaDB | [video](https://www.youtube.com/watch?v=Rhi-OBtbe5c) |
+|         | Name                                                  | One-liner                          | Tech stack                    |                                                      |
+|---------|-------------------------------------------------------|------------------------------------|-------------------------------|------------------------------------------------------|
+| 2022 08 | Love capsule                                          | Find someone who you used to love. | Dart/Flutter + Firebase       | [video](https://vimeo.com/761317519)                 |
+| 2021 10 | Zeze                                                  | SNS for gardener.                  | Dart/Flutter + Firebase       | [video](https://vimeo.com/652749941)                 |
+| 2020 08 | [Parking lot](https://github.com/krapjost/parkinglot) | Pakringlot simulator.              | vanilla Js + NodeJs + MariaDB | [video](https://www.youtube.com/watch?v=Rhi-OBtbe5c) |
 
 
 ### Computer Skills {#computer-skills}
