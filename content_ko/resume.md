@@ -10,6 +10,8 @@ menu:
 
 ## 이력서 {#이력서}
 
+[pdf 버전](https://krapjost.github.io/resume_ko.pdf)
+
 
 #### 박기둥 {#박기둥}
 
