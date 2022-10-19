@@ -10,6 +10,8 @@ draft = false
 
 ## Resume {#resume}
 
+[pdf version](https://krapjost.github.io/resume_en.pdf)
+
 
 #### Park gidoong {#park-gidoong}
 
