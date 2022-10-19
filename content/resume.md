@@ -42,7 +42,7 @@ I want to work for the joy of process, not for the goal itself.<br />
 
 #### Work {#work}
 
-|              | Company       | Part         | Tech stack                  |
+| Duration     | Company       | Part         | Tech stack                  |
 |--------------|---------------|--------------|-----------------------------|
 | 2021 01 - 08 | Namu software | Web Frontend | Js/React, Go + Docker + AWS |
 
@@ -63,7 +63,7 @@ I want to work for the joy of process, not for the goal itself.<br />
 
 #### Education {#education}
 
-|              | Course                      | What i've learned |
+| Duration     | Course                      | What i've learned |
 |--------------|-----------------------------|-------------------|
 | 2022 08      | 42 Seoul - picine           | Shell, C          |
 | 2021 09 - 11 | Like lion - startup school  | Django, Dart      |
@@ -95,11 +95,11 @@ I want to work for the joy of process, not for the goal itself.<br />
 
 #### Projects {#projects}
 
-|         | Name                                                  | One-liner                          | Tech stack                    |                                                      |
-|---------|-------------------------------------------------------|------------------------------------|-------------------------------|------------------------------------------------------|
-| 2022 08 | Love capsule                                          | Find someone who you used to love. | Dart/Flutter + Firebase       | [video](https://vimeo.com/761317519)                 |
-| 2021 10 | Zeze                                                  | SNS for gardener.                  | Dart/Flutter + Firebase       | [video](https://vimeo.com/652749941)                 |
-| 2020 08 | [Parking lot](https://github.com/krapjost/parkinglot) | Pakringlot simulator.              | vanilla Js + NodeJs + MariaDB | [video](https://www.youtube.com/watch?v=Rhi-OBtbe5c) |
+| Duration | Name                                                  | One-liner                          | Tech stack                    | Demo                                                 |
+|----------|-------------------------------------------------------|------------------------------------|-------------------------------|------------------------------------------------------|
+| 2022 08  | Love capsule                                          | Find someone who you used to love. | Dart/Flutter + Firebase       | [video](https://vimeo.com/761317519)                 |
+| 2021 10  | Zeze                                                  | SNS for gardener.                  | Dart/Flutter + Firebase       | [video](https://vimeo.com/652749941)                 |
+| 2020 08  | [Parking lot](https://github.com/krapjost/parkinglot) | Pakringlot simulator.              | vanilla Js + NodeJs + MariaDB | [video](https://www.youtube.com/watch?v=Rhi-OBtbe5c) |
 
 
 ### Computer Skills {#computer-skills}
