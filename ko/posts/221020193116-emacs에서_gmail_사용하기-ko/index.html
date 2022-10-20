@@ -1,0 +1,118 @@
+<!doctype html><html lang=ko dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="목표 # Doom emacs에서 Gmail을 수발신 하기 위해 필요한 설정들과 그 과정에서 배운 것들을 기록하기 위함.
+이맥스내에서 필요한 설정 # ~/.doom.d/init.el 파일 # (doom! ;;... :email ;; 이 부분 주석 해제 (mu4e +org +gmail)) mu4e란 # mu for emacs 라는 뜻의 이름인 듯 하다. 위 mu4e 변수 위에 K 키를 누르면 Readme문서를 확인할 수 있다.
+mu는 maildir-utils 의 약자이다. maildir 포맷 디렉터리 내의 이메일 메시지들을 다루는 도구 모음이다. 커맨드라인에서 메시지들을 색인, 검색, 추가, 삭제, 확인할 수 있다."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Emacs에서 Gmail 사용하기"><meta property="og:description" content="목표 # Doom emacs에서 Gmail을 수발신 하기 위해 필요한 설정들과 그 과정에서 배운 것들을 기록하기 위함.
+이맥스내에서 필요한 설정 # ~/.doom.d/init.el 파일 # (doom! ;;... :email ;; 이 부분 주석 해제 (mu4e +org +gmail)) mu4e란 # mu for emacs 라는 뜻의 이름인 듯 하다. 위 mu4e 변수 위에 K 키를 누르면 Readme문서를 확인할 수 있다.
+mu는 maildir-utils 의 약자이다. maildir 포맷 디렉터리 내의 이메일 메시지들을 다루는 도구 모음이다. 커맨드라인에서 메시지들을 색인, 검색, 추가, 삭제, 확인할 수 있다."><meta property="og:type" content="article"><meta property="og:url" content="http://krapjost.github.io/ko/posts/221020193116-emacs%EC%97%90%EC%84%9C_gmail_%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-ko/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-20T19:31:00+09:00"><meta property="article:modified_time" content="2022-10-20T21:25:09+09:00"><meta property="og:site_name" content="정원"><title>Emacs에서 Gmail 사용하기 | 정원</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.3e7c6d989fa733ee22d0bab8709297e4c2385a45ce37d75d9d094ef135aa42fb.css integrity="sha256-PnxtmJ+nM+4i0Lq4cJKX5MI4WkXON9ddnQlO8TWqQvs=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/ko.search.min.a61a16dbeda51088d8eea5fc06954505ffbd9e4b22dfd23de0068d2080c2999b.js integrity="sha256-phoW2+2lEIjY7qX8BpVFBf+9nksi39I94AaNIIDCmZs=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/ko/><span>정원</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=검색 aria-label=검색 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
+<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+한국어</a></label><ul><li><a href=http://krapjost.github.io/>English</a></li></ul></li></ul><ul><li><a href=/ko/posts/>기록들</a></li></ul><ul><li><a href=/ko/resume/>이력서</a></li><li><a href=https://github.com/krapjost target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Emacs에서 Gmail 사용하기</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#목표>목표</a></li><li><a href=#이맥스내에서-필요한-설정>이맥스내에서 필요한 설정</a><ul><li></li></ul></li><li><a href=#mu4e란>mu4e란</a></li><li><a href=#mu-설치>mu 설치</a></li><li><a href=#isync-설치>isync 설치</a><ul><li></li></ul></li><li><a href=#gmail-imap-사용-설정>gmail IMAP 사용 설정</a></li><li><a href=#앱-비밀번호-설정>앱 비밀번호 설정</a></li><li><a href=#gpg-사용법>gpg 사용법</a></li><li><a href=#mu-maildir-init>mu maildir init</a></li><li><a href=#이메일-동기화>이메일 동기화</a></li><li><a href=#이맥스에서-gmail-사용해보기>이맥스에서 gmail 사용해보기</a></li></ul></nav></aside></header><article class=markdown><h1><a href=/ko/posts/221020193116-emacs%EC%97%90%EC%84%9C_gmail_%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-ko/>Emacs에서 Gmail 사용하기</a></h1><h5>October 20, 2022</h5><div><a href=/ko/categories/emacs/>emacs</a></div><div><a href=/ko/tags/doom/>doom</a></div><h2 id=목표>목표
+<a class=anchor href=#%eb%aa%a9%ed%91%9c>#</a></h2><p>Doom emacs에서 Gmail을 수발신 하기 위해 필요한 설정들과 그 과정에서 배운 것들을 기록하기 위함.</p><h2 id=이맥스내에서-필요한-설정>이맥스내에서 필요한 설정
+<a class=anchor href=#%ec%9d%b4%eb%a7%a5%ec%8a%a4%eb%82%b4%ec%97%90%ec%84%9c-%ed%95%84%ec%9a%94%ed%95%9c-%ec%84%a4%ec%a0%95>#</a></h2><h4 id=dot-doom-dot-d-init-dot-el-파일><code>~/.doom.d/init.el</code> 파일
+<a class=anchor href=#dot-doom-dot-d-init-dot-el-%ed%8c%8c%ec%9d%bc>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span>(doom!
+</span></span><span style=display:flex><span> <span style=color:#75715e>;;...</span>
+</span></span><span style=display:flex><span>       :email
+</span></span><span style=display:flex><span>       <span style=color:#75715e>;; 이 부분 주석 해제</span>
+</span></span><span style=display:flex><span>       (mu4e +org +gmail))
+</span></span></code></pre></div><h2 id=mu4e란>mu4e란
+<a class=anchor href=#mu4e%eb%9e%80>#</a></h2><p><code>mu for emacs</code> 라는 뜻의 이름인 듯 하다. 위 <code>mu4e</code> 변수 위에 <code>K</code> 키를 누르면 Readme문서를 확인할 수 있다.</p><p><a href=https://github.com/djcb/mu>mu</a>는 <code>maildir-utils</code> 의 약자이다.
+<a href=https://en.wikipedia.org/wiki/Maildir>maildir</a> 포맷 디렉터리 내의 이메일 메시지들을 다루는 도구 모음이다. 커맨드라인에서 메시지들을 색인, 검색, 추가, 삭제, 확인할 수 있다.
+mu4e가 mu에 의존하니 우선 mu를 OS 패키지 매니저에서 설치하거나 리포지터리에서 클론해 직접 빌드해주어야 한다.</p><h2 id=mu-설치>mu 설치
+<a class=anchor href=#mu-%ec%84%a4%ec%b9%98>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e># Arch</span>
+</span></span><span style=display:flex><span>yay -S mu
+</span></span><span style=display:flex><span><span style=color:#75715e># MacOS</span>
+</span></span><span style=display:flex><span>brew install mu
+</span></span><span style=display:flex><span><span style=color:#75715e># Debian/Ubuntu</span>
+</span></span><span style=display:flex><span>apt-get install maildir-utils mu4e
+</span></span></code></pre></div><p>mu를 설치하고 나면 <code>man mu</code> 혹은 <code>man mu-easy</code> 로 매뉴얼을 확인할 수 있다.</p><h2 id=isync-설치>isync 설치
+<a class=anchor href=#isync-%ec%84%a4%ec%b9%98>#</a></h2><p>mail 서버의 maildir와 로컬 maildir를 동기화하기 위해서는 isync (mbsync) 혹은 offlineimap을 사용해야 한다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>yay -S isync
+</span></span></code></pre></div><p>그 후 유저 홈 디렉터리에 설정 파일을 작성해주어야 한다. <a href=https://wiki.archlinux.org/title/isync>아치 위키</a>의 설명대로 설정해주었으나 잘 되지 않아서 검색해보니 <code>/usr/share/doc/isync/examples/mbsyncrc.sample</code> 위치에 공식 설정 레퍼런스 파일이 있었다. 하지만 공식 레퍼런스에 설정되어 있는 <code>RequireSSL</code> 옵션은 deprecated 되었고, <code>SSLType</code> 옵션을 사용하는 것이 맞다고 한다.</p><p><a href="https://support.google.com/mail/answer/7126229?hl=ko&visit_id=638018557156237770-4293095573&rd=2#zippy=%2C%EB%8B%A8%EA%B3%84-imap%EC%9D%B4-%EC%BC%9C%EC%A0%B8-%EC%9E%88%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8%2C%EB%8B%A8%EA%B3%84-%EC%9D%B4%EB%A9%94%EC%9D%BC-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%9D%98-smtp%EC%99%80-%EA%B8%B0%ED%83%80-%EC%84%A4%EC%A0%95-%EB%B3%80%EA%B2%BD%2C%EC%9D%B4%EB%A9%94%EC%9D%BC-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%97%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%A0-%EC%88%98-%EC%97%86%EC%9D%8C">다른 이메일 클라이언트에서 Gmail 확인하기</a> 구글 문서를 확인하고 최종적으로 다음과 같이 설정해주었다.</p><h4 id=dot-mbsyncrc-파일><code>~/.mbsyncrc</code> 파일
+<a class=anchor href=#dot-mbsyncrc-%ed%8c%8c%ec%9d%bc>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e># IMAP 접속 계정 정보를 여기에 설정한다.</span>
+</span></span><span style=display:flex><span>IMAPAccount gmail
+</span></span><span style=display:flex><span>Host imap.gmail.com
+</span></span><span style=display:flex><span>User YOUR_ID
+</span></span><span style=display:flex><span><span style=color:#75715e># 비밀번호는 PassCmd에 설정한 gpg 명령어로 .mailpass.gpg에 저장한 암호를 복호화하여 사용한다.</span>
+</span></span><span style=display:flex><span>PassCmd <span style=color:#e6db74>&#34;gpg2 -q --for-your-eyes-only --no-tty -d ~/.mailpass.gpg&#34;</span>
+</span></span><span style=display:flex><span>Port <span style=color:#ae81ff>993</span>
+</span></span><span style=display:flex><span>SSLType IMAPS
+</span></span><span style=display:flex><span><span style=color:#75715e># The following line should work. If you get certificate errors, uncomment the two following lines and read the &#34;Troubleshooting&#34; section.</span>
+</span></span><span style=display:flex><span>CertificateFile /etc/ssl/certs/ca-certificates.crt
+</span></span><span style=display:flex><span><span style=color:#75715e>#CertificateFile ~/.cert/imap.gmail.com.pem</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#CertificateFile ~/.cert/Equifax_Secure_CA.pem</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 리모트 저장소 계정에 위에서 작성한 계정 이름을 적는다.</span>
+</span></span><span style=display:flex><span>IMAPStore gmail-remote
+</span></span><span style=display:flex><span>Account gmail
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 동기화할 로컬 저장소 정보를 작성한다.</span>
+</span></span><span style=display:flex><span>MaildirStore gmail-local
+</span></span><span style=display:flex><span>SubFolders Verbatim
+</span></span><span style=display:flex><span>Path ~/mailbox/Gmail/
+</span></span><span style=display:flex><span>Inbox ~/mailbox/Gmail/Inbox
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Channel gmail
+</span></span><span style=display:flex><span>Far :gmail-remote:
+</span></span><span style=display:flex><span>Near :gmail-local:
+</span></span><span style=display:flex><span><span style=color:#75715e># Exclude everything under the internal [Gmail] folder, except the interesting folders</span>
+</span></span><span style=display:flex><span>Patterns * !<span style=color:#f92672>[</span>Gmail<span style=color:#f92672>]</span>* <span style=color:#e6db74>&#34;[Gmail]/Sent Mail&#34;</span> <span style=color:#e6db74>&#34;[Gmail]/Starred&#34;</span> <span style=color:#e6db74>&#34;[Gmail]/All Mail&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Or include everything</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#Patterns *</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Automatically create missing mailboxes, both locally and on the server</span>
+</span></span><span style=display:flex><span>Create Both
+</span></span><span style=display:flex><span><span style=color:#75715e># Sync the movement of messages between folders and deletions, add after making sure the sync works</span>
+</span></span><span style=display:flex><span>Expunge Both
+</span></span><span style=display:flex><span><span style=color:#75715e># Save the synchronization state files in the relevant directory</span>
+</span></span><span style=display:flex><span>SyncState *
+</span></span></code></pre></div><h2 id=gmail-imap-사용-설정>gmail IMAP 사용 설정
+<a class=anchor href=#gmail-imap-%ec%82%ac%ec%9a%a9-%ec%84%a4%ec%a0%95>#</a></h2><p>gmail 페이지 우측 상단 톱니바퀴 버튼을 누르면 모든 설정 보기 버튼이 있다.</p><p><a id=figure--gmail-imap></a></p><figure><img src=../gmail_imap_setting.png alt="Figure 1: gmail IMAP 설정"><figcaption><p><span class=figure-number>Figure 1: </span>gmail IMAP 설정</p></figcaption></figure><h2 id=앱-비밀번호-설정>앱 비밀번호 설정
+<a class=anchor href=#%ec%95%b1-%eb%b9%84%eb%b0%80%eb%b2%88%ed%98%b8-%ec%84%a4%ec%a0%95>#</a></h2><p>구글 계정관리 페이지 보안 탭으로 들어가면 앱 비밀번호를 설정할 수 있다.
+여기서 말하는 앱이란 앞서 설정한 mbsync를 의미하는 것 같다.
+mbsync가 구글 서비스에 접속하려할 때 사용하는 비밀번호인 것이다.
+따라서 여기서 설정하는 비밀번호를 gpg를 사용해 로컬에 저장해두면 된다.</p><p><a id=figure--google-password></a></p><figure><img src=../google_app_password_setting.png alt="Figure 2: google app password 설정"><figcaption><p><span class=figure-number>Figure 2: </span>google app password 설정</p></figcaption></figure><h2 id=gpg-사용법>gpg 사용법
+<a class=anchor href=#gpg-%ec%82%ac%ec%9a%a9%eb%b2%95>#</a></h2><p>더 상세한 설명은 <a href=https://johngrib.github.io/wiki/gpg/>기계인간님 블로그</a>에서 확인할 수 있다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e># gpg로 키를 생성한다.</span>
+</span></span><span style=display:flex><span>gpg --generate-key
+</span></span><span style=display:flex><span><span style=color:#75715e># 구글 계정설정 보안탭에서 설정한 앱 비밀번호를 다음 파일에 작성한다.</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;app-password&#34;</span> &gt;&gt; ~/.mailpass
+</span></span><span style=display:flex><span><span style=color:#75715e># gpg 해당 비밀번호를 암호화한다. 그러면 ~/.mailpass.gpg 파일이 생긴다.</span>
+</span></span><span style=display:flex><span>gpg -e ~/.mailpass
+</span></span></code></pre></div><h2 id=mu-maildir-init>mu maildir init
+<a class=anchor href=#mu-maildir-init>#</a></h2><p>우선 위에서 설정한 로컬 <code>MaildirStore</code> 구조에 맞게 디렉터리를 생성해준다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>mkdir -p ~/mailbox/Gmail
+</span></span></code></pre></div><p>mu init 해준다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>mu init --maildir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;~/mailbox/Gmail&#34;</span> --my-address<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;YOUR-ID@gmail.com&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 문제 없다면 다음과 같은 결과가 나온다.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#+begin_example</span>
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| maildir           | /home/user/mailbox/Gmail        |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| database-path     | /home/user/.cache/mu/xapian     |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| schema-version    | <span style=color:#ae81ff>465</span>                             |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| max-message-size  | <span style=color:#ae81ff>100000000</span>                       |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| batch-size        | <span style=color:#ae81ff>250000</span>                          |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| created           | Thu <span style=color:#ae81ff>20</span> Oct <span style=color:#ae81ff>2022</span> 09:13:33 PM KST |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| personal-address  | YOUR-ID@gmail.com               |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| messages in store | <span style=color:#ae81ff>0</span>                               |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| last-change       | never                           |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span>| last-index        | never                           |
+</span></span><span style=display:flex><span>+-------------------+---------------------------------+
+</span></span><span style=display:flex><span><span style=color:#75715e>#+end_example</span>
+</span></span></code></pre></div><h2 id=이메일-동기화>이메일 동기화
+<a class=anchor href=#%ec%9d%b4%eb%a9%94%ec%9d%bc-%eb%8f%99%ea%b8%b0%ed%99%94>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e># 위 mbsync 설정 파일에 작성한 Channel 이름으로 명령어를 실행하면 된다.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 본인 계정의 메일박스들이 제대로 출력되는지 -l 옵션으로 확인해본다.</span>
+</span></span><span style=display:flex><span>mbsync -l gmail
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 이상없이 출력된다면 -L 옵션으로 pull 해올 수 있다.</span>
+</span></span><span style=display:flex><span>mbsync -L gmail
+</span></span></code></pre></div><h2 id=이맥스에서-gmail-사용해보기>이맥스에서 gmail 사용해보기
+<a class=anchor href=#%ec%9d%b4%eb%a7%a5%ec%8a%a4%ec%97%90%ec%84%9c-gmail-%ec%82%ac%ec%9a%a9%ed%95%b4%eb%b3%b4%ea%b8%b0>#</a></h2><p>이제 <code>SPC o m</code> 로 <code>mu4e</code> 를 열고 <code>u</code> 눌러주면 알아서 메일을 가져와준다.</p><p><a id=figure--mu4e-test></a></p><figure><img src=../mu4e-test.gif alt="Figure 3: mu4e test"><figcaption><p><span class=figure-number>Figure 3: </span>mu4e test</p></figcaption></figure><hr><div class=bl-section><h4>No notes link to this note</h4></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#목표>목표</a></li><li><a href=#이맥스내에서-필요한-설정>이맥스내에서 필요한 설정</a><ul><li></li></ul></li><li><a href=#mu4e란>mu4e란</a></li><li><a href=#mu-설치>mu 설치</a></li><li><a href=#isync-설치>isync 설치</a><ul><li></li></ul></li><li><a href=#gmail-imap-사용-설정>gmail IMAP 사용 설정</a></li><li><a href=#앱-비밀번호-설정>앱 비밀번호 설정</a></li><li><a href=#gpg-사용법>gpg 사용법</a></li><li><a href=#mu-maildir-init>mu maildir init</a></li><li><a href=#이메일-동기화>이메일 동기화</a></li><li><a href=#이맥스에서-gmail-사용해보기>이맥스에서 gmail 사용해보기</a></li></ul></nav></div></aside></main></body></html>
