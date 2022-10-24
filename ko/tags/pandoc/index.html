@@ -1,18 +1,18 @@
 <!doctype html><html lang=ko dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="pandoc"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="http://krapjost.github.io/ko/tags/pandoc/"><meta property="og:site_name" content="정원"><title>pandoc | 정원</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.3e7c6d989fa733ee22d0bab8709297e4c2385a45ce37d75d9d094ef135aa42fb.css integrity="sha256-PnxtmJ+nM+4i0Lq4cJKX5MI4WkXON9ddnQlO8TWqQvs=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/ko.search.min.fcb1c110c58b75774a3782274ed9f4f369cda61152c968aee9ecfea2c83e90e3.js integrity="sha256-/LHBEMWLdXdKN4InTtn082nNphFSyWiu6ez+osg+kOM=" crossorigin=anonymous></script>
+<script defer src=/ko.search.min.d824182b0670040dbcda4fb0158d69944487ae92d77b912bccfd3d04d11b50b4.js integrity="sha256-2CQYKwZwBA282k+wFY1plESHrpLXe5ErzP09BNEbULQ=" crossorigin=anonymous></script>
 <link rel=alternate type=application/rss+xml href=http://krapjost.github.io/ko/tags/pandoc/index.xml title=정원></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/ko/><span>정원</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=검색 aria-label=검색 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
 <label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
 한국어</a></label><ul><li><a href=http://krapjost.github.io/>English</a></li></ul></li></ul><ul><li><a href=/ko/posts/>기록들</a></li></ul><ul><li><a href=/ko/resume/>이력서</a></li><li><a href=https://github.com/krapjost target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>pandoc</strong>
 <label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav><ul><li class=book-section-flat><strong>Categories</strong><ul><li class="flex justify-between"><a href=/ko/categories/clojure/>clojure</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/categories/emacs/>emacs</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/categories/emacs/>emacs</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/categories/%EC%A1%B0%EC%96%B8/>조언</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/categories/%ED%9A%8C%EA%B3%A0/>회고</a>
 <span>2</span></li><li class="flex justify-between"><a href=/ko/categories/cs/>CS</a>
 <span>5</span></li></ul></li><li class=book-section-flat><strong>Tags</strong><ul><li class="flex justify-between"><a href=/ko/tags/clojurescript/>clojurescript</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/tags/log/>log</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/tags/doom/>doom</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/tags/log/>log</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/tags/doom/>doom</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/>데이터베이스</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/%EC%9D%B8%ED%94%84%EB%9D%BC/>인프라</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/pandoc/>pandoc</a>
@@ -21,13 +21,13 @@
 yay pandoc yay wkhtmltopdf css 파일을 같은 디렉터리에 위치시킨다.
 wget https://gist.githubusercontent.com/dashed/6714393/raw/ae966d9d0806eb1e24462d88082a0264438adc50/github-pandoc.css css를 적용한 html문서를 만들고, pdf로 출력한다.
 pandoc -t html5 --metadata pagetitle="resume.md" --css=github-pandoc.css resume.md -o res.pdf 상세한 설명은 스택 오버플로우에&mldr;</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav><ul><li class=book-section-flat><strong>Categories</strong><ul><li class="flex justify-between"><a href=/ko/categories/clojure/>clojure</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/categories/emacs/>emacs</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/categories/emacs/>emacs</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/categories/%EC%A1%B0%EC%96%B8/>조언</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/categories/%ED%9A%8C%EA%B3%A0/>회고</a>
 <span>2</span></li><li class="flex justify-between"><a href=/ko/categories/cs/>CS</a>
 <span>5</span></li></ul></li><li class=book-section-flat><strong>Tags</strong><ul><li class="flex justify-between"><a href=/ko/tags/clojurescript/>clojurescript</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/tags/log/>log</a>
-<span>1</span></li><li class="flex justify-between"><a href=/ko/tags/doom/>doom</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/tags/log/>log</a>
+<span>2</span></li><li class="flex justify-between"><a href=/ko/tags/doom/>doom</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/>데이터베이스</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/%EC%9D%B8%ED%94%84%EB%9D%BC/>인프라</a>
 <span>1</span></li><li class="flex justify-between"><a href=/ko/tags/pandoc/>pandoc</a>
