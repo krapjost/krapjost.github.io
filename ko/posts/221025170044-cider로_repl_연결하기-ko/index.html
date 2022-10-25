@@ -1,0 +1,67 @@
+<!doctype html><html lang=ko dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="refs # 이름공간 변경하기 clj tool로 REPL 시작하기 # 이런 deps.edn 파일이 있다고 했을 때
+{:aliases {:dev {...} :test {...}}} 다음 명령어로 aliases와 함께 REPL을 실행할 수 있다.
+clj -M:dev:test # 혹은 clj -A:dev:test Namespace 사용하기 # clojure 프로젝트는 ns(namespace)로 스코프를 분리하고 있다. repl 환경에서 (ns dev.server) 을 실행하면 해당 ns를 만들고, 그 공간으로 넘어간다. 이 때 이전 공간에서 선언했던 이름들에는 접근할 수 없다.
+user=> (def x 42) #'user/x user=> x 42 user=> (ns server) nil server=> server=> x Syntax error compiling at (REPL:0:0)."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="cider로 repl 연결하기"><meta property="og:description" content="refs # 이름공간 변경하기 clj tool로 REPL 시작하기 # 이런 deps.edn 파일이 있다고 했을 때
+{:aliases {:dev {...} :test {...}}} 다음 명령어로 aliases와 함께 REPL을 실행할 수 있다.
+clj -M:dev:test # 혹은 clj -A:dev:test Namespace 사용하기 # clojure 프로젝트는 ns(namespace)로 스코프를 분리하고 있다. repl 환경에서 (ns dev.server) 을 실행하면 해당 ns를 만들고, 그 공간으로 넘어간다. 이 때 이전 공간에서 선언했던 이름들에는 접근할 수 없다.
+user=> (def x 42) #'user/x user=> x 42 user=> (ns server) nil server=> server=> x Syntax error compiling at (REPL:0:0)."><meta property="og:type" content="article"><meta property="og:url" content="http://krapjost.github.io/ko/posts/221025170044-cider%EB%A1%9C_repl_%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0-ko/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-25T17:00:00+09:00"><meta property="article:modified_time" content="2022-10-25T18:35:37+09:00"><meta property="og:site_name" content="정원"><title>cider로 repl 연결하기 | 정원</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.3e7c6d989fa733ee22d0bab8709297e4c2385a45ce37d75d9d094ef135aa42fb.css integrity="sha256-PnxtmJ+nM+4i0Lq4cJKX5MI4WkXON9ddnQlO8TWqQvs=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/ko.search.min.d08e03182327862481a4aa9cc5a0827a59a61673d7b308f892a2696b5d58a17f.js integrity="sha256-0I4DGCMnhiSBpKqcxaCCelmmFnPXswj4kqJpa11YoX8=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/ko/><span>정원</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=검색 aria-label=검색 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
+<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+한국어</a></label><ul><li><a href=http://krapjost.github.io/>English</a></li></ul></li></ul><ul><li><a href=/ko/posts/>기록들</a></li></ul><ul><li><a href=/ko/resume/>이력서</a></li><li><a href=https://github.com/krapjost target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>cider로 repl 연결하기</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#refs>refs</a></li><li><a href=#clj-tool로-repl-시작하기>clj tool로 REPL 시작하기</a></li><li><a href=#namespace-사용하기>Namespace 사용하기</a><ul><li><a href=#in-ns-와-ns-의-차이점>in-ns 와 ns 의 차이점</a></li><li><a href=#기존에-있는-공간으로-넘어가기>기존에 있는 공간으로 넘어가기</a></li></ul></li><li><a href=#cider로-repl을-실행하여-namespace-사용하기>CIDER로 REPL을 실행하여 Namespace 사용하기</a><ul><li><a href=#ref>ref</a></li><li><a href=#dot-dir-locals-dot-el>.dir-locals.el</a></li></ul></li><li><a href=#cider로-코드-불러오기>CIDER로 코드 불러오기</a></li></ul></nav></aside></header><article class=markdown><h1><a href=/ko/posts/221025170044-cider%EB%A1%9C_repl_%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0-ko/>cider로 repl 연결하기</a></h1><h5>October 25, 2022</h5><div><a href=/ko/categories/emacs/>emacs</a></div><div><a href=/ko/tags/cider/>cider</a>,
+<a href=/ko/tags/clojure/>clojure</a>,
+<a href=/ko/tags/repl/>repl</a></div><h2 id=refs>refs
+<a class=anchor href=#refs>#</a></h2><ol><li><a href=https://clojure.org/guides/repl/navigating_namespaces>이름공간 변경하기</a></li></ol><h2 id=clj-tool로-repl-시작하기>clj tool로 REPL 시작하기
+<a class=anchor href=#clj-tool%eb%a1%9c-repl-%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0>#</a></h2><p>이런 deps.edn 파일이 있다고 했을 때</p><pre tabindex=0><code class=language-edn data-lang=edn>{:aliases   {:dev  {...}
+             :test {...}}}
+</code></pre><p>다음 명령어로 aliases와 함께 REPL을 실행할 수 있다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>clj -M:dev:test
+</span></span><span style=display:flex><span><span style=color:#75715e># 혹은</span>
+</span></span><span style=display:flex><span>clj -A:dev:test
+</span></span></code></pre></div><h2 id=namespace-사용하기>Namespace 사용하기
+<a class=anchor href=#namespace-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0>#</a></h2><p>clojure 프로젝트는 ns(namespace)로 스코프를 분리하고 있다.
+repl 환경에서 <code>(ns dev.server)</code> 을 실행하면 해당 ns를 만들고, 그 공간으로 넘어간다.
+이 때 이전 공간에서 선언했던 이름들에는 접근할 수 없다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>user<span style=color:#f92672>=</span>&gt; <span style=color:#f92672>(</span>def x 42<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#&#39;user/x</span>
+</span></span><span style=display:flex><span>user<span style=color:#f92672>=</span>&gt; x
+</span></span><span style=display:flex><span><span style=color:#ae81ff>42</span>
+</span></span><span style=display:flex><span>user<span style=color:#f92672>=</span>&gt; <span style=color:#f92672>(</span>ns server<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>nil
+</span></span><span style=display:flex><span>server<span style=color:#f92672>=</span>&gt;
+</span></span><span style=display:flex><span>server<span style=color:#f92672>=</span>&gt; x
+</span></span><span style=display:flex><span>Syntax error compiling at <span style=color:#f92672>(</span>REPL:0:0<span style=color:#f92672>)</span>.
+</span></span><span style=display:flex><span>Unable to resolve symbol: x in this context
+</span></span><span style=display:flex><span>server<span style=color:#f92672>=</span>&gt; <span style=color:#f92672>(</span>ns user<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>nil
+</span></span><span style=display:flex><span>user<span style=color:#f92672>=</span>&gt; x
+</span></span><span style=display:flex><span><span style=color:#ae81ff>42</span>
+</span></span></code></pre></div><h3 id=in-ns-와-ns-의-차이점>in-ns 와 ns 의 차이점
+<a class=anchor href=#in-ns-%ec%99%80-ns-%ec%9d%98-%ec%b0%a8%ec%9d%b4%ec%a0%90>#</a></h3><p>in-ns가 ns에 비해 일을 좀 덜한다.
+in-ns는 기존에 있는 이름 공간으로 넘어가는 역할만 한다.
+만약 그 공간이 없다면 하나 만들어서 넘어가긴 하는데 clojure.core에 있는 이름들을 가져오지 않는다.
+그래서 <code>defn</code> 같은 클로저 코어 함수들을 사용할 수 없다.</p><p>그리고 문법이 조금 다르다. ns로 이름 공간을 사용할 시 작은 따옴표를 앞에 붙이지 않는다.
+<code>'</code> 는 심볼이다.</p><h3 id=기존에-있는-공간으로-넘어가기>기존에 있는 공간으로 넘어가기
+<a class=anchor href=#%ea%b8%b0%ec%a1%b4%ec%97%90-%ec%9e%88%eb%8a%94-%ea%b3%b5%ea%b0%84%ec%9c%bc%eb%a1%9c-%eb%84%98%ec%96%b4%ea%b0%80%ea%b8%b0>#</a></h3><p>프로젝트 내에 <code>dev.server</code> 라는 이름 공간이 선언되어 있다고 하자.
+해당 공간에 접근하기 위해 in-ns를 사용해서 넘어가려고 했지만 새로운 공간을 선언한다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>user<span style=color:#f92672>=</span>&gt; <span style=color:#f92672>(</span>in-ns <span style=color:#960050;background-color:#1e0010>&#39;</span>dev.server<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#object[clojure.lang.Namespace 0x57dc9128 &#34;dev.server&#34;]</span>
+</span></span><span style=display:flex><span>dev.server<span style=color:#f92672>=</span>&gt;
+</span></span><span style=display:flex><span>dev.server<span style=color:#f92672>=</span>&gt; <span style=color:#f92672>(</span>start! 6000<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Syntax error compiling at <span style=color:#f92672>(</span>REPL:1:1<span style=color:#f92672>)</span>.
+</span></span><span style=display:flex><span>Unable to resolve symbol: start! in this context
+</span></span></code></pre></div><p>작성되어 있는 프로그램 파일의 ns를 가져오기 위해서는 <code>(require 'project.dev)</code> 를 먼저 실행해줘야 한다.
+그래야 해당 ns가 의존하고 있는 파일들과 해당 스코프의 이름들을 다 가져온다.
+그 후에 <code>(in-ns 'project.dev)</code> 로 해당 이름공간으로 들어가면 그 공간에 작성되어 있는 함수들에 접근할 수 있다.</p><h2 id=cider로-repl을-실행하여-namespace-사용하기>CIDER로 REPL을 실행하여 Namespace 사용하기
+<a class=anchor href=#cider%eb%a1%9c-repl%ec%9d%84-%ec%8b%a4%ed%96%89%ed%95%98%ec%97%ac-namespace-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0>#</a></h2><h3 id=ref>ref
+<a class=anchor href=#ref>#</a></h3><p><a href=https://practical.li/spacemacs/clojure-projects/project-configuration.html>practicalli 프로젝트 설정 안내</a></p><h3 id=dot-dir-locals-dot-el>.dir-locals.el
+<a class=anchor href=#dot-dir-locals-dot-el>#</a></h3><p>프로젝트 루트에 <code>.dir-locals.el</code> 파일을 만든다.
+이맥스가 해당 파일이 있는 프로젝트 내부의 파일을 실행할 때 여기 적힌 설정대로 구동된다.
+바보같이 파일 이름을 .dir-local.el로 써서 왜 안되는지 한참 헤맸다.</p><h4 id=clojure-setting>clojure setting
+<a class=anchor href=#clojure-setting>#</a></h4><p>클로저 모드일 때 <a href=https://practical.li/spacemacs/reference/cider/configuration-variables.html>cider 설정 변수</a>에 접근해서 바꿔준다.
+앞으로 cider로 repl을 실행할 때마다 빌드 툴로 <code>clj</code> 를 사용하고, 함께 실행할 alias들로 dev와 test를 지정한다.
+그럼 맨 위의 cli로 실행했을 때와 같이 edn 파일에 적힌 dev, test를 함께 실행해준다.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span>((clojure-mode <span style=color:#f92672>.</span> ((cider-preferred-build-tool <span style=color:#f92672>.</span> clojure-cli)
+</span></span><span style=display:flex><span>                  (cider-clojure-cli-aliases <span style=color:#f92672>.</span> <span style=color:#e6db74>&#34;:dev:test&#34;</span>))))
+</span></span></code></pre></div><h2 id=cider로-코드-불러오기>CIDER로 코드 불러오기
+<a class=anchor href=#cider%eb%a1%9c-%ec%bd%94%eb%93%9c-%eb%b6%88%eb%9f%ac%ec%98%a4%ea%b8%b0>#</a></h2><p><code>require</code> 단계를 단축키로 해결할 수 있다.
+<code>C-c C-k</code> (cider-load-buffer)로 현재 버퍼의 코드를 불러온다.
+그 후에는 해당 스코프의 s-표현식들을 실행할 수 있다.</p><hr><div class=bl-section><h4>No notes link to this note</h4></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#refs>refs</a></li><li><a href=#clj-tool로-repl-시작하기>clj tool로 REPL 시작하기</a></li><li><a href=#namespace-사용하기>Namespace 사용하기</a><ul><li><a href=#in-ns-와-ns-의-차이점>in-ns 와 ns 의 차이점</a></li><li><a href=#기존에-있는-공간으로-넘어가기>기존에 있는 공간으로 넘어가기</a></li></ul></li><li><a href=#cider로-repl을-실행하여-namespace-사용하기>CIDER로 REPL을 실행하여 Namespace 사용하기</a><ul><li><a href=#ref>ref</a></li><li><a href=#dot-dir-locals-dot-el>.dir-locals.el</a></li></ul></li><li><a href=#cider로-코드-불러오기>CIDER로 코드 불러오기</a></li></ul></nav></div></aside></main></body></html>
