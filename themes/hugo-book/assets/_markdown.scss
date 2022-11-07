@@ -106,8 +106,7 @@
   }
 
   p {
-    word-wrap: break-word;
-    word-break: keep-all;
+    word-break: break-all;
   }
 
   p::first-letter {
