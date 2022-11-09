@@ -1,0 +1,51 @@
+<!doctype html><html lang=ko dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="컴포넌트 리스트 그리는 방법 # 아래와 같은 데이터와
+(def book-list {:section &#34;Today&#34; :list [{:id &#34;0&#34; :name &#34;book1&#34; :author &#34;doong&#34; :description &#34;rorlame edalkwdqd qwlmdkwmd ql&#34;} {:id &#34;1&#34; :name &#34;book2&#34; :author &#34;ojo&#34; :description &#34;heleld qwdmlkqwd awlkda wk&#34;}]} {:section &#34;Weekly&#34; :list [{:id &#34;4&#34; :name &#34;book5&#34; :author &#34;asdw&#34; :description &#34;asdawd&#34;} {:id &#34;6&#34; :name &#34;book7&#34; :author &#34;qw w w&#34; :description &#34;wqlwd qwldkm qwlkdasd asd&#34;}]}) 아래와 같은 컴포넌트가 있을 때
+(defc book-card [{:keys [name author description]}] (render (<< [:a {:class (css :relative :block :h-96)} [:span {:class (css :absolute :inset-0 :border-2 :border-dashed :border-black)}] [:div {:class (css :relative :flex :h-full :items-end :border-2 :border-black :bg-white :transition-transform [:hover {:transform &#34;translate(-0."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="shadow-grove-"><meta property="og:description" content="컴포넌트 리스트 그리는 방법 # 아래와 같은 데이터와
+(def book-list {:section &#34;Today&#34; :list [{:id &#34;0&#34; :name &#34;book1&#34; :author &#34;doong&#34; :description &#34;rorlame edalkwdqd qwlmdkwmd ql&#34;} {:id &#34;1&#34; :name &#34;book2&#34; :author &#34;ojo&#34; :description &#34;heleld qwdmlkqwd awlkda wk&#34;}]} {:section &#34;Weekly&#34; :list [{:id &#34;4&#34; :name &#34;book5&#34; :author &#34;asdw&#34; :description &#34;asdawd&#34;} {:id &#34;6&#34; :name &#34;book7&#34; :author &#34;qw w w&#34; :description &#34;wqlwd qwldkm qwlkdasd asd&#34;}]}) 아래와 같은 컴포넌트가 있을 때
+(defc book-card [{:keys [name author description]}] (render (<< [:a {:class (css :relative :block :h-96)} [:span {:class (css :absolute :inset-0 :border-2 :border-dashed :border-black)}] [:div {:class (css :relative :flex :h-full :items-end :border-2 :border-black :bg-white :transition-transform [:hover {:transform &#34;translate(-0."><meta property="og:type" content="article"><meta property="og:url" content="http://krapjost.github.io/ko/posts/221109170247-shadow_grove-ko/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-11-09T17:02:00+09:00"><meta property="article:modified_time" content="2022-11-09T17:15:28+09:00"><meta property="og:site_name" content="정원"><title>shadow-grove- | 정원</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.3e7c6d989fa733ee22d0bab8709297e4c2385a45ce37d75d9d094ef135aa42fb.css integrity="sha256-PnxtmJ+nM+4i0Lq4cJKX5MI4WkXON9ddnQlO8TWqQvs=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/ko.search.min.a03c1a4f5a053a62254990f46363c2204c9f19a2ed837d3ce534da2d579a8c07.js integrity="sha256-oDwaT1oFOmIlSZD0Y2PCIEyfGaLtg3085TTaLVeajAc=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/ko/><span>정원</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=검색 aria-label=검색 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
+<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+한국어</a></label><ul><li><a href=http://krapjost.github.io/>English</a></li></ul></li></ul><ul><li><a href=/ko/posts/>기록들</a></li></ul><ul><li><a href=/ko/resume/>이력서</a></li><li><a href=https://github.com/krapjost target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>shadow-grove-</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#컴포넌트-리스트-그리는-방법>컴포넌트 리스트 그리는 방법</a></li></ul></nav></aside></header><article class=markdown><h1><a href=/ko/posts/221109170247-shadow_grove-ko/>shadow-grove-</a></h1><h5>November 9, 2022</h5><div><a href=/ko/categories/clojure/>clojure</a></div><div><a href=/ko/tags/clojurescript/>clojurescript</a>,
+<a href=/ko/tags/shadow-grove/>shadow-grove</a></div><h2 id=컴포넌트-리스트-그리는-방법>컴포넌트 리스트 그리는 방법
+<a class=anchor href=#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-%eb%a6%ac%ec%8a%a4%ed%8a%b8-%ea%b7%b8%eb%a6%ac%eb%8a%94-%eb%b0%a9%eb%b2%95>#</a></h2><p>아래와 같은 데이터와</p><pre tabindex=0><code class=language-clojurescript data-lang=clojurescript>(def book-list
+  {:section &#34;Today&#34;
+    :list [{:id &#34;0&#34;
+            :name &#34;book1&#34;
+            :author &#34;doong&#34;
+            :description &#34;rorlame edalkwdqd qwlmdkwmd ql&#34;}
+           {:id &#34;1&#34;
+            :name &#34;book2&#34;
+            :author &#34;ojo&#34;
+            :description &#34;heleld qwdmlkqwd awlkda wk&#34;}]}
+   {:section &#34;Weekly&#34;
+    :list [{:id &#34;4&#34;
+            :name &#34;book5&#34;
+            :author &#34;asdw&#34;
+            :description &#34;asdawd&#34;}
+           {:id &#34;6&#34;
+            :name &#34;book7&#34;
+            :author &#34;qw w w&#34;
+            :description &#34;wqlwd qwldkm qwlkdasd asd&#34;}]})
+</code></pre><p>아래와 같은 컴포넌트가 있을 때</p><pre tabindex=0><code class=language-clojurescript data-lang=clojurescript>(defc book-card [{:keys [name author description]}]
+  (render
+   (&lt;&lt; [:a {:class (css :relative :block :h-96)}
+        [:span {:class (css :absolute :inset-0 :border-2 :border-dashed :border-black)}]
+        [:div
+         {:class (css :relative :flex :h-full :items-end :border-2 :border-black :bg-white :transition-transform [:hover {:transform &#34;translate(-0.5rem, -0.5rem)&#34;}])}
+         [:div
+          {:class (css :px-8 :pb-8 :transition-opacity [:hover :absolute :opacity-0])}
+          [:h2
+           {:class (css :mt-4 :text-2xl :font-medium)} name] [:h3 author]]
+         [:div
+          {:class (css :absolute :p-8 :opacity-0 :transition-opacity [:hover :relative :opacity-100])}
+          [:h2 {:class (css :mt-4 :text-2xl :font-medium)} name]
+          [:h3 author]
+          [:p {:class (css :mt-4)} description]
+          [:p {:class (css :mt-8 :font-bold)} &#34;읽어보기&#34;]]]])))
+</code></pre><p><code>keyed-seq</code> 를 사용해 book-list 데이터를 풀어 book-card에 전해줄 수 있다.
+이때 2번 째 아규먼트는 키 함수인데 키워드를 통해 키 중복을 방지할 수 있다.
+키 대신 <code>identity</code> 를 넣으면 모든 데이터에 중복이 없어야 렌더링 된다.</p><pre tabindex=0><code class=language-clojurescript data-lang=clojurescript>(sg/keyed-seq book-list :id book-card)
+</code></pre><hr><div class=bl-section><h4>No notes link to this note</h4></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#컴포넌트-리스트-그리는-방법>컴포넌트 리스트 그리는 방법</a></li></ul></nav></div></aside></main></body></html>

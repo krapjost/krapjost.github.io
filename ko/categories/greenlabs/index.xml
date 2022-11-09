@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>greenlabs on 정원</title><link>http://krapjost.github.io/ko/categories/greenlabs/</link><description>Recent content in greenlabs on 정원</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 08 Nov 2022 15:10:00 +0900</lastBuildDate><atom:link href="http://krapjost.github.io/ko/categories/greenlabs/index.xml" rel="self" type="application/rss+xml"/><item><title>greenlabs-bootcamp</title><link>http://krapjost.github.io/ko/posts/221108151034-greenlabs_bootcamp-ko/</link><pubDate>Tue, 08 Nov 2022 15:10:00 +0900</pubDate><guid>http://krapjost.github.io/ko/posts/221108151034-greenlabs_bootcamp-ko/</guid><description>함수형은 # 익숙해? 고등학교 2학년 과정에 있음
+http://blog.jenkster.com/2015/12/what-is-functional-programming.html
+두 뿌리 # 튜링 기계 언어 # 기계에 명령하기 위함
+람다 계산 언어 ( Alonzo church ) # 값을 계산하기 위함 ( Applicative language )
+자바 스트림?
+추상화의 스펙트럼 # goto -&amp;gt;&amp;gt; for loop -&amp;gt;&amp;gt; map/filter/reduce https://www.youtube.com/watch?v=mVVNJKv9esE
+닐 포드 함수형 사고
+Dev dive 2022 # Why functional programming matters # https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf 모듈식 설계 분해와 좋은 조립이 핵심이다.
+조립 수단 # 고차 함수 지연 평가 (lazy eval) 지연평가가 왜 좋은가 rtfeldman - why functional programming isn&amp;rsquo;t norm # IEEE 잡지 Why functional programming should be the future of software development # constacts liftIO 김은민 # 쏙쏙 들어오는 함수형 코딩 저자</description></item></channel></rss>
